@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Image Redaction Tool - Privacy Photo Masking | Secure ID Card Blur</title>
+    <meta name="description" content="100% client-side image redaction tool. Blur faces, mask ID numbers, and protect privacy locally in your browser. Zero server uploads, works offline.">
+    <meta name="keywords" content="Local Image Redaction, Privacy Photo Masking, ID Card Blur Tool, Secure Face Mosaic, Offline Image Editor">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        .drop-zone { border: 3px dashed #64748b; transition: all 0.3s ease; }
+        .drop-zone:hover, .drop-zone.dragover { border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.1); }
+        .canvas-container { position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .btn-primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4); }
+        .security-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; border-radius: 20px; color: #22c55e; font-size: 14px; font-weight: 500; }
+        .ad-slot { background-color: #f8fafc; border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100px; margin: 24px 0; }
+        .ad-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; font-weight: 500; }
+        .page-controls { display: flex; gap: 8px; align-items: center; justify-content: center; margin-top: 12px; }
+        .page-btn { padding: 8px 16px; background: #3b82f6; color: white; border-radius: 6px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+        .page-btn:hover:not(:disabled) { background: #2563eb; }
+        .page-btn:disabled { background: #cbd5e1; cursor: not-allowed; }
+        .page-info { font-size: 14px; color: #64748b; font-weight: 500; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span class="text-2xl font-bold">PrivacyMask Pro</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">100% Local Image & PDF Redaction<br/>Zero Server Upload Required</h1>
+            <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">Protect your privacy when sharing sensitive documents. Blur faces, mask ID numbers, and redact confidential information entirely in your browser.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="security-badge"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16z" clip-rule="evenodd"/></svg><span>Works Offline</span></div>
+                <div class="security-badge"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16z" clip-rule="evenodd"/></svg><span>No Data Leaves Your Device</span></div>
+                <div class="security-badge"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16z" clip-rule="evenodd"/></svg><span>Manual Selection Only</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 mt-8">
+        <div id="ads-banner-top" class="ad-slot rounded-lg">
+            <div class="ad-label">Advertisement</div>
+            <div style="color: #cbd5e1; font-size: 14px;">Ad Space - 728x90 or Responsive Banner</div>
+        </div>
+    </div>
+
+    <main class="py-16 bg-white" id="workspace">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">Document Redaction Workspace</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div id="canvasWrapper" class="canvas-container bg-slate-100 hidden">
+                        <canvas id="mainCanvas" class="w-full h-auto block"></canvas>
+                    </div>
+                    <div id="pageControls" class="page-controls hidden">
+                        <button id="prevPage" class="page-btn" onclick="changePage(-1)">← Previous</button>
+                        <span class="page-info">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+                        <button id="nextPage" class="page-btn" onclick="changePage(1)">Next →</button>
+                    </div>
+                    <div id="emptyState" class="border-2 border-dashed border-slate-300 rounded-lg p-16 text-center bg-slate-50">
+                        <svg class="w-24 h-24 mx-auto mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <p class="text-xl text-slate-500">Upload an image or PDF to start redacting</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-1 space-y-6">
+                    <div id="dropZone" class="drop-zone rounded-lg p-8 text-center cursor-pointer bg-slate-50">
+                        <input type="file" id="fileInput" accept="image/*,.pdf" class="hidden">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                        <p class="text-lg font-semibold mb-2">Drop your file here</p>
+                        <p class="text-sm text-slate-500">or click to browse files</p>
+                        <p class="text-xs text-slate-400 mt-2">Supports JPG, PNG, GIF, WebP, PDF</p>
+                    </div>
+                    <div id="selectionControls" class="space-y-3 hidden">
+                        <h3 class="font-semibold text-slate-700 mb-3">Selection Tool</h3>
+                        <button onclick="enableManualSelect()" class="w-full btn-primary text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                            Select Area to Redact
+                        </button>
+                        <p class="text-xs text-slate-500 mt-2">Click the button above, then drag on the image to select an area</p>
+                    </div>
+                    <div id="effectControls" class="space-y-4 hidden">
+                        <h3 class="font-semibold text-slate-700 mb-3">Effect Settings</h3>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-600 mb-2">Effect Type</label>
+                            <select id="effectType" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="pixelate" selected>Mosaic (Pixelate)</option>
+                                <option value="blur">Gaussian Blur</option>
+                                <option value="blackout">Black Out</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-600 mb-2">Intensity: <span id="intensityValue">30</span></label>
+                            <input type="range" id="intensitySlider" min="20" max="100" value="30" class="w-full">
+                            <p class="text-xs text-slate-500 mt-1">Higher = stronger effect (recommended: 30-50)</p>
+                        </div>
+                        <button onclick="resetImage()" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-lg font-medium transition">
+                            Reset to Original
+                        </button>
+                    </div>
+                    <div id="exportSection" class="hidden">
+                        <button onclick="downloadImage()" class="w-full btn-primary text-white py-4 px-6 rounded-lg font-bold text-lg flex items-center justify-center gap-3 shadow-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            Download Redacted File
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container mx-auto px-4 mb-8">
+        <div id="ads-rect-bottom" class="ad-slot rounded-lg mx-auto" style="max-width: 728px;">
+            <div class="ad-label">Advertisement</div>
+            <div style="color: #cbd5e1; font-size: 14px;">Ad Space - 336x280 or Responsive Rectangle</div>
+        </div>
+    </div>
+
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-400">&copy; 2026 PrivacyMask Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        
+        let originalImage = null, currentImage = null, canvas = null, ctx = null;
+        let selectionStart = null, selectionEnd = null;
+        let pdfDoc = null, currentPage = 1, totalPages = 1, isPDF = false;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            canvas = document.getElementById('mainCanvas');
+            ctx = canvas.getContext('2d');
+            setupEventListeners();
+        });
+
+        function setupEventListeners() {
+            const dropZone = document.getElementById('dropZone');
+            const fileInput = document.getElementById('fileInput');
+            const intensitySlider = document.getElementById('intensitySlider');
+            const intensityValue = document.getElementById('intensityValue');
+            
+            dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+            dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('dragover'); });
+            dropZone.addEventListener('drop', (e) => { e.preventDefault(); dropZone.classList.remove('dragover'); handleFile(e.dataTransfer.files[0]); });
+            dropZone.addEventListener('click', () => { fileInput.click(); });
+            fileInput.addEventListener('change', (e) => { if (e.target.files.length > 0) handleFile(e.target.files[0]); });
+            intensitySlider.addEventListener('input', (e) => { intensityValue.textContent = e.target.value; });
+            
+            canvas.addEventListener('mousedown', handleCanvasMouseDown);
+            canvas.addEventListener('mousemove', handleCanvasMouseMove);
+            canvas.addEventListener('mouseup', handleCanvasMouseUp);
+            canvas.addEventListener('mouseleave', handleCanvasMouseUp);
+        }
+
+        async function handleFile(file) {
+            if (!file) return;
+            
+            if (file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf')) {
+                await handlePDF(file);
+                return;
+            }
+            
+            if (!file.type.startsWith('image/')) {
+                alert('Please upload a valid image file (JPG, PNG, GIF, WebP) or PDF');
+                return;
+            }
+            
+            isPDF = false;
+            pdfDoc = null;
+            document.getElementById('pageControls').classList.add('hidden');
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    originalImage = img;
+                    currentImage = img;
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    showWorkspace();
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function handlePDF(file) {
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+                isPDF = true;
+                totalPages = pdfDoc.numPages;
+                currentPage = 1;
+                document.getElementById('pageControls').classList.remove('hidden');
+                updatePageInfo();
+                await renderPDFPage(1);
+                showWorkspace();
+                showNotification('PDF loaded successfully!');
+            } catch (error) {
+                console.error('Error loading PDF:', error);
+                alert('Error loading PDF file.');
+            }
+        }
+
+        async function renderPDFPage(pageNum) {
+            if (!pdfDoc) return;
+            try {
+                const page = await pdfDoc.getPage(pageNum);
+                const viewport = page.getViewport({ scale: 1.5 });
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+                currentImage = new Image();
+                currentImage.src = canvas.toDataURL();
+                originalImage = currentImage;
+                updatePageInfo();
+            } catch (error) {
+                console.error('Error rendering PDF page:', error);
+            }
+        }
+
+        async function changePage(delta) {
+            const newPage = currentPage + delta;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                await renderPDFPage(currentPage);
+            }
+        }
+
+        function updatePageInfo() {
+            document.getElementById('currentPage').textContent = currentPage;
+            document.getElementById('totalPages').textContent = totalPages;
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage === totalPages;
+        }
+
+        function showWorkspace() {
+            document.getElementById('canvasWrapper').classList.remove('hidden');
+            document.getElementById('emptyState').classList.add('hidden');
+            document.getElementById('selectionControls').classList.remove('hidden');
+            document.getElementById('effectControls').classList.remove('hidden');
+            document.getElementById('exportSection').classList.remove('hidden');
+        }
+
+        function enableManualSelect() {
+            if (!currentImage) {
+                alert('Please upload a file first');
+                return;
+            }
+            canvas.style.cursor = 'crosshair';
+            showNotification('Click and drag on the image to select an area');
+        }
+
+        function handleCanvasMouseDown(e) {
+            if (!currentImage || canvas.style.cursor !== 'crosshair') return;
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            selectionStart = { x: (e.clientX - rect.left) * scaleX, y: (e.clientY - rect.top) * scaleY };
+        }
+
+        function handleCanvasMouseMove(e) {
+            if (!selectionStart || !currentImage) return;
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            selectionEnd = { x: (e.clientX - rect.left) * scaleX, y: (e.clientY - rect.top) * scaleY };
+            
+            // Only redraw the base image and selection preview
+            ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+            drawSelectionPreview(selectionStart, selectionEnd);
+        }
+
+        function handleCanvasMouseUp(e) {
+            if (!selectionStart || !currentImage) return;
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            selectionEnd = { x: (e.clientX - rect.left) * scaleX, y: (e.clientY - rect.top) * scaleY };
+            
+            const x = Math.min(selectionStart.x, selectionEnd.x);
+            const y = Math.min(selectionStart.y, selectionEnd.y);
+            const width = Math.abs(selectionEnd.x - selectionStart.x);
+            const height = Math.abs(selectionEnd.y - selectionStart.y);
+            
+            // Clear selection state first
+            selectionStart = null;
+            selectionEnd = null;
+            canvas.style.cursor = 'default';
+            
+            if (width > 10 && height > 10) {
+                // Redraw canvas to remove selection preview before applying effect
+                redrawCanvas();
+                
+                // Apply effect immediately after clearing the preview
+                applyEffect(x, y, width, height);
+                showNotification('Effect applied successfully!');
+            } else {
+                // Just redraw if selection is too small
+                redrawCanvas();
+            }
+        }
+
+        function drawSelectionPreview(start, end) {
+            const x = Math.min(start.x, end.x);
+            const y = Math.min(start.y, end.y);
+            const width = Math.abs(end.x - start.x);
+            const height = Math.abs(end.y - start.y);
+            ctx.strokeStyle = '#ef4444';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.strokeRect(x, y, width, height);
+            ctx.setLineDash([]);
+            ctx.fillStyle = 'rgba(239, 68, 68, 0.2)';
+            ctx.fillRect(x, y, width, height);
+        }
+
+        function applyEffect(x, y, width, height) {
+            const effectType = document.getElementById('effectType').value;
+            const intensity = parseInt(document.getElementById('intensitySlider').value);
+            
+            switch(effectType) {
+                case 'pixelate':
+                    applyPixelate(x, y, width, height, intensity);
+                    break;
+                case 'blur':
+                    applyBlur(x, y, width, height, intensity);
+                    break;
+                case 'blackout':
+                    applyBlackout(x, y, width, height);
+                    break;
+            }
+            
+            // Update currentImage with the modified canvas content
+            const newImg = new Image();
+            newImg.onload = function() {
+                currentImage = newImg;
+            };
+            newImg.src = canvas.toDataURL();
+        }
+
+        function applyPixelate(x, y, width, height, blockSize) {
+            const effectiveBlockSize = Math.max(blockSize, 20);
+            const startX = Math.floor(x);
+            const startY = Math.floor(y);
+            const areaWidth = Math.ceil(width);
+            const areaHeight = Math.ceil(height);
+            
+            const imageData = ctx.getImageData(startX, startY, areaWidth, areaHeight);
+            const data = imageData.data;
+            const w = imageData.width;
+            const h = imageData.height;
+            
+            for (let blockY = 0; blockY < h; blockY += effectiveBlockSize) {
+                for (let blockX = 0; blockX < w; blockX += effectiveBlockSize) {
+                    let r = 0, g = 0, b = 0, a = 0, count = 0;
+                    const endY = Math.min(blockY + effectiveBlockSize, h);
+                    const endX = Math.min(blockX + effectiveBlockSize, w);
+                    
+                    // Calculate average color for the block
+                    for (let dy = blockY; dy < endY; dy++) {
+                        for (let dx = blockX; dx < endX; dx++) {
+                            const idx = (dy * w + dx) * 4;
+                            r += data[idx];
+                            g += data[idx + 1];
+                            b += data[idx + 2];
+                            a += data[idx + 3];
+                            count++;
+                        }
+                    }
+                    
+                    if (count === 0) continue;
+                    r = Math.round(r / count);
+                    g = Math.round(g / count);
+                    b = Math.round(b / count);
+                    a = Math.round(a / count);
+                    
+                    // Apply averaged color to entire block
+                    for (let dy = blockY; dy < endY; dy++) {
+                        for (let dx = blockX; dx < endX; dx++) {
+                            const idx = (dy * w + dx) * 4;
+                            data[idx] = r;
+                            data[idx + 1] = g;
+                            data[idx + 2] = b;
+                            data[idx + 3] = a;
+                        }
+                    }
+                }
+            }
+            ctx.putImageData(imageData, startX, startY);
+        }
+
+        function applyBlur(x, y, width, height, radius) {
+            const effectiveRadius = Math.max(radius, 5);
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = Math.ceil(width);
+            tempCanvas.height = Math.ceil(height);
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            // Draw the selection area to temp canvas
+            tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
+            
+            // Apply blur filter
+            tempCtx.filter = `blur(${effectiveRadius}px)`;
+            tempCtx.drawImage(tempCanvas, 0, 0);
+            
+            // Draw blurred result back to main canvas
+            ctx.drawImage(tempCanvas, 0, 0, Math.ceil(width), Math.ceil(height), Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height));
+        }
+
+        function applyBlackout(x, y, width, height) {
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(x, y, width, height);
+        }
+
+        function redrawCanvas() {
+            if (!currentImage) return;
+            // Use drawImage directly without clearRect to avoid flickering
+            ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+        }
+
+        function resetImage() {
+            if (!originalImage) return;
+            currentImage = originalImage;
+            redrawCanvas();
+            showNotification('Reset to original');
+        }
+
+        function downloadImage() {
+            if (!canvas) return;
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = isPDF ? `redacted-pdf-page-${currentPage}-${Date.now()}.png` : `redacted-image-${Date.now()}.png`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+                showNotification('File downloaded successfully!');
+            }, 'image/png', 1.0);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transition = 'opacity 0.3s';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
