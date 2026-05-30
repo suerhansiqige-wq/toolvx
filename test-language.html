@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detection Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+        .info-box { 
+            background: white;
+            margin: 10px 0; 
+            padding: 15px; 
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1e40af; }
+        .success { border-left-color: #10b981; }
+        .warning { border-left-color: #f59e0b; }
+        .error { border-left-color: #ef4444; }
+        code { 
+            background: #f3f4f6; 
+            padding: 2px 6px; 
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌐 Language Detection Test</h1>
+    
+    <div class="info-box">
+        <strong>Browser Language:</strong> <code id="browserLang"></code>
+    </div>
+    
+    <div class="info-box">
+        <strong>Navigator Languages:</strong> <code id="navLangs"></code>
+    </div>
+    
+    <div class="info-box">
+        <strong>Detected Language:</strong> <code id="detectedLang">Detecting...</code>
+    </div>
+    
+    <div class="info-box success">
+        <h3>Translation Tests:</h3>
+        <p><strong>nav.home:</strong> <span data-i18n="nav.home">Home</span></p>
+        <p><strong>nav.blog:</strong> <span data-i18n="nav.blog">Blog</span></p>
+        <p><strong>hero.title:</strong> <span data-i18n="hero.title">Hero Title</span></p>
+        <p><strong>footer.description:</strong> <span data-i18n="footer.description">Footer Description</span></p>
+    </div>
+    
+    <div class="info-box warning">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Open browser console (F12)</li>
+            <li>Check the console logs for language detection messages</li>
+            <li>If your browser language is Chinese (zh-CN or zh-TW), the page should display Chinese text</li>
+            <li>If not working, check for JavaScript errors in the console</li>
+        </ol>
+    </div>
+    
+    <script src="js/i18n.js"></script>
+    <script>
+        // Display browser language info
+        document.getElementById('browserLang').textContent = navigator.language || navigator.userLanguage;
+        document.getElementById('navLangs').textContent = navigator.languages ? navigator.languages.join(', ') : 'Not available';
+        
+        // Wait for i18n to initialize and show detected language
+        setTimeout(() => {
+            const detectedLang = localStorage.getItem('preferred_language') || 'Not set';
+            document.getElementById('detectedLang').textContent = detectedLang;
+            
+            // Add visual indicator
+            if (detectedLang === 'zh') {
+                document.getElementById('detectedLang').style.color = '#10b981';
+                document.getElementById('detectedLang').textContent += ' ✅ (Chinese detected!)';
+            } else if (detectedLang === 'en') {
+                document.getElementById('detectedLang').style.color = '#f59e0b';
+                document.getElementById('detectedLang').textContent += ' ⚠️ (English - expected Chinese?)';
+            }
+        }, 500);
+    </script>
+</body>
+</html>

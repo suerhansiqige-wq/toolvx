@@ -23,7 +23,7 @@ const SUPPORTED_LANGUAGES = {
     },
     'fr': {
         name: 'Français',
-        flag: '🇫🇷',
+        flag: '🇷',
         direction: 'ltr'
     },
     'de': {
@@ -33,17 +33,17 @@ const SUPPORTED_LANGUAGES = {
     },
     'ja': {
         name: '日本語',
-        flag: '🇯🇵',
+        flag: '🇵',
         direction: 'ltr'
     },
     'ko': {
         name: '한국어',
-        flag: '🇰',
+        flag: '',
         direction: 'ltr'
     },
     'pt': {
         name: 'Português',
-        flag: '🇵🇹',
+        flag: '🇹',
         direction: 'ltr'
     },
     'ru': {
@@ -53,7 +53,7 @@ const SUPPORTED_LANGUAGES = {
     },
     'ar': {
         name: 'العربية',
-        flag: '🇸🇦',
+        flag: '🇦',
         direction: 'rtl'
     }
 };
@@ -326,53 +326,65 @@ const TRANSLATIONS = {
 
 // Detect user's preferred language
 function detectUserLanguage() {
+    console.log(' Starting language detection...');
+    
     // Try multiple methods to detect language
     
     // Method 1: Check URL parameter (highest priority)
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
     if (langParam && SUPPORTED_LANGUAGES[langParam]) {
+        console.log(`✅ Language detected from URL: ${langParam}`);
         return langParam;
     }
     
     // Method 2: Check localStorage (user preference)
     const savedLang = localStorage.getItem('preferred_language');
     if (savedLang && SUPPORTED_LANGUAGES[savedLang]) {
+        console.log(`✅ Language detected from localStorage: ${savedLang}`);
         return savedLang;
     }
     
     // Method 3: Check browser language settings
     const browserLang = navigator.language || navigator.userLanguage;
+    console.log(`📱 Browser language detected: ${browserLang}`);
     if (browserLang) {
         // Get base language code (e.g., 'en-US' -> 'en')
         const baseLang = browserLang.split('-')[0].toLowerCase();
         if (SUPPORTED_LANGUAGES[baseLang]) {
+            console.log(`✅ Using browser language: ${baseLang}`);
             return baseLang;
         }
     }
     
     // Method 4: Check navigator.languages array
     if (navigator.languages && navigator.languages.length > 0) {
+        console.log(` Navigator languages: ${navigator.languages.join(', ')}`);
         for (let lang of navigator.languages) {
             const baseLang = lang.split('-')[0].toLowerCase();
             if (SUPPORTED_LANGUAGES[baseLang]) {
+                console.log(`✅ Using navigator language: ${baseLang}`);
                 return baseLang;
             }
         }
     }
     
     // Default to English
+    console.log(`⚠️ No supported language detected, defaulting to English`);
     return 'en';
 }
 
 // Apply translations to the page
 function applyTranslations(language) {
+    console.log(` Applying translations for language: ${language}`);
     document.documentElement.lang = language;
     document.documentElement.dir = SUPPORTED_LANGUAGES[language].direction;
     
     // Find all elements with data-i18n attribute
     const elements = document.querySelectorAll('[data-i18n]');
+    console.log(`📊 Found ${elements.length} elements with data-i18n attribute`);
     
+    let translatedCount = 0;
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         
@@ -384,6 +396,7 @@ function applyTranslations(language) {
             } else {
                 element.textContent = translation;
             }
+            translatedCount++;
         } else if (TRANSLATIONS[key] && TRANSLATIONS[key]['en']) {
             // Fallback to English
             const translation = TRANSLATIONS[key]['en'];
@@ -392,25 +405,33 @@ function applyTranslations(language) {
             } else {
                 element.textContent = translation;
             }
+        } else {
+            console.warn(`⚠️ No translation found for key: ${key}`);
         }
     });
+    
+    console.log(`✅ Successfully translated ${translatedCount}/${elements.length} elements`);
     
     // Save preference to localStorage
     localStorage.setItem('preferred_language', language);
     
     // Log detected language (hidden mode - console only)
-    console.log(`🌐 Language detected: ${SUPPORTED_LANGUAGES[language].flag} ${SUPPORTED_LANGUAGES[language].name} (${language})`);
+    console.log(` Language applied: ${SUPPORTED_LANGUAGES[language].flag} ${SUPPORTED_LANGUAGES[language].name} (${language})`);
 }
 
 // Initialize i18n system
 function initI18n() {
+    console.log('🔧 initI18n called, document.readyState:', document.readyState);
     // Wait for DOM to be ready
     if (document.readyState === 'loading') {
+        console.log(' Waiting for DOMContentLoaded...');
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('✅ DOMContentLoaded fired');
             const detectedLang = detectUserLanguage();
             applyTranslations(detectedLang);
         });
     } else {
+        console.log('✅ DOM already ready');
         const detectedLang = detectUserLanguage();
         applyTranslations(detectedLang);
     }
@@ -426,5 +447,6 @@ if (typeof module !== 'undefined' && module.exports) {
     };
 }
 
-// Auto-initialize
+// Auto-initialize - Execute as soon as script loads
+console.log('🚀 i18n.js loaded, starting initialization...');
 initI18n();
