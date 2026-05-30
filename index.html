@@ -8,22 +8,54 @@
     <meta name="keywords" content="Local Image Redaction, Privacy Photo Masking, ID Card Blur Tool, Secure Face Mosaic, Offline Image Editor">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
         .drop-zone { border: 3px dashed #64748b; transition: all 0.3s ease; }
-        .drop-zone:hover, .drop-zone.dragover { border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.1); }
-        .canvas-container { position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .drop-zone:hover, .drop-zone.dragover { border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.1); box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2); transform: translateY(-2px); }
+        .canvas-container { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
         .btn-primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); transition: all 0.3s ease; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4); }
         .security-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; border-radius: 20px; color: #22c55e; font-size: 14px; font-weight: 500; }
         .ad-slot { background-color: #f8fafc; border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100px; margin: 24px 0; }
         .ad-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; font-weight: 500; }
-        .page-controls { display: flex; gap: 8px; align-items: center; justify-content: center; margin-top: 12px; }
-        .page-btn { padding: 8px 16px; background: #3b82f6; color: white; border-radius: 6px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-        .page-btn:hover:not(:disabled) { background: #2563eb; }
-        .page-btn:disabled { background: #cbd5e1; cursor: not-allowed; }
-        .page-info { font-size: 14px; color: #64748b; font-weight: 500; }
+        .page-controls { display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 16px; }
+        .page-btn { padding: 10px 20px; background: #3b82f6; color: white; border-radius: 8px; font-size: 14px; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        .page-btn:hover:not(:disabled) { background: #2563eb; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+        .page-btn:disabled { background: #cbd5e1; cursor: not-allowed; opacity: 0.6; }
+        .page-info { font-size: 15px; color: #64748b; font-weight: 600; }
+        
+        /* Custom range slider styling */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+            transition: all 0.2s;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.6);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+            border: none;
+            transition: all 0.2s;
+        }
+        input[type="range"]::-moz-range-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.6);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -57,61 +89,85 @@
         </div>
     </div>
 
-    <main class="py-16 bg-white" id="workspace">
+    <main class="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50" id="workspace">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">Document Redaction Workspace</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">Document Redaction Workspace</h2>
+                <p class="text-slate-600 text-lg">Professional privacy protection for your sensitive documents</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4 rounded-full"></div>
+            </div>
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2">
-                    <div id="canvasWrapper" class="canvas-container bg-slate-100 hidden">
-                        <canvas id="mainCanvas" class="w-full h-auto block"></canvas>
+                    <div id="canvasWrapper" class="canvas-container bg-white rounded-xl shadow-lg border border-slate-200 hidden">
+                        <canvas id="mainCanvas" class="w-full h-auto block rounded-xl"></canvas>
                     </div>
-                    <div id="pageControls" class="page-controls hidden">
-                        <button id="prevPage" class="page-btn" onclick="changePage(-1)">← Previous</button>
-                        <span class="page-info">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
-                        <button id="nextPage" class="page-btn" onclick="changePage(1)">Next →</button>
+                    <div id="pageControls" class="page-controls hidden mt-4 bg-white rounded-xl p-4 shadow-md border border-slate-200">
+                        <button id="prevPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(-1)">← Previous</button>
+                        <span class="page-info bg-slate-100 px-4 py-2.5 rounded-lg font-semibold text-slate-700">Page <span id="currentPage" class="text-blue-600">1</span> of <span id="totalPages" class="text-blue-600">1</span></span>
+                        <button id="nextPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(1)">Next →</button>
                     </div>
-                    <div id="emptyState" class="border-2 border-dashed border-slate-300 rounded-lg p-16 text-center bg-slate-50">
-                        <svg class="w-24 h-24 mx-auto mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        <p class="text-xl text-slate-500">Upload an image or PDF to start redacting</p>
+                    <div id="emptyState" class="border-2 border-dashed border-blue-300 rounded-xl p-16 text-center bg-gradient-to-br from-blue-50 to-indigo-50 shadow-sm">
+                        <svg class="w-24 h-24 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <p class="text-xl text-slate-600 font-medium">Upload an image or PDF to start redacting</p>
                     </div>
                 </div>
-                <div class="lg:col-span-1 space-y-6">
-                    <div id="dropZone" class="drop-zone rounded-lg p-8 text-center cursor-pointer bg-slate-50">
+                <div class="lg:col-span-1 space-y-5">
+                    <div id="dropZone" class="drop-zone rounded-xl p-8 text-center cursor-pointer bg-gradient-to-br from-white to-blue-50 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-blue-200">
                         <input type="file" id="fileInput" accept="image/*,.pdf" class="hidden">
-                        <svg class="w-16 h-16 mx-auto mb-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-                        <p class="text-lg font-semibold mb-2">Drop your file here</p>
+                        <svg class="w-16 h-16 mx-auto mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                        <p class="text-lg font-bold text-slate-700 mb-2">Drop your file here</p>
                         <p class="text-sm text-slate-500">or click to browse files</p>
                         <p class="text-xs text-slate-400 mt-2">Supports JPG, PNG, GIF, WebP, PDF</p>
                     </div>
+                    <div id="colorPickerSection" class="bg-white rounded-xl p-5 shadow-md border border-slate-200">
+                        <div class="flex items-center gap-2 mb-4">
+                            <input type="checkbox" id="useCustomColor" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                            <label for="useCustomColor" class="text-sm font-medium text-slate-700">Use custom color</label>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3" id="presetColors">
+                            <button onclick="setFillColor('#000000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #000000;" title="Black" data-color="#000000"></button>
+                            <button onclick="setFillColor('#FFFFFF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FFFFFF;" title="White" data-color="#FFFFFF"></button>
+                            <button onclick="setFillColor('#FF0000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FF0000;" title="Red" data-color="#FF0000"></button>
+                            <button onclick="setFillColor('#00FF00')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #00FF00;" title="Green" data-color="#00FF00"></button>
+                            <button onclick="setFillColor('#0000FF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #0000FF;" title="Blue" data-color="#0000FF"></button>
+                            <button onclick="setFillColor('#FFFF00')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FFFF00;" title="Yellow" data-color="#FFFF00"></button>
+                            <button onclick="setFillColor('#FF00FF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FF00FF;" title="Magenta" data-color="#FF00FF"></button>
+                            <button onclick="setFillColor('#00FFFF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #00FFFF;" title="Cyan" data-color="#00FFFF"></button>
+                        </div>
+                    </div>
                     <div id="selectionControls" class="space-y-3 hidden">
-                        <h3 class="font-semibold text-slate-700 mb-3">Selection Tool</h3>
-                        <button onclick="enableManualSelect()" class="w-full btn-primary text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2">
+                        <button onclick="enableManualSelect()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
                             Select Area to Redact
                         </button>
-                        <p class="text-xs text-slate-500 mt-2">Click the button above, then drag on the image to select an area</p>
                     </div>
-                    <div id="effectControls" class="space-y-4 hidden">
-                        <h3 class="font-semibold text-slate-700 mb-3">Effect Settings</h3>
+                    <div id="effectControls" class="bg-white rounded-xl p-5 shadow-md border border-slate-200 space-y-4 hidden">
                         <div>
-                            <label class="block text-sm font-medium text-slate-600 mb-2">Effect Type</label>
-                            <select id="effectType" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Effect Type</label>
+                            <select id="effectType" onchange="updateColorPicker()" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-700 font-medium shadow-sm">
                                 <option value="pixelate" selected>Mosaic (Pixelate)</option>
                                 <option value="blur">Gaussian Blur</option>
                                 <option value="blackout">Black Out</option>
                             </select>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-600 mb-2">Intensity: <span id="intensityValue">30</span></label>
-                            <input type="range" id="intensitySlider" min="20" max="100" value="30" class="w-full">
-                            <p class="text-xs text-slate-500 mt-1">Higher = stronger effect (recommended: 30-50)</p>
+                        <div class="flex items-end gap-4">
+                            <div class="flex-1">
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Intensity: <span id="intensityValue" class="text-blue-600">30</span></label>
+                                <input type="range" id="intensitySlider" min="20" max="100" value="30" class="w-full h-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg appearance-none cursor-pointer">
+                            </div>
+                            <div class="flex-shrink-0 pb-1">
+                                <label class="flex items-center gap-2 text-sm font-medium text-slate-700 whitespace-nowrap bg-slate-50 px-3 py-2 rounded-lg border border-slate-200">
+                                    <input type="checkbox" id="useCustomColorInline" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                                    <span>Custom color</span>
+                                </label>
+                            </div>
                         </div>
-                        <button onclick="resetImage()" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-lg font-medium transition">
+                        <button onclick="resetImage()" class="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                             Reset to Original
                         </button>
                     </div>
                     <div id="exportSection" class="hidden">
-                        <button onclick="downloadImage()" class="w-full btn-primary text-white py-4 px-6 rounded-lg font-bold text-lg flex items-center justify-center gap-3 shadow-lg">
+                        <button onclick="downloadImage()" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-4 px-6 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                             Download Redacted File
                         </button>
@@ -140,11 +196,19 @@
         let originalImage = null, currentImage = null, canvas = null, ctx = null;
         let selectionStart = null, selectionEnd = null;
         let pdfDoc = null, currentPage = 1, totalPages = 1, isPDF = false;
+        let fillColor = '#000000'; // Default fill color for blackout effect
+        let originalFileName = ''; // Store original file name
+        let originalFileType = ''; // Store original file type (e.g., 'image/jpeg', 'image/png')
+        let redactedPages = []; // Store redacted page data for PDF export
 
         document.addEventListener('DOMContentLoaded', function() {
             canvas = document.getElementById('mainCanvas');
             ctx = canvas.getContext('2d');
             setupEventListeners();
+            updateColorPicker(); // Initialize color picker visibility
+            
+            // Set initial checkmark on default color (black)
+            setFillColor('#000000');
         });
 
         function setupEventListeners() {
@@ -160,10 +224,55 @@
             fileInput.addEventListener('change', (e) => { if (e.target.files.length > 0) handleFile(e.target.files[0]); });
             intensitySlider.addEventListener('input', (e) => { intensityValue.textContent = e.target.value; });
             
+            // Sync the two custom color checkboxes
+            const useCustomColor1 = document.getElementById('useCustomColor');
+            const useCustomColor2 = document.getElementById('useCustomColorInline');
+            useCustomColor1.addEventListener('change', () => {
+                useCustomColor2.checked = useCustomColor1.checked;
+            });
+            useCustomColor2.addEventListener('change', () => {
+                useCustomColor1.checked = useCustomColor2.checked;
+            });
+            
             canvas.addEventListener('mousedown', handleCanvasMouseDown);
             canvas.addEventListener('mousemove', handleCanvasMouseMove);
             canvas.addEventListener('mouseup', handleCanvasMouseUp);
             canvas.addEventListener('mouseleave', handleCanvasMouseUp);
+        }
+
+        function updateColorPicker() {
+            // Color picker is always visible now, no need to toggle visibility
+            // Just ensure both checkboxes are synced
+            const useCustomColor1 = document.getElementById('useCustomColor');
+            const useCustomColor2 = document.getElementById('useCustomColorInline');
+            useCustomColor2.checked = useCustomColor1.checked;
+        }
+
+        function setFillColor(color) {
+            fillColor = color;
+            
+            // Update checkmark on preset color buttons
+            const presetButtons = document.querySelectorAll('#presetColors button');
+            presetButtons.forEach(button => {
+                // Remove existing checkmark
+                const existingCheck = button.querySelector('.checkmark');
+                if (existingCheck) {
+                    existingCheck.remove();
+                }
+                
+                // Add checkmark to selected color
+                if (button.dataset.color === color) {
+                    const checkmark = document.createElement('div');
+                    checkmark.className = 'checkmark absolute inset-0 flex items-center justify-center';
+                    checkmark.innerHTML = '<svg class="w-5 h-5 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>';
+                    button.appendChild(checkmark);
+                    
+                    // For light colors, use dark checkmark
+                    if (color === '#FFFFFF' || color === '#FFFF00') {
+                        checkmark.innerHTML = '<svg class="w-5 h-5 text-gray-800 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>';
+                    }
+                }
+            });
         }
 
         async function handleFile(file) {
@@ -178,6 +287,10 @@
                 alert('Please upload a valid image file (JPG, PNG, GIF, WebP) or PDF');
                 return;
             }
+            
+            // Store original file information
+            originalFileName = file.name;
+            originalFileType = file.type;
             
             isPDF = false;
             pdfDoc = null;
@@ -206,6 +319,10 @@
                 isPDF = true;
                 totalPages = pdfDoc.numPages;
                 currentPage = 1;
+                
+                // Initialize redacted pages array
+                redactedPages = new Array(totalPages).fill(null);
+                
                 document.getElementById('pageControls').classList.remove('hidden');
                 updatePageInfo();
                 await renderPDFPage(1);
@@ -224,10 +341,25 @@
                 const viewport = page.getViewport({ scale: 1.5 });
                 canvas.width = viewport.width;
                 canvas.height = viewport.height;
-                await page.render({ canvasContext: ctx, viewport: viewport }).promise;
-                currentImage = new Image();
-                currentImage.src = canvas.toDataURL();
-                originalImage = currentImage;
+                
+                // Check if we have a redacted version of this page
+                if (redactedPages[pageNum - 1]) {
+                    // Load the redacted version
+                    const img = new Image();
+                    img.onload = function() {
+                        ctx.drawImage(img, 0, 0);
+                        currentImage = img;
+                        originalImage = img;
+                    };
+                    img.src = redactedPages[pageNum - 1];
+                } else {
+                    // Render original page
+                    await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+                    currentImage = new Image();
+                    currentImage.src = canvas.toDataURL();
+                    originalImage = currentImage;
+                }
+                
                 updatePageInfo();
             } catch (error) {
                 console.error('Error rendering PDF page:', error);
@@ -350,11 +482,24 @@
             const newImg = new Image();
             newImg.onload = function() {
                 currentImage = newImg;
+                
+                // Save redacted page for PDF export
+                if (isPDF) {
+                    saveRedactedPage();
+                }
             };
             newImg.src = canvas.toDataURL();
         }
 
+        function saveRedactedPage() {
+            // Save current canvas state for the current page
+            const pageData = canvas.toDataURL('image/png');
+            redactedPages[currentPage - 1] = pageData;
+        }
+
         function applyPixelate(x, y, width, height, blockSize) {
+            const useCustomColor = document.getElementById('useCustomColor').checked || 
+                                   document.getElementById('useCustomColorInline').checked;
             const effectiveBlockSize = Math.max(blockSize, 20);
             const startX = Math.floor(x);
             const startY = Math.floor(y);
@@ -366,38 +511,52 @@
             const w = imageData.width;
             const h = imageData.height;
             
+            // Parse custom color if enabled
+            let customR = 0, customG = 0, customB = 0;
+            if (useCustomColor) {
+                const hex = fillColor.replace('#', '');
+                customR = parseInt(hex.substr(0, 2), 16);
+                customG = parseInt(hex.substr(2, 2), 16);
+                customB = parseInt(hex.substr(4, 2), 16);
+            }
+            
             for (let blockY = 0; blockY < h; blockY += effectiveBlockSize) {
                 for (let blockX = 0; blockX < w; blockX += effectiveBlockSize) {
-                    let r = 0, g = 0, b = 0, a = 0, count = 0;
+                    let r = 0, g = 0, b = 0, count = 0;
                     const endY = Math.min(blockY + effectiveBlockSize, h);
                     const endX = Math.min(blockX + effectiveBlockSize, w);
                     
-                    // Calculate average color for the block
-                    for (let dy = blockY; dy < endY; dy++) {
-                        for (let dx = blockX; dx < endX; dx++) {
-                            const idx = (dy * w + dx) * 4;
-                            r += data[idx];
-                            g += data[idx + 1];
-                            b += data[idx + 2];
-                            a += data[idx + 3];
-                            count++;
+                    if (useCustomColor) {
+                        // Use custom color directly
+                        r = customR;
+                        g = customG;
+                        b = customB;
+                    } else {
+                        // Calculate average color for the block
+                        for (let dy = blockY; dy < endY; dy++) {
+                            for (let dx = blockX; dx < endX; dx++) {
+                                const idx = (dy * w + dx) * 4;
+                                r += data[idx];
+                                g += data[idx + 1];
+                                b += data[idx + 2];
+                                count++;
+                            }
                         }
+                        
+                        if (count === 0) continue;
+                        r = Math.round(r / count);
+                        g = Math.round(g / count);
+                        b = Math.round(b / count);
                     }
                     
-                    if (count === 0) continue;
-                    r = Math.round(r / count);
-                    g = Math.round(g / count);
-                    b = Math.round(b / count);
-                    a = Math.round(a / count);
-                    
-                    // Apply averaged color to entire block
+                    // Apply color to entire block
                     for (let dy = blockY; dy < endY; dy++) {
                         for (let dx = blockX; dx < endX; dx++) {
                             const idx = (dy * w + dx) * 4;
                             data[idx] = r;
                             data[idx + 1] = g;
                             data[idx + 2] = b;
-                            data[idx + 3] = a;
+                            data[idx + 3] = 255; // Full opacity
                         }
                     }
                 }
@@ -406,14 +565,25 @@
         }
 
         function applyBlur(x, y, width, height, radius) {
+            const useCustomColor = document.getElementById('useCustomColor').checked || 
+                                   document.getElementById('useCustomColorInline').checked;
             const effectiveRadius = Math.max(radius, 5);
             const tempCanvas = document.createElement('canvas');
             tempCanvas.width = Math.ceil(width);
             tempCanvas.height = Math.ceil(height);
             const tempCtx = tempCanvas.getContext('2d');
             
-            // Draw the selection area to temp canvas
-            tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
+            if (useCustomColor) {
+                // Fill with custom color first
+                tempCtx.fillStyle = fillColor;
+                tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+                
+                // Draw the selection area on top
+                tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
+            } else {
+                // Normal blur without custom color
+                tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
+            }
             
             // Apply blur filter
             tempCtx.filter = `blur(${effectiveRadius}px)`;
@@ -424,8 +594,8 @@
         }
 
         function applyBlackout(x, y, width, height) {
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(x, y, width, height);
+            ctx.fillStyle = fillColor;
+            ctx.fillRect(Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height));
         }
 
         function redrawCanvas() {
@@ -436,24 +606,158 @@
 
         function resetImage() {
             if (!originalImage) return;
-            currentImage = originalImage;
-            redrawCanvas();
+            
+            // For PDF, reload the original page
+            if (isPDF && pdfDoc) {
+                redactedPages[currentPage - 1] = null;
+                renderPDFPage(currentPage);
+            } else {
+                currentImage = originalImage;
+                redrawCanvas();
+            }
+            
             showNotification('Reset to original');
         }
 
         function downloadImage() {
             if (!canvas) return;
+            
+            // Handle PDF export
+            if (isPDF && pdfDoc) {
+                exportAsPDF();
+                return;
+            }
+            
+            // Determine output format based on original file type
+            let mimeType = 'image/png';
+            let extension = 'png';
+            let quality = 1.0;
+            
+            if (originalFileType) {
+                // Use the same format as the original file
+                if (originalFileType.includes('jpeg') || originalFileType.includes('jpg')) {
+                    mimeType = 'image/jpeg';
+                    extension = 'jpg';
+                    quality = 0.95;
+                } else if (originalFileType.includes('webp')) {
+                    mimeType = 'image/webp';
+                    extension = 'webp';
+                    quality = 0.95;
+                } else if (originalFileType.includes('gif')) {
+                    mimeType = 'image/gif';
+                    extension = 'gif';
+                    quality = 1.0;
+                }
+                // Default to PNG for other formats
+            }
+            
+            // Use original filename for export (preserves all characters including non-English)
+            const fileName = originalFileName;
+            
             canvas.toBlob(function(blob) {
-                const url = URL.createObjectURL(blob);
+                // Create a File object with the exact name
+                const file = new File([blob], fileName, { type: mimeType });
+                
+                // Use URL.createObjectURL with the File object
+                const url = URL.createObjectURL(file);
                 const link = document.createElement('a');
                 link.href = url;
-                link.download = isPDF ? `redacted-pdf-page-${currentPage}-${Date.now()}.png` : `redacted-image-${Date.now()}.png`;
+                link.download = fileName;
+                
+                // Additional attributes for better compatibility
+                link.setAttribute('download', fileName);
+                link.setAttribute('filename', fileName);
+                
                 document.body.appendChild(link);
+                
+                // Trigger download
                 link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-                showNotification('File downloaded successfully!');
-            }, 'image/png', 1.0);
+                
+                // Cleanup
+                setTimeout(() => {
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                }, 100);
+                
+                showNotification(`File downloaded: ${fileName}`);
+            }, mimeType, quality);
+        }
+
+        async function exportAsPDF() {
+            try {
+                showNotification('Generating PDF...');
+                
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF();
+                
+                // Save current page first
+                saveRedactedPage();
+                
+                // Add all pages to PDF
+                for (let i = 0; i < totalPages; i++) {
+                    if (i > 0) {
+                        pdf.addPage();
+                    }
+                    
+                    // Get page data (redacted or original)
+                    let pageData = redactedPages[i];
+                    
+                    if (!pageData) {
+                        // If no redacted version, render original page
+                        const page = await pdfDoc.getPage(i + 1);
+                        const viewport = page.getViewport({ scale: 1.5 });
+                        
+                        // Create temporary canvas for rendering
+                        const tempCanvas = document.createElement('canvas');
+                        tempCanvas.width = viewport.width;
+                        tempCanvas.height = viewport.height;
+                        const tempCtx = tempCanvas.getContext('2d');
+                        
+                        await page.render({ canvasContext: tempCtx, viewport: viewport }).promise;
+                        pageData = tempCanvas.toDataURL('image/png');
+                    }
+                    
+                    // Add image to PDF
+                    const imgProps = pdf.getImageProperties(pageData);
+                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                    
+                    pdf.addImage(pageData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                }
+                
+                // Save PDF with original filename (preserves all characters including non-English)
+                const fileName = originalFileName;
+                
+                // Generate PDF blob and use File object for proper filename handling
+                const pdfBlob = pdf.output('blob');
+                const pdfFile = new File([pdfBlob], fileName, { type: 'application/pdf' });
+                const url = URL.createObjectURL(pdfFile);
+                
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = fileName;
+                link.setAttribute('download', fileName);
+                document.body.appendChild(link);
+                
+                // Use MouseEvent to ensure download attribute is respected
+                const event = new MouseEvent('click', {
+                    view: window,
+                    bubbles: true,
+                    cancelable: true
+                });
+                link.dispatchEvent(event);
+                
+                // Cleanup after a short delay
+                setTimeout(() => {
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                }, 100);
+                
+                showNotification(`PDF exported: ${fileName}`);
+            } catch (error) {
+                console.error('Error exporting PDF:', error);
+                alert('Error exporting PDF. Please try again.');
+            }
         }
 
         function showNotification(message) {
