@@ -242,7 +242,7 @@
             <nav class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
                     <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                    <span class="text-2xl font-bold">PrivacyMask Pro</span>
+                    <span class="text-2xl font-bold" data-i18n="brand.name">PrivacyMask Pro</span>
                 </div>
                 <div class="hidden md:flex items-center gap-6">
                     <a href="index.html" class="text-white hover:text-blue-300 transition font-medium" data-i18n="nav.home">Home</a>
@@ -280,9 +280,9 @@
                         <canvas id="mainCanvas" class="w-full h-auto block rounded-xl"></canvas>
                     </div>
                     <div id="pageControls" class="page-controls hidden mt-4 bg-white rounded-xl p-4 shadow-md border border-slate-200">
-                        <button id="prevPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(-1)">← Previous</button>
-                        <span class="page-info bg-slate-100 px-4 py-2.5 rounded-lg font-semibold text-slate-700">Page <span id="currentPage" class="text-blue-600">1</span> of <span id="totalPages" class="text-blue-600">1</span></span>
-                        <button id="nextPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(1)">Next →</button>
+                        <button id="prevPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(-1)" data-i18n="pdf.prev">← Previous</button>
+                        <span class="page-info bg-slate-100 px-4 py-2.5 rounded-lg font-semibold text-slate-700"><span data-i18n="pdf.pageInfo">Page</span> <span id="currentPage" class="text-blue-600">1</span> <span data-i18n="pdf.of">of</span> <span id="totalPages" class="text-blue-600">1</span></span>
+                        <button id="nextPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(1)" data-i18n="pdf.next">Next →</button>
                     </div>
                     <div id="emptyState" class="border-2 border-dashed border-blue-300 rounded-xl p-16 text-center bg-gradient-to-br from-blue-50 to-indigo-50 shadow-sm">
                         <svg class="w-24 h-24 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -300,7 +300,7 @@
                     <div id="colorPickerSection" class="bg-white rounded-xl p-5 shadow-md border border-slate-200">
                         <div class="flex items-center gap-2 mb-4">
                             <input type="checkbox" id="useCustomColor" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-                            <label for="useCustomColor" class="text-sm font-medium text-slate-700">Use custom color</label>
+                            <label for="useCustomColor" class="text-sm font-medium text-slate-700" data-i18n="control.useCustomColor">Use custom color</label>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-3" id="presetColors">
                             <button onclick="setFillColor('#000000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #000000;" title="Black" data-color="#000000"></button>
@@ -316,38 +316,38 @@
                     <div id="selectionControls" class="space-y-3 hidden">
                         <button onclick="enableManualSelect()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
-                            Select Area to Redact
+                            <span data-i18n="control.selectArea">Select Area to Redact</span>
                         </button>
                     </div>
                     <div id="effectControls" class="bg-white rounded-xl p-5 shadow-md border border-slate-200 space-y-4 hidden">
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-2">Effect Type</label>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="control.effectType">Effect Type</label>
                             <select id="effectType" onchange="updateColorPicker()" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-700 font-medium shadow-sm">
-                                <option value="pixelate" selected>Mosaic (Pixelate)</option>
-                                <option value="blur">Gaussian Blur</option>
-                                <option value="blackout">Black Out</option>
+                                <option value="pixelate" selected data-i18n="control.effect.mosaic">Mosaic (Pixelate)</option>
+                                <option value="blur" data-i18n="control.effect.blur">Gaussian Blur</option>
+                                <option value="blackout" data-i18n="control.effect.blackout">Black Out</option>
                             </select>
                         </div>
                         <div class="flex items-end gap-4">
                             <div class="flex-1">
-                                <label class="block text-sm font-semibold text-slate-700 mb-2">Intensity: <span id="intensityValue" class="text-blue-600">30</span></label>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2"><span data-i18n="control.intensity">Intensity:</span> <span id="intensityValue" class="text-blue-600">30</span></label>
                                 <input type="range" id="intensitySlider" min="20" max="100" value="30" class="w-full h-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg appearance-none cursor-pointer">
                             </div>
                             <div class="flex-shrink-0 pb-1">
                                 <label class="flex items-center gap-2 text-sm font-medium text-slate-700 whitespace-nowrap bg-slate-50 px-3 py-2 rounded-lg border border-slate-200">
                                     <input type="checkbox" id="useCustomColorInline" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-                                    <span>Custom color</span>
+                                    <span data-i18n="control.customColor">Custom color</span>
                                 </label>
                             </div>
                         </div>
                         <button onclick="resetImage()" class="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                            Reset to Original
+                            <span data-i18n="control.reset">Reset to Original</span>
                         </button>
                     </div>
                     <div id="exportSection" class="hidden">
                         <button onclick="downloadImage()" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-4 px-6 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                            Download Redacted File
+                            <span data-i18n="control.download">Download Redacted File</span>
                         </button>
                     </div>
                 </div>
@@ -422,48 +422,48 @@
             
             <!-- Key Features -->
             <div class="mt-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg border border-slate-200">
-                <h3 class="text-2xl font-bold text-center text-slate-800 mb-8">Key Features</h3>
+                <h3 class="text-2xl font-bold text-center text-slate-800 mb-8" data-i18n="features.title">Key Features</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-slate-800 mb-1">100% Client-Side Processing</h4>
-                            <p class="text-sm text-slate-600">Your files never leave your device. All redaction happens directly in your browser for maximum privacy and security.</p>
+                            <h4 class="font-semibold text-slate-800 mb-1" data-i18n="feature.clientSide.title">100% Client-Side Processing</h4>
+                            <p class="text-sm text-slate-600" data-i18n="feature.clientSide.desc">Your files never leave your device. All redaction happens directly in your browser for maximum privacy and security.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-slate-800 mb-1">Manual Selection Control</h4>
-                            <p class="text-sm text-slate-600">You have complete control over which areas to redact. No automatic detection - you decide exactly what gets masked.</p>
+                            <h4 class="font-semibold text-slate-800 mb-1" data-i18n="feature.manualControl.title">Manual Selection Control</h4>
+                            <p class="text-sm text-slate-600" data-i18n="feature.manualControl.desc">You have complete control over which areas to redact. No automatic detection - you decide exactly what gets masked.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-slate-800 mb-1">Multiple Effect Types</h4>
-                            <p class="text-sm text-slate-600">Choose from Mosaic (pixelation), Gaussian Blur, or solid color blackout. Customize colors and intensity for perfect results.</p>
+                            <h4 class="font-semibold text-slate-800 mb-1" data-i18n="feature.multipleEffects.title">Multiple Effect Types</h4>
+                            <p class="text-sm text-slate-600" data-i18n="feature.multipleEffects.desc">Choose from Mosaic (pixelation), Gaussian Blur, or solid color blackout. Customize colors and intensity for perfect results.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-slate-800 mb-1">Multi-Page PDF Support</h4>
-                            <p class="text-sm text-slate-600">Edit multiple pages in a single PDF file. Navigate between pages, apply different effects, and export as complete multi-page PDF.</p>
+                            <h4 class="font-semibold text-slate-800 mb-1" data-i18n="feature.pdfSupport.title">Multi-Page PDF Support</h4>
+                            <p class="text-sm text-slate-600" data-i18n="feature.pdfSupport.desc">Edit multiple pages in a single PDF file. Navigate between pages, apply different effects, and export as complete multi-page PDF.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-slate-800 mb-1">Original Filename Preservation</h4>
-                            <p class="text-sm text-slate-600">Exported files keep their original names, including all characters (Chinese, Japanese, Korean, etc.). No random renaming.</p>
+                            <h4 class="font-semibold text-slate-800 mb-1" data-i18n="feature.filenamePreservation.title">Original Filename Preservation</h4>
+                            <p class="text-sm text-slate-600" data-i18n="feature.filenamePreservation.desc">Exported files keep their original names, including all characters (Chinese, Japanese, Korean, etc.). No random renaming.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-slate-800 mb-1">Works Offline</h4>
-                            <p class="text-sm text-slate-600">Once loaded, the tool works completely offline. No internet connection required after initial page load.</p>
+                            <h4 class="font-semibold text-slate-800 mb-1" data-i18n="feature.offline.title">Works Offline</h4>
+                            <p class="text-sm text-slate-600" data-i18n="feature.offline.desc">Once loaded, the tool works completely offline. No internet connection required after initial page load.</p>
                         </div>
                     </div>
                 </div>

@@ -495,6 +495,190 @@ const TRANSLATIONS = {
         'ar': 'أدوات مجانية وآمنة وخاصة لتحرير الصور. ملفاتك لا تغادر جهازك أبدًا.'
     },
     
+    // Control Panel
+    'control.useCustomColor': {
+        'en': 'Use custom color',
+        'zh': '使用自定义颜色',
+        'es': 'Usar color personalizado',
+        'fr': 'Utiliser une couleur personnalisée',
+        'de': 'Benutzerdefinierte Farbe verwenden',
+        'ja': 'カスタムカラーを使用',
+        'ko': '사용자 정의 색상 사용',
+        'pt': 'Usar cor personalizada',
+        'ru': 'Использовать пользовательский цвет',
+        'ar': 'استخدم لون مخصص'
+    },
+    
+    'control.selectArea': {
+        'en': 'Select Area to Redact',
+        'zh': '选择要编辑的区域',
+        'es': 'Seleccionar área para editar',
+        'fr': 'Sélectionner la zone à éditer',
+        'de': 'Bereich zum Bearbeiten auswählen',
+        'ja': '編集する領域を選択',
+        'ko': '편집할 영역 선택',
+        'pt': 'Selecionar área para editar',
+        'ru': 'Выбрать область для редактирования',
+        'ar': 'حدد المنطقة للتحرير'
+    },
+    
+    'control.effectType': {
+        'en': 'Effect Type',
+        'zh': '效果类型',
+        'es': 'Tipo de efecto',
+        'fr': 'Type d\'effet',
+        'de': 'Effekttyp',
+        'ja': '効果タイプ',
+        'ko': '효과 유형',
+        'pt': 'Tipo de efeito',
+        'ru': 'Тип эффекта',
+        'ar': 'نوع التأثير'
+    },
+    
+    'control.effect.mosaic': {
+        'en': 'Mosaic (Pixelate)',
+        'zh': '马赛克（像素化）',
+        'es': 'Mosaico (Pixelar)',
+        'fr': 'Mosaïque (Pixéliser)',
+        'de': 'Mosaik (Verpixeln)',
+        'ja': 'モザイク（ピクセル化）',
+        'ko': '모자이크 (픽셀화)',
+        'pt': 'Mosaico (Pixelizar)',
+        'ru': 'Мозаика (Пикселизация)',
+        'ar': 'فسيفساء (بكسل)'
+    },
+    
+    'control.effect.blur': {
+        'en': 'Gaussian Blur',
+        'zh': '高斯模糊',
+        'es': 'Desenfoque Gaussiano',
+        'fr': 'Flou gaussien',
+        'de': 'Gaußscher Weichzeichner',
+        'ja': 'ガウスぼかし',
+        'ko': '가우시안 블러',
+        'pt': 'Desfoque Gaussiano',
+        'ru': 'Размытие по Гауссу',
+        'ar': 'ضبابية غاوسية'
+    },
+    
+    'control.effect.blackout': {
+        'en': 'Black Out',
+        'zh': '涂黑',
+        'es': 'Oscurecer',
+        'fr': 'Obscurcir',
+        'de': 'Schwärzen',
+        'ja': '黒塗り',
+        'ko': '블랙아웃',
+        'pt': 'Escurecer',
+        'ru': 'Затемнение',
+        'ar': 'تعتيم'
+    },
+    
+    'control.intensity': {
+        'en': 'Intensity:',
+        'zh': '强度：',
+        'es': 'Intensidad:',
+        'fr': 'Intensité :',
+        'de': 'Intensität:',
+        'ja': '強度：',
+        'ko': '강도:',
+        'pt': 'Intensidade:',
+        'ru': 'Интенсивность:',
+        'ar': 'الشدة:'
+    },
+    
+    'control.customColor': {
+        'en': 'Custom color',
+        'zh': '自定义颜色',
+        'es': 'Color personalizado',
+        'fr': 'Couleur personnalisée',
+        'de': 'Benutzerdefinierte Farbe',
+        'ja': 'カスタムカラー',
+        'ko': '사용자 정의 색상',
+        'pt': 'Cor personalizada',
+        'ru': 'Пользовательский цвет',
+        'ar': 'لون مخصص'
+    },
+    
+    'control.reset': {
+        'en': 'Reset to Original',
+        'zh': '重置为原始',
+        'es': 'Restablecer a original',
+        'fr': 'Réinitialiser à l\'original',
+        'de': 'Auf Original zurücksetzen',
+        'ja': 'オリジナルにリセット',
+        'ko': '원본으로 재설정',
+        'pt': 'Redefinir para original',
+        'ru': 'Сбросить к оригиналу',
+        'ar': 'إعادة التعيين إلى الأصلي'
+    },
+    
+    'control.download': {
+        'en': 'Download Redacted File',
+        'zh': '下载编辑后的文件',
+        'es': 'Descargar archivo editado',
+        'fr': 'Télécharger le fichier édité',
+        'de': 'Bearbeitete Datei herunterladen',
+        'ja': '編集したファイルをダウンロード',
+        'ko': '편집된 파일 다운로드',
+        'pt': 'Baixar arquivo editado',
+        'ru': 'Скачать отредактированный файл',
+        'ar': 'تنزيل الملف المُحرر'
+    },
+    
+    // PDF Navigation
+    'pdf.prev': {
+        'en': '← Previous',
+        'zh': '← 上一页',
+        'es': '← Anterior',
+        'fr': '← Précédent',
+        'de': '← Zurück',
+        'ja': '← 前へ',
+        'ko': '← 이전',
+        'pt': '← Anterior',
+        'ru': '← Назад',
+        'ar': '← السابق'
+    },
+    
+    'pdf.pageInfo': {
+        'en': 'Page',
+        'zh': '第',
+        'es': 'Página',
+        'fr': 'Page',
+        'de': 'Seite',
+        'ja': 'ページ',
+        'ko': '페이지',
+        'pt': 'Página',
+        'ru': 'Страница',
+        'ar': 'صفحة'
+    },
+    
+    'pdf.of': {
+        'en': 'of',
+        'zh': '页，共',
+        'es': 'de',
+        'fr': 'sur',
+        'de': 'von',
+        'ja': '/',
+        'ko': '/',
+        'pt': 'de',
+        'ru': 'из',
+        'ar': 'من'
+    },
+    
+    'pdf.next': {
+        'en': 'Next →',
+        'zh': '下一页 →',
+        'es': 'Siguiente →',
+        'fr': 'Suivant →',
+        'de': 'Weiter →',
+        'ja': '次へ →',
+        'ko': '다음 →',
+        'pt': 'Próximo →',
+        'ru': 'Вперёд →',
+        'ar': 'التالي →'
+    },
+    
     'footer.quickLinks': {
         'en': 'Quick Links',
         'zh': '快速链接',
@@ -558,6 +742,230 @@ const TRANSLATIONS = {
         'pt': 'Edição de fotos com foco na privacidade. Sem uploads. Sem rastreamento. 100% seguro.',
         'ru': 'Редактирование фото с приоритетом конфиденциальности. Без загрузок. Без отслеживания. 100% безопасно.',
         'ar': 'تحرير الصور مع الأولوية للخصوصية. بدون تحميلات. بدون تتبع. آمن بنسبة 100٪.'
+    },
+    
+    // Brand Name
+    'brand.name': {
+        'en': 'PrivacyMask Pro',
+        'zh': 'PrivacyMask Pro',
+        'es': 'PrivacyMask Pro',
+        'fr': 'PrivacyMask Pro',
+        'de': 'PrivacyMask Pro',
+        'ja': 'PrivacyMask Pro',
+        'ko': 'PrivacyMask Pro',
+        'pt': 'PrivacyMask Pro',
+        'ru': 'PrivacyMask Pro',
+        'ar': 'PrivacyMask Pro'
+    },
+    
+    // Features Section
+    'features.title': {
+        'en': 'Key Features',
+        'zh': '主要功能',
+        'es': 'Características principales',
+        'fr': 'Fonctionnalités clés',
+        'de': 'Hauptfunktionen',
+        'ja': '主な機能',
+        'ko': '주요 기능',
+        'pt': 'Principais recursos',
+        'ru': 'Ключевые возможности',
+        'ar': 'الميزات الرئيسية'
+    },
+    
+    'feature.clientSide.title': {
+        'en': '100% Client-Side Processing',
+        'zh': '100% 客户端处理',
+        'es': 'Procesamiento 100% del lado del cliente',
+        'fr': 'Traitement 100% côté client',
+        'de': '100% clientseitige Verarbeitung',
+        'ja': '100% クライアントサイド処理',
+        'ko': '100% 클라이언트 측 처리',
+        'pt': 'Processamento 100% do lado do cliente',
+        'ru': '100% обработка на стороне клиента',
+        'ar': 'معالجة بنسبة 100٪ من جانب العميل'
+    },
+    
+    'feature.clientSide.desc': {
+        'en': 'Your files never leave your device. All redaction happens directly in your browser for maximum privacy and security.',
+        'zh': '您的文件绝不会离开您的设备。所有编辑都在浏览器中直接进行，以实现最大的隐私和安全性。',
+        'es': 'Sus archivos nunca salen de su dispositivo. Toda la edición ocurre directamente en su navegador para máxima privacidad y seguridad.',
+        'fr': 'Vos fichiers ne quittent jamais votre appareil. Toute l\'édition se fait directement dans votre navigateur pour une confidentialité et une sécurité maximales.',
+        'de': 'Ihre Dateien verlassen niemals Ihr Gerät. Die gesamte Bearbeitung erfolgt direkt in Ihrem Browser für maximale Privatsphäre und Sicherheit.',
+        'ja': 'ファイルはデバイスから流出しません。すべての編集は最大限のプライバシーとセキュリティのためにブラウザで直接行われます。',
+        'ko': '파일이 장치를 떠나지 않습니다. 모든 편집은 최대 개인 정보 보호와 보안을 위해 브라우저에서 직접 발생합니다.',
+        'pt': 'Seus arquivos nunca saem do seu dispositivo. Toda a edição ocorre diretamente no seu navegador para máxima privacidade e segurança.',
+        'ru': 'Ваши файлы никогда не покидают ваше устройство. Вся обработка происходит прямо в вашем браузере для максимальной конфиденциальности и безопасности.',
+        'ar': 'ملفاتك لا تغادر جهازك أبدًا. تتم جميع عمليات التحرير مباشرة في متصفحك لأقصى قدر من الخصوصية والأمان.'
+    },
+    
+    'feature.manualControl.title': {
+        'en': 'Manual Selection Control',
+        'zh': '手动选择控制',
+        'es': 'Control de selección manual',
+        'fr': 'Contrôle de sélection manuelle',
+        'de': 'Manuelle Auswahlsteuerung',
+        'ja': '手動選択制御',
+        'ko': '수동 선택 제어',
+        'pt': 'Controle de seleção manual',
+        'ru': 'Ручное управление выбором',
+        'ar': 'التحكم في الاختيار اليدوي'
+    },
+    
+    'feature.manualControl.desc': {
+        'en': 'You have complete control over which areas to redact. No automatic detection - you decide exactly what gets masked.',
+        'zh': '您可以完全控制要编辑的区域。没有自动检测 - 您决定确切要遮盖的内容。',
+        'es': 'Tiene control completo sobre qué áreas editar. Sin detección automática: usted decide exactamente qué se oculta.',
+        'fr': 'Vous avez un contrôle complet sur les zones à éditer. Pas de détection automatique - vous décidez exactement ce qui est masqué.',
+        'de': 'Sie haben die vollständige Kontrolle darüber, welche Bereiche bearbeitet werden sollen. Keine automatische Erkennung - Sie entscheiden genau, was maskiert wird.',
+        'ja': '編集する領域を完全に制御できます。自動検出なし - マスクする内容を正確に決定します。',
+        'ko': '편집할 영역을 완전히 제어할 수 있습니다. 자동 감지 없음 - 마스킹할 내용을 정확히 결정합니다.',
+        'pt': 'Você tem controle completo sobre quais áreas editar. Sem detecção automática - você decide exatamente o que é mascarado.',
+        'ru': 'У вас есть полный контроль над тем, какие области редактировать. Никакого автоматического обнаружения - вы решаете, что именно маскируется.',
+        'ar': 'لديك تحكم كامل في المناطق التي تريد تحريرها. لا يوجد كشف تلقائي - أنت تقرر بالضبط ما يتم إخفاؤه.'
+    },
+    
+    'feature.multipleEffects.title': {
+        'en': 'Multiple Effect Types',
+        'zh': '多种效果类型',
+        'es': 'Múltiples tipos de efectos',
+        'fr': 'Plusieurs types d\'effets',
+        'de': 'Mehrere Effekttypen',
+        'ja': '複数の効果タイプ',
+        'ko': '다양한 효과 유형',
+        'pt': 'Múltiplos tipos de efeitos',
+        'ru': 'Несколько типов эффектов',
+        'ar': 'أنواع تأثيرات متعددة'
+    },
+    
+    'feature.multipleEffects.desc': {
+        'en': 'Choose from Mosaic (pixelation), Gaussian Blur, or solid color blackout. Customize colors and intensity for perfect results.',
+        'zh': '从马赛克（像素化）、高斯模糊或纯色涂黑中选择。自定义颜色和强度以获得完美效果。',
+        'es': 'Elija entre Mosaico (pixelación), Desenfoque Gaussiano u oscurecimiento de color sólido. Personalice colores e intensidad para resultados perfectos.',
+        'fr': 'Choisissez entre Mosaïque (pixélisation), Flou gaussien ou obscurcissement de couleur unie. Personnalisez les couleurs et l\'intensité pour des résultats parfaits.',
+        'de': 'Wählen Sie aus Mosaik (Verpixelung), Gaußscher Weichzeichner oder einfarbigem Schwarzout. Passen Sie Farben und Intensität für perfekte Ergebnisse an.',
+        'ja': 'モザイク（ピクセル化）、ガウスぼかし、または単色ブラックアウトから選択します。完璧な結果のために色と強度をカスタマイズします。',
+        'ko': '모자이크(픽셀화), 가우시안 블러 또는 단색 블랙아웃 중에서 선택하세요. 완벽한 결과를 위해 색상과 강도를 사용자 정의합니다.',
+        'pt': 'Escolha entre Mosaico (pixelização), Desfoque Gaussiano ou obscurecimento de cor sólida. Personalize cores e intensidade para resultados perfeitos.',
+        'ru': 'Выбирайте из Мозаики (пикселизации), Размытия по Гауссу или сплошного затемнения. Настройте цвета и интенсивность для идеальных результатов.',
+        'ar': 'اختر من بين الفسيفساء (البكسل)، الضبابية الغاوسية، أو التعتيم بلون خالص. قم بتخصيص الألوان والشدة للحصول على نتائج مثالية.'
+    },
+    
+    'feature.pdfSupport.title': {
+        'en': 'Multi-Page PDF Support',
+        'zh': '多页PDF支持',
+        'es': 'Soporte para PDF de varias páginas',
+        'fr': 'Support PDF multi-pages',
+        'de': 'Mehrseitige PDF-Unterstützung',
+        'ja': '複数ページのPDF対応',
+        'ko': '다중 페이지 PDF 지원',
+        'pt': 'Suporte a PDF de várias páginas',
+        'ru': 'Поддержка многостраничных PDF',
+        'ar': 'دعم ملفات PDF متعددة الصفحات'
+    },
+    
+    'feature.pdfSupport.desc': {
+        'en': 'Edit multiple pages in a single PDF file. Navigate between pages, apply different effects, and export as complete multi-page PDF.',
+        'zh': '在单个PDF文件中编辑多个页面。在页面之间导航，应用不同的效果，并导出为完整的多页PDF。',
+        'es': 'Edite múltiples páginas en un solo archivo PDF. Navegue entre páginas, aplique diferentes efectos y exporte como PDF multipágina completo.',
+        'fr': 'Modifiez plusieurs pages dans un seul fichier PDF. Naviguez entre les pages, appliquez différents effets et exportez en tant que PDF multi-pages complet.',
+        'de': 'Bearbeiten Sie mehrere Seiten in einer einzigen PDF-Datei. Navigieren Sie zwischen den Seiten, wenden Sie verschiedene Effekte an und exportieren Sie als vollständiges mehrseitiges PDF.',
+        'ja': '単一のPDFファイルで複数のページを編集します。ページ間を移動し、異なる効果を適用し、完全な複数ページのPDFとしてエクスポートします。',
+        'ko': '단일 PDF 파일에서 여러 페이지를 편집합니다. 페이지 간에 이동하고, 다른 효과를 적용하며, 완전한 다중 페이지 PDF로 내보냅니다.',
+        'pt': 'Edite várias páginas em um único arquivo PDF. Navegue entre as páginas, aplique diferentes efeitos e exporte como PDF multipágina completo.',
+        'ru': 'Редактируйте несколько страниц в одном файле PDF. Перемещайтесь между страницами, применяйте различные эффекты и экспортируйте как полный многостраничный PDF.',
+        'ar': 'قم بتحرير صفحات متعددة في ملف PDF واحد. تنقل بين الصفحات، وطبق تأثيرات مختلفة، وقم بالتصدير كملف PDF متعدد الصفحات كامل.'
+    },
+    
+    'feature.filenamePreservation.title': {
+        'en': 'Original Filename Preservation',
+        'zh': '原始文件名保留',
+        'es': 'Conservación del nombre de archivo original',
+        'fr': 'Préservation du nom de fichier original',
+        'de': 'Beibehaltung des ursprünglichen Dateinamens',
+        'ja': '元のファイル名の保持',
+        'ko': '원본 파일명 보존',
+        'pt': 'Preservação do nome de arquivo original',
+        'ru': 'Сохранение исходного имени файла',
+        'ar': 'الحفاظ على اسم الملف الأصلي'
+    },
+    
+    'feature.filenamePreservation.desc': {
+        'en': 'Exported files keep their original names, including all characters (Chinese, Japanese, Korean, etc.). No random renaming.',
+        'zh': '导出的文件保留其原始名称，包括所有字符（中文、日文、韩文等）。没有随机重命名。',
+        'es': 'Los archivos exportados conservan sus nombres originales, incluidos todos los caracteres (chino, japonés, coreano, etc.). Sin cambio de nombre aleatorio.',
+        'fr': 'Les fichiers exportés conservent leurs noms originaux, y compris tous les caractères (chinois, japonais, coréen, etc.). Pas de renommage aléatoire.',
+        'de': 'Exportierte Dateien behalten ihre ursprünglichen Namen bei, einschließlich aller Zeichen (Chinesisch, Japanisch, Koreanisch usw.). Keine zufällige Umbenennung.',
+        'ja': 'エクスポートされたファイルは、すべての文字（中国語、日本語、韓国語など）を含む元のファイル名を保持します。ランダムな名前変更はありません。',
+        'ko': '내보낸 파일은 모든 문자(중국어, 일본어, 한국어 등)를 포함하여 원래 이름을 유지합니다. 무작위 이름 변경이 없습니다.',
+        'pt': 'Os arquivos exportados mantêm seus nomes originais, incluindo todos os caracteres (chinês, japonês, coreano, etc.). Sem renomeação aleatória.',
+        'ru': 'Экспортированные файлы сохраняют свои исходные имена, включая все символы (китайские, японские, корейские и т. д.). Без случайного переименования.',
+        'ar': 'تحافظ الملفات المُصدَّرة على أسمائها الأصلية، بما في ذلك جميع الأحرف (الصينية، اليابانية، الكورية، إلخ). بدون إعادة تسمية عشوائية.'
+    },
+    
+    'feature.offline.title': {
+        'en': 'Works Offline',
+        'zh': '离线工作',
+        'es': 'Funciona sin conexión',
+        'fr': 'Fonctionne hors ligne',
+        'de': 'Funktioniert offline',
+        'ja': 'オフラインで動作',
+        'ko': '오프라인 작동',
+        'pt': 'Funciona offline',
+        'ru': 'Работает офлайн',
+        'ar': 'يعمل دون اتصال'
+    },
+    
+    'feature.offline.desc': {
+        'en': 'Once loaded, the tool works completely offline. No internet connection required after initial page load.',
+        'zh': '加载后，该工具完全可以离线工作。初始页面加载后不需要互联网连接。',
+        'es': 'Una vez cargado, la herramienta funciona completamente sin conexión. No se requiere conexión a Internet después de la carga inicial de la página.',
+        'fr': 'Une fois chargé, l\'outil fonctionne complètement hors ligne. Aucune connexion Internet n\'est requise après le chargement initial de la page.',
+        'de': 'Sobald es geladen ist, funktioniert das Tool vollständig offline. Nach dem ersten Laden der Seite ist keine Internetverbindung erforderlich.',
+        'ja': '読み込まれると、ツールは完全にオフラインで動作します。初期ページ読み込み後はインターネット接続は不要です。',
+        'ko': '로드되면 도구는 완전히 오프라인으로 작동합니다. 초기 페이지 로드 후에는 인터넷 연결이 필요하지 않습니다.',
+        'pt': 'Uma vez carregado, a ferramenta funciona completamente offline. Nenhuma conexão com a Internet é necessária após o carregamento inicial da página.',
+        'ru': 'После загрузки инструмент работает полностью офлайн. После первоначальной загрузки страницы подключение к Интернету не требуется.',
+        'ar': 'بمجرد التحميل، تعمل الأداة بالكامل دون اتصال. لا يلزم وجود اتصال بالإنترنت بعد التحميل الأولي للصفحة.'
+    },
+    
+    // SEO Content Section
+    'seo.whyChoose.title': {
+        'en': 'Why Choose Our Free Image Redaction Tool?',
+        'zh': '为什么选择我们的免费图像编辑工具？',
+        'es': '¿Por qué elegir nuestra herramienta gratuita de edición de imágenes?',
+        'fr': 'Pourquoi choisir notre outil gratuit d\'édition d\'images ?',
+        'de': 'Warum unser kostenloses Bildbearbeitungstool wählen?',
+        'ja': 'なぜ無料の画像編集ツールを選ぶのか？',
+        'ko': '왜 무료 이미지 편집 도구를 선택해야 하나요?',
+        'pt': 'Por que escolher nossa ferramenta gratuita de edição de imagens?',
+        'ru': 'Почему выбрать наш бесплатный инструмент для редактирования изображений?',
+        'ar': 'لماذا تختار أداة تحرير الصور المجانية الخاصة بنا؟'
+    },
+    
+    'seo.useCases.title': {
+        'en': 'Popular Use Cases',
+        'zh': '热门用例',
+        'es': 'Casos de uso populares',
+        'fr': 'Cas d\'utilisation populaires',
+        'de': 'Beliebte Anwendungsfälle',
+        'ja': '人気の使用例',
+        'ko': '인기 사용 사례',
+        'pt': 'Casos de uso populares',
+        'ru': 'Популярные варианты использования',
+        'ar': 'حالات الاستخدام الشائعة'
+    },
+    
+    'seo.faq.title': {
+        'en': 'Frequently Asked Questions About Image Redaction',
+        'zh': '关于图像编辑的常见问题',
+        'es': 'Preguntas frecuentes sobre la edición de imágenes',
+        'fr': 'Questions fréquemment posées sur l\'édition d\'images',
+        'de': 'Häufig gestellte Fragen zur Bildbearbeitung',
+        'ja': '画像編集に関するよくある質問',
+        'ko': '이미지 편집에 관한 자주 묻는 질문',
+        'pt': 'Perguntas frequentes sobre edição de imagens',
+        'ru': 'Часто задаваемые вопросы о редактировании изображений',
+        'ar': 'الأسئلة الشائعة حول تحرير الصور'
     }
 };
 
