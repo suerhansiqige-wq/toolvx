@@ -147,7 +147,8 @@
         .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
         .drop-zone { border: 3px dashed #64748b; transition: all 0.3s ease; }
         .drop-zone:hover, .drop-zone.dragover { border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.1); box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2); transform: translateY(-2px); }
-        .canvas-container { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .canvas-container { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 900px; display: flex; align-items: center; justify-content: center; }
+        #mainCanvas { max-width: 100%; max-height: 100%; width: auto; height: auto; }
         .btn-primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); transition: all 0.3s ease; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4); }
         .security-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; border-radius: 20px; color: #22c55e; font-size: 14px; font-weight: 500; }
@@ -237,6 +238,10 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
+    <!-- Download Progress Bar -->
+    <div id="downloadProgress" class="fixed top-0 left-0 right-0 h-1 bg-gray-200/50 backdrop-blur-sm z-[9999] hidden">
+        <div id="downloadProgressBar" class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 w-0 transition-all duration-300 ease-out shadow-[0_0_8px_rgba(59,130,246,0.6)]"></div>
+    </div>
     <header class="gradient-bg text-white py-6 shadow-lg">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between">
@@ -257,7 +262,7 @@
     <section class="gradient-bg text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero.title">100% Local Image & PDF Redaction<br/>Zero Server Upload Required</h1>
-            <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto" data-i18n="hero.description">Protect your privacy when sharing sensitive documents. Blur faces, mask ID numbers, and redact confidential information entirely in your browser.</p>
+            <p class="text-base text-slate-300 mb-8 max-w-5xl mx-auto whitespace-nowrap" data-i18n="hero.description">Protect your privacy when sharing sensitive documents. Blur faces, mask ID numbers, and redact confidential information entirely in your browser.</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <div class="security-badge"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16z" clip-rule="evenodd"/></svg><span data-i18n="badge.offline">Works Offline</span></div>
                 <div class="security-badge"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16z" clip-rule="evenodd"/></svg><span data-i18n="badge.no_upload">No Data Leaves Your Device</span></div>
@@ -298,11 +303,7 @@
                         <p class="text-xs text-slate-400 mt-2" data-i18n="dropzone.supported">Supports JPG, PNG, GIF, WebP, PDF</p>
                     </div>
                     <div id="colorPickerSection" class="bg-white rounded-xl p-5 shadow-md border border-slate-200">
-                        <div class="flex items-center gap-2 mb-4">
-                            <input type="checkbox" id="useCustomColor" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-                            <label for="useCustomColor" class="text-sm font-medium text-slate-700" data-i18n="control.useCustomColor">Use custom color</label>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-3" id="presetColors">
+                        <div class="flex flex-wrap gap-2 mb-3 justify-center items-center" id="presetColors">
                             <button onclick="setFillColor('#000000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #000000;" title="Black" data-color="#000000"></button>
                             <button onclick="setFillColor('#FFFFFF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FFFFFF;" title="White" data-color="#FFFFFF"></button>
                             <button onclick="setFillColor('#FF0000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FF0000;" title="Red" data-color="#FF0000"></button>
@@ -311,6 +312,7 @@
                             <button onclick="setFillColor('#FFFF00')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FFFF00;" title="Yellow" data-color="#FFFF00"></button>
                             <button onclick="setFillColor('#FF00FF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FF00FF;" title="Magenta" data-color="#FF00FF"></button>
                             <button onclick="setFillColor('#00FFFF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #00FFFF;" title="Cyan" data-color="#00FFFF"></button>
+                            <button onclick="clearFillColor()" class="px-3 h-9 rounded-lg border-2 border-slate-300 hover:border-red-500 hover:text-red-500 text-slate-600 text-xs font-medium transition-all duration-200 shadow-sm flex items-center justify-center" title="Clear color">清除</button>
                         </div>
                     </div>
                     <div id="selectionControls" class="space-y-3 hidden">
@@ -334,10 +336,7 @@
                                 <input type="range" id="intensitySlider" min="20" max="100" value="30" class="w-full h-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg appearance-none cursor-pointer">
                             </div>
                             <div class="flex-shrink-0 pb-1">
-                                <label class="flex items-center gap-2 text-sm font-medium text-slate-700 whitespace-nowrap bg-slate-50 px-3 py-2 rounded-lg border border-slate-200">
-                                    <input type="checkbox" id="useCustomColorInline" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-                                    <span data-i18n="control.customColor">Custom color</span>
-                                </label>
+                                <span class="text-xs text-slate-400" id="activeColorLabel">Black</span>
                             </div>
                         </div>
                         <button onclick="resetImage()" class="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
@@ -478,6 +477,7 @@
         let selectionStart = null, selectionEnd = null;
         let pdfDoc = null, currentPage = 1, totalPages = 1, isPDF = false;
         let fillColor = '#000000'; // Default fill color for blackout effect
+        let hasCustomColorSelected = true; // Whether a custom color is actively selected
         let originalFileName = ''; // Store original file name
         let originalFileType = ''; // Store original file type (e.g., 'image/jpeg', 'image/png')
         let redactedPages = []; // Store redacted page data for PDF export
@@ -488,8 +488,8 @@
             setupEventListeners();
             updateColorPicker(); // Initialize color picker visibility
             
-            // Set initial checkmark on default color (black)
-            setFillColor('#000000');
+            // Default: no color selected
+            hasCustomColorSelected = false;
         });
 
         function setupEventListeners() {
@@ -505,16 +505,6 @@
             fileInput.addEventListener('change', (e) => { if (e.target.files.length > 0) handleFile(e.target.files[0]); });
             intensitySlider.addEventListener('input', (e) => { intensityValue.textContent = e.target.value; });
             
-            // Sync the two custom color checkboxes
-            const useCustomColor1 = document.getElementById('useCustomColor');
-            const useCustomColor2 = document.getElementById('useCustomColorInline');
-            useCustomColor1.addEventListener('change', () => {
-                useCustomColor2.checked = useCustomColor1.checked;
-            });
-            useCustomColor2.addEventListener('change', () => {
-                useCustomColor1.checked = useCustomColor2.checked;
-            });
-            
             canvas.addEventListener('mousedown', handleCanvasMouseDown);
             canvas.addEventListener('mousemove', handleCanvasMouseMove);
             canvas.addEventListener('mouseup', handleCanvasMouseUp);
@@ -522,16 +512,13 @@
         }
 
         function updateColorPicker() {
-            // Color picker is always visible now, no need to toggle visibility
-            // Just ensure both checkboxes are synced
-            const useCustomColor1 = document.getElementById('useCustomColor');
-            const useCustomColor2 = document.getElementById('useCustomColorInline');
-            useCustomColor2.checked = useCustomColor1.checked;
+            // Color picker is always active, no additional setup needed
         }
 
         function setFillColor(color) {
             fillColor = color;
-            
+            hasCustomColorSelected = true;
+
             // Update checkmark on preset color buttons
             const presetButtons = document.querySelectorAll('#presetColors button');
             presetButtons.forEach(button => {
@@ -540,20 +527,50 @@
                 if (existingCheck) {
                     existingCheck.remove();
                 }
-                
+
                 // Add checkmark to selected color
                 if (button.dataset.color === color) {
                     const checkmark = document.createElement('div');
                     checkmark.className = 'checkmark absolute inset-0 flex items-center justify-center';
                     checkmark.innerHTML = '<svg class="w-5 h-5 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>';
                     button.appendChild(checkmark);
-                    
+
                     // For light colors, use dark checkmark
                     if (color === '#FFFFFF' || color === '#FFFF00') {
                         checkmark.innerHTML = '<svg class="w-5 h-5 text-gray-800 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>';
                     }
                 }
             });
+
+            // Update active color label
+            const colorNames = {
+                '#000000': 'Black', '#FFFFFF': 'White', '#FF0000': 'Red',
+                '#00FF00': 'Green', '#0000FF': 'Blue', '#FFFF00': 'Yellow',
+                '#FF00FF': 'Magenta', '#00FFFF': 'Cyan'
+            };
+            const label = document.getElementById('activeColorLabel');
+            if (label) {
+                label.textContent = colorNames[color] || 'Custom';
+            }
+        }
+
+        function clearFillColor() {
+            hasCustomColorSelected = false;
+
+            // Remove checkmark from all preset color buttons
+            const presetButtons = document.querySelectorAll('#presetColors button');
+            presetButtons.forEach(button => {
+                const existingCheck = button.querySelector('.checkmark');
+                if (existingCheck) {
+                    existingCheck.remove();
+                }
+            });
+
+            // Update active color label
+            const label = document.getElementById('activeColorLabel');
+            if (label) {
+                label.textContent = 'None';
+            }
         }
 
         async function handleFile(file) {
@@ -586,6 +603,7 @@
                     canvas.width = img.width;
                     canvas.height = img.height;
                     ctx.drawImage(img, 0, 0);
+                    fitCanvasToContainer();
                     showWorkspace();
                 };
                 img.src = e.target.result;
@@ -626,7 +644,7 @@
                 const viewport = page.getViewport({ scale: 1.5 });
                 canvas.width = viewport.width;
                 canvas.height = viewport.height;
-                
+
                 // Check if we have a redacted version of this page
                 if (redactedPages[pageNum - 1]) {
                     // Load the redacted version
@@ -635,6 +653,7 @@
                         ctx.drawImage(img, 0, 0);
                         currentImage = img;
                         originalImage = img;
+                        fitCanvasToContainer();
                     };
                     img.src = redactedPages[pageNum - 1];
                 } else {
@@ -643,8 +662,9 @@
                     currentImage = new Image();
                     currentImage.src = canvas.toDataURL();
                     originalImage = currentImage;
+                    fitCanvasToContainer();
                 }
-                
+
                 updatePageInfo();
             } catch (error) {
                 console.error('Error rendering PDF page:', error);
@@ -815,36 +835,33 @@
         }
 
         function applyPixelate(x, y, width, height, blockSize) {
-            const useCustomColor = document.getElementById('useCustomColor').checked || 
-                                   document.getElementById('useCustomColorInline').checked;
             const effectiveBlockSize = Math.max(blockSize, 20);
             const startX = Math.floor(x);
             const startY = Math.floor(y);
             const areaWidth = Math.ceil(width);
             const areaHeight = Math.ceil(height);
-            
+
             const imageData = ctx.getImageData(startX, startY, areaWidth, areaHeight);
             const data = imageData.data;
             const w = imageData.width;
             const h = imageData.height;
-            
-            // Parse custom color if enabled
+
+            // Parse selected fill color
             let customR = 0, customG = 0, customB = 0;
-            if (useCustomColor) {
+            if (hasCustomColorSelected) {
                 const hex = fillColor.replace('#', '');
                 customR = parseInt(hex.substr(0, 2), 16);
                 customG = parseInt(hex.substr(2, 2), 16);
                 customB = parseInt(hex.substr(4, 2), 16);
             }
-            
+
             for (let blockY = 0; blockY < h; blockY += effectiveBlockSize) {
                 for (let blockX = 0; blockX < w; blockX += effectiveBlockSize) {
                     let r = 0, g = 0, b = 0, count = 0;
                     const endY = Math.min(blockY + effectiveBlockSize, h);
                     const endX = Math.min(blockX + effectiveBlockSize, w);
-                    
-                    if (useCustomColor) {
-                        // Use custom color directly
+
+                    if (hasCustomColorSelected) {
                         r = customR;
                         g = customG;
                         b = customB;
@@ -859,13 +876,12 @@
                                 count++;
                             }
                         }
-                        
                         if (count === 0) continue;
                         r = Math.round(r / count);
                         g = Math.round(g / count);
                         b = Math.round(b / count);
                     }
-                    
+
                     // Apply color to entire block
                     for (let dy = blockY; dy < endY; dy++) {
                         for (let dx = blockX; dx < endX; dx++) {
@@ -882,30 +898,23 @@
         }
 
         function applyBlur(x, y, width, height, radius) {
-            const useCustomColor = document.getElementById('useCustomColor').checked || 
-                                   document.getElementById('useCustomColorInline').checked;
             const effectiveRadius = Math.max(radius, 5);
             const tempCanvas = document.createElement('canvas');
             tempCanvas.width = Math.ceil(width);
             tempCanvas.height = Math.ceil(height);
             const tempCtx = tempCanvas.getContext('2d');
-            
-            if (useCustomColor) {
-                // Fill with custom color first
-                tempCtx.fillStyle = fillColor;
-                tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
-                
-                // Draw the selection area on top
-                tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
-            } else {
-                // Normal blur without custom color
-                tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
-            }
-            
+
+            // Fill with selected color first
+            tempCtx.fillStyle = fillColor;
+            tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+
+            // Draw the selection area on top
+            tempCtx.drawImage(canvas, Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height), 0, 0, Math.ceil(width), Math.ceil(height));
+
             // Apply blur filter
             tempCtx.filter = `blur(${effectiveRadius}px)`;
             tempCtx.drawImage(tempCanvas, 0, 0);
-            
+
             // Draw blurred result back to main canvas
             ctx.drawImage(tempCanvas, 0, 0, Math.ceil(width), Math.ceil(height), Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height));
         }
@@ -938,12 +947,14 @@
 
         function downloadImage() {
             if (!canvas) return;
-            
+
             // Handle PDF export
             if (isPDF && pdfDoc) {
                 exportAsPDF();
                 return;
             }
+
+            showProgress(0);
             
             // Determine output format based on original file type
             let mimeType = 'image/png';
@@ -999,35 +1010,37 @@
                     }, 100);
                     
                     showNotification(`File downloaded: ${fileName}`);
+                    hideProgress();
                 }, mimeType);
             } else {
                 // For JPEG/WebP, use quality parameter for high compression
                 canvas.toBlob(function(blob) {
                     // Create a File object with the exact name
                     const file = new File([blob], fileName, { type: mimeType });
-                    
+
                     // Use URL.createObjectURL with the File object
                     const url = URL.createObjectURL(file);
                     const link = document.createElement('a');
                     link.href = url;
                     link.download = fileName;
-                    
+
                     // Additional attributes for better compatibility
                     link.setAttribute('download', fileName);
                     link.setAttribute('filename', fileName);
-                    
+
                     document.body.appendChild(link);
-                    
+
                     // Trigger download
                     link.click();
-                    
+
                     // Cleanup
                     setTimeout(() => {
                         document.body.removeChild(link);
                         URL.revokeObjectURL(url);
                     }, 100);
-                    
+
                     showNotification(`File downloaded: ${fileName}`);
+                    hideProgress();
                 }, mimeType, quality);
             }
         }
@@ -1037,37 +1050,57 @@
                 showNotification('Generating optimized PDF...');
 
                 const { jsPDF } = window.jspdf;
-                const MAX_RENDER_WIDTH = 1200;
-                const JPEG_QUALITY = 0.80;
 
-                // Gather original page dimensions from the source PDF
+                // Dynamic quality settings based on page count to keep file under 2MB
+                // while maintaining the highest possible clarity
+                let MAX_RENDER_WIDTH, JPEG_QUALITY;
+                if (totalPages <= 8) {
+                    MAX_RENDER_WIDTH = 1200; JPEG_QUALITY = 0.85;
+                } else if (totalPages <= 16) {
+                    MAX_RENDER_WIDTH = 900;  JPEG_QUALITY = 0.82;
+                } else if (totalPages <= 30) {
+                    MAX_RENDER_WIDTH = 700;  JPEG_QUALITY = 0.78;
+                } else if (totalPages <= 50) {
+                    MAX_RENDER_WIDTH = 500;  JPEG_QUALITY = 0.74;
+                } else {
+                    MAX_RENDER_WIDTH = 400;  JPEG_QUALITY = 0.70;
+                }
+
+                // Gather original page dimensions and orientation from the source PDF
                 const pageInfos = [];
                 for (let i = 0; i < totalPages; i++) {
                     const page = await pdfDoc.getPage(i + 1);
                     const viewport = page.getViewport({ scale: 1 });
+                    const isLandscape = viewport.width > viewport.height;
                     pageInfos.push({
                         width: viewport.width,
-                        height: viewport.height
+                        height: viewport.height,
+                        isLandscape: isLandscape
                     });
                 }
 
-                // Create PDF with first page's original dimensions
-                // Using [width, height] preserves the original orientation (landscape or portrait)
+                // Create PDF with first page's original dimensions and orientation
                 const firstPage = pageInfos[0];
                 const pdf = new jsPDF({
                     compress: true,
                     unit: 'pt',
-                    format: [firstPage.width, firstPage.height]
+                    format: [Math.min(firstPage.width, firstPage.height), Math.max(firstPage.width, firstPage.height)],
+                    orientation: firstPage.isLandscape ? 'landscape' : 'portrait'
                 });
 
                 // Save current page first
                 saveRedactedPage();
 
                 for (let i = 0; i < totalPages; i++) {
+                    showProgress(Math.round(((i + 1) / totalPages) * 100));
+
                     if (i > 0) {
-                        // Add page with the same original dimensions as the source
+                        // Add page with the same original dimensions and orientation as the source
                         const pageInfo = pageInfos[i];
-                        pdf.addPage([pageInfo.width, pageInfo.height]);
+                        pdf.addPage(
+                            [Math.min(pageInfo.width, pageInfo.height), Math.max(pageInfo.width, pageInfo.height)],
+                            pageInfo.isLandscape ? 'landscape' : 'portrait'
+                        );
                     }
 
                     let pageData = redactedPages[i];
@@ -1119,10 +1152,29 @@
                 }, 100);
 
                 showNotification(`PDF exported: ${fileName}`);
+                hideProgress();
             } catch (error) {
                 console.error('Error exporting PDF:', error);
                 alert('Error exporting PDF. Please try again.');
             }
+        }
+
+        // Download progress bar controls
+        function showProgress(percent) {
+            const progress = document.getElementById('downloadProgress');
+            const bar = document.getElementById('downloadProgressBar');
+            progress.classList.remove('hidden');
+            bar.style.width = percent + '%';
+        }
+
+        function hideProgress() {
+            const progress = document.getElementById('downloadProgress');
+            const bar = document.getElementById('downloadProgressBar');
+            showProgress(100);
+            setTimeout(() => {
+                progress.classList.add('hidden');
+                bar.style.width = '0%';
+            }, 400);
         }
 
         function showNotification(message) {
