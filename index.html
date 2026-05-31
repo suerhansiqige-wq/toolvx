@@ -198,26 +198,25 @@
             z-index: 10;
         }
         
-        /* Mobile responsive - compact inline layout */
+        /* Mobile responsive - fixed positioning */
         @media (max-width: 1023px) {
             #controlPanel {
-                position: static;
-                max-height: none;
-                background: transparent;
-                border: none;
-                box-shadow: none;
-                padding: 0;
-                z-index: auto;
-                overflow-y: visible;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                max-height: 40vh;
+                background: white;
+                border-top: 2px solid #e2e8f0;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                z-index: 100;
+                overflow-y: auto;
             }
-
+            
             #workspace {
-                padding-bottom: 0;
-            }
-
-            /* Compact mobile controls */
-            #controlPanel > div {
-                margin-bottom: 0.5rem;
+                padding-bottom: 45vh; /* Add space for fixed panel */
             }
         }
         
@@ -243,7 +242,7 @@
     <div id="downloadProgress" class="fixed top-0 left-0 right-0 h-1 bg-gray-200/50 backdrop-blur-sm z-[9999] hidden">
         <div id="downloadProgressBar" class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 w-0 transition-all duration-300 ease-out shadow-[0_0_8px_rgba(59,130,246,0.6)]"></div>
     </div>
-    <header class="gradient-bg text-white py-3 md:py-6 shadow-lg">
+    <header class="gradient-bg text-white py-6 shadow-lg">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
@@ -275,8 +274,8 @@
 
     <main class="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50" id="workspace">
         <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-3 gap-4 md:gap-8">
-                <div class="lg:col-span-1 order-last lg:order-first space-y-3" id="canvasPanel">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-3" id="canvasArea">
                     <div id="canvasWrapper" class="canvas-container bg-white rounded-xl shadow-lg border border-slate-200 hidden">
                         <canvas id="mainCanvas" class="w-full h-auto block rounded-xl"></canvas>
                     </div>
@@ -290,34 +289,40 @@
                         <p class="text-xl text-slate-600 font-medium" data-i18n="upload.prompt">Upload an image or PDF to start redacting</p>
                     </div>
                 </div>
-                <div class="lg:col-span-1 order-first lg:order-last flex flex-col md:block gap-2 md:gap-0 md:space-y-5" id="controlPanel">
-                    <div id="dropZone" class="drop-zone rounded-xl md:p-8 p-3 text-center cursor-pointer bg-gradient-to-br from-white to-blue-50 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-blue-200">
+                <div class="lg:col-span-1 space-y-5" id="controlPanel">
+                    <div id="dropZone" class="drop-zone rounded-xl p-8 text-center cursor-pointer bg-gradient-to-br from-white to-blue-50 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-blue-200">
                         <input type="file" id="fileInput" accept="image/*,.pdf" class="hidden">
-                        <svg class="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-                        <p class="text-sm md:text-lg font-bold text-slate-700 mb-1 md:mb-2" data-i18n="dropzone.title">Drop your file here</p>
-                        <p class="text-xs md:text-sm text-slate-500" data-i18n="dropzone.or">or click to browse files</p>
-                        <p class="text-[10px] md:text-xs text-slate-400 mt-1 md:mt-2" data-i18n="dropzone.supported">Supports JPG, PNG, GIF, WebP, PDF</p>
+                        <svg class="w-16 h-16 mx-auto mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                        <p class="text-lg font-bold text-slate-700 mb-2" data-i18n="dropzone.title">Drop your file here</p>
+                        <p class="text-sm text-slate-500" data-i18n="dropzone.or">or click to browse files</p>
+                        <p class="text-xs text-slate-400 mt-2" data-i18n="dropzone.supported">Supports JPG, PNG, GIF, WebP, PDF</p>
                     </div>
-                    <div id="colorPickerSection" class="bg-white rounded-xl md:p-5 p-2 shadow-md border border-slate-200">
-                        <div class="flex flex-nowrap md:flex-wrap gap-1 md:gap-2 mb-1 md:mb-3 justify-center items-center overflow-x-auto md:overflow-visible" id="presetColors">
-                            <button onclick="setFillColor('#000000')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #000000;" title="Black" data-color="#000000"></button>
-                            <button onclick="setFillColor('#FFFFFF')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #FFFFFF;" title="White" data-color="#FFFFFF"></button>
-                            <button onclick="setFillColor('#FF0000')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #FF0000;" title="Red" data-color="#FF0000"></button>
-                            <button onclick="setFillColor('#00FF00')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #00FF00;" title="Green" data-color="#00FF00"></button>
-                            <button onclick="setFillColor('#0000FF')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #0000FF;" title="Blue" data-color="#0000FF"></button>
-                            <button onclick="setFillColor('#FFFF00')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #FFFF00;" title="Yellow" data-color="#FFFF00"></button>
-                            <button onclick="setFillColor('#FF00FF')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #FF00FF;" title="Magenta" data-color="#FF00FF"></button>
-                            <button onclick="setFillColor('#00FFFF')" class="w-6 h-6 md:w-9 md:h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm flex-shrink-0" style="background-color: #00FFFF;" title="Cyan" data-color="#00FFFF"></button>
-                            <button onclick="clearFillColor()" class="px-2 md:px-3 h-6 md:h-9 rounded-lg border-2 border-slate-300 hover:border-red-500 hover:text-red-500 text-slate-600 text-[10px] md:text-xs font-medium transition-all duration-200 shadow-sm flex items-center justify-center flex-shrink-0" title="Clear color">清除</button>
+                    <div id="colorPickerSection" class="bg-white rounded-xl p-5 shadow-md border border-slate-200">
+                        <div class="flex flex-wrap gap-2 mb-3 justify-center items-center" id="presetColors">
+                            <button onclick="setFillColor('#000000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #000000;" title="Black" data-color="#000000"></button>
+                            <button onclick="setFillColor('#FFFFFF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FFFFFF;" title="White" data-color="#FFFFFF"></button>
+                            <button onclick="setFillColor('#FF0000')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FF0000;" title="Red" data-color="#FF0000"></button>
+                            <button onclick="setFillColor('#00FF00')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #00FF00;" title="Green" data-color="#00FF00"></button>
+                            <button onclick="setFillColor('#0000FF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #0000FF;" title="Blue" data-color="#0000FF"></button>
+                            <button onclick="setFillColor('#FFFF00')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FFFF00;" title="Yellow" data-color="#FFFF00"></button>
+                            <button onclick="setFillColor('#FF00FF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #FF00FF;" title="Magenta" data-color="#FF00FF"></button>
+                            <button onclick="setFillColor('#00FFFF')" class="w-9 h-9 rounded-lg border-2 border-slate-300 hover:border-blue-500 hover:scale-110 transition-all duration-200 relative shadow-sm" style="background-color: #00FFFF;" title="Cyan" data-color="#00FFFF"></button>
+                            <button onclick="clearFillColor()" class="px-3 h-9 rounded-lg border-2 border-slate-300 hover:border-red-500 hover:text-red-500 text-slate-600 text-xs font-medium transition-all duration-200 shadow-sm flex items-center justify-center" title="Clear color">清除</button>
                         </div>
                     </div>
-                    <div id="selectionControls" class="space-y-3 hidden">
-                        <button onclick="enableManualSelect()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white md:py-3.5 py-2 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
-                            <span data-i18n="control.selectArea">Select Area to Redact</span>
-                        </button>
+                    <div id="historyControls" class="space-y-3 hidden">
+                        <div class="flex gap-2">
+                            <button id="undoBtn" onclick="undo()" disabled class="flex-1 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 disabled:opacity-50 disabled:cursor-not-allowed text-white py-3.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+                                <span>撤销</span>
+                            </button>
+                            <button id="redoBtn" onclick="redo()" disabled class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white py-3.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10h-10a8 8 0 00-8 8v2M21 10l-6 6m6-6l-6-6"/></svg>
+                                <span>恢复</span>
+                            </button>
+                        </div>
                     </div>
-                    <div id="effectControls" class="bg-white rounded-xl md:p-5 p-2 shadow-md border border-slate-200 md:space-y-4 space-y-2 hidden">
+                    <div id="effectControls" class="bg-white rounded-xl p-5 shadow-md border border-slate-200 space-y-4 hidden">
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="control.effectType">Effect Type</label>
                             <select id="effectType" onchange="updateColorPicker()" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-700 font-medium shadow-sm">
@@ -335,12 +340,12 @@
                                 <span class="text-xs text-slate-400" id="activeColorLabel">Black</span>
                             </div>
                         </div>
-                        <button onclick="resetImage()" class="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white md:py-3 py-2 px-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <button onclick="resetImage()" class="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                             <span data-i18n="control.reset">Reset to Original</span>
                         </button>
                     </div>
                     <div id="exportSection" class="hidden">
-                        <button onclick="downloadImage()" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white md:py-4 py-2 px-6 rounded-xl font-bold md:text-lg text-sm flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                        <button onclick="downloadImage()" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-4 px-6 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                             <span data-i18n="control.download">Download Redacted File</span>
                         </button>
@@ -477,6 +482,8 @@
         let originalFileName = ''; // Store original file name
         let originalFileType = ''; // Store original file type (e.g., 'image/jpeg', 'image/png')
         let redactedPages = []; // Store redacted page data for PDF export
+        let historyStack = []; // Undo history stack
+        let redoStack = []; // Redo history stack
 
         document.addEventListener('DOMContentLoaded', function() {
             canvas = document.getElementById('mainCanvas');
@@ -685,21 +692,15 @@
         function showWorkspace() {
             document.getElementById('canvasWrapper').classList.remove('hidden');
             document.getElementById('emptyState').classList.add('hidden');
-            document.getElementById('selectionControls').classList.remove('hidden');
+            document.getElementById('historyControls').classList.remove('hidden');
             document.getElementById('effectControls').classList.remove('hidden');
             document.getElementById('exportSection').classList.remove('hidden');
-        }
-
-        function fitCanvasToContainer() {
-            const container = document.getElementById('canvasWrapper');
-            if (!container || !canvas) return;
-            const containerHeight = container.clientHeight;
-            const containerWidth = container.clientWidth;
-            const scaleX = containerWidth / canvas.width;
-            const scaleY = containerHeight / canvas.height;
-            const scale = Math.min(scaleX, scaleY, 1);
-            canvas.style.width = (canvas.width * scale) + 'px';
-            canvas.style.height = (canvas.height * scale) + 'px';
+            // Initialize history with current canvas state
+            if (canvas) {
+                historyStack = [canvas.toDataURL()];
+                redoStack = [];
+                updateHistoryButtons();
+            }
         }
 
         function enableManualSelect() {
@@ -712,7 +713,7 @@
         }
 
         function handleCanvasMouseDown(e) {
-            if (!currentImage || canvas.style.cursor !== 'crosshair') return;
+            if (!currentImage) return;
             const rect = canvas.getBoundingClientRect();
             const scaleX = canvas.width / rect.width;
             const scaleY = canvas.height / rect.height;
@@ -746,7 +747,6 @@
             // Clear selection state first
             selectionStart = null;
             selectionEnd = null;
-            canvas.style.cursor = 'default';
             
             if (width > 10 && height > 10) {
                 // Redraw canvas to remove selection preview before applying effect
@@ -791,6 +791,19 @@
                     break;
             }
             
+            // Capture current canvas state immediately for history (sync)
+            const currentState = canvas.toDataURL();
+            
+            // Save to history stack immediately to avoid async issues
+            if (historyStack.length === 0) {
+                historyStack = [currentState];
+            } else {
+                historyStack.push(currentState);
+            }
+            // Clear redo stack on new action
+            redoStack = [];
+            updateHistoryButtons();
+            
             // Update currentImage with the modified canvas content
             const newImg = new Image();
             newImg.onload = function() {
@@ -801,7 +814,7 @@
                     saveRedactedPage();
                 }
             };
-            newImg.src = canvas.toDataURL();
+            newImg.src = currentState;
         }
 
         function saveRedactedPage() {
@@ -932,10 +945,70 @@
             ctx.fillRect(Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height));
         }
 
+        function fitCanvasToContainer() {
+            // Adjust canvas display size to fit container while preserving aspect ratio
+            const container = document.getElementById('canvasWrapper');
+            if (!container || !canvas) return;
+            // The canvas intrinsic size is already set; just ensure wrapper shows it properly
+            canvas.style.maxWidth = '100%';
+            canvas.style.maxHeight = '100%';
+        }
+
         function redrawCanvas() {
             if (!currentImage) return;
             // Use drawImage directly without clearRect to avoid flickering
             ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+        }
+
+        function undo() {
+            if (historyStack.length <= 1) {
+                showNotification('没有可撤销的操作');
+                return;
+            }
+            // Move current state to redo stack
+            redoStack.push(historyStack.pop());
+            // Restore previous state
+            const prevState = historyStack[historyStack.length - 1];
+            restoreCanvasState(prevState);
+            updateHistoryButtons();
+            showNotification('已撤销');
+        }
+
+        function redo() {
+            if (redoStack.length === 0) {
+                showNotification('没有可恢复的操作');
+                return;
+            }
+            // Move redo state back to history stack
+            const nextState = redoStack.pop();
+            historyStack.push(nextState);
+            restoreCanvasState(nextState);
+            updateHistoryButtons();
+            showNotification('已恢复');
+        }
+
+        let restoreVersion = 0;
+
+        function restoreCanvasState(dataUrl) {
+            const version = ++restoreVersion;
+            const img = new Image();
+            img.onload = function() {
+                // Ignore stale restore operations
+                if (version !== restoreVersion) return;
+                currentImage = img;
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                if (isPDF) {
+                    saveRedactedPage();
+                }
+            };
+            img.src = dataUrl;
+        }
+
+        function updateHistoryButtons() {
+            const undoBtn = document.getElementById('undoBtn');
+            const redoBtn = document.getElementById('redoBtn');
+            if (undoBtn) undoBtn.disabled = historyStack.length <= 1;
+            if (redoBtn) redoBtn.disabled = redoStack.length === 0;
         }
 
         function resetImage() {
@@ -949,6 +1022,11 @@
                 currentImage = originalImage;
                 redrawCanvas();
             }
+            
+            // Clear history stacks on reset
+            historyStack = [];
+            redoStack = [];
+            updateHistoryButtons();
             
             showNotification('Reset to original');
         }
