@@ -158,7 +158,43 @@
         .page-btn:disabled { background: #cbd5e1; cursor: not-allowed; opacity: 0.6; }
         .page-info { font-size: 15px; color: #64748b; font-weight: 600; }
         
-        /* Custom range slider styling */
+        /* Chat app browser overlay */
+        .chat-app-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #1e293b;
+            z-index: 99999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .chat-app-overlay.active { display: flex; }
+        .chat-app-overlay .browser-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .chat-app-overlay .arrow {
+            width: 40px;
+            height: 40px;
+            margin: 1rem 0;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -238,6 +274,35 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
+    <!-- Chat App Browser Guide Overlay -->
+    <div id="chatAppOverlay" class="chat-app-overlay">
+        <div class="browser-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5">
+                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.6 9H20.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.6 15H20.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 3C14.0188 5.4696 15.1112 8.68288 15.1112 12C15.1112 15.3171 14.0188 18.5304 12 21C9.98124 18.5304 8.88885 15.3171 8.88885 12C8.88885 8.68288 9.98124 5.4696 12 3Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-white mb-2">请在浏览器中打开</h2>
+        <p class="text-slate-300 mb-6 max-w-md">当前页面在聊天工具内置浏览器中打开，部分功能可能无法正常使用。请点击右上角菜单，选择「在浏览器中打开」。</p>
+        <div class="text-slate-400 text-sm mb-4">推荐使用 Chrome / Safari / Edge 浏览器</div>
+        <div class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-4 max-w-sm">
+            <div class="flex items-center gap-3 text-left">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">1</div>
+                <p class="text-slate-200 text-sm">点击右上角 <span class="text-yellow-400 font-bold">···</span> 菜单按钮</p>
+            </div>
+            <div class="flex items-center gap-3 text-left mt-3">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">2</div>
+                <p class="text-slate-200 text-sm">选择「在浏览器中打开」或「用 Safari / Chrome 打开」</p>
+            </div>
+        </div>
+    </div>
     <!-- Download Progress Bar -->
     <div id="downloadProgress" class="fixed top-0 left-0 right-0 h-1 bg-gray-200/50 backdrop-blur-sm z-[9999] hidden">
         <div id="downloadProgressBar" class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 w-0 transition-all duration-300 ease-out shadow-[0_0_8px_rgba(59,130,246,0.6)]"></div>
@@ -484,6 +549,39 @@
         let redactedPages = []; // Store redacted page data for PDF export
         let historyStack = []; // Undo history stack
         let redoStack = []; // Redo history stack
+
+        // Detect chat app built-in browsers and show guide overlay
+        (function detectChatAppBrowser() {
+            const ua = navigator.userAgent.toLowerCase();
+            const chatAppKeywords = [
+                'micromessenger',  // WeChat
+                'wechat',
+                'qq/',             // QQ
+                'tim',             // TIM
+                'dingtalk',        // DingTalk
+                'alipayclient',    // Alipay
+                'alipay',
+                'lark',            // Lark/Feishu
+                'feishu',
+                'weibo',           // Weibo
+                'wxwork',          // WeChat Work
+                'whatsapp',        // WhatsApp
+                'fbav',            // Facebook App
+                'fban',
+                'instagram',       // Instagram
+                'line/',           // LINE
+                'twitter',         // Twitter/X App
+                'snapchat',        // Snapchat
+                'telegram'         // Telegram
+            ];
+            const isChatAppBrowser = chatAppKeywords.some(keyword => ua.includes(keyword));
+            if (isChatAppBrowser) {
+                const overlay = document.getElementById('chatAppOverlay');
+                if (overlay) {
+                    overlay.classList.add('active');
+                }
+            }
+        })();
 
         document.addEventListener('DOMContentLoaded', function() {
             canvas = document.getElementById('mainCanvas');
