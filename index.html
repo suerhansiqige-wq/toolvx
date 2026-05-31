@@ -284,6 +284,10 @@
                 margin-top: 0.5rem !important;
             }
 
+            #workspace .grid {
+                gap: 0.25rem !important;
+            }
+
             #canvasArea {
                 gap: 0.25rem !important;
             }
@@ -439,6 +443,13 @@
                         </div>
                     </div>
                     <div id="effectControls" class="bg-white rounded-xl p-5 shadow-md border border-slate-200 space-y-4 hidden">
+                        <div class="lg:hidden">
+                            <button onclick="generateSelectionAndApply()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 px-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l2.12 2.12M17.657 16.657l2.121 2.121"/></svg>
+                                <span>生成选框并处理</span>
+                            </button>
+                            <p class="text-xs text-slate-400 mt-1 text-center">在图片中央自动生成选框并应用当前效果</p>
+                        </div>
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="control.effectType">Effect Type</label>
                             <select id="effectType" onchange="updateColorPicker()" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-700 font-medium shadow-sm">
@@ -669,6 +680,26 @@
 
         function updateColorPicker() {
             // Color picker is always active, no additional setup needed
+        }
+
+        function generateSelectionAndApply() {
+            if (!currentImage) {
+                showNotification('请先上传图片');
+                return;
+            }
+            
+            const canvasWidth = canvas.width;
+            const canvasHeight = canvas.height;
+            
+            // Generate a centered rectangle (30% of image size)
+            const width = canvasWidth * 0.3;
+            const height = canvasHeight * 0.3;
+            const x = (canvasWidth - width) / 2;
+            const y = (canvasHeight - height) / 2;
+            
+            // Apply effect
+            applyEffect(x, y, width, height);
+            showNotification('已生成选框并应用效果');
         }
 
         function setFillColor(color) {
