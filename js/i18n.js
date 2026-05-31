@@ -731,6 +731,86 @@ const TRANSLATIONS = {
         'ar': 'أدوات مجانية لتحرير الصور وملفات PDF عبر الإنترنت'
     },
     
+    // Footer - Popular Articles
+    'footer.article.blurFaces': {
+        'en': 'Blur Faces Guide',
+        'zh': '模糊面部指南',
+        'es': 'Guía para difuminar rostros',
+        'fr': 'Guide pour flouter les visages',
+        'de': 'Gesichter verwischen Anleitung',
+        'ja': '顔をぼかすガイド',
+        'ko': '얼굴 흐리기 가이드',
+        'pt': 'Guia para desfocar rostos',
+        'ru': 'Руководство по размытию лиц',
+        'ar': 'دليل طمس الوجوه'
+    },
+    
+    'footer.article.privacyGuide': {
+        'en': 'Privacy Guide',
+        'zh': '隐私指南',
+        'es': 'Guía de privacidad',
+        'fr': 'Guide de confidentialité',
+        'de': 'Datenschutz-Leitfaden',
+        'ja': 'プライバシーガイド',
+        'ko': '개인 정보 보호 가이드',
+        'pt': 'Guia de privacidade',
+        'ru': 'Руководство по конфиденциальности',
+        'ar': 'دليل الخصوصية'
+    },
+    
+    'footer.article.pdfTools': {
+        'en': 'PDF Tools',
+        'zh': 'PDF工具',
+        'es': 'Herramientas PDF',
+        'fr': 'Outils PDF',
+        'de': 'PDF-Tools',
+        'ja': 'PDFツール',
+        'ko': 'PDF 도구',
+        'pt': 'Ferramentas PDF',
+        'ru': 'Инструменты PDF',
+        'ar': 'أدوات PDF'
+    },
+    
+    // Footer - Legal Pages
+    'footer.legal.privacy': {
+        'en': 'Privacy Policy',
+        'zh': '隐私政策',
+        'es': 'Política de privacidad',
+        'fr': 'Politique de confidentialité',
+        'de': 'Datenschutzerklärung',
+        'ja': 'プライバシーポリシー',
+        'ko': '개인 정보 보호 정책',
+        'pt': 'Política de privacidade',
+        'ru': 'Политика конфиденциальности',
+        'ar': 'سياسة الخصوصية'
+    },
+    
+    'footer.legal.terms': {
+        'en': 'Terms of Service',
+        'zh': '服务条款',
+        'es': 'Términos de servicio',
+        'fr': 'Conditions d\'utilisation',
+        'de': 'Nutzungsbedingungen',
+        'ja': '利用規約',
+        'ko': '서비스 약관',
+        'pt': 'Termos de serviço',
+        'ru': 'Условия использования',
+        'ar': 'شروط الخدمة'
+    },
+    
+    'footer.legal.cookie': {
+        'en': 'Cookie Policy',
+        'zh': 'Cookie政策',
+        'es': 'Política de cookies',
+        'fr': 'Politique relative aux cookies',
+        'de': 'Cookie-Richtlinie',
+        'ja': 'Cookieポリシー',
+        'ko': '쿠키 정책',
+        'pt': 'Política de cookies',
+        'ru': 'Политика использования файлов cookie',
+        'ar': 'سياسة ملفات تعريف الارتباط'
+    },
+    
     'footer.tagline': {
         'en': 'Privacy-first photo editing. No uploads. No tracking. 100% secure.',
         'zh': '隐私优先的照片编辑。无上传。无跟踪。100%安全。',
@@ -969,6 +1049,216 @@ const TRANSLATIONS = {
     }
 };
 
+// SEO Why Choose Section
+TRANSLATIONS['seo.whyChoose.free'] = {
+    'en': '100% Free Online Photo Editor',
+    'zh': '100%免费在线照片编辑器',
+    'es': 'Editor de fotos en línea 100% gratuito',
+    'fr': 'Éditeur de photos en ligne 100% gratuit',
+    'de': '100% kostenloser Online-Fotoeditor',
+    'ja': '100%無料オンライン写真編集ツール',
+    'ko': '100% 무료 온라인 사진 편집기',
+    'pt': 'Editor de fotos online 100% gratuito',
+    'ru': '100% бесплатный онлайн-редактор фото',
+    'ar': 'محرر صور مجاني بنسبة 100٪ عبر الإنترنت'
+};
+
+TRANSLATIONS['seo.whyChoose.noReg'] = {
+    'en': 'No registration, no watermarks, no limits',
+    'zh': '无需注册，无水印，无限制',
+    'es': 'Sin registro, sin marcas de agua, sin límites',
+    'fr': 'Aucune inscription, aucun filigrane, aucune limite',
+    'de': 'Keine Registrierung, keine Wasserzeichen, keine Einschränkungen',
+    'ja': '登録不要、透かしなし、制限なし',
+    'ko': '등록 불필요, 워터마크 없음, 제한 없음',
+    'pt': 'Sem registro, sem marcas d\'água, sem limites',
+    'ru': 'Без регистрации, без водяных знаков, без ограничений',
+    'ar': 'بدون تسجيل، بدون علامات مائية، بدون حدود'
+};
+
+TRANSLATIONS['seo.whyChoose.privacy'] = {
+    'en': 'Complete Privacy Protection',
+    'zh': '完整隐私保护',
+    'es': 'Protección completa de la privacidad',
+    'fr': 'Protection complète de la vie privée',
+    'de': 'Vollständiger Datenschutz',
+    'ja': '完全なプライバシー保護',
+    'ko': '완전한 개인 정보 보호',
+    'pt': 'Proteção completa da privacidade',
+    'ru': 'Полная защита конфиденциальности',
+    'ar': 'حماية كاملة للخصوصية'
+};
+
+TRANSLATIONS['seo.whyChoose.noUpload'] = {
+    'en': 'Your files never leave your device',
+    'zh': '您的文件绝不会离开您的设备',
+    'es': 'Sus archivos nunca salen de su dispositivo',
+    'fr': 'Vos fichiers ne quittent jamais votre appareil',
+    'de': 'Ihre Dateien verlassen niemals Ihr Gerät',
+    'ja': 'ファイルはデバイスから流出しません',
+    'ko': '파일이 장치를 떠나지 않습니다',
+    'pt': 'Seus arquivos nunca saem do seu dispositivo',
+    'ru': 'Ваши файлы никогда не покидают ваше устройство',
+    'ar': 'ملفاتك لا تغادر جهازك أبدًا'
+};
+
+TRANSLATIONS['seo.whyChoose.offline'] = {
+    'en': 'Works Offline',
+    'zh': '离线工作',
+    'es': 'Funciona sin conexión',
+    'fr': 'Fonctionne hors ligne',
+    'de': 'Funktioniert offline',
+    'ja': 'オフラインで動作',
+    'ko': '오프라인 작동',
+    'pt': 'Funciona offline',
+    'ru': 'Работает офлайн',
+    'ar': 'يعمل دون اتصال'
+};
+
+TRANSLATIONS['seo.whyChoose.noInternet'] = {
+    'en': 'No internet required after page loads',
+    'zh': '页面加载后无需互联网',
+    'es': 'No se requiere Internet después de cargar la página',
+    'fr': 'Aucune connexion Internet requise après le chargement de la page',
+    'de': 'Nach dem Laden der Seite ist keine Internetverbindung erforderlich',
+    'ja': 'ページ読み込み後はインターネット不要',
+    'ko': '페이지 로드 후 인터넷 불필요',
+    'pt': 'Nenhuma conexão com a Internet necessária após o carregamento da página',
+    'ru': 'После загрузки страницы интернет не требуется',
+    'ar': 'لا يلزم وجود اتصال بالإنترنت بعد تحميل الصفحة'
+};
+
+TRANSLATIONS['seo.whyChoose.multiFormat'] = {
+    'en': 'Multi-format Support',
+    'zh': '多格式支持',
+    'es': 'Soporte para múltiples formatos',
+    'fr': 'Support multi-formats',
+    'de': 'Unterstützung mehrerer Formate',
+    'ja': '複数フォーマット対応',
+    'ko': '다중 형식 지원',
+    'pt': 'Suporte a múltiplos formatos',
+    'ru': 'Поддержка нескольких форматов',
+    'ar': 'دعم تنسيقات متعددة'
+};
+
+TRANSLATIONS['seo.whyChoose.formats'] = {
+    'en': 'JPG, PNG, GIF, WebP, and PDF files',
+    'zh': 'JPG、PNG、GIF、WebP和PDF文件',
+    'es': 'Archivos JPG, PNG, GIF, WebP y PDF',
+    'fr': 'Fichiers JPG, PNG, GIF, WebP et PDF',
+    'de': 'JPG-, PNG-, GIF-, WebP- und PDF-Dateien',
+    'ja': 'JPG、PNG、GIF、WebP、PDFファイル',
+    'ko': 'JPG, PNG, GIF, WebP 및 PDF 파일',
+    'pt': 'Arquivos JPG, PNG, GIF, WebP e PDF',
+    'ru': 'Файлы JPG, PNG, GIF, WebP и PDF',
+    'ar': 'ملفات JPG وPNG وGIF وWebP وPDF'
+};
+
+TRANSLATIONS['seo.whyChoose.professional'] = {
+    'en': 'Professional Results',
+    'zh': '专业效果',
+    'es': 'Resultados profesionales',
+    'fr': 'Résultats professionnels',
+    'de': 'Professionelle Ergebnisse',
+    'ja': 'プロフェッショナルな結果',
+    'ko': '전문적인 결과',
+    'pt': 'Resultados profissionais',
+    'ru': 'Профессиональные результаты',
+    'ar': 'نتائج احترافية'
+};
+
+TRANSLATIONS['seo.whyChoose.customControl'] = {
+    'en': 'Custom colors, adjustable intensity, precise control',
+    'zh': '自定义颜色、可调强度、精确控制',
+    'es': 'Colores personalizados, intensidad ajustable, control preciso',
+    'fr': 'Couleurs personnalisées, intensité réglable, contrôle précis',
+    'de': 'Benutzerdefinierte Farben, einstellbare Intensität, präzise Steuerung',
+    'ja': 'カスタムカラー、調整可能な強度、精密な制御',
+    'ko': '사용자 정의 색상, 조정 가능한 강도, 정밀한 제어',
+    'pt': 'Cores personalizadas, intensidade ajustável, controle preciso',
+    'ru': 'Пользовательские цвета, регулируемая интенсивность, точный контроль',
+    'ar': 'ألوان مخصصة، شدة قابلة للتعديل، تحكم دقيق'
+};
+
+// Blog Page
+TRANSLATIONS['blog.tryTool'] = {
+    'en': 'Try Free Tool',
+    'zh': '试用免费工具',
+    'es': 'Probar herramienta gratuita',
+    'fr': 'Essayer l\'outil gratuit',
+    'de': 'Kostenloses Tool ausprobieren',
+    'ja': '無料ツールを試す',
+    'ko': '무료 도구 사용해 보기',
+    'pt': 'Experimente a ferramenta gratuita',
+    'ru': 'Попробовать бесплатный инструмент',
+    'ar': 'جرب الأداة المجانية'
+};
+
+TRANSLATIONS['blog.title'] = {
+    'en': 'Privacy & Security Blog',
+    'zh': '隐私与安全博客',
+    'es': 'Blog de privacidad y seguridad',
+    'fr': 'Blog sur la confidentialité et la sécurité',
+    'de': 'Datenschutz- und Sicherheitsblog',
+    'ja': 'プライバシーとセキュリティブログ',
+    'ko': '개인 정보 보호 및 보안 블로그',
+    'pt': 'Blog de privacidade e segurança',
+    'ru': 'Блог о конфиденциальности и безопасности',
+    'ar': 'مدونة الخصوصية والأمان'
+};
+
+TRANSLATIONS['blog.subtitle'] = {
+    'en': 'Expert guides to protect your digital identity, secure your documents, and share photos safely online',
+    'zh': '保护您的数字身份、保护文档安全以及在线安全分享照片的专业指南',
+    'es': 'Guías expertas para proteger su identidad digital, asegurar sus documentos y compartir fotos de forma segura en línea',
+    'fr': 'Guides d\'experts pour protéger votre identité numérique, sécuriser vos documents et partager des photos en toute sécurité en ligne',
+    'de': 'Expertenleitfäden zum Schutz Ihrer digitalen Identität, zur Sicherung Ihrer Dokumente und zum sicheren Teilen von Fotos online',
+    'ja': 'デジタルアイデンティティを保護し、文書を保護し、オンラインで写真を安全に共有するための専門ガイド',
+    'ko': '디지털 신원을 보호하고 문서를 안전하게 보호하며 온라인에서 사진을 안전하게 공유하는 전문가 가이드',
+    'pt': 'Guias especializados para proteger sua identidade digital, proteger seus documentos e compartilhar fotos com segurança online',
+    'ru': 'Экспертные руководства по защите вашей цифровой идентичности, обеспечению безопасности документов и безопасному обмену фотографиями в Интернете',
+    'ar': 'أدلة الخبراء لحماية هويتك الرقمية، وتأمين مستنداتك، ومشاركة الصور بأمان عبر الإنترنت'
+};
+
+TRANSLATIONS['blog.articles'] = {
+    'en': 'Articles',
+    'zh': '文章',
+    'es': 'Artículos',
+    'fr': 'Articles',
+    'de': 'Artikel',
+    'ja': '記事',
+    'ko': '기사',
+    'pt': 'Artigos',
+    'ru': 'Статьи',
+    'ar': 'المقالات'
+};
+
+TRANSLATIONS['blog.freeResources'] = {
+    'en': 'Free Resources',
+    'zh': '免费资源',
+    'es': 'Recursos gratuitos',
+    'fr': 'Ressources gratuites',
+    'de': 'Kostenlose Ressourcen',
+    'ja': '無料リソース',
+    'ko': '무료 리소스',
+    'pt': 'Recursos gratuitos',
+    'ru': 'Бесплатные ресурсы',
+    'ar': 'موارد مجانية'
+};
+
+TRANSLATIONS['blog.privacyFirst'] = {
+    'en': 'Privacy First',
+    'zh': '隐私优先',
+    'es': 'Privacidad primero',
+    'fr': 'Confidentialité d\'abord',
+    'de': 'Datenschutz zuerst',
+    'ja': 'プライバシーファースト',
+    'ko': '개인 정보 우선',
+    'pt': 'Privacidade em primeiro lugar',
+    'ru': 'Конфиденциальность прежде всего',
+    'ar': 'الخصوصية أولاً'
+};
+
 // Detect user's preferred language
 function detectUserLanguage() {
     console.log(' Starting language detection...');
@@ -1091,6 +1381,491 @@ if (typeof module !== 'undefined' && module.exports) {
         TRANSLATIONS
     };
 }
+
+TRANSLATIONS['seo.faq.title'] = {
+    'en': 'Frequently Asked Questions About Image Redaction',
+    'zh': '关于图像编辑的常见问题',
+    'es': 'Preguntas frecuentes sobre la edición de imágenes',
+    'fr': 'Questions fréquemment posées sur l\'édition d\'images',
+    'de': 'Häufig gestellte Fragen zur Bildbearbeitung',
+    'ja': '画像編集に関するよくある質問',
+    'ko': '이미지 편집에 관한 자주 묻는 질문',
+    'pt': 'Perguntas frequentes sobre edição de imagens',
+    'ru': 'Часто задаваемые вопросы о редактировании изображений',
+    'ar': 'الأسئلة الشائعة حول تحرير الصور'
+};
+
+// Use Cases Section
+TRANSLATIONS['usecase.blurFaces'] = {
+    'en': 'Blur Faces in Photos',
+    'zh': '照片中模糊面部',
+    'es': 'Difuminar rostros en fotos',
+    'fr': 'Flouter les visages dans les photos',
+    'de': 'Gesichter in Fotos verwischen',
+    'ja': '写真の顔をぼかす',
+    'ko': '사진에서 얼굴 흐리기',
+    'pt': 'Desfocar rostos em fotos',
+    'ru': 'Размытие лиц на фотографиях',
+    'ar': 'طمس الوجوه في الصور'
+};
+
+TRANSLATIONS['usecase.blurFaces.desc'] = {
+    'en': 'Protect identity in screenshots and social media posts',
+    'zh': '保护截图和社交媒体帖子中的身份',
+    'es': 'Proteger la identidad en capturas de pantalla y publicaciones en redes sociales',
+    'fr': 'Protéger l\'identité dans les captures d\'écran et les publications sur les réseaux sociaux',
+    'de': 'Identität in Screenshots und Social-Media-Beiträgen schützen',
+    'ja': 'スクリーンショットやソーシャルメディア投稿での身元を保護',
+    'ko': '스크린샷 및 소셜 미디어 게시물에서 신원 보호',
+    'pt': 'Proteger identidade em capturas de tela e publicações em redes sociais',
+    'ru': 'Защита личности на скриншотах и в публикациях в социальных сетях',
+    'ar': 'حماية الهوية في لقطات الشاشة ومنشورات وسائل التواصل الاجتماعي'
+};
+
+TRANSLATIONS['usecase.maskID'] = {
+    'en': 'Mask ID Card Numbers',
+    'zh': '遮盖身份证号码',
+    'es': 'Ocultar números de tarjeta de identificación',
+    'fr': 'Masquer les numéros de carte d\'identité',
+    'de': 'Ausweisnummern maskieren',
+    'ja': 'IDカード番号をマスク',
+    'ko': '신분증 번호 마스킹',
+    'pt': 'Mascarar números de cartão de identificação',
+    'ru': 'Маскировка номеров удостоверений личности',
+    'ar': 'إخفاء أرقام بطاقات الهوية'
+};
+
+TRANSLATIONS['usecase.maskID.desc'] = {
+    'en': 'Hide sensitive information on passports, driver\'s licenses',
+    'zh': '隐藏护照、驾驶执照上的敏感信息',
+    'es': 'Ocultar información sensible en pasaportes y licencias de conducir',
+    'fr': 'Masquer les informations sensibles sur les passeports et permis de conduire',
+    'de': 'Sensible Informationen auf Pässen und Führerscheinen verbergen',
+    'ja': 'パスポートや運転免許証の機密情報を隠す',
+    'ko': '여권 및 운전면허증의 민감한 정보 숨기기',
+    'pt': 'Ocultar informações sensíveis em passaportes e carteiras de motorista',
+    'ru': 'Скрытие конфиденциальной информации в паспортах и водительских правах',
+    'ar': 'إخفاء المعلومات الحساسة على جوازات السفر ورخص القيادة'
+};
+
+TRANSLATIONS['usecase.redactBank'] = {
+    'en': 'Redact Bank Statements',
+    'zh': '编辑银行对账单',
+    'es': 'Editar extractos bancarios',
+    'fr': 'Éditer les relevés bancaires',
+    'de': 'Kontoauszüge bearbeiten',
+    'ja': '銀行取引明細書を編集',
+    'ko': '은행 명세서 편집',
+    'pt': 'Editar extratos bancários',
+    'ru': 'Редактирование банковских выписок',
+    'ar': 'تحرير كشوف الحسابات البنكية'
+};
+
+TRANSLATIONS['usecase.redactBank.desc'] = {
+    'en': 'Obscure account numbers and financial data',
+    'zh': '遮盖账号和财务数据',
+    'es': 'Ocultar números de cuenta y datos financieros',
+    'fr': 'Obscurcir les numéros de compte et les données financières',
+    'de': 'Kontonummern und Finanzdaten verbergen',
+    'ja': '口座番号と財務データを隠す',
+    'ko': '계좌 번호 및 재무 데이터 가리기',
+    'pt': 'Ocultar números de conta e dados financeiros',
+    'ru': 'Сокрытие номеров счетов и финансовых данных',
+    'ar': 'إخفاء أرقام الحسابات والبيانات المالية'
+};
+
+TRANSLATIONS['usecase.editPDF'] = {
+    'en': 'Edit PDF Documents',
+    'zh': '编辑PDF文档',
+    'es': 'Editar documentos PDF',
+    'fr': 'Éditer des documents PDF',
+    'de': 'PDF-Dokumente bearbeiten',
+    'ja': 'PDF文書を編集',
+    'ko': 'PDF 문서 편집',
+    'pt': 'Editar documentos PDF',
+    'ru': 'Редактирование PDF-документов',
+    'ar': 'تحرير مستندات PDF'
+};
+
+TRANSLATIONS['usecase.editPDF.desc'] = {
+    'en': 'Multi-page PDF support with page-by-page editing',
+    'zh': '多页PDF支持，逐页编辑',
+    'es': 'Soporte para PDF de varias páginas con edición página por página',
+    'fr': 'Support PDF multi-pages avec édition page par page',
+    'de': 'Mehrseitige PDF-Unterstützung mit seitenweiser Bearbeitung',
+    'ja': 'ページごとの編集ができる複数ページのPDF対応',
+    'ko': '페이지별 편집이 가능한 다중 페이지 PDF 지원',
+    'pt': 'Suporte a PDF de várias páginas com edição página por página',
+    'ru': 'Поддержка многостраничных PDF с постраничным редактированием',
+    'ar': 'دعم ملفات PDF متعددة الصفحات مع التحرير صفحة بصفحة'
+};
+
+TRANSLATIONS['usecase.hideCreditCard'] = {
+    'en': 'Hide Credit Card Info',
+    'zh': '隐藏信用卡信息',
+    'es': 'Ocultar información de tarjeta de crédito',
+    'fr': 'Masquer les informations de carte de crédit',
+    'de': 'Kreditkarteninformationen verbergen',
+    'ja': 'クレジットカード情報を隠す',
+    'ko': '신용카드 정보 숨기기',
+    'pt': 'Ocultar informações de cartão de crédito',
+    'ru': 'Скрытие информации о кредитной карте',
+    'ar': 'إخفاء معلومات بطاقة الائتمان'
+};
+
+TRANSLATIONS['usecase.hideCreditCard.desc'] = {
+    'en': 'Secure payment receipts and invoices',
+    'zh': '保护支付收据和发票安全',
+    'es': 'Asegurar recibos de pago y facturas',
+    'fr': 'Sécuriser les reçus de paiement et les factures',
+    'de': 'Zahlungsbelege und Rechnungen sichern',
+    'ja': '支払い領収書と請求書を安全に',
+    'ko': '결제 영수증 및 송장 보안',
+    'pt': 'Proteger recibos de pagamento e faturas',
+    'ru': 'Защита платежных квитанций и счетов-фактур',
+    'ar': 'تأمين إيصالات الدفع والفواتير'
+};
+
+TRANSLATIONS['usecase.anonymizeScreenshots'] = {
+    'en': 'Anonymize Screenshots',
+    'zh': '匿名化截图',
+    'es': 'Anonimizar capturas de pantalla',
+    'fr': 'Anonymiser les captures d\'écran',
+    'de': 'Screenshots anonymisieren',
+    'ja': 'スクリーンショットを匿名化',
+    'ko': '스크린샷 익명화',
+    'pt': 'Anonimizar capturas de tela',
+    'ru': 'Анонимизация скриншотов',
+    'ar': 'إخفاء هوية لقطات الشاشة'
+};
+
+TRANSLATIONS['usecase.anonymizeScreenshots.desc'] = {
+    'en': 'Remove personal data before sharing online',
+    'zh': '在线分享前删除个人数据',
+    'es': 'Eliminar datos personales antes de compartir en línea',
+    'fr': 'Supprimer les données personnelles avant de partager en ligne',
+    'de': 'Persönliche Daten vor dem Online-Teilen entfernen',
+    'ja': 'オンラインで共有する前に個人データを削除',
+    'ko': '온라인 공유 전 개인 데이터 제거',
+    'pt': 'Remover dados pessoais antes de compartilhar online',
+    'ru': 'Удаление личных данных перед публикацией в Интернете',
+    'ar': 'إزالة البيانات الشخصية قبل المشاركة عبر الإنترنت'
+};
+
+// FAQ Section
+TRANSLATIONS['faq.q1.title'] = {
+    'en': 'What is image redaction and why do I need it?',
+    'zh': '什么是图像编辑，为什么我需要它？',
+    'es': '¿Qué es la edición de imágenes y por qué la necesito?',
+    'fr': 'Qu\'est-ce que l\'édition d\'images et pourquoi en ai-je besoin ?',
+    'de': 'Was ist Bildbearbeitung und warum brauche ich sie?',
+    'ja': '画像編集とは何ですか？なぜ必要ですか？',
+    'ko': '이미지 편집이란 무엇이며 왜 필요한가요?',
+    'pt': 'O que é edição de imagens e por que preciso disso?',
+    'ru': 'Что такое редактирование изображений и зачем оно мне нужно?',
+    'ar': 'ما هو تحرير الصور ولماذا أحتاج إليه؟'
+};
+
+TRANSLATIONS['faq.q1.answer'] = {
+    'en': 'Image redaction is the process of permanently removing or obscuring sensitive information from photos and documents. Whether you\'re sharing a screenshot online, submitting documents for verification, or posting photos on social media, redaction helps protect your privacy by hiding personal data like faces, ID numbers, addresses, and financial information. Our free online tool makes this process simple and secure.',
+    'zh': '图像编辑是从照片和文档中永久删除或遮盖敏感信息的过程。无论您是在线分享截图、提交文档进行验证，还是在社交媒体上发布照片，编辑都可以通过隐藏面部、身份证号、地址和财务信息等个人数据来帮助保护您的隐私。我们的免费在线工具使这一过程简单而安全。',
+    'es': 'La edición de imágenes es el proceso de eliminar u ocultar permanentemente información sensible de fotos y documentos. Ya sea que comparta una captura de pantalla en línea, envíe documentos para verificación o publique fotos en redes sociales, la edición ayuda a proteger su privacidad ocultando datos personales como rostros, números de identificación, direcciones e información financiera. Nuestra herramienta gratuita en línea hace que este proceso sea simple y seguro.',
+    'fr': 'L\'édition d\'images est le processus de suppression ou d\'obscurcissement permanent des informations sensibles des photos et documents. Que vous partagiez une capture d\'écran en ligne, soumettiez des documents pour vérification ou publiiez des photos sur les réseaux sociaux, l\'édition aide à protéger votre vie privée en masquant les données personnelles comme les visages, les numéros d\'identification, les adresses et les informations financières. Notre outil gratuit en ligne rend ce processus simple et sécurisé.',
+    'de': 'Bildbearbeitung ist der Prozess des dauerhaften Entfernens oder Verbergens sensibler Informationen aus Fotos und Dokumenten. Ob Sie einen Screenshot online teilen, Dokumente zur Überprüfung einreichen oder Fotos in sozialen Medien veröffentlichen, die Bearbeitung hilft, Ihre Privatsphäre zu schützen, indem sie persönliche Daten wie Gesichter, Ausweisnummern, Adressen und Finanzinformationen verbirgt. Unser kostenloses Online-Tool macht diesen Prozess einfach und sicher.',
+    'ja': '画像編集は、写真や文書から機密情報を永久に削除または隠すプロセスです。スクリーンショットをオンラインで共有する場合、確認のために文書を提出する場合、またはソーシャルメディアで写真を投稿する場合でも、編集は顔、ID番号、住所、財務情報などの個人データを隠すことでプライバシーを保護するのに役立ちます。当社の無料オンラインツールはこのプロセスをシンプルかつ安全にします。',
+    'ko': '이미지 편집은 사진과 문서에서 민감한 정보를 영구적으로 제거하거나 가리는 과정입니다. 스크린샷을 온라인으로 공유하거나, 검증을 위해 문서를 제출하거나, 소셜 미디어에 사진을 게시하는 경우에도 편집은 얼굴, ID 번호, 주소, 재무 정보와 같은 개인 데이터를 숨겨 개인 정보를 보호하는 데 도움이 됩니다. 당사 무료 온라인 도구는 이 과정을 간단하고 안전하게 만듭니다.',
+    'pt': 'A edição de imagens é o processo de remover ou obscurecer permanentemente informações confidenciais de fotos e documentos. Quer você esteja compartilhando uma captura de tela online, enviando documentos para verificação ou publicando fotos nas redes sociais, a edição ajuda a proteger sua privacidade ocultando dados pessoais como rostos, números de identificação, endereços e informações financeiras. Nossa ferramenta online gratuita torna esse processo simples e seguro.',
+    'ru': 'Редактирование изображений - это процесс постоянного удаления или сокрытия конфиденциальной информации из фотографий и документов. Независимо от того, делитесь ли вы скриншотом в Интернете, отправляете документы для проверки или публикуете фотографии в социальных сетях, редактирование помогает защитить вашу конфиденциальность, скрывая личные данные, такие как лица, идентификационные номера, адреса и финансовая информация. Наш бесплатный онлайн-инструмент делает этот процесс простым и безопасным.',
+    'ar': 'تحرير الصور هو عملية إزالة أو طمس المعلومات الحساسة من الصور والمستندات بشكل دائم. سواء كنت تشارك لقطة شاشة عبر الإنترنت، أو تقدم مستندات للتحقق، أو تنشر صورًا على وسائل التواصل الاجتماعي، فإن التحرير يساعد في حماية خصوصيتك من خلال إخفاء البيانات الشخصية مثل الوجوه وأرقام الهوية والعناوين والمعلومات المالية. أداتنا المجانية عبر الإنترنت تجعل هذه العملية بسيطة وآمنة.'
+};
+
+TRANSLATIONS['faq.q2.title'] = {
+    'en': 'How does this local image editor protect my privacy?',
+    'zh': '这个本地图像编辑器如何保护我的隐私？',
+    'es': '¿Cómo protege mi privacidad este editor de imágenes local?',
+    'fr': 'Comment cet éditeur d\'images local protège-t-il ma vie privée ?',
+    'de': 'Wie schützt dieser lokale Bildeditor meine Privatsphäre?',
+    'ja': 'このローカル画像エディターはどのようにしてプライバシーを保護しますか？',
+    'ko': '이 로컬 이미지 편집기는 어떻게 내 개인 정보를 보호하나요?',
+    'pt': 'Como este editor de imagens local protege minha privacidade?',
+    'ru': 'Как этот локальный редактор изображений защищает мою конфиденциальность?',
+    'ar': 'كيف يحمي محرر الصور المحلي هذا خصوصيتي؟'
+};
+
+TRANSLATIONS['faq.q2.answer'] = {
+    'en': 'Unlike most online photo editors, our tool processes everything 100% locally in your browser. This means your images and PDFs are never uploaded to any server. All editing happens on your own device using JavaScript, ensuring complete confidentiality. This is crucial when handling sensitive documents like passport copies, bank statements, medical records, or confidential business documents.',
+    'zh': '与大多数在线照片编辑器不同，我们的工具在浏览器中100%本地处理所有内容。这意味着您的图片和PDF永远不会上传到任何服务器。所有编辑都使用JavaScript在您自己的设备上完成，确保完全机密。这在处理护照副本、银行对账单、医疗记录或机密商业文档等敏感文档时至关重要。',
+    'es': 'A diferencia de la mayoría de los editores de fotos en línea, nuestra herramienta procesa todo 100% localmente en su navegador. Esto significa que sus imágenes y PDF nunca se cargan en ningún servidor. Toda la edición ocurre en su propio dispositivo usando JavaScript, garantizando completa confidencialidad. Esto es crucial al manejar documentos confidenciales como copias de pasaportes, extractos bancarios, registros médicos o documentos comerciales confidenciales.',
+    'fr': 'Contrairement à la plupart des éditeurs de photos en ligne, notre outil traite tout 100% localement dans votre navigateur. Cela signifie que vos images et PDF ne sont jamais téléchargés sur un serveur. Tout l\'édition se fait sur votre propre appareil en utilisant JavaScript, garantissant une confidentialité complète. C\'est crucial lors du traitement de documents sensibles comme des copies de passeport, des relevés bancaires, des dossiers médicaux ou des documents commerciaux confidentiels.',
+    'de': 'Im Gegensatz zu den meisten Online-Fotoeditoren verarbeitet unser Tool alles 100% lokal in Ihrem Browser. Das bedeutet, dass Ihre Bilder und PDFs niemals auf einen Server hochgeladen werden. Die gesamte Bearbeitung erfolgt auf Ihrem eigenen Gerät mit JavaScript, was vollständige Vertraulichkeit gewährleistet. Dies ist entscheidend beim Umgang mit sensiblen Dokumenten wie Passkopien, Kontoauszügen, medizinischen Aufzeichnungen oder vertraulichen Geschäftsdokumenten.',
+    'ja': 'ほとんどのオンライン写真エディターとは異なり、当社のツールはブラウザ内で100%ローカルにすべてを処理します。これは、画像やPDFがサーバーにアップロードされないことを意味します。すべての編集はJavaScriptを使用して自分のデバイス上で行われ、完全な機密性を確保します。これは、パスポートのコピー、銀行取引明細書、医療記録、または機密ビジネス文書などの機密文書を扱う際に重要です。',
+    'ko': '대부분의 온라인 사진 편집기와 달리 당사의 도구는 브라우저에서 100% 로컬로 모든 것을 처리합니다. 이는 이미지와 PDF가 서버에 업로드되지 않음을 의미합니다. 모든 편집은 JavaScript를 사용하여 사용자의 장치에서 발생하여 완전한 기밀성을 보장합니다. 이는 여권 사본, 은행 명세서, 의료 기록 또는 기밀 비즈니스 문서와 같은 민감한 문서를 처리할 때 중요합니다.',
+    'pt': 'Ao contrário da maioria dos editores de fotos online, nossa ferramenta processa tudo 100% localmente no seu navegador. Isso significa que suas imagens e PDFs nunca são carregados em nenhum servidor. Toda a edição acontece no seu próprio dispositivo usando JavaScript, garantindo total confidencialidade. Isso é crucial ao lidar com documentos confidenciais como cópias de passaporte, extratos bancários, registros médicos ou documentos comerciais confidenciais.',
+    'ru': 'В отличие от большинства онлайн-редакторов фотографий, наш инструмент обрабатывает все 100% локально в вашем браузере. Это означает, что ваши изображения и PDF никогда не загружаются на сервер. Вся обработка происходит на вашем собственном устройстве с использованием JavaScript, обеспечивая полную конфиденциальность. Это имеет решающее значение при работе с конфиденциальными документами, такими как копии паспортов, банковские выписки, медицинские записи или конфиденциальные бизнес-документы.',
+    'ar': 'على عكس معظم محررات الصور عبر الإنترنت، تعالج أداتنا كل شيء بنسبة 100٪ محليًا في متصفحك. هذا يعني أن صورك وملفات PDF لا يتم تحميلها أبدًا على أي خادم. تحدث جميع عمليات التحرير على جهازك الخاص باستخدام JavaScript، مما يضمن السرية التامة. هذا أمر بالغ الأهمية عند التعامل مع المستندات الحساسة مثل نسخ جوازات السفر وكشوف الحسابات البنكية والسجلات الطبية أو مستندات الأعمال السرية.'
+};
+
+TRANSLATIONS['faq.q3.title'] = {
+    'en': 'Can I edit multi-page PDF files for free?',
+    'zh': '我可以免费编辑多页PDF文件吗？',
+    'es': '¿Puedo editar archivos PDF de varias páginas gratis?',
+    'fr': 'Puis-je éditer des fichiers PDF multi-pages gratuitement ?',
+    'de': 'Kann ich mehrseitige PDF-Dateien kostenlos bearbeiten?',
+    'ja': '複数ページのPDFファイルを無料で編集できますか？',
+    'ko': '다중 페이지 PDF 파일을 무료로 편집할 수 있나요?',
+    'pt': 'Posso editar arquivos PDF de várias páginas gratuitamente?',
+    'ru': 'Могу ли я бесплатно редактировать многостраничные PDF-файлы?',
+    'ar': 'هل يمكنني تحرير ملفات PDF متعددة الصفحات مجانًا؟'
+};
+
+TRANSLATIONS['faq.q3.answer'] = {
+    'en': 'Yes! Our free PDF redaction tool supports multi-page documents. You can navigate through pages, edit each page individually, and export the entire document as a single PDF file. Each page maintains its quality, and the exported PDF preserves all your redactions. This is perfect for editing contracts, legal documents, reports, or any multi-page PDF that needs sensitive information removed.',
+    'zh': '是的！我们的免费PDF编辑工具支持多页文档。您可以浏览页面，单独编辑每个页面，并将整个文档导出为单个PDF文件。每个页面都保持其质量，导出的PDF保留所有您的编辑。这非常适合编辑合同、法律文档、报告或任何需要删除敏感信息的多页PDF。',
+    'es': '¡Sí! Nuestra herramienta gratuita de edición de PDF admite documentos de varias páginas. Puede navegar por las páginas, editar cada página individualmente y exportar todo el documento como un solo archivo PDF. Cada página mantiene su calidad y el PDF exportado conserva todas sus ediciones. Esto es perfecto para editar contratos, documentos legales, informes o cualquier PDF de varias páginas que necesite eliminar información confidencial.',
+    'fr': 'Oui ! Notre outil gratuit d\'édition PDF prend en charge les documents multi-pages. Vous pouvez naviguer à travers les pages, éditer chaque page individuellement et exporter l\'ensemble du document en tant que fichier PDF unique. Chaque page conserve sa qualité et le PDF exporté préserve toutes vos éditions. C\'est parfait pour éditer des contrats, des documents juridiques, des rapports ou tout PDF multi-pages nécessitant la suppression d\'informations sensibles.',
+    'de': 'Ja! Unser kostenloses PDF-Bearbeitungstool unterstützt mehrseitige Dokumente. Sie können durch Seiten navigieren, jede Seite einzeln bearbeiten und das gesamte Dokument als einzelne PDF-Datei exportieren. Jede Seite behält ihre Qualität und die exportierte PDF bewahrt alle Ihre Bearbeitungen. Dies ist perfekt zum Bearbeiten von Verträgen, juristischen Dokumenten, Berichten oder allen mehrseitigen PDFs, bei denen sensible Informationen entfernt werden müssen.',
+    'ja': 'はい！当社の無料PDF編集ツールは複数ページの文書に対応しています。ページを移動し、各ページを個別に編集し、文書全体を単一のPDFファイルとしてエクスポートできます。各ページは品質を維持し、エクスポートされたPDFはすべての編集を保持します。これは、契約書、法律文書、レポート、または機密情報を削除する必要がある複数ページのPDFを編集するのに最適です。',
+    'ko': '네! 당사 무료 PDF 편집 도구는 다중 페이지 문서를 지원합니다. 페이지를 탐색하고 각 페이지를 개별적으로 편집하며 전체 문서를 단일 PDF 파일로 내보낼 수 있습니다. 각 페이지는 품질을 유지하고 내보낸 PDF는 모든 편집을 보존합니다. 이는 계약서, 법률 문서, 보고서 또는 민감한 정보를 제거해야 하는 다중 페이지 PDF를 편집하는 데 완벽합니다.',
+    'pt': 'Sim! Nossa ferramenta gratuita de edição de PDF suporta documentos de várias páginas. Você pode navegar pelas páginas, editar cada página individualmente e exportar todo o documento como um único arquivo PDF. Cada página mantém sua qualidade e o PDF exportado preserva todas as suas edições. Isso é perfeito para editar contratos, documentos legais, relatórios ou qualquer PDF de várias páginas que precise remover informações confidenciais.',
+    'ru': 'Да! Наш бесплатный инструмент для редактирования PDF поддерживает многостраничные документы. Вы можете перемещаться по страницам, редактировать каждую страницу отдельно и экспортировать весь документ как один PDF-файл. Каждая страница сохраняет свое качество, а экспортированный PDF сохраняет все ваши правки. Это идеально подходит для редактирования контрактов, юридических документов, отчетов или любых многостраничных PDF, из которых нужно удалить конфиденциальную информацию.',
+    'ar': 'نعم! أداة تحرير PDF المجانية الخاصة بنا تدعم المستندات متعددة الصفحات. يمكنك التنقل بين الصفحات وتحرير كل صفحة على حدة وتصدير المستند بأكمله كملف PDF واحد. تحافظ كل صفحة على جودتها ويحافظ ملف PDF المُصدَّر على جميع تحريراتك. هذا مثالي لتحرير العقود والمستندات القانونية والتقارير أو أي ملف PDF متعدد الصفحات يحتاج إلى إزالة المعلومات الحساسة.'
+};
+
+TRANSLATIONS['faq.q4.title'] = {
+    'en': 'What\'s the best way to blur faces in photos?',
+    'zh': '在照片中模糊面部的最佳方法是什么？',
+    'es': '¿Cuál es la mejor manera de difuminar rostros en fotos?',
+    'fr': 'Quelle est la meilleure façon de flouter les visages dans les photos ?',
+    'de': 'Was ist der beste Weg, um Gesichter in Fotos zu verwischen?',
+    'ja': '写真の顔をぼかす最良の方法は何ですか？',
+    'ko': '사진에서 얼굴을 흐리는 가장 좋은 방법은 무엇인가요?',
+    'pt': 'Qual é a melhor maneira de desfocar rostos em fotos?',
+    'ru': 'Какой лучший способ размыть лица на фотографиях?',
+    'ar': 'ما هي أفضل طريقة لطمس الوجوه في الصور؟'
+};
+
+TRANSLATIONS['faq.q4.answer'] = {
+    'en': 'To blur faces effectively: (1) Upload your photo to our tool, (2) Select the area covering the face by clicking and dragging, (3) Choose a solid color or blur effect, (4) Adjust the intensity if needed for complete coverage, (5) Export the edited image. For best results, make sure the selection completely covers facial features. You can use black or white boxes for maximum obscurity, or choose a skin-tone color for a more natural look.',
+    'zh': '要有效模糊面部：(1) 将照片上传到我们的工具，(2) 通过点击并拖动选择覆盖面部的区域，(3) 选择纯色或模糊效果，(4) 如果需要，调整强度以实现完全覆盖，(5) 导出编辑后的图像。为了获得最佳效果，请确保选择完全覆盖面部特征。您可以使用黑色或白色方框以获得最大程度的隐蔽性，或者选择肤色以获得更自然的外观。',
+    'es': 'Para difuminar rostros eficazmente: (1) Suba su foto a nuestra herramienta, (2) Seleccione el área que cubre el rostro haciendo clic y arrastrando, (3) Elija un color sólido o efecto de desenfoque, (4) Ajuste la intensidad si es necesario para una cobertura completa, (5) Exporte la imagen editada. Para obtener mejores resultados, asegúrese de que la selección cubra completamente las características faciales. Puede usar cajas negras o blancas para máxima oscuridad, o elegir un color de tono de piel para un aspecto más natural.',
+    'fr': 'Pour flouter efficacement les visages : (1) Téléchargez votre photo sur notre outil, (2) Sélectionnez la zone couvrant le visage en cliquant et en faisant glisser, (3) Choisissez une couleur unie ou un effet de flou, (4) Ajustez l\'intensité si nécessaire pour une couverture complète, (5) Exportez l\'image éditée. Pour de meilleurs résultats, assurez-vous que la sélection couvre complètement les traits du visage. Vous pouvez utiliser des boîtes noires ou blanches pour une obscurité maximale, ou choisir une couleur de ton de peau pour un aspect plus naturel.',
+    'de': 'Um Gesichter effektiv zu verwischen: (1) Laden Sie Ihr Foto in unser Tool hoch, (2) Wählen Sie den Bereich, der das Gesicht bedeckt, indem Sie klicken und ziehen, (3) Wählen Sie eine einfarbige Farbe oder einen Weichzeichnereffekt, (4) Passen Sie die Intensität bei Bedarf für vollständige Abdeckung an, (5) Exportieren Sie das bearbeitete Bild. Für beste Ergebnisse stellen Sie sicher, dass die Auswahl die Gesichtszüge vollständig abdeckt. Sie können schwarze oder weiße Kästen für maximale Undurchsichtigkeit verwenden oder eine Hautfarbe für ein natürlicheres Aussehen wählen.',
+    'ja': '顔を効果的にぼかすには：(1) 写真をツールにアップロード、(2) クリックしてドラッグして顔を覆う領域を選択、(3) 単色またはぼかし効果を選択、(4) 完全なカバーageのために必要に応じて強度を調整、(5) 編集した画像をエクスポート。最良の結果を得るには、選択が顔の特徴を完全に覆っていることを確認してください。最大の不透明性のために黒または白のボックスを使用するか、より自然な外観のために肌色を選択できます。',
+    'ko': '얼굴을 효과적으로 흐리게 하려면: (1) 사진을 도구에 업로드, (2) 클릭하고 드래그하여 얼굴을 덮는 영역 선택, (3) 단색 또는 흐림 효과 선택, (4) 완전한 커버리지를 위해 필요하면 강도 조정, (5) 편집된 이미지 내보내기. 최상의 결과를 얻으려면 선택이 얼굴 특징을 완전히 덮는지 확인하세요. 최대 불투명도를 위해 검은색 또는 흰색 상자를 사용하거나 더 자연스러운 외관을 위해 피부 톤 색상을 선택할 수 있습니다.',
+    'pt': 'Para desfocar rostos efetivamente: (1) Carregue sua foto em nossa ferramenta, (2) Selecione a área cobrindo o rosto clicando e arrastando, (3) Escolha uma cor sólida ou efeito de desfoque, (4) Ajuste a intensidade se necessário para cobertura completa, (5) Exporte a imagem editada. Para melhores resultados, certifique-se de que a seleção cubra completamente as características faciais. Você pode usar caixas pretas ou brancas para máxima obscuridade, ou escolher uma cor de tom de pele para uma aparência mais natural.',
+    'ru': 'Чтобы эффективно размыть лица: (1) Загрузите фотографию в наш инструмент, (2) Выберите область, покрывающую лицо, щелкнув и перетащив, (3) Выберите сплошной цвет или эффект размытия, (4) При необходимости отрегулируйте интенсивность для полного покрытия, (5) Экспортируйте отредактированное изображение. Для лучших результатов убедитесь, что выбор полностью покрывает черты лица. Вы можете использовать черные или белые коробки для максимальной непрозрачности или выбрать цвет тона кожи для более естественного вида.',
+    'ar': 'لطمس الوجوه بفعالية: (1) ارفع صورتك إلى أداتنا، (2) حدد المنطقة التي تغطي الوجه بالنقر والسحب، (3) اختر لونًا خالصًا أو تأثير ضبابي، (4) اضبط الشدة إذا لزم الأمر للتغطية الكاملة، (5) صدّر الصورة المُحررة. للحصول على أفضل النتائج، تأكد من أن التحديد يغطي ملامح الوجه بالكامل. يمكنك استخدام مربعات سوداء أو بيضاء لأقصى قدر من الغموض، أو اختيار لون بشرة لمظهر أكثر طبيعية.'
+};
+
+TRANSLATIONS['faq.q5.title'] = {
+    'en': 'Is this really a free alternative to paid redaction software?',
+    'zh': '这真的是付费编辑软件的免费替代品吗？',
+    'es': '¿Es realmente una alternativa gratuita al software de edición de pago?',
+    'fr': 'Est-ce vraiment une alternative gratuite aux logiciels d\'édition payants ?',
+    'de': 'Ist dies wirklich eine kostenlose Alternative zu kostenpflichtiger Bearbeitungssoftware?',
+    'ja': 'これは本当に有料編集ソフトウェアの無料代替品ですか？',
+    'ko': '이것이 정말로 유료 편집 소프트웨어의 무료 대안인가요?',
+    'pt': 'Esta é realmente uma alternativa gratuita ao software de edição pago?',
+    'ru': 'Действительно ли это бесплатная альтернатива платному программному обеспечению для редактирования?',
+    'ar': 'هل هذا حقًا بديل مجاني لبرامج التحرير المدفوعة؟'
+};
+
+TRANSLATIONS['faq.q5.answer'] = {
+    'en': 'Absolutely! Our tool is completely free with no hidden costs. Unlike expensive software like Adobe Acrobat Pro or subscription-based services, we offer professional-grade redaction features at no cost. There are no watermarks, no usage limits, and no registration required. We believe privacy protection should be accessible to everyone.',
+    'zh': '绝对是的！我们的工具完全免费，没有隐藏成本。与Adobe Acrobat Pro等昂贵软件或基于订阅的服务不同，我们免费提供专业级编辑功能。没有水印，没有使用限制，也不需要注册。我们相信隐私保护应该对每个人都可以访问。',
+    'es': '¡Absolutamente! Nuestra herramienta es completamente gratuita sin costos ocultos. A diferencia del software costoso como Adobe Acrobat Pro o los servicios basados en suscripción, ofrecemos funciones de edición de nivel profesional sin costo. No hay marcas de agua, no hay límites de uso y no se requiere registro. Creemos que la protección de la privacidad debería ser accesible para todos.',
+    'fr': 'Absolument ! Notre outil est entièrement gratuit sans coûts cachés. Contrairement aux logiciels coûteux comme Adobe Acrobat Pro ou aux services basés sur un abonnement, nous offrons des fonctionnalités d\'édition de niveau professionnel sans frais. Il n\'y a pas de filigranes, pas de limites d\'utilisation et aucune inscription requise. Nous croyons que la protection de la vie privée devrait être accessible à tous.',
+    'de': 'Absolut! Unser Tool ist völlig kostenlos ohne versteckte Kosten. Im Gegensatz zu teurer Software wie Adobe Acrobat Pro oder abonnementbasierten Diensten bieten wir professionelle Bearbeitungsfunktionen kostenlos an. Es gibt keine Wasserzeichen, keine Nutzungsbeschränkungen und keine Registrierung erforderlich. Wir glauben, dass Datenschutz für alle zugänglich sein sollte.',
+    'ja': 'もちろんです！当社のツールは隠れたコストなしで完全に無料です。Adobe Acrobat Proなどの高価なソフトウェアやサブスクリプションベースのサービスとは異なり、プロフェッショナルグレードの編集機能を無償で提供します。透かしはなく、使用制限もなく、登録も不要です。プライバシー保護は誰にでもアクセスできるべきだと信じています。',
+    'ko': '물론입니다! 당사 도구는 숨겨진 비용 없이 완전히 무료입니다. Adobe Acrobat Pro와 같은 비싼 소프트웨어나 구독 기반 서비스와 달리 당사는 프로페셔널급 편집 기능을 무상으로 제공합니다. 워터마크가 없고 사용 제한이 없으며 등록이 필요하지 않습니다. 당사는 개인 정보 보호가 모두에게 접근 가능해야 한다고 믿습니다.',
+    'pt': 'Absolutamente! Nossa ferramenta é completamente gratuita sem custos ocultos. Ao contrário de softwares caros como Adobe Acrobat Pro ou serviços baseados em assinatura, oferecemos recursos de edição de nível profissional sem custo. Não há marcas d\'água, não há limites de uso e nenhum registro é necessário. Acreditamos que a proteção da privacidade deve ser acessível a todos.',
+    'ru': 'Абсолютно! Наш инструмент совершенно бесплатен без скрытых расходов. В отличие от дорогого программного обеспечения, такого как Adobe Acrobat Pro, или сервисов на основе подписки, мы предлагаем профессиональные функции редактирования бесплатно. Нет водяных знаков, нет ограничений на использование и не требуется регистрация. Мы считаем, что защита конфиденциальности должна быть доступна каждому.',
+    'ar': 'بالتأكيد! أداتنا مجانية تمامًا بدون تكاليف خفية. على عكس البرامج باهظة الثمن مثل Adobe Acrobat Pro أو الخدمات القائمة على الاشتراك، نقدم ميزات تحرير احترافية بدون تكلفة. لا توجد علامات مائية، ولا حدود للاستخدام، ولا يلزم التسجيل. نعتقد أن حماية الخصوصية يجب أن تكون متاحة للجميع.'
+};
+
+TRANSLATIONS['faq.q6.title'] = {
+    'en': 'Which file formats can I edit and export?',
+    'zh': '我可以编辑和导出哪些文件格式？',
+    'es': '¿Qué formatos de archivo puedo editar y exportar?',
+    'fr': 'Quels formats de fichier puis-je éditer et exporter ?',
+    'de': 'Welche Dateiformate kann ich bearbeiten und exportieren?',
+    'ja': 'どのファイル形式を編集およびエクスポートできますか？',
+    'ko': '어떤 파일 형식을 편집하고 내보낼 수 있나요?',
+    'pt': 'Quais formatos de arquivo posso editar e exportar?',
+    'ru': 'Какие форматы файлов я могу редактировать и экспортировать?',
+    'ar': 'ما هي تنسيقات الملفات التي يمكنني تحريرها وتصديرها؟'
+};
+
+TRANSLATIONS['faq.q6.answer'] = {
+    'en': 'We support all major image formats including JPG/JPEG, PNG, GIF, and WebP. For PDF files, you can import and export multi-page documents. The tool preserves the original file format when exporting - if you upload a JPG, you can download as JPG; if you upload a PDF, you get a PDF back. This ensures compatibility with your workflow.',
+    'zh': '我们支持所有主要图像格式，包括JPG/JPEG、PNG、GIF和WebP。对于PDF文件，您可以导入和导出多页文档。该工具在导出时保留原始文件格式 - 如果您上传JPG，则可以下载为JPG；如果您上传PDF，则会得到PDF。这确保了与工作流的兼容性。',
+    'es': 'Admitimos todos los formatos de imagen principales, incluidos JPG/JPEG, PNG, GIF y WebP. Para archivos PDF, puede importar y exportar documentos de varias páginas. La herramienta conserva el formato de archivo original al exportar: si carga un JPG, puede descargarlo como JPG; si carga un PDF, obtiene un PDF. Esto garantiza la compatibilidad con su flujo de trabajo.',
+    'fr': 'Nous prenons en charge tous les principaux formats d\'image, y compris JPG/JPEG, PNG, GIF et WebP. Pour les fichiers PDF, vous pouvez importer et exporter des documents multi-pages. L\'outil conserve le format de fichier original lors de l\'exportation - si vous téléchargez un JPG, vous pouvez le télécharger en JPG ; si vous téléchargez un PDF, vous obtenez un PDF. Cela garantit la compatibilité avec votre flux de travail.',
+    'de': 'Wir unterstützen alle gängigen Bildformate, einschließlich JPG/JPEG, PNG, GIF und WebP. Für PDF-Dateien können Sie mehrseitige Dokumente importieren und exportieren. Das Tool behält das ursprüngliche Dateiformat beim Exportieren bei - wenn Sie ein JPG hochladen, können Sie es als JPG herunterladen; wenn Sie ein PDF hochladen, erhalten Sie ein PDF zurück. Dies gewährleistet die Kompatibilität mit Ihrem Arbeitsablauf.',
+    'ja': 'JPG/JPEG、PNG、GIF、WebPを含むすべての主要な画像形式をサポートしています。PDFファイルの場合、複数ページのドキュメントをインポートおよびエクスポートできます。ツールはエクスポート時に元のファイル形式を保持します-JPGをアップロードするとJPGとしてダウンロードできます。PDFをアップロードするとPDFが返されます。これにより、ワークフローとの互換性が確保されます。',
+    'ko': 'JPG/JPEG, PNG, GIF 및 WebP를 포함한 모든 주요 이미지 형식을 지원합니다. PDF 파일의 경우 다중 페이지 문서를 가져오고 내보낼 수 있습니다. 도구는 내보낼 때 원래 파일 형식을 유지합니다. JPG를 업로드하면 JPG로 다운로드할 수 있고 PDF를 업로드하면 PDF를 받습니다. 이렇게 하면 워크플로우와의 호환성이 보장됩니다.',
+    'pt': 'Suportamos todos os principais formatos de imagem, incluindo JPG/JPEG, PNG, GIF e WebP. Para arquivos PDF, você pode importar e exportar documentos de várias páginas. A ferramenta preserva o formato de arquivo original ao exportar - se você carregar um JPG, pode baixá-lo como JPG; se você carregar um PDF, recebe um PDF de volta. Isso garante compatibilidade com seu fluxo de trabalho.',
+    'ru': 'Мы поддерживаем все основные форматы изображений, включая JPG/JPEG, PNG, GIF и WebP. Для файлов PDF вы можете импортировать и экспортировать многостраничные документы. Инструмент сохраняет исходный формат файла при экспорте - если вы загружаете JPG, вы можете скачать его как JPG; если вы загружаете PDF, вы получаете PDF обратно. Это обеспечивает совместимость с вашим рабочим процессом.',
+    'ar': 'ندعم جميع تنسيقات الصور الرئيسية بما في ذلك JPG/JPEG وPNG وGIF وWebP. بالنسبة لملفات PDF، يمكنك استيراد وتصدير المستندات متعددة الصفحات. تحافظ الأداة على تنسيق الملف الأصلي عند التصدير - إذا قمت بتحميل JPG، فيمكنك تنزيله كـ JPG؛ وإذا قمت بتحميل PDF، فستحصل على PDF مرة أخرى. يضمن هذا التوافق مع سير عملك.'
+};
+
+TRANSLATIONS['faq.q7.title'] = {
+    'en': 'How do I hide ID numbers and credit card information?',
+    'zh': '如何隐藏身份证号码和信用卡信息？',
+    'es': '¿Cómo oculto números de identificación e información de tarjetas de crédito?',
+    'fr': 'Comment masquer les numéros d\'identification et les informations de carte de crédit ?',
+    'de': 'Wie verberge ich Ausweisnummern und Kreditkarteninformationen?',
+    'ja': 'ID番号とクレジットカード情報を隠すにはどうすればよいですか？',
+    'ko': '신분증 번호와 신용카드 정보를 숨기려면 어떻게 해야 하나요?',
+    'pt': 'Como escondo números de identificação e informações de cartão de crédito?',
+    'ru': 'Как скрыть номера удостоверений личности и информацию о кредитной карте?',
+    'ar': 'كيف أخفي أرقام الهوية ومعلومات بطاقة الائتمان؟'
+};
+
+TRANSLATIONS['faq.q7.answer'] = {
+    'en': 'For maximum security when hiding sensitive numbers: (1) Upload your document image, (2) Carefully select the area containing the ID number, SSN, or credit card digits, (3) Use a solid black or white box for complete coverage, (4) Make sure the selection extends slightly beyond the text edges, (5) Preview to ensure nothing is visible, (6) Export securely. Always double-check that all sensitive data is fully obscured before sharing.',
+    'zh': '隐藏敏感号码时的最大安全性：(1) 上传文档图像，(2) 仔细选择包含身份证号、社会安全号或信用卡数字的区域，(3) 使用纯黑色或白色方框以实现完全覆盖，(4) 确保选择略微超出文本边缘，(5) 预览以确保没有任何内容可见，(6) 安全导出。在分享之前，务必仔细检查所有敏感数据是否完全被遮盖。',
+    'es': 'Para máxima seguridad al ocultar números sensibles: (1) Suba la imagen de su documento, (2) Seleccione cuidadosamente el área que contiene el número de identificación, SSN o dígitos de tarjeta de crédito, (3) Use una caja negra o blanca sólida para cobertura completa, (4) Asegúrese de que la selección se extienda ligeramente más allá de los bordes del texto, (5) Obtenga una vista previa para asegurarse de que nada sea visible, (6) Exporte de forma segura. Siempre verifique dos veces que todos los datos sensibles estén completamente ocultos antes de compartir.',
+    'fr': 'Pour une sécurité maximale lors du masquage de numéros sensibles : (1) Téléchargez l\'image de votre document, (2) Sélectionnez soigneusement la zone contenant le numéro d\'identification, le SSN ou les chiffres de la carte de crédit, (3) Utilisez une boîte noire ou blanche unie pour une couverture complète, (4) Assurez-vous que la sélection s\'étend légèrement au-delà des bords du texte, (5) Prévisualisez pour vous assurer que rien n\'est visible, (6) Exportez en toute sécurité. Vérifiez toujours deux fois que toutes les données sensibles sont complètement masquées avant de partager.',
+    'de': 'Für maximale Sicherheit beim Verbergen sensibler Nummern: (1) Laden Sie Ihr Dokumentbild hoch, (2) Wählen Sie sorgfältig den Bereich aus, der die Ausweisnummer, Sozialversicherungsnummer oder Kreditkartenziffern enthält, (3) Verwenden Sie ein solides schwarzes oder weißes Feld für vollständige Abdeckung, (4) Stellen Sie sicher, dass die Auswahl leicht über die Textkanten hinausgeht, (5) Zeigen Sie eine Vorschau an, um sicherzustellen, dass nichts sichtbar ist, (6) Exportieren Sie sicher. Überprüfen Sie immer doppelt, ob alle sensiblen Daten vollständig verborgen sind, bevor Sie sie teilen.',
+    'ja': '機密番号を隠す際の最大限のセキュリティ：(1) 文書画像をアップロード、(2) ID番号、社会保障番号、またはクレジットカードの数字を含む領域を注意深く選択、(3) 完全なカバーageのために純粋な黒または白のボックスを使用、(4) 選択がテキストエッジをわずかに超えていることを確認、(5) 何も表示されていないことを確認するためにプレビュー、(6) 安全にエクスポート。共有する前に、すべての機密データが完全に隠されていることを常に再確認してください。',
+    'ko': '민감한 번호를 숨길 때 최대 보안을 위해: (1) 문서 이미지 업로드, (2) 신분증 번호, 사회 보장 번호 또는 신용카드 숫자가 포함된 영역을 주의 깊게 선택, (3) 완전한 커버리지를 위해 단색 검은색 또는 흰색 상자 사용, (4) 선택이 텍스트 가장자리를 약간 넘어서도록 확인, (5) 아무것도 표시되지 않는지 미리보기로 확인, (6) 안전하게 내보내기. 공유하기 전에 모든 민감한 데이터가 완전히 가려졌는지 항상 다시 확인하세요.',
+    'pt': 'Para segurança máxima ao ocultar números confidenciais: (1) Carregue a imagem do seu documento, (2) Selecione cuidadosamente a área contendo o número de identificação, CPF ou dígitos do cartão de crédito, (3) Use uma caixa preta ou branca sólida para cobertura completa, (4) Certifique-se de que a seleção se estenda ligeiramente além das bordas do texto, (5) Visualize para garantir que nada esteja visível, (6) Exporte com segurança. Sempre verifique duas vezes se todos os dados confidenciais estão completamente ocultos antes de compartilhar.',
+    'ru': 'Для максимальной безопасности при скрытии конфиденциальных номеров: (1) Загрузите изображение документа, (2) Тщательно выберите область, содержащую номер удостоверения личности, номер социального страхования или цифры кредитной карты, (3) Используйте сплошной черный или белый прямоугольник для полного покрытия, (4) Убедитесь, что выбор немного выходит за края текста, (5) Предварительный просмотр, чтобы убедиться, что ничего не видно, (6) Безопасный экспорт. Всегда дважды проверяйте, что все конфиденциальные данные полностью скрыты перед публикацией.',
+    'ar': 'للحصول على أقصى قدر من الأمان عند إخفاء الأرقام الحساسة: (1) ارفع صورة مستندك، (2) حدد بعناية المنطقة التي تحتوي على رقم الهوية أو رقم الضمان الاجتماعي أو أرقام بطاقة الائتمان، (3) استخدم مربعًا أسود أو أبيض خالصًا للتغطية الكاملة، (4) تأكد من أن التحديد يمتد قليلاً خارج حواف النص، (5) اعرض معاينة للتأكد من عدم ظهور أي شيء، (6) صدّر بأمان. تحقق دائمًا مرتين من أن جميع البيانات الحساسة مغطاة بالكامل قبل المشاركة.'
+};
+
+TRANSLATIONS['faq.q8.title'] = {
+    'en': 'Does this tool work on mobile devices?',
+    'zh': '这个工具可以在移动设备上使用吗？',
+    'es': '¿Funciona esta herramienta en dispositivos móviles?',
+    'fr': 'Cet outil fonctionne-t-il sur les appareils mobiles ?',
+    'de': 'Funktioniert dieses Tool auf mobilen Geräten?',
+    'ja': 'このツールはモバイルデバイスで動作しますか？',
+    'ko': '이 도구는 모바일 기기에서 작동하나요?',
+    'pt': 'Esta ferramenta funciona em dispositivos móveis?',
+    'ru': 'Работает ли этот инструмент на мобильных устройствах?',
+    'ar': 'هل تعمل هذه الأداة على الأجهزة المحمولة؟'
+};
+
+TRANSLATIONS['faq.q8.answer'] = {
+    'en': 'Yes! Our responsive design works perfectly on smartphones and tablets running iOS or Android. You can upload photos directly from your camera roll, take new photos, or select PDF files. The touch-friendly interface makes it easy to select areas for redaction on smaller screens. Everything runs in your mobile browser - no app installation needed.',
+    'zh': '是的！我们的响应式设计在运行iOS或Android的智能手机和平板电脑上完美工作。您可以直接从相机胶卷上传照片、拍摄新照片或选择PDF文件。触摸友好的界面使在小屏幕上选择编辑区域变得容易。一切都在您的移动浏览器中运行 - 无需安装应用程序。',
+    'es': '¡Sí! Nuestro diseño responsivo funciona perfectamente en teléfonos inteligentes y tabletas que ejecutan iOS o Android. Puede cargar fotos directamente desde su carrete de cámara, tomar nuevas fotos o seleccionar archivos PDF. La interfaz amigable con el tacto facilita la selección de áreas para editar en pantallas más pequeñas. Todo se ejecuta en su navegador móvil: no es necesaria la instalación de aplicaciones.',
+    'fr': 'Oui ! Notre conception réactive fonctionne parfaitement sur les smartphones et les tablettes exécutant iOS ou Android. Vous pouvez télécharger des photos directement depuis votre pellicule, prendre de nouvelles photos ou sélectionner des fichiers PDF. L\'interface conviviale au toucher facilite la sélection des zones à éditer sur les petits écrans. Tout s\'exécute dans votre navigateur mobile - aucune installation d\'application n\'est nécessaire.',
+    'de': 'Ja! Unser responsives Design funktioniert einwandfrei auf Smartphones und Tablets mit iOS oder Android. Sie können Fotos direkt aus Ihrer Kamerarolle hochladen, neue Fotos aufnehmen oder PDF-Dateien auswählen. Die berührungsfreundliche Oberfläche erleichtert die Auswahl von Bereichen zur Bearbeitung auf kleineren Bildschirmen. Alles läuft in Ihrem mobilen Browser - keine App-Installation erforderlich.',
+    'ja': 'はい！当社のレスポンシブデザインは、iOSまたはAndroidを実行しているスマートフォンやタブレットで完璧に機能します。カメラロールから直接写真をアップロードしたり、新しい写真を撮ったり、PDFファイルを選択したりできます。タッチフレンドリーなインターフェースにより、小さな画面で編集する領域を簡単に選択できます。すべてはモバイルブラウザで実行され、アプリのインストールは不要です。',
+    'ko': '네! 당사 반응형 디자인은 iOS 또는 Android를 실행하는 스마트폰과 태블릿에서 완벽하게 작동합니다. 카메라 롤에서 직접 사진을 업로드하거나 새 사진을 찍거나 PDF 파일을 선택할 수 있습니다. 터치 친화적 인터페이스는 작은 화면에서 편집할 영역을 쉽게 선택할 수 있게 해줍니다. 모든 것이 모바일 브라우저에서 실행되며 앱 설치가 필요하지 않습니다.',
+    'pt': 'Sim! Nosso design responsivo funciona perfeitamente em smartphones e tablets executando iOS ou Android. Você pode carregar fotos diretamente do seu rolo da câmera, tirar novas fotos ou selecionar arquivos PDF. A interface amigável ao toque facilita a seleção de áreas para edição em telas menores. Tudo é executado no seu navegador móvel - não é necessária instalação de aplicativo.',
+    'ru': 'Да! Наш адаптивный дизайн отлично работает на смартфонах и планшетах под управлением iOS или Android. Вы можете загружать фотографии прямо из фотопленки, делать новые фотографии или выбирать файлы PDF. Удобный сенсорный интерфейс облегчает выбор областей для редактирования на меньших экранах. Все работает в вашем мобильном браузере - установка приложения не требуется.',
+    'ar': 'نعم! تصميمنا المتجاوب يعمل بشكل مثالي على الهواتف الذكية والأجهزة اللوحية التي تعمل بنظام iOS أو Android. يمكنك تحميل الصور مباشرة من لفة الكاميرا الخاصة بك، أو التقاط صور جديدة، أو تحديد ملفات PDF. تجعل الواجهة الصديقة للمس من السهل تحديد المناطق للتحرير على الشاشات الأصغر. كل شيء يعمل في متصفحك المحمول - لا حاجة لتثبيت التطبيق.'
+};
+
+// Additional SEO Content Features
+TRANSLATIONS['seo.feature1.title'] = {
+    'en': '🔒 Secure Document Editing',
+    'zh': '🔒 安全的文档编辑',
+    'es': '🔒 Edición segura de documentos',
+    'fr': '🔒 Édition sécurisée de documents',
+    'de': '🔒 Sichere Dokumentenbearbeitung',
+    'ja': '🔒 安全な文書編集',
+    'ko': '🔒 안전한 문서 편집',
+    'pt': '🔒 Edição segura de documentos',
+    'ru': '🔒 Безопасное редактирование документов',
+    'ar': '🔒 تحرير المستندات الآمن'
+};
+
+TRANSLATIONS['seo.feature1.desc'] = {
+    'en': 'Edit sensitive documents safely with our client-side processor. Perfect for legal documents, medical records, financial statements, and personal identification cards. No data leaves your device.',
+    'zh': '使用我们的客户端处理器安全地编辑敏感文档。非常适合法律文档、医疗记录、财务报表和个人身份证件。数据不会离开您的设备。',
+    'es': 'Edite documentos confidenciales de forma segura con nuestro procesador del lado del cliente. Perfecto para documentos legales, registros médicos, estados financieros y tarjetas de identificación personal. Ningún dato sale de su dispositivo.',
+    'fr': 'Modifiez des documents sensibles en toute sécurité avec notre processeur côté client. Parfait pour les documents juridiques, les dossiers médicaux, les relevés financiers et les cartes d\'identité personnelles. Aucune donnée ne quitte votre appareil.',
+    'de': 'Bearbeiten Sie sensible Dokumente sicher mit unserem clientseitigen Prozessor. Perfekt für juristische Dokumente, medizinische Aufzeichnungen, Finanzberichte und persönliche Ausweise. Keine Daten verlassen Ihr Gerät.',
+    'ja': 'クライアントサイドプロセッサーで機密文書を安全に編集。法律文書、医療記録、財務諸表、個人身分証明書に最適です。データはデバイスから流出しません。',
+    'ko': '클라이언트 측 프로세서를 사용하여 민감한 문서를 안전하게 편집하세요. 법률 문서, 의료 기록, 재무제표 및 개인 신분증에 이상적입니다. 데이터가 장치를 떠나지 않습니다.',
+    'pt': 'Edite documentos confidenciais com segurança com nosso processador do lado do cliente. Perfeito para documentos legais, registros médicos, demonstrações financeiras e cartões de identificação pessoal. Nenhum dado sai do seu dispositivo.',
+    'ru': 'Безопасно редактируйте конфиденциальные документы с помощью нашего клиентского процессора. Идеально подходит для юридических документов, медицинских записей, финансовых отчетов и личных удостоверений личности. Данные не покидают ваше устройство.',
+    'ar': 'قم بتحرير المستندات الحساسة بأمان باستخدام معالجنا من جانب العميل. مثالي للمستندات القانونية والسجلات الطبية والبيانات المالية وبطاقات التعريف الشخصية. لا تغادر البيانات جهازك.'
+};
+
+TRANSLATIONS['seo.feature2.title'] = {
+    'en': '📸 Photo Privacy Protection',
+    'zh': '📸 照片隐私保护',
+    'es': '📸 Protección de privacidad de fotos',
+    'fr': '📸 Protection de la vie privée des photos',
+    'de': '📸 Foto-Datenschutz',
+    'ja': '📸 写真プライバシー保護',
+    'ko': '📸 사진 개인 정보 보호',
+    'pt': '📸 Proteção de privacidade de fotos',
+    'ru': '📸 Защита конфиденциальности фотографий',
+    'ar': '📸 حماية خصوصية الصور'
+};
+
+TRANSLATIONS['seo.feature2.desc'] = {
+    'en': 'Protect identities in photos before sharing on social media. Blur faces, obscure license plates, hide addresses in screenshots. Essential for journalists, researchers, and privacy-conscious users.',
+    'zh': '在社交媒体上分享之前保护照片中的身份。模糊面部、遮盖车牌、隐藏截图中的地址。记者、研究人员和注重隐私的用户必备。',
+    'es': 'Proteja identidades en fotos antes de compartir en redes sociales. Difumine rostros, oculte matrículas, oculte direcciones en capturas de pantalla. Esencial para periodistas, investigadores y usuarios conscientes de la privacidad.',
+    'fr': 'Protégez les identités dans les photos avant de partager sur les réseaux sociaux. Floutez les visages, obscurcissez les plaques d\'immatriculation, cachez les adresses dans les captures d\'écran. Essentiel pour les journalistes, les chercheurs et les utilisateurs soucieux de la vie privée.',
+    'de': 'Schützen Sie Identitäten in Fotos, bevor Sie sie in sozialen Medien teilen. Verwischen Sie Gesichter, verbergen Sie Kennzeichen, verstecken Sie Adressen in Screenshots. Unverzichtbar für Journalisten, Forscher und datenschutzbewusste Benutzer.',
+    'ja': 'ソーシャルメディアで共有する前に写真の身元を保護。顔をぼかし、ナンバープレートを隠し、スクリーンショットの住所を隠す。ジャーナリスト、研究者、プライバシー意識の高いユーザーに必須です。',
+    'ko': '소셜 미디어에 공유하기 전에 사진의 신원을 보호하세요. 얼굴을 흐리게 하고, 번호판을 가리고, 스크린샷의 주소를 숨기세요. 기자, 연구원 및 개인 정보 보호 의식이 높은 사용자에게 필수적입니다.',
+    'pt': 'Proteja identidades em fotos antes de compartilhar nas redes sociais. Desfoque rostos, oculte placas de licença, esconda endereços em capturas de tela. Essencial para jornalistas, pesquisadores e usuários preocupados com a privacidade.',
+    'ru': 'Защитите личности на фотографиях перед публикацией в социальных сетях. Размывайте лица, скрывайте номерные знаки, прячьте адреса на скриншотах. Необходимо для журналистов, исследователей и пользователей, заботящихся о конфиденциальности.',
+    'ar': 'احمِ الهويات في الصور قبل المشاركة على وسائل التواصل الاجتماعي. طمس الوجوه، وإخفاء لوحات التراخيص، وإخفاء العناوين في لقطات الشاشة. ضروري للصحفيين والباحثين والمستخدمين الواعين بالخصوصية.'
+};
+
+TRANSLATIONS['seo.feature3.title'] = {
+    'en': '📄 PDF Redaction Made Easy',
+    'zh': '📄 PDF编辑变得简单',
+    'es': '📄 Edición de PDF facilitada',
+    'fr': '📄 Édition PDF simplifiée',
+    'de': '📄 PDF-Bearbeitung leicht gemacht',
+    'ja': '📄 PDF編集が簡単に',
+    'ko': '📄 PDF 편집이 쉬워졌습니다',
+    'pt': '📄 Edição de PDF facilitada',
+    'ru': '📄 Редактирование PDF стало проще',
+    'ar': '📄 تحرير PDF أصبح سهلاً'
+};
+
+TRANSLATIONS['seo.feature3.desc'] = {
+    'en': 'Professional PDF editing without expensive software. Redact text, mask images, hide sensitive data across multiple pages. Export as clean PDF ready for sharing or archiving.',
+    'zh': '无需昂贵软件的专业PDF编辑。跨多页编辑文本、遮盖图像、隐藏敏感数据。导出为干净的PDF，准备分享或存档。',
+    'es': 'Edición profesional de PDF sin software costoso. Edite texto, oculte imágenes, oculte datos confidenciales en varias páginas. Exporte como PDF limpio listo para compartir o archivar.',
+    'fr': 'Édition PDF professionnelle sans logiciel coûteux. Éditez du texte, masquez des images, cachez des données sensibles sur plusieurs pages. Exportez en tant que PDF propre prêt à partager ou archiver.',
+    'de': 'Professionelle PDF-Bearbeitung ohne teure Software. Bearbeiten Sie Text, maskieren Sie Bilder, verbergen Sie sensible Daten über mehrere Seiten. Exportieren Sie als sauberes PDF, bereit zum Teilen oder Archivieren.',
+    'ja': '高価なソフトウェアなしでプロフェッショナルなPDF編集。テキストを編集し、画像をマスクし、複数ページにわたって機密データを隠します。共有またはアーカイブの準備ができているクリーンなPDFとしてエクスポート。',
+    'ko': '비싼 소프트웨어 없이 전문적인 PDF 편집. 텍스트를 편집하고, 이미지를 마스킹하며, 여러 페이지에 걸쳐 민감한 데이터를 숨기세요. 공유하거나 보관할 준비가 된 깔끔한 PDF로 내보냅니다.',
+    'pt': 'Edição profissional de PDF sem software caro. Edite texto, mascare imagens, oculte dados confidenciais em várias páginas. Exporte como PDF limpo pronto para compartilhar ou arquivar.',
+    'ru': 'Профессиональное редактирование PDF без дорогого программного обеспечения. Редактируйте текст, маскируйте изображения, скрывайте конфиденциальные данные на нескольких страницах. Экспортируйте как чистый PDF, готовый к публикации или архивированию.',
+    'ar': 'تحرير PDF احترافي بدون برامج باهظة الثمن. حرر النصوص، وأخفِ الصور، واخبئ البيانات الحساسة عبر صفحات متعددة. صدّر كملف PDF نظيف جاهز للمشاركة أو الأرشفة.'
+};
+
+// Keywords Section
+TRANSLATIONS['seo.keywords.title'] = {
+    'en': 'Related Search Terms',
+    'zh': '相关搜索词',
+    'es': 'Términos de búsqueda relacionados',
+    'fr': 'Termes de recherche associés',
+    'de': 'Verwandte Suchbegriffe',
+    'ja': '関連検索語',
+    'ko': '관련 검색어',
+    'pt': 'Termos de pesquisa relacionados',
+    'ru': 'Похожие поисковые запросы',
+    'ar': 'مصطلحات البحث ذات الصلة'
+};
+
+TRANSLATIONS['seo.keywords.list'] = {
+    'en': 'free online image redaction tool, how to blur faces in photos online, mask sensitive information in screenshots, hide ID card number in image, secure photo editor no upload, offline image redaction software, edit PDF without Adobe, free PDF redaction tool online, blur license plate in photo, anonymize document before sharing, remove personal data from images, protect privacy in photos, obscure credit card number in receipt, hide social security number in document, free alternative to Photoshop for redaction, browser-based image editor secure, client-side photo processing tool, edit bank statement PDF free, redact medical records online, hide email address in screenshot, mosaic effect for photos online, pixelate faces in images free, whiteout text in image online, black box redaction tool, multi-page PDF editor free, edit contract PDF online secure',
+    'zh': '免费在线图像编辑工具，如何在线模糊照片中的面部，遮盖截图中的敏感信息，隐藏图像中的身份证号码，安全照片编辑器无上传，离线图像编辑软件，无需Adobe编辑PDF，免费在线PDF编辑工具，模糊照片中的车牌，分享前匿名化文档，从图像中删除个人数据，保护照片中的隐私，遮盖收据中的信用卡号码，隐藏文档中的社会安全号码，Photoshop编辑的免费替代品，基于浏览器的安全图像编辑器，客户端照片处理工具，免费编辑银行对账单PDF，在线编辑医疗记录，隐藏截图中的电子邮件地址，在线照片马赛克效果，免费像素化图像中的面部，在线图像中涂白文本，黑盒编辑工具，免费多页PDF编辑器，安全在线编辑合同PDF',
+    'es': 'herramienta gratuita de edición de imágenes en línea, cómo difuminar rostros en fotos en línea, ocultar información confidencial en capturas de pantalla, ocultar número de tarjeta de identificación en imagen, editor de fotos seguro sin carga, software de edición de imágenes sin conexión, editar PDF sin Adobe, herramienta gratuita de edición de PDF en línea, difuminar matrícula en foto, anonimizar documento antes de compartir, eliminar datos personales de imágenes, proteger privacidad en fotos, ocultar número de tarjeta de crédito en recibo, ocultar número de seguridad social en documento, alternativa gratuita a Photoshop para edición, editor de imágenes basado en navegador seguro, herramienta de procesamiento de fotos del lado del cliente, editar extracto bancario PDF gratis, editar registros médicos en línea, ocultar dirección de correo electrónico en captura de pantalla, efecto mosaico para fotos en línea, pixelar rostros en imágenes gratis, tachar texto en imagen en línea, herramienta de edición de caja negra, editor de PDF de varias páginas gratis, editar contrato PDF en línea seguro',
+    'fr': 'outil gratuit d\'édition d\'images en ligne, comment flouter les visages dans les photos en ligne, masquer les informations sensibles dans les captures d\'écran, masquer le numéro de carte d\'identité dans l\'image, éditeur de photos sécurisé sans téléchargement, logiciel d\'édition d\'images hors ligne, modifier PDF sans Adobe, outil gratuit d\'édition PDF en ligne, flouter la plaque d\'immatriculation dans la photo, anonymiser le document avant de partager, supprimer les données personnelles des images, protéger la vie privée dans les photos, masquer le numéro de carte de crédit sur le reçu, masquer le numéro de sécurité sociale dans le document, alternative gratuite à Photoshop pour l\'édition, éditeur d\'images basé sur un navigateur sécurisé, outil de traitement de photos côté client, modifier le relevé bancaire PDF gratuitement, éditer les dossiers médicaux en ligne, masquer l\'adresse e-mail dans la capture d\'écran, effet mosaïque pour les photos en ligne, pixéliser les visages dans les images gratuitement, corriger le texte dans l\'image en ligne, outil d\'édition de boîte noire, éditeur PDF multi-pages gratuit, modifier le contrat PDF en ligne sécurisé',
+    'de': 'kostenloses Online-Bildbearbeitungstool, wie man Gesichter in Fotos online verwischt, sensible Informationen in Screenshots maskieren, Ausweisnummer im Bild verbergen, sicherer Fotoeditor ohne Upload, Offline-Bildbearbeitungssoftware, PDF ohne Adobe bearbeiten, kostenloses PDF-Bearbeitungstool online, Kennzeichen im Foto verwischen, Dokument vor dem Teilen anonymisieren, persönliche Daten aus Bildern entfernen, Privatsphäre in Fotos schützen, Kreditkartennummer auf Quittung verbergen, Sozialversicherungsnummer im Dokument verbergen, kostenlose Alternative zu Photoshop zum Bearbeiten, browserbasierter sicherer Bildeditor, clientseitiges Fotobearbeitungstool, Kontoauszug PDF kostenlos bearbeiten, medizinische Aufzeichnungen online bearbeiten, E-Mail-Adresse im Screenshot verbergen, Mosaikeffekt für Fotos online, Gesichter in Bildern kostenlos verpixeln, Text im Bild online schwärzen, Blackbox-Bearbeitungstool, mehrseitiger PDF-Editor kostenlos, Vertrag PDF online sicher bearbeiten',
+    'ja': '無料オンライン画像編集ツール、オンラインで写真の顔をぼかす方法、スクリーンショットの機密情報をマスク、画像のID番号を隠す、アップロード不要の安全な写真エディター、オフライン画像編集ソフトウェア、AdobeなしでPDFを編集、無料オンラインPDF編集ツール、写真のナンバープレートをぼかす、共有前に文書を匿名化、画像から個人データを削除、写真のプライバシーを保護、領収書のクレジットカード番号を隠す、文書の社会保障番号を隠す、編集用のPhotoshopの無料代替品、ブラウザベースの安全な画像エディター、クライアントサイドの写真処理ツール、銀行取引明細書PDFを無料で編集、オンラインで医療記録を編集、スクリーンショットのメールアドレスを隠す、オンライン写真のモザイク効果、画像の顔を無料でピクセル化、オンラインで画像のテキストを塗りつぶし、ブラックボックス編集ツール、無料の複数ページPDFエディター、安全にオンラインで契約PDFを編集',
+    'ko': '무료 온라인 이미지 편집 도구, 온라인에서 사진의 얼굴을 흐리게 하는 방법, 스크린샷의 민감한 정보 마스킹, 이미지의 신분증 번호 숨기기, 업로드 불필요한 안전한 사진 편집기, 오프라인 이미지 편집 소프트웨어, Adobe 없이 PDF 편집, 무료 온라인 PDF 편집 도구, 사진의 번호판 흐리기, 공유 전 문서 익명화, 이미지에서 개인 데이터 제거, 사진의 개인 정보 보호, 영수증의 신용카드 번호 숨기기, 문서의 사회 보장 번호 숨기기, 편집을 위한 Photoshop 무료 대안, 브라우저 기반 안전한 이미지 편집기, 클라이언트 측 사진 처리 도구, 은행 명세서 PDF 무료 편집, 온라인에서 의료 기록 편집, 스크린샷의 이메일 주소 숨기기, 온라인 사진 모자이크 효과, 이미지의 얼굴 무료 픽셀화, 온라인에서 이미지의 텍스트 칠하기, 블랙박스 편집 도구, 무료 다중 페이지 PDF 편집기, 안전하게 온라인에서 계약 PDF 편집',
+    'pt': 'ferramenta gratuita de edição de imagens online, como desfocar rostos em fotos online, mascarar informações confidenciais em capturas de tela, ocultar número de cartão de identificação na imagem, editor de fotos seguro sem upload, software de edição de imagens offline, editar PDF sem Adobe, ferramenta gratuita de edição de PDF online, desfocar placa de carro na foto, anonimizar documento antes de compartilhar, remover dados pessoais de imagens, proteger privacidade em fotos, ocultar número de cartão de crédito no recibo, ocultar número de seguridade social no documento, alternativa gratuita ao Photoshop para edição, editor de imagens baseado em navegador seguro, ferramenta de processamento de fotos do lado do cliente, editar extrato bancário PDF grátis, editar registros médicos online, ocultar endereço de e-mail na captura de tela, efeito mosaico para fotos online, pixelizar rostos em imagens grátis, corrigir texto na imagem online, ferramenta de edição de caixa preta, editor de PDF de várias páginas grátis, editar contrato PDF online seguro',
+    'ru': 'бесплатный онлайн-инструмент для редактирования изображений, как размыть лица на фотографиях онлайн, маскировать конфиденциальную информацию на скриншотах, скрыть номер удостоверения личности на изображении, безопасный фоторедактор без загрузки, офлайн-программа для редактирования изображений, редактировать PDF без Adobe, бесплатный онлайн-инструмент для редактирования PDF, размыть номерной знак на фото, анонимизировать документ перед публикацией, удалить личные данные с изображений, защитить конфиденциальность на фотографиях, скрыть номер кредитной карты на квитанции, скрыть номер социального страхования в документе, бесплатная альтернатива Photoshop для редактирования, браузерный безопасный редактор изображений, клиентский инструмент обработки фотографий, редактировать банковскую выписку PDF бесплатно, редактировать медицинские записи онлайн, скрыть адрес электронной почты на скриншоте, эффект мозаики для фото онлайн, пикселизировать лица на изображениях бесплатно, закрасить текст на изображении онлайн, инструмент редактирования черного ящика, бесплатный многостраничный редактор PDF, безопасно редактировать контракт PDF онлайн',
+    'ar': 'أداة مجانية لتحرير الصور عبر الإنترنت، كيفية طمس الوجوه في الصور عبر الإنترنت، إخفاء المعلومات الحساسة في لقطات الشاشة، إخفاء رقم بطاقة الهوية في الصورة، محرر صور آمن بدون تحميل، برنامج تحرير الصور دون اتصال، تحرير PDF بدون Adobe، أداة مجانية لتحرير PDF عبر الإنترنت، طمس لوحة الترخيص في الصورة، إخفاء هوية المستند قبل المشاركة، إزالة البيانات الشخصية من الصور، حماية الخصوصية في الصور، إخفاء رقم بطاقة الائتمان في الإيصال، إخفاء رقم الضمان الاجتماعي في المستند، بديل مجاني لـ Photoshop للتحرير، محرر صور قائم على المتصفح آمن، أداة معالجة صور من جانب العميل، تحرير كشف حساب بنكي PDF مجانًا، تحرير السجلات الطبية عبر الإنترنت، إخفاء عنوان البريد الإلكتروني في لقطة الشاشة، تأثير الفسيفساء للصور عبر الإنترنت، بكسلة الوجوه في الصور مجانًا، تصحيح النص في الصورة عبر الإنترنت، أداة تحرير الصندوق الأسود، محرر PDF متعدد الصفحات مجاني، تحرير عقد PDF عبر الإنترنت بأمان'
+};
 
 // Auto-initialize - Execute as soon as script loads
 console.log('🚀 i18n.js loaded, starting initialization...');
