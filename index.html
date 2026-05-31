@@ -782,6 +782,38 @@
             redactedPages[currentPage - 1] = pageData;
         }
 
+        /**
+         * Compress and resize image data for optimal PDF export.
+         * Limits max width to control file size while maintaining readability.
+         */
+        function compressImageData(dataUrl, maxWidth, quality) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = function() {
+                    let w = img.width;
+                    let h = img.height;
+
+                    // Scale down if exceeds max width
+                    if (w > maxWidth) {
+                        h = Math.round((maxWidth / w) * h);
+                        w = maxWidth;
+                    }
+
+                    const cvs = document.createElement('canvas');
+                    cvs.width = w;
+                    cvs.height = h;
+                    const c = cvs.getContext('2d');
+                    c.drawImage(img, 0, 0, w, h);
+
+                    resolve(cvs.toDataURL('image/jpeg', quality));
+                };
+                img.onerror = function(err) {
+                    reject(err);
+                };
+                img.src = dataUrl;
+            });
+        }
+
         function applyPixelate(x, y, width, height, blockSize) {
             const useCustomColor = document.getElementById('useCustomColor').checked || 
                                    document.getElementById('useCustomColorInline').checked;
@@ -1002,109 +1034,86 @@
 
         async function exportAsPDF() {
             try {
-                showNotification('Generating high-quality compressed PDF...');
-                
-                // Debug: Log the original filename
-                console.log('Original file name:', originalFileName);
-                
+                showNotification('Generating optimized PDF...');
+
                 const { jsPDF } = window.jspdf;
-                // Create PDF with compression enabled
                 const pdf = new jsPDF({
-                    compress: true,  // Enable PDF compression
-                    unit: 'pt',      // Use points for better precision
-                    format: 'a4'     // Default format, will adjust per page
+                    compress: true,
+                    unit: 'pt',
+                    format: 'a4'
                 });
-                
+
                 // Save current page first
                 saveRedactedPage();
-                
-                // Process each page with high quality rendering
+
+                // Maximum render width: A4 at ~150 DPI is ~1240px.
+                // 1200px provides excellent clarity for both screen and print
+                // while keeping file size minimal.
+                const MAX_RENDER_WIDTH = 1200;
+                // JPEG quality 0.80 is the sweet spot for text documents:
+                // virtually indistinguishable from higher qualities,
+                // but typically 40-60% smaller file size than 0.92
+                const JPEG_QUALITY = 0.80;
+
                 for (let i = 0; i < totalPages; i++) {
                     if (i > 0) {
                         pdf.addPage();
                     }
-                    
-                    // Get page data (redacted or original)
+
                     let pageData = redactedPages[i];
-                    
+
                     if (!pageData) {
-                        // If no redacted version, render original page with high quality
+                        // Render original page with optimized resolution
                         const page = await pdfDoc.getPage(i + 1);
-                        // Use higher scale for better quality (2.0 instead of 1.5)
-                        const viewport = page.getViewport({ scale: 2.0 });
-                        
-                        // Create temporary canvas for rendering
+                        const baseViewport = page.getViewport({ scale: 1 });
+                        const originalWidth = baseViewport.width;
+
+                        // Calculate scale: target ~1200px width, capped at 1.5x
+                        // This yields ~144 DPI (excellent for text) without bloat
+                        const scale = Math.min(1.5, MAX_RENDER_WIDTH / originalWidth);
+                        const viewport = page.getViewport({ scale: scale });
+
                         const tempCanvas = document.createElement('canvas');
                         tempCanvas.width = viewport.width;
                         tempCanvas.height = viewport.height;
                         const tempCtx = tempCanvas.getContext('2d');
-                        
-                        // High quality rendering settings
-                        tempCtx.imageSmoothingEnabled = true;
-                        tempCtx.imageSmoothingQuality = 'high';
-                        
+
                         await page.render({ canvasContext: tempCtx, viewport: viewport }).promise;
-                        
-                        // Convert to JPEG with high quality compression (92% quality)
-                        pageData = tempCanvas.toDataURL('image/jpeg', 0.92);
+
+                        // Export as JPEG with optimized quality
+                        pageData = tempCanvas.toDataURL('image/jpeg', JPEG_QUALITY);
                     } else {
-                        // If already redacted, convert PNG to JPEG for better compression
-                        // Check if it's a PNG data URL
+                        // Compress redacted (PNG) pages
                         if (pageData.startsWith('data:image/png')) {
-                            // Create an image element to convert
-                            const img = new Image();
-                            img.src = pageData;
-                            await new Promise((resolve) => {
-                                img.onload = () => {
-                                    const tempCanvas = document.createElement('canvas');
-                                    tempCanvas.width = img.width;
-                                    tempCanvas.height = img.height;
-                                    const tempCtx = tempCanvas.getContext('2d');
-                                    
-                                    // High quality rendering
-                                    tempCtx.imageSmoothingEnabled = true;
-                                    tempCtx.imageSmoothingQuality = 'high';
-                                    
-                                    tempCtx.drawImage(img, 0, 0);
-                                    
-                                    // Convert to JPEG with 92% quality
-                                    pageData = tempCanvas.toDataURL('image/jpeg', 0.92);
-                                    resolve();
-                                };
-                            });
+                            pageData = await compressImageData(pageData, MAX_RENDER_WIDTH, JPEG_QUALITY);
                         }
                     }
-                    
-                    // Add image to PDF with optimized compression
+
+                    // Add image to PDF
                     const imgProps = pdf.getImageProperties(pageData);
                     const pdfWidth = pdf.internal.pageSize.getWidth();
                     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-                    
-                    // Use JPEG format with compression for smaller file size
+
                     pdf.addImage(pageData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST');
                 }
-                
-                // Save PDF with original filename using manual download approach
+
                 const fileName = originalFileName || 'document.pdf';
-                console.log('Exporting PDF with filename:', fileName);
-                
-                // Generate PDF as blob with compression and trigger download manually
                 const pdfBlob = pdf.output('blob', { compression: 'FAST' });
                 const url = URL.createObjectURL(pdfBlob);
-                
+
                 const link = document.createElement('a');
                 link.href = url;
                 link.download = fileName;
                 link.style.display = 'none';
                 document.body.appendChild(link);
                 link.click();
-                
+
                 setTimeout(() => {
                     document.body.removeChild(link);
                     URL.revokeObjectURL(url);
                 }, 100);
-                
-                showNotification(`High-quality PDF exported: ${fileName}`);
+
+                showNotification(`PDF exported: ${fileName}`);
             } catch (error) {
                 console.error('Error exporting PDF:', error);
                 alert('Error exporting PDF. Please try again.');
