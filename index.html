@@ -1037,40 +1037,47 @@
                 showNotification('Generating optimized PDF...');
 
                 const { jsPDF } = window.jspdf;
+                const MAX_RENDER_WIDTH = 1200;
+                const JPEG_QUALITY = 0.80;
+
+                // Gather original page dimensions from the source PDF
+                const pageInfos = [];
+                for (let i = 0; i < totalPages; i++) {
+                    const page = await pdfDoc.getPage(i + 1);
+                    const viewport = page.getViewport({ scale: 1 });
+                    pageInfos.push({
+                        width: viewport.width,
+                        height: viewport.height
+                    });
+                }
+
+                // Create PDF with first page's original dimensions
+                // Using [width, height] preserves the original orientation (landscape or portrait)
+                const firstPage = pageInfos[0];
                 const pdf = new jsPDF({
                     compress: true,
                     unit: 'pt',
-                    format: 'a4'
+                    format: [firstPage.width, firstPage.height]
                 });
 
                 // Save current page first
                 saveRedactedPage();
 
-                // Maximum render width: A4 at ~150 DPI is ~1240px.
-                // 1200px provides excellent clarity for both screen and print
-                // while keeping file size minimal.
-                const MAX_RENDER_WIDTH = 1200;
-                // JPEG quality 0.80 is the sweet spot for text documents:
-                // virtually indistinguishable from higher qualities,
-                // but typically 40-60% smaller file size than 0.92
-                const JPEG_QUALITY = 0.80;
-
                 for (let i = 0; i < totalPages; i++) {
                     if (i > 0) {
-                        pdf.addPage();
+                        // Add page with the same original dimensions as the source
+                        const pageInfo = pageInfos[i];
+                        pdf.addPage([pageInfo.width, pageInfo.height]);
                     }
 
                     let pageData = redactedPages[i];
+                    const pageInfo = pageInfos[i];
 
                     if (!pageData) {
                         // Render original page with optimized resolution
                         const page = await pdfDoc.getPage(i + 1);
-                        const baseViewport = page.getViewport({ scale: 1 });
-                        const originalWidth = baseViewport.width;
-
-                        // Calculate scale: target ~1200px width, capped at 1.5x
-                        // This yields ~144 DPI (excellent for text) without bloat
-                        const scale = Math.min(1.5, MAX_RENDER_WIDTH / originalWidth);
+                        // Calculate scale to target ~1200px render width
+                        const scale = MAX_RENDER_WIDTH / pageInfo.width;
                         const viewport = page.getViewport({ scale: scale });
 
                         const tempCanvas = document.createElement('canvas');
@@ -1089,11 +1096,9 @@
                         }
                     }
 
-                    // Add image to PDF
-                    const imgProps = pdf.getImageProperties(pageData);
+                    // Add image to fill the entire page exactly
                     const pdfWidth = pdf.internal.pageSize.getWidth();
-                    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
+                    const pdfHeight = pdf.internal.pageSize.getHeight();
                     pdf.addImage(pageData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST');
                 }
 
