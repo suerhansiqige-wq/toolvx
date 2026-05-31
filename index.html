@@ -237,22 +237,31 @@
         /* Mobile responsive - fixed positioning */
         @media (max-width: 1023px) {
             #controlPanel {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
                 top: auto;
-                max-height: 40vh;
-                background: white;
-                border-top: 2px solid #e2e8f0;
-                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-                padding: 15px;
-                z-index: 100;
-                overflow-y: auto;
+                max-height: none;
+                background: transparent;
+                border-top: none;
+                box-shadow: none;
+                padding: 0;
+                z-index: auto;
+                overflow-y: visible;
+                margin-top: 1.5rem;
             }
-            
+
+            #dropZone {
+                display: none !important;
+            }
+
             #workspace {
-                padding-bottom: 45vh; /* Add space for fixed panel */
+                padding-bottom: 0;
+            }
+
+            #emptyState {
+                cursor: pointer;
             }
         }
         
