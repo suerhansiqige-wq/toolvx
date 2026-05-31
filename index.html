@@ -603,6 +603,10 @@
             dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('dragover'); });
             dropZone.addEventListener('drop', (e) => { e.preventDefault(); dropZone.classList.remove('dragover'); handleFile(e.dataTransfer.files[0]); });
             dropZone.addEventListener('click', () => { fileInput.click(); });
+            const emptyState = document.getElementById('emptyState');
+            if (emptyState) {
+                emptyState.addEventListener('click', () => { fileInput.click(); });
+            }
             fileInput.addEventListener('change', (e) => { if (e.target.files.length > 0) handleFile(e.target.files[0]); });
             intensitySlider.addEventListener('input', (e) => { intensityValue.textContent = e.target.value; });
             
@@ -1578,6 +1582,15 @@
             
             <!-- Bottom Bar -->
             <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2026 toolvx.com - <span data-i18n="footer.copyright">Free online image and PDF editing tools</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- i18n System (Hidden Mode) -->
+    <script src="js/i18n.js"></script>
+</body>
+</html>
                 <p class="text-sm text-gray-400">&copy; 2026 toolvx.com - <span data-i18n="footer.copyright">Free online image and PDF editing tools</span>. All rights reserved.</p>
             </div>
         </div>
