@@ -110,6 +110,19 @@ const TRANSLATIONS = {
         'ar': 'الأسئلة الشائعة'
     },
     
+    'nav.contact': {
+        'en': 'Contact',
+        'zh': '联系我们',
+        'es': 'Contacto',
+        'fr': 'Contact',
+        'de': 'Kontakt',
+        'ja': 'お問い合わせ',
+        'ko': '문의하기',
+        'pt': 'Contato',
+        'ru': 'Контакты',
+        'ar': 'اتصل بنا'
+    },
+    
     // Hero Section
     'hero.title': {
         'en': '100% Local Image & PDF Redaction<br/>Zero Server Upload Required',
@@ -1865,6 +1878,622 @@ TRANSLATIONS['seo.keywords.list'] = {
     'pt': 'ferramenta gratuita de edição de imagens online, como desfocar rostos em fotos online, mascarar informações confidenciais em capturas de tela, ocultar número de cartão de identificação na imagem, editor de fotos seguro sem upload, software de edição de imagens offline, editar PDF sem Adobe, ferramenta gratuita de edição de PDF online, desfocar placa de carro na foto, anonimizar documento antes de compartilhar, remover dados pessoais de imagens, proteger privacidade em fotos, ocultar número de cartão de crédito no recibo, ocultar número de seguridade social no documento, alternativa gratuita ao Photoshop para edição, editor de imagens baseado em navegador seguro, ferramenta de processamento de fotos do lado do cliente, editar extrato bancário PDF grátis, editar registros médicos online, ocultar endereço de e-mail na captura de tela, efeito mosaico para fotos online, pixelizar rostos em imagens grátis, corrigir texto na imagem online, ferramenta de edição de caixa preta, editor de PDF de várias páginas grátis, editar contrato PDF online seguro',
     'ru': 'бесплатный онлайн-инструмент для редактирования изображений, как размыть лица на фотографиях онлайн, маскировать конфиденциальную информацию на скриншотах, скрыть номер удостоверения личности на изображении, безопасный фоторедактор без загрузки, офлайн-программа для редактирования изображений, редактировать PDF без Adobe, бесплатный онлайн-инструмент для редактирования PDF, размыть номерной знак на фото, анонимизировать документ перед публикацией, удалить личные данные с изображений, защитить конфиденциальность на фотографиях, скрыть номер кредитной карты на квитанции, скрыть номер социального страхования в документе, бесплатная альтернатива Photoshop для редактирования, браузерный безопасный редактор изображений, клиентский инструмент обработки фотографий, редактировать банковскую выписку PDF бесплатно, редактировать медицинские записи онлайн, скрыть адрес электронной почты на скриншоте, эффект мозаики для фото онлайн, пикселизировать лица на изображениях бесплатно, закрасить текст на изображении онлайн, инструмент редактирования черного ящика, бесплатный многостраничный редактор PDF, безопасно редактировать контракт PDF онлайн',
     'ar': 'أداة مجانية لتحرير الصور عبر الإنترنت، كيفية طمس الوجوه في الصور عبر الإنترنت، إخفاء المعلومات الحساسة في لقطات الشاشة، إخفاء رقم بطاقة الهوية في الصورة، محرر صور آمن بدون تحميل، برنامج تحرير الصور دون اتصال، تحرير PDF بدون Adobe، أداة مجانية لتحرير PDF عبر الإنترنت، طمس لوحة الترخيص في الصورة، إخفاء هوية المستند قبل المشاركة، إزالة البيانات الشخصية من الصور، حماية الخصوصية في الصور، إخفاء رقم بطاقة الائتمان في الإيصال، إخفاء رقم الضمان الاجتماعي في المستند، بديل مجاني لـ Photoshop للتحرير، محرر صور قائم على المتصفح آمن، أداة معالجة صور من جانب العميل، تحرير كشف حساب بنكي PDF مجانًا، تحرير السجلات الطبية عبر الإنترنت، إخفاء عنوان البريد الإلكتروني في لقطة الشاشة، تأثير الفسيفساء للصور عبر الإنترنت، بكسلة الوجوه في الصور مجانًا، تصحيح النص في الصورة عبر الإنترنت، أداة تحرير الصندوق الأسود، محرر PDF متعدد الصفحات مجاني، تحرير عقد PDF عبر الإنترنت بأمان'
+};
+
+// ==================== CONTACT PAGE TRANSLATIONS ====================
+
+// Contact Page - Main
+TRANSLATIONS['contact.title'] = {
+    'en': 'Contact Us',
+    'zh': '联系我们',
+    'es': 'Contáctenos',
+    'fr': 'Contactez-nous',
+    'de': 'Kontaktieren Sie uns',
+    'ja': 'お問い合わせ',
+    'ko': '문의하기',
+    'pt': 'Fale Conosco',
+    'ru': 'Свяжитесь с нами',
+    'ar': 'اتصل بنا'
+};
+
+TRANSLATIONS['contact.subtitle'] = {
+    'en': 'We\'re here to help! Get in touch with our team.',
+    'zh': '我们随时为您提供帮助！与我们的团队联系。',
+    'es': '¡Estamos aquí para ayudar! Póngase en contacto con nuestro equipo.',
+    'fr': 'Nous sommes là pour vous aider ! Contactez notre équipe.',
+    'de': 'Wir sind hier, um zu helfen! Nehmen Sie Kontakt mit unserem Team auf.',
+    'ja': 'お手伝いします！チームにご連絡ください。',
+    'ko': '저희가 도와드리겠습니다! 팀에 문의하세요.',
+    'pt': 'Estamos aqui para ajudar! Entre em contato com nossa equipe.',
+    'ru': 'Мы здесь, чтобы помочь! Свяжитесь с нашей командой.',
+    'ar': 'نحن هنا للمساعدة! تواصل مع فريقنا.'
+};
+
+TRANSLATIONS['contact.getInTouch'] = {
+    'en': 'Get in Touch',
+    'zh': '联系方式',
+    'es': 'Póngase en contacto',
+    'fr': 'Prenez contact',
+    'de': 'Kontakt aufnehmen',
+    'ja': 'お問い合わせ',
+    'ko': '연락처',
+    'pt': 'Entre em contato',
+    'ru': 'Связаться с нами',
+    'ar': 'تواصل معنا'
+};
+
+TRANSLATIONS['contact.emailSupport'] = {
+    'en': 'Email Support',
+    'zh': '邮件支持',
+    'es': 'Soporte por correo electrónico',
+    'fr': 'Support par e-mail',
+    'de': 'E-Mail-Support',
+    'ja': 'メールサポート',
+    'ko': '이메일 지원',
+    'pt': 'Suporte por e-mail',
+    'ru': 'Поддержка по электронной почте',
+    'ar': 'دعم البريد الإلكتروني'
+};
+
+TRANSLATIONS['contact.emailDesc'] = {
+    'en': 'For general inquiries, technical support, or feedback:',
+    'zh': '一般咨询、技术支持或反馈：',
+    'es': 'Para consultas generales, soporte técnico o comentarios:',
+    'fr': 'Pour les demandes générales, le support technique ou les commentaires :',
+    'de': 'Für allgemeine Anfragen, technischen Support oder Feedback:',
+    'ja': '一般的な問い合わせ、技術サポート、フィードバック用：',
+    'ko': '일반 문의, 기술 지원 또는 피드백용:',
+    'pt': 'Para perguntas gerais, suporte técnico ou feedback:',
+    'ru': 'Для общих вопросов, технической поддержки или отзывов:',
+    'ar': 'للاستفسارات العامة والدعم الفني أو الملاحظات:'
+};
+
+TRANSLATIONS['contact.responseTime'] = {
+    'en': 'Response time: Within 30 days',
+    'zh': '响应时间：30天内',
+    'es': 'Tiempo de respuesta: Dentro de 30 días',
+    'fr': 'Délai de réponse : Sous 30 jours',
+    'de': 'Antwortzeit: Innerhalb von 30 Tagen',
+    'ja': '応答時間：30日以内',
+    'ko': '응답 시간: 30일 이내',
+    'pt': 'Tempo de resposta: Em até 30 dias',
+    'ru': 'Время ответа: В течение 30 дней',
+    'ar': 'وقت الاستجابة: خلال 30 يومًا'
+};
+
+TRANSLATIONS['contact.responseTimeTitle'] = {
+    'en': 'Response Time',
+    'zh': '响应时间',
+    'es': 'Tiempo de respuesta',
+    'fr': 'Délai de réponse',
+    'de': 'Antwortzeit',
+    'ja': '応答時間',
+    'ko': '응답 시간',
+    'pt': 'Tempo de resposta',
+    'ru': 'Время ответа',
+    'ar': 'وقت الاستجابة'
+};
+
+TRANSLATIONS['contact.responseTimeDesc'] = {
+    'en': 'We typically respond to all inquiries within:',
+    'zh': '我们通常在以下时间内回复所有询问：',
+    'es': 'Normalmente respondemos a todas las consultas dentro de:',
+    'fr': 'Nous répondons généralement à toutes les demandes dans les délais suivants :',
+    'de': 'Wir antworten normalerweise auf alle Anfragen innerhalb von:',
+    'ja': '通常、すべての問い合わせに以下の期間内に返信します：',
+    'ko': '우리는 일반적으로 모든 문의에 다음 기간 내에 답변합니다:',
+    'pt': 'Normalmente respondemos a todas as perguntas dentro de:',
+    'ru': 'Обычно мы отвечаем на все запросы в течение:',
+    'ar': 'نرد عادةً على جميع الاستفسارات خلال:'
+};
+
+TRANSLATIONS['contact.time.general'] = {
+    'en': '• General questions: 24-48 hours',
+    'zh': '• 一般问题：24-48小时',
+    'es': '• Preguntas generales: 24-48 horas',
+    'fr': '• Questions générales : 24-48 heures',
+    'de': '• Allgemeine Fragen: 24-48 Stunden',
+    'ja': '• 一般的な質問：24〜48時間',
+    'ko': '• 일반 질문: 24-48시간',
+    'pt': '• Perguntas gerais: 24-48 horas',
+    'ru': '• Общие вопросы: 24-48 часов',
+    'ar': '• الأسئلة العامة: 24-48 ساعة'
+};
+
+TRANSLATIONS['contact.time.tech'] = {
+    'en': '• Technical support: 48-72 hours',
+    'zh': '• 技术支持：48-72小时',
+    'es': '• Soporte técnico: 48-72 horas',
+    'fr': '• Support technique : 48-72 heures',
+    'de': '• Technischer Support: 48-72 Stunden',
+    'ja': '• 技術サポート：48〜72時間',
+    'ko': '• 기술 지원: 48-72시간',
+    'pt': '• Suporte técnico: 48-72 horas',
+    'ru': '• Техническая поддержка: 48-72 часа',
+    'ar': '• الدعم الفني: 48-72 ساعة'
+};
+
+TRANSLATIONS['contact.time.privacy'] = {
+    'en': '• Privacy concerns: Within 30 days (GDPR requirement)',
+    'zh': '• 隐私问题：30天内（GDPR要求）',
+    'es': '• Preocupaciones de privacidad: Dentro de 30 días (requisito GDPR)',
+    'fr': '• Préoccupations relatives à la confidentialité : Sous 30 jours (exigence RGPD)',
+    'de': '• Datenschutzbedenken: Innerhalb von 30 Tagen (DSGVO-Anforderung)',
+    'ja': '• プライバシーに関する懸念：30日以内（GDPR要件）',
+    'ko': '• 개인정보 보호 문제: 30일 이내 (GDPR 요구사항)',
+    'pt': '• Preocupações com privacidade: Em até 30 dias (requisito GDPR)',
+    'ru': '• Вопросы конфиденциальности: В течение 30 дней (требование GDPR)',
+    'ar': '• مخاوف الخصوصية: خلال 30 يومًا (متطلب GDPR)'
+};
+
+TRANSLATIONS['contact.faqFirst'] = {
+    'en': 'FAQ First',
+    'zh': '先看常见问题',
+    'es': 'Primero consulte las FAQ',
+    'fr': 'Consultez d\'abord la FAQ',
+    'de': 'Zuerst FAQ lesen',
+    'ja': 'まずFAQを確認',
+    'ko': '먼저 FAQ 확인',
+    'pt': 'Primeiro consulte o FAQ',
+    'ru': 'Сначала посмотрите FAQ',
+    'ar': 'الأسئلة الشائعة أولاً'
+};
+
+TRANSLATIONS['contact.faqDesc'] = {
+    'en': 'Before contacting us, please check our',
+    'zh': '在联系我们之前，请查看我们的',
+    'es': 'Antes de contactarnos, consulte nuestras',
+    'fr': 'Avant de nous contacter, veuillez consulter notre',
+    'de': 'Bevor Sie uns kontaktieren, überprüfen Sie bitte unsere',
+    'ja': 'お問い合わせの前に、当社の',
+    'ko': '문의하기 전에 당사의',
+    'pt': 'Antes de nos contatar, verifique nosso',
+    'ru': 'Прежде чем связаться с нами, пожалуйста, проверьте наш',
+    'ar': 'قبل الاتصال بنا، يرجى التحقق من'
+};
+
+TRANSLATIONS['contact.faqLink'] = {
+    'en': 'Frequently Asked Questions →',
+    'zh': '常见问题 →',
+    'es': 'Preguntas frecuentes →',
+    'fr': 'Questions fréquemment posées →',
+    'de': 'Häufig gestellte Fragen →',
+    'ja': 'よくある質問 →',
+    'ko': '자주 묻는 질문 →',
+    'pt': 'Perguntas frequentes →',
+    'ru': 'Часто задаваемые вопросы →',
+    'ar': 'الأسئلة الشائعة →'
+};
+
+TRANSLATIONS['contact.faqHint'] = {
+    'en': 'Your question might already be answered!',
+    'zh': '您的问题可能已经有答案了！',
+    'es': '¡Su pregunta ya podría estar respondida!',
+    'fr': 'Votre question pourrait déjà avoir une réponse !',
+    'de': 'Ihre Frage könnte bereits beantwortet sein!',
+    'ja': 'あなたの質問はすでに答えられているかもしれません！',
+    'ko': '귀하의 질문에 이미 답변이 있을 수 있습니다!',
+    'pt': 'Sua pergunta já pode ter sido respondida!',
+    'ru': 'Возможно, на ваш вопрос уже есть ответ!',
+    'ar': 'قد يكون سؤالك مجابًا بالفعل!'
+};
+
+TRANSLATIONS['contact.quickTip'] = {
+    'en': '💡 Quick Tip',
+    'zh': '💡 快速提示',
+    'es': '💡 Consejo rápido',
+    'fr': '💡 Astuce rapide',
+    'de': '💡 Schneller Tipp',
+    'ja': '💡 クイックヒント',
+    'ko': '💡 빠른 팁',
+    'pt': '💡 Dica rápida',
+    'ru': '💡 Быстрый совет',
+    'ar': '💡 نصيحة سريعة'
+};
+
+TRANSLATIONS['contact.tipDesc'] = {
+    'en': 'For faster support, please include:',
+    'zh': '为了更快地获得支持，请包括：',
+    'es': 'Para un soporte más rápido, incluya:',
+    'fr': 'Pour un support plus rapide, veuillez inclure :',
+    'de': 'Für schnelleren Support bitte angeben:',
+    'ja': 'より迅速なサポートのために、以下を含めてください：',
+    'ko': '더 빠른 지원을 위해 다음을 포함해주세요:',
+    'pt': 'Para suporte mais rápido, inclua:',
+    'ru': 'Для более быстрой поддержки, пожалуйста, укажите:',
+    'ar': 'لدعم أسرع، يرجى تضمين:'
+};
+
+TRANSLATIONS['contact.tip.browser'] = {
+    'en': '• Your browser type and version',
+    'zh': '• 您的浏览器类型和版本',
+    'es': '• Tipo y versión de su navegador',
+    'fr': '• Type et version de votre navigateur',
+    'de': '• Ihr Browsertyp und Ihre Version',
+    'ja': '• ブラウザの種類とバージョン',
+    'ko': '• 브라우저 유형 및 버전',
+    'pt': '• Tipo e versão do seu navegador',
+    'ru': '• Тип и версия вашего браузера',
+    'ar': '• نوع وإصدار متصفحك'
+};
+
+TRANSLATIONS['contact.tip.os'] = {
+    'en': '• Operating system (Windows, Mac, Linux, etc.)',
+    'zh': '• 操作系统（Windows、Mac、Linux等）',
+    'es': '• Sistema operativo (Windows, Mac, Linux, etc.)',
+    'fr': '• Système d\'exploitation (Windows, Mac, Linux, etc.)',
+    'de': '• Betriebssystem (Windows, Mac, Linux usw.)',
+    'ja': '• オペレーティングシステム（Windows、Mac、Linuxなど）',
+    'ko': '• 운영 체제(Windows, Mac, Linux 등)',
+    'pt': '• Sistema operacional (Windows, Mac, Linux, etc.)',
+    'ru': '• Операционная система (Windows, Mac, Linux и т. д.)',
+    'ar': '• نظام التشغيل (Windows, Mac, Linux, إلخ)'
+};
+
+TRANSLATIONS['contact.tip.filetype'] = {
+    'en': '• File type you\'re working with (JPG, PNG, PDF, etc.)',
+    'zh': '• 您正在处理的文件类型（JPG、PNG、PDF等）',
+    'es': '• Tipo de archivo con el que está trabajando (JPG, PNG, PDF, etc.)',
+    'fr': '• Type de fichier avec lequel vous travaillez (JPG, PNG, PDF, etc.)',
+    'de': '• Dateityp, mit dem Sie arbeiten (JPG, PNG, PDF usw.)',
+    'ja': '• 作業中のファイルタイプ（JPG、PNG、PDFなど）',
+    'ko': '• 작업 중인 파일 유형(JPG, PNG, PDF 등)',
+    'pt': '• Tipo de arquivo com o qual você está trabalhando (JPG, PNG, PDF, etc.)',
+    'ru': '• Тип файла, с которым вы работаете (JPG, PNG, PDF и т. д.)',
+    'ar': '• نوع الملف الذي تعمل عليه (JPG, PNG, PDF, إلخ)'
+};
+
+TRANSLATIONS['contact.tip.desc'] = {
+    'en': '• Detailed description of the issue',
+    'zh': '• 问题的详细描述',
+    'es': '• Descripción detallada del problema',
+    'fr': '• Description détaillée du problème',
+    'de': '• Detaillierte Beschreibung des Problems',
+    'ja': '• 問題の詳細な説明',
+    'ko': '• 문제에 대한 자세한 설명',
+    'pt': '• Descrição detalhada do problema',
+    'ru': '• Подробное описание проблемы',
+    'ar': '• وصف مفصل للمشكلة'
+};
+
+TRANSLATIONS['contact.tip.screenshot'] = {
+    'en': '• Screenshots (if applicable)',
+    'zh': '• 截图（如适用）',
+    'es': '• Capturas de pantalla (si corresponde)',
+    'fr': '• Captures d\'écran (le cas échéant)',
+    'de': '• Screenshots (falls zutreffend)',
+    'ja': '• スクリーンショット（該当する場合）',
+    'ko': '• 스크린샷(해당되는 경우)',
+    'pt': '• Capturas de tela (se aplicável)',
+    'ru': '• Скриншоты (если применимо)',
+    'ar': '• لقطات شاشة (إن وجدت)'
+};
+
+// Common Reasons Section
+TRANSLATIONS['contact.commonReasons'] = {
+    'en': 'Common Reasons to Contact Us',
+    'zh': '常见联系原因',
+    'es': 'Razones comunes para contactarnos',
+    'fr': 'Raisons courantes de nous contacter',
+    'de': 'Häufige Gründe, uns zu kontaktieren',
+    'ja': 'お問い合わせの一般的な理由',
+    'ko': '문의하는 일반적인 이유',
+    'pt': 'Motivos comuns para nos contatar',
+    'ru': 'Распространенные причины обращения к нам',
+    'ar': 'الأسباب الشائعة للاتصال بنا'
+};
+
+TRANSLATIONS['contact.reason.bug'] = {
+    'en': '🐛 Report a Bug',
+    'zh': '🐛 报告错误',
+    'es': '🐛 Informar un error',
+    'fr': '🐛 Signaler un bug',
+    'de': '🐛 Fehler melden',
+    'ja': '🐛 バグを報告',
+    'ko': '🐛 버그 신고',
+    'pt': '🐛 Relatar um bug',
+    'ru': '🐛 Сообщить об ошибке',
+    'ar': '🐛 الإبلاغ عن خطأ'
+};
+
+TRANSLATIONS['contact.reason.bug.desc'] = {
+    'en': 'Found a bug? Please email us at admin@toolvx.com with details about what happened, what you expected, and steps to reproduce the issue.',
+    'zh': '发现错误？请发送电子邮件至 admin@toolvx.com，详细说明发生了什么、您期望的结果以及重现问题的步骤。',
+    'es': '¿Encontró un error? Envíenos un correo electrónico a admin@toolvx.com con detalles sobre lo que sucedió, lo que esperaba y los pasos para reproducir el problema.',
+    'fr': 'Vous avez trouvé un bug ? Veuillez nous envoyer un e-mail à admin@toolvx.com avec des détails sur ce qui s\'est passé, ce que vous attendiez et les étapes pour reproduire le problème.',
+    'de': 'Fehler gefunden? Bitte senden Sie uns eine E-Mail an admin@toolvx.com mit Details dazu, was passiert ist, was Sie erwartet haben und Schritten zur Reproduktion des Problems.',
+    'ja': 'バグを見つけましたか？何が起こったか、何を期待していたか、問題を再現する手順の詳細を admin@toolvx.com までメールでお知らせください。',
+    'ko': '버그를 발견하셨나요? admin@toolvx.com으로 발생한 일, 기대했던 내용, 문제 재현 단계에 대한 세부 정보를 이메일로 보내주세요.',
+    'pt': 'Encontrou um bug? Por favor, envie um e-mail para admin@toolvx.com com detalhes sobre o que aconteceu, o que você esperava e os passos para reproduzir o problema.',
+    'ru': 'Нашли ошибку? Пожалуйста, отправьте нам электронное письмо на admin@toolvx.com с подробностями о том, что произошло, чего вы ожидали и шагах для воспроизведения проблемы.',
+    'ar': 'وجدت خطأ؟ يرجى مراسلتنا عبر البريد الإلكتروني على admin@toolvx.com مع تفاصيل حول ما حدث وما كنت تتوقعه وخطوات إعادة إنتاج المشكلة.'
+};
+
+TRANSLATIONS['contact.reason.feature'] = {
+    'en': '💡 Feature Request',
+    'zh': '💡 功能请求',
+    'es': '💡 Solicitud de función',
+    'fr': '💡 Demande de fonctionnalité',
+    'de': '💡 Funktionsanfrage',
+    'ja': '💡 機能リクエスト',
+    'ko': '💡 기능 요청',
+    'pt': '💡 Solicitação de recurso',
+    'ru': '💡 Запрос функции',
+    'ar': '💡 طلب ميزة'
+};
+
+TRANSLATIONS['contact.reason.feature.desc'] = {
+    'en': 'Have an idea for a new feature? We\'d love to hear it! Send your suggestions to admin@toolvx.com.',
+    'zh': '有新功能的想法吗？我们很乐意听取！将您的建议发送至 admin@toolvx.com。',
+    'es': '¿Tiene una idea para una nueva función? ¡Nos encantaría escucharla! Envíe sus sugerencias a admin@toolvx.com.',
+    'fr': 'Vous avez une idée pour une nouvelle fonctionnalité ? Nous serions ravis de l\'entendre ! Envoyez vos suggestions à admin@toolvx.com.',
+    'de': 'Haben Sie eine Idee für eine neue Funktion? Wir würden sie gerne hören! Senden Sie Ihre Vorschläge an admin@toolvx.com.',
+    'ja': '新機能のアイデアがありますか？ぜひお聞かせください！admin@toolvx.com までご提案をお送りください。',
+    'ko': '새로운 기능에 대한 아이디어가 있으신가요? 듣고 싶습니다! admin@toolvx.com으로 제안을 보내주세요.',
+    'pt': 'Tem uma ideia para um novo recurso? Adoraríamos ouvir! Envie suas sugestões para admin@toolvx.com.',
+    'ru': 'Есть идея для новой функции? Мы будем рады услышать! Отправьте свои предложения на admin@toolvx.com.',
+    'ar': 'هل لديك فكرة لميزة جديدة؟ نود أن نسمعها! أرسل اقتراحاتك إلى admin@toolvx.com.'
+};
+
+TRANSLATIONS['contact.reason.privacy'] = {
+    'en': '🔒 Privacy Concerns',
+    'zh': '🔒 隐私问题',
+    'es': '🔒 Preocupaciones de privacidad',
+    'fr': '🔒 Préoccupations relatives à la confidentialité',
+    'de': '🔒 Datenschutzbedenken',
+    'ja': '🔒 プライバシーに関する懸念',
+    'ko': '🔒 개인정보 보호 문제',
+    'pt': '🔒 Preocupações com privacidade',
+    'ru': '🔒 Вопросы конфиденциальности',
+    'ar': '🔒 مخاوف الخصوصية'
+};
+
+TRANSLATIONS['contact.reason.privacy.desc'] = {
+    'en': 'Questions about data privacy or GDPR rights? Contact us at admin@toolvx.com. We take privacy seriously and will respond promptly.',
+    'zh': '有关数据隐私或GDPR权利的问题？请联系 admin@toolvx.com。我们认真对待隐私并将及时回复。',
+    'es': '¿Preguntas sobre la privacidad de datos o los derechos del GDPR? Contáctenos en admin@toolvx.com. Tomamos la privacidad en serio y responderemos prontamente.',
+    'fr': 'Des questions sur la confidentialité des données ou les droits RGPD ? Contactez-nous à admin@toolvx.com. Nous prenons la confidentialité au sérieux et répondrons rapidement.',
+    'de': 'Fragen zum Datenschutz oder DSGVO-Rechten? Kontaktieren Sie uns unter admin@toolvx.com. Wir nehmen Datenschutz ernst und werden prompt antworten.',
+    'ja': 'データプライバシーまたはGDPR権利に関する質問？admin@toolvx.com までご連絡ください。私たちはプライバシーを真剣に受け止め、迅速に対応します。',
+    'ko': '데이터 개인정보 보호 또는 GDPR 권리에 관한 질문이 있으신가요? admin@toolvx.com으로 문의하세요. 당사는 개인정보 보호를 진지하게 받아들이고 신속하게 응답할 것입니다.',
+    'pt': 'Perguntas sobre privacidade de dados ou direitos do GDPR? Contate-nos em admin@toolvx.com. Levamos a privacidade a sério e responderemos prontamente.',
+    'ru': 'Вопросы о конфиденциальности данных или правах GDPR? Свяжитесь с нами по адресу admin@toolvx.com. Мы серьезно относимся к конфиденциальности и оперативно ответим.',
+    'ar': 'أسئلة حول خصوصية البيانات أو حقوق GDPR؟ اتصل بنا على admin@toolvx.com. نحن نأخذ الخصوصية على محمل الجد وسنرد بسرعة.'
+};
+
+TRANSLATIONS['contact.reason.docs'] = {
+    'en': '📚 Documentation Help',
+    'zh': '📚 文档帮助',
+    'es': '📚 Ayuda con documentación',
+    'fr': '📚 Aide à la documentation',
+    'de': '📚 Dokumentationshilfe',
+    'ja': '📚 ドキュメントヘルプ',
+    'ko': '📚 문서 도움말',
+    'pt': '📚 Ajuda com documentação',
+    'ru': '📚 Помощь с документацией',
+    'ar': '📚 مساعدة الوثائق'
+};
+
+TRANSLATIONS['contact.reason.docs.desc'] = {
+    'en': 'Need help understanding how to use a feature? Check our blog tutorials first, then contact us if you still need assistance.',
+    'zh': '需要帮助了解如何使用某项功能吗？先查看我们的博客教程，如果仍然需要帮助，请联系我们。',
+    'es': '¿Necesita ayuda para entender cómo usar una función? Consulte nuestros tutoriales de blog primero, luego contáctenos si aún necesita ayuda.',
+    'fr': 'Besoin d\'aide pour comprendre comment utiliser une fonctionnalité ? Consultez d\'abord nos tutoriels de blog, puis contactez-nous si vous avez toujours besoin d\'aide.',
+    'de': 'Brauchen Sie Hilfe beim Verständnis der Verwendung einer Funktion? Überprüfen Sie zuerst unsere Blog-Tutorials und kontaktieren Sie uns dann, wenn Sie weiterhin Hilfe benötigen.',
+    'ja': '機能の使い方を理解するのに助けが必要ですか？まずブログチュートリアルを確認し、それでも助けが必要な場合はお問い合わせください。',
+    'ko': '기능 사용 방법을 이해하는 데 도움이 필요하신가요? 먼저 블로그 튜토리얼을 확인한 후 여전히 도움이 필요하면 문의하세요.',
+    'pt': 'Precisa de ajuda para entender como usar um recurso? Verifique nossos tutoriais de blog primeiro, depois entre em contato se ainda precisar de ajuda.',
+    'ru': 'Нужна помощь в понимании того, как использовать функцию? Сначала проверьте наши учебные пособия в блоге, затем свяжитесь с нами, если вам все еще нужна помощь.',
+    'ar': 'تحتاج مساعدة في فهم كيفية استخدام ميزة؟ تحقق من دروس المدونة أولاً، ثم اتصل بنا إذا كنت لا تزال بحاجة إلى المساعدة.'
+};
+
+TRANSLATIONS['contact.reason.partnership'] = {
+    'en': '🤝 Partnership Opportunities',
+    'zh': '🤝 合作机会',
+    'es': '🤝 Oportunidades de asociación',
+    'fr': '🤝 Opportunités de partenariat',
+    'de': '🤝 Partnerschaftsmöglichkeiten',
+    'ja': '🤝 パートナーシップの機会',
+    'ko': '🤝 파트너십 기회',
+    'pt': '🤝 Oportunidades de parceria',
+    'ru': '🤝 Возможности партнерства',
+    'ar': '🤝 فرص الشراكة'
+};
+
+TRANSLATIONS['contact.reason.partnership.desc'] = {
+    'en': 'Interested in collaborating, guest posting, or partnership opportunities? Reach out to admin@toolvx.com.',
+    'zh': '对合作、客座发帖或合作伙伴关系感兴趣？请联系 admin@toolvx.com。',
+    'es': '¿Interesado en colaborar, publicar como invitado u oportunidades de asociación? Comuníquese con admin@toolvx.com.',
+    'fr': 'Intéressé par la collaboration, les articles invités ou les opportunités de partenariat ? Contactez admin@toolvx.com.',
+    'de': 'Interessiert an Zusammenarbeit, Gastbeiträgen oder Partnerschaftsmöglichkeiten? Wenden Sie sich an admin@toolvx.com.',
+    'ja': 'コラボレーション、ゲスト投稿、パートナーシップの機会に興味がありますか？admin@toolvx.com までご連絡ください。',
+    'ko': '협력, 게스트 포스팅 또는 파트너십 기회에 관심이 있으신가요? admin@toolvx.com으로 연락하세요.',
+    'pt': 'Interessado em colaborar, postar como convidado ou oportunidades de parceria? Entre em contato com admin@toolvx.com.',
+    'ru': 'Заинтересованы в сотрудничестве, гостевых постах или возможностях партнерства? Свяжитесь с admin@toolvx.com.',
+    'ar': 'مهتم بالتعاون أو النشر كضيف أو فرص الشراكة؟ تواصل مع admin@toolvx.com.'
+};
+
+TRANSLATIONS['contact.reason.security'] = {
+    'en': '⚠️ Security Issues',
+    'zh': '⚠️ 安全问题',
+    'es': '⚠️ Problemas de seguridad',
+    'fr': '⚠️ Problèmes de sécurité',
+    'de': '⚠️ Sicherheitsprobleme',
+    'ja': '⚠️ セキュリティ問題',
+    'ko': '⚠️ 보안 문제',
+    'pt': '⚠️ Problemas de segurança',
+    'ru': '⚠️ Проблемы безопасности',
+    'ar': '⚠️ مشاكل الأمان'
+};
+
+TRANSLATIONS['contact.reason.security.desc'] = {
+    'en': 'If you discover a security vulnerability, please report it responsibly to admin@toolvx.com. Do not publicly disclose until we\'ve had a chance to address it.',
+    'zh': '如果您发现安全漏洞，请负责任地向 admin@toolvx.com 报告。在我们有机会解决之前，请勿公开披露。',
+    'es': 'Si descubre una vulnerabilidad de seguridad, infórmela responsablemente a admin@toolvx.com. No la divulgue públicamente hasta que hayamos tenido la oportunidad de abordarla.',
+    'fr': 'Si vous découvrez une vulnérabilité de sécurité, veuillez la signaler de manière responsable à admin@toolvx.com. Ne la divulguez pas publiquement avant que nous ayons eu la chance de la résoudre.',
+    'de': 'Wenn Sie eine Sicherheitslücke entdecken, melden Sie diese bitte verantwortungsvoll an admin@toolvx.com. Veröffentlichen Sie sie nicht öffentlich, bevor wir die Möglichkeit hatten, sie zu beheben.',
+    'ja': 'セキュリティ脆弱性を発見した場合は、責任を持って admin@toolvx.com まで報告してください。対応する機会があるまで公開しないでください。',
+    'ko': '보안 취약점을 발견하면 admin@toolvx.com으로 책임 있게 보고해주세요. 해결할 기회를 갖기 전에 공개적으로 밝히지 마세요.',
+    'pt': 'Se você descobrir uma vulnerabilidade de segurança, relate-a responsavelmente para admin@toolvx.com. Não divulgue publicamente até que tenhamos tido a chance de resolvê-la.',
+    'ru': 'Если вы обнаружите уязвимость безопасности, пожалуйста, ответственно сообщите об этом на admin@toolvx.com. Не разглашайте публично, пока у нас не будет возможности устранить ее.',
+    'ar': 'إذا اكتشفت ثغرة أمنية، يرجى الإبلاغ عنها بمسؤولية إلى admin@toolvx.com. لا تكشف عنها علنًا حتى تتاح لنا الفرصة لمعالجتها.'
+};
+
+TRANSLATIONS['contact.notFor'] = {
+    'en': '✅ What NOT to Contact Us For',
+    'zh': '✅ 不要联系我们处理的事项',
+    'es': '✅ Para qué NO contactarnos',
+    'fr': '✅ Pour quoi NE PAS nous contacter',
+    'de': '✅ Wofür Sie uns NICHT kontaktieren sollten',
+    'ja': '✅ お問い合わせいただけない事項',
+    'ko': '✅ 문의하지 말아야 할 사항',
+    'pt': '✅ Para o que NÃO nos contatar',
+    'ru': '✅ По каким вопросам НЕ обращаться к нам',
+    'ar': '✅ لما لا تتصل بنا من أجله'
+};
+
+TRANSLATIONS['contact.notFor.password'] = {
+    'en': '❌ Password resets (we don\'t store passwords)',
+    'zh': '❌ 密码重置（我们不存储密码）',
+    'es': '❌ Restablecimiento de contraseñas (no almacenamos contraseñas)',
+    'fr': '❌ Réinitialisation des mots de passe (nous ne stockons pas les mots de passe)',
+    'de': '❌ Passwortzurücksetzungen (wir speichern keine Passwörter)',
+    'ja': '❌ パスワードのリセット（パスワードは保存していません）',
+    'ko': '❌ 비밀번호 재설정 (비밀번호를 저장하지 않음)',
+    'pt': '❌ Redefinições de senha (não armazenamos senhas)',
+    'ru': '❌ Сброс паролей (мы не храним пароли)',
+    'ar': '❌ إعادة تعيين كلمات المرور (لا نخزن كلمات المرور)'
+};
+
+TRANSLATIONS['contact.notFor.account'] = {
+    'en': '❌ Account issues (no account required)',
+    'zh': '❌ 账户问题（不需要账户）',
+    'es': '❌ Problemas de cuenta (no se requiere cuenta)',
+    'fr': '❌ Problèmes de compte (aucun compte requis)',
+    'de': '❌ Kontoprobleme (kein Konto erforderlich)',
+    'ja': '❌ アカウントの問題（アカウントは不要）',
+    'ko': '❌ 계정 문제 (계정 불필요)',
+    'pt': '❌ Problemas de conta (nenhuma conta necessária)',
+    'ru': '❌ Проблемы с аккаунтом (аккаунт не требуется)',
+    'ar': '❌ مشاكل الحساب (لا يلزم وجود حساب)'
+};
+
+TRANSLATIONS['contact.notFor.billing'] = {
+    'en': '❌ Billing questions (service is 100% free)',
+    'zh': '❌ 账单问题（服务完全免费）',
+    'es': '❌ Preguntas de facturación (el servicio es 100% gratuito)',
+    'fr': '❌ Questions de facturation (le service est 100% gratuit)',
+    'de': '❌ Abrechnungsfragen (Dienst ist 100% kostenlos)',
+    'ja': '❌ 請求に関する質問（サービスは100%無料）',
+    'ko': '❌ 청구 관련 질문 (서비스는 100% 무료)',
+    'pt': '❌ Perguntas de faturamento (serviço é 100% gratuito)',
+    'ru': '❌ Вопросы выставления счетов (услуга на 100% бесплатна)',
+    'ar': '❌ أسئلة الفوترة (الخدمة مجانية بنسبة 100٪)'
+};
+
+TRANSLATIONS['contact.notFor.recovery'] = {
+    'en': '❌ File recovery (we don\'t store your files)',
+    'zh': '❌ 文件恢复（我们不存储您的文件）',
+    'es': '❌ Recuperación de archivos (no almacenamos sus archivos)',
+    'fr': '❌ Récupération de fichiers (nous ne stockons pas vos fichiers)',
+    'de': '❌ Dateiwiederherstellung (wir speichern Ihre Dateien nicht)',
+    'ja': '❌ ファイルの復元（ファイルは保存していません）',
+    'ko': '❌ 파일 복구 (파일을 저장하지 않음)',
+    'pt': '❌ Recuperação de arquivos (não armazenamos seus arquivos)',
+    'ru': '❌ Восстановление файлов (мы не храним ваши файлы)',
+    'ar': '❌ استرداد الملفات (لا نخزن ملفاتك)'
+};
+
+// About Section
+TRANSLATIONS['contact.about'] = {
+    'en': 'About toolvx.com',
+    'zh': '关于 toolvx.com',
+    'es': 'Acerca de toolvx.com',
+    'fr': 'À propos de toolvx.com',
+    'de': 'Über toolvx.com',
+    'ja': 'toolvx.com について',
+    'ko': 'toolvx.com 소개',
+    'pt': 'Sobre toolvx.com',
+    'ru': 'О toolvx.com',
+    'ar': 'حول toolvx.com'
+};
+
+TRANSLATIONS['contact.mission.title'] = {
+    'en': 'Our Mission',
+    'zh': '我们的使命',
+    'es': 'Nuestra misión',
+    'fr': 'Notre mission',
+    'de': 'Unsere Mission',
+    'ja': '私たちの使命',
+    'ko': '우리의 사명',
+    'pt': 'Nossa missão',
+    'ru': 'Наша миссия',
+    'ar': 'مهمتنا'
+};
+
+TRANSLATIONS['contact.mission.desc'] = {
+    'en': 'To provide free, secure, and privacy-first tools for protecting sensitive information in images and documents.',
+    'zh': '提供免费、安全且隐私优先的工具，用于保护图像和文档中的敏感信息。',
+    'es': 'Proporcionar herramientas gratuitas, seguras y con prioridad de privacidad para proteger información confidencial en imágenes y documentos.',
+    'fr': 'Fournir des outils gratuits, sécurisés et axés sur la confidentialité pour protéger les informations sensibles dans les images et les documents.',
+    'de': 'Kostenlose, sichere und datenschutzorientierte Tools zum Schutz sensibler Informationen in Bildern und Dokumenten bereitstellen.',
+    'ja': '画像や文書内の機密情報を保護するための無料、安全、プライバシー優先のツールを提供すること。',
+    'ko': '이미지 및 문서의 민감한 정보를 보호하기 위한 무료, 안전하고 개인 정보 우선 도구를 제공하는 것.',
+    'pt': 'Fornecer ferramentas gratuitas, seguras e com foco na privacidade para proteger informações confidenciais em imagens e documentos.',
+    'ru': 'Предоставлять бесплатные, безопасные и ориентированные на конфиденциальность инструменты для защиты конфиденциальной информации в изображениях и документах.',
+    'ar': 'توفير أدوات مجانية وآمنة وذات أولوية للخصوصية لحماية المعلومات الحساسة في الصور والمستندات.'
+};
+
+TRANSLATIONS['contact.privacy.title'] = {
+    'en': 'Privacy First',
+    'zh': '隐私优先',
+    'es': 'Privacidad primero',
+    'fr': 'Confidentialité d\'abord',
+    'de': 'Datenschutz zuerst',
+    'ja': 'プライバシーファースト',
+    'ko': '개인 정보 우선',
+    'pt': 'Privacidade em primeiro lugar',
+    'ru': 'Конфиденциальность прежде всего',
+    'ar': 'الخصوصية أولاً'
+};
+
+TRANSLATIONS['contact.privacy.desc'] = {
+    'en': 'All processing happens locally in your browser. Your files never leave your device or get uploaded to servers.',
+    'zh': '所有处理都在浏览器中本地进行。您的文件绝不会离开您的设备或上传到服务器。',
+    'es': 'Todo el procesamiento ocurre localmente en su navegador. Sus archivos nunca salen de su dispositivo ni se cargan en servidores.',
+    'fr': 'Tout le traitement se fait localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil et ne sont pas téléchargés sur des serveurs.',
+    'de': 'Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser. Ihre Dateien verlassen niemals Ihr Gerät oder werden auf Server hochgeladen.',
+    'ja': 'すべての処理はブラウザでローカルに行われます。ファイルはデバイスから流出したり、サーバーにアップロードされたりしません。',
+    'ko': '모든 처리는 브라우저에서 로컬로 발생합니다. 파일은 장치를 떠나거나 서버에 업로드되지 않습니다.',
+    'pt': 'Todo o processamento ocorre localmente no seu navegador. Seus arquivos nunca saem do seu dispositivo ou são carregados em servidores.',
+    'ru': 'Вся обработка происходит локально в вашем браузере. Ваши файлы никогда не покидают ваше устройство и не загружаются на серверы.',
+    'ar': 'تتم جميع المعالجة محليًا في متصفحك. ملفاتك لا تغادر جهازك أبدًا ولا يتم تحميلها على الخوادم.'
+};
+
+TRANSLATIONS['contact.free.title'] = {
+    'en': '100% Free',
+    'zh': '100% 免费',
+    'es': '100% gratuito',
+    'fr': '100% gratuit',
+    'de': '100% kostenlos',
+    'ja': '100% 無料',
+    'ko': '100% 무료',
+    'pt': '100% gratuito',
+    'ru': '100% бесплатно',
+    'ar': 'مجاني بنسبة 100٪'
+};
+
+TRANSLATIONS['contact.free.desc'] = {
+    'en': 'No hidden costs, no watermarks, no registration required. Use our tool as much as you need, completely free.',
+    'zh': '无隐藏费用，无水印，无需注册。根据需要随意使用我们的工具，完全免费。',
+    'es': 'Sin costos ocultos, sin marcas de agua, sin registro requerido. Use nuestra herramienta tanto como necesite, completamente gratis.',
+    'fr': 'Aucun coût caché, aucun filigrane, aucune inscription requise. Utilisez notre outil autant que vous le souhaitez, complètement gratuitement.',
+    'de': 'Keine versteckten Kosten, keine Wasserzeichen, keine Registrierung erforderlich. Nutzen Sie unser Tool so oft Sie möchten, völlig kostenlos.',
+    'ja': '隠れたコストなし、透かしなし、登録不要。必要に応じてツールを完全に無料でご利用いただけます。',
+    'ko': '숨겨진 비용 없음, 워터마크 없음, 등록 불필요. 필요한 만큼 도구를 완전히 무료로 사용하세요.',
+    'pt': 'Sem custos ocultos, sem marcas d\'água, nenhum registro necessário. Use nossa ferramenta o quanto precisar, completamente gratuito.',
+    'ru': 'Без скрытых расходов, без водяных знаков, регистрация не требуется. Используйте наш инструмент столько, сколько нужно, совершенно бесплатно.',
+    'ar': 'بدون تكاليف خفية، بدون علامات مائية، بدون تسجيل مطلوب. استخدم أداتنا بقدر ما تحتاج، مجانًا تمامًا.'
 };
 
 // Auto-initialize - Execute as soon as script loads

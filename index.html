@@ -916,72 +916,109 @@
             // Determine output format based on original file type
             let mimeType = 'image/png';
             let extension = 'png';
-            let quality = 1.0;
+            let quality = 0.92; // High quality with good compression for JPEG
             
             if (originalFileType) {
                 // Use the same format as the original file
                 if (originalFileType.includes('jpeg') || originalFileType.includes('jpg')) {
                     mimeType = 'image/jpeg';
                     extension = 'jpg';
-                    quality = 0.95;
+                    quality = 0.92; // High quality JPEG compression (92% quality)
                 } else if (originalFileType.includes('webp')) {
                     mimeType = 'image/webp';
                     extension = 'webp';
-                    quality = 0.95;
+                    quality = 0.85; // WebP provides better compression at lower quality values
                 } else if (originalFileType.includes('gif')) {
                     mimeType = 'image/gif';
                     extension = 'gif';
-                    quality = 1.0;
+                    quality = 1.0; // GIF doesn't support quality parameter
                 }
-                // Default to PNG for other formats
+                // Default to PNG for other formats (PNG uses lossless compression)
             }
             
             // Use original filename for export (preserves all characters including non-English)
             const fileName = originalFileName;
             
-            canvas.toBlob(function(blob) {
-                // Create a File object with the exact name
-                const file = new File([blob], fileName, { type: mimeType });
-                
-                // Use URL.createObjectURL with the File object
-                const url = URL.createObjectURL(file);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = fileName;
-                
-                // Additional attributes for better compatibility
-                link.setAttribute('download', fileName);
-                link.setAttribute('filename', fileName);
-                
-                document.body.appendChild(link);
-                
-                // Trigger download
-                link.click();
-                
-                // Cleanup
-                setTimeout(() => {
-                    document.body.removeChild(link);
-                    URL.revokeObjectURL(url);
-                }, 100);
-                
-                showNotification(`File downloaded: ${fileName}`);
-            }, mimeType, quality);
+            // For PNG, use high compression level
+            if (mimeType === 'image/png') {
+                canvas.toBlob(function(blob) {
+                    // Create a File object with the exact name
+                    const file = new File([blob], fileName, { type: mimeType });
+                    
+                    // Use URL.createObjectURL with the File object
+                    const url = URL.createObjectURL(file);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = fileName;
+                    
+                    // Additional attributes for better compatibility
+                    link.setAttribute('download', fileName);
+                    link.setAttribute('filename', fileName);
+                    
+                    document.body.appendChild(link);
+                    
+                    // Trigger download
+                    link.click();
+                    
+                    // Cleanup
+                    setTimeout(() => {
+                        document.body.removeChild(link);
+                        URL.revokeObjectURL(url);
+                    }, 100);
+                    
+                    showNotification(`File downloaded: ${fileName}`);
+                }, mimeType);
+            } else {
+                // For JPEG/WebP, use quality parameter for high compression
+                canvas.toBlob(function(blob) {
+                    // Create a File object with the exact name
+                    const file = new File([blob], fileName, { type: mimeType });
+                    
+                    // Use URL.createObjectURL with the File object
+                    const url = URL.createObjectURL(file);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = fileName;
+                    
+                    // Additional attributes for better compatibility
+                    link.setAttribute('download', fileName);
+                    link.setAttribute('filename', fileName);
+                    
+                    document.body.appendChild(link);
+                    
+                    // Trigger download
+                    link.click();
+                    
+                    // Cleanup
+                    setTimeout(() => {
+                        document.body.removeChild(link);
+                        URL.revokeObjectURL(url);
+                    }, 100);
+                    
+                    showNotification(`File downloaded: ${fileName}`);
+                }, mimeType, quality);
+            }
         }
 
         async function exportAsPDF() {
             try {
-                showNotification('Generating PDF...');
+                showNotification('Generating high-quality compressed PDF...');
                 
                 // Debug: Log the original filename
                 console.log('Original file name:', originalFileName);
                 
                 const { jsPDF } = window.jspdf;
-                const pdf = new jsPDF();
+                // Create PDF with compression enabled
+                const pdf = new jsPDF({
+                    compress: true,  // Enable PDF compression
+                    unit: 'pt',      // Use points for better precision
+                    format: 'a4'     // Default format, will adjust per page
+                });
                 
                 // Save current page first
                 saveRedactedPage();
                 
-                // Add all pages to PDF
+                // Process each page with high quality rendering
                 for (let i = 0; i < totalPages; i++) {
                     if (i > 0) {
                         pdf.addPage();
@@ -991,9 +1028,10 @@
                     let pageData = redactedPages[i];
                     
                     if (!pageData) {
-                        // If no redacted version, render original page
+                        // If no redacted version, render original page with high quality
                         const page = await pdfDoc.getPage(i + 1);
-                        const viewport = page.getViewport({ scale: 1.5 });
+                        // Use higher scale for better quality (2.0 instead of 1.5)
+                        const viewport = page.getViewport({ scale: 2.0 });
                         
                         // Create temporary canvas for rendering
                         const tempCanvas = document.createElement('canvas');
@@ -1001,24 +1039,57 @@
                         tempCanvas.height = viewport.height;
                         const tempCtx = tempCanvas.getContext('2d');
                         
+                        // High quality rendering settings
+                        tempCtx.imageSmoothingEnabled = true;
+                        tempCtx.imageSmoothingQuality = 'high';
+                        
                         await page.render({ canvasContext: tempCtx, viewport: viewport }).promise;
-                        pageData = tempCanvas.toDataURL('image/png');
+                        
+                        // Convert to JPEG with high quality compression (92% quality)
+                        pageData = tempCanvas.toDataURL('image/jpeg', 0.92);
+                    } else {
+                        // If already redacted, convert PNG to JPEG for better compression
+                        // Check if it's a PNG data URL
+                        if (pageData.startsWith('data:image/png')) {
+                            // Create an image element to convert
+                            const img = new Image();
+                            img.src = pageData;
+                            await new Promise((resolve) => {
+                                img.onload = () => {
+                                    const tempCanvas = document.createElement('canvas');
+                                    tempCanvas.width = img.width;
+                                    tempCanvas.height = img.height;
+                                    const tempCtx = tempCanvas.getContext('2d');
+                                    
+                                    // High quality rendering
+                                    tempCtx.imageSmoothingEnabled = true;
+                                    tempCtx.imageSmoothingQuality = 'high';
+                                    
+                                    tempCtx.drawImage(img, 0, 0);
+                                    
+                                    // Convert to JPEG with 92% quality
+                                    pageData = tempCanvas.toDataURL('image/jpeg', 0.92);
+                                    resolve();
+                                };
+                            });
+                        }
                     }
                     
-                    // Add image to PDF
+                    // Add image to PDF with optimized compression
                     const imgProps = pdf.getImageProperties(pageData);
                     const pdfWidth = pdf.internal.pageSize.getWidth();
                     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
                     
-                    pdf.addImage(pageData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                    // Use JPEG format with compression for smaller file size
+                    pdf.addImage(pageData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST');
                 }
                 
                 // Save PDF with original filename using manual download approach
                 const fileName = originalFileName || 'document.pdf';
                 console.log('Exporting PDF with filename:', fileName);
                 
-                // Generate PDF as blob and trigger download manually
-                const pdfBlob = pdf.output('blob');
+                // Generate PDF as blob with compression and trigger download manually
+                const pdfBlob = pdf.output('blob', { compression: 'FAST' });
                 const url = URL.createObjectURL(pdfBlob);
                 
                 const link = document.createElement('a');
@@ -1033,7 +1104,7 @@
                     URL.revokeObjectURL(url);
                 }, 100);
                 
-                showNotification(`PDF exported: ${fileName}`);
+                showNotification(`High-quality PDF exported: ${fileName}`);
             } catch (error) {
                 console.error('Error exporting PDF:', error);
                 alert('Error exporting PDF. Please try again.');
@@ -1230,6 +1301,7 @@
                         <li><a href="articles/blog.html" class="text-gray-400 hover:text-white transition" data-i18n="nav.blog">Blog</a></li>
                         <li><a href="pages/features.html" class="text-gray-400 hover:text-white transition" data-i18n="nav.features">Features</a></li>
                         <li><a href="pages/faq.html" class="text-gray-400 hover:text-white transition" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="pages/contact.html" class="text-gray-400 hover:text-white transition" data-i18n="nav.contact">Contact Us</a></li>
                     </ul>
                 </div>
                 
