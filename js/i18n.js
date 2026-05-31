@@ -2496,6 +2496,1047 @@ TRANSLATIONS['contact.free.desc'] = {
     'ar': 'بدون تكاليف خفية، بدون علامات مائية، بدون تسجيل مطلوب. استخدم أداتنا بقدر ما تحتاج، مجانًا تمامًا.'
 };
 
+// Privacy Policy translations
+TRANSLATIONS['pp.title'] = {
+    'en': 'Privacy Policy',
+    'zh': '隐私政策',
+    'es': 'Política de privacidad',
+    'fr': 'Politique de confidentialité',
+    'de': 'Datenschutzerklärung',
+    'ja': 'プライバシーポリシー',
+    'ko': '개인정보 보호정책',
+    'pt': 'Política de privacidade',
+    'ru': 'Политика конфиденциальности',
+    'ar': 'سياسة الخصوصية'
+};
+
+TRANSLATIONS['pp.lastUpdated'] = {
+    'en': 'Last updated: May 31, 2026',
+    'zh': '最后更新：2026年5月31日',
+    'es': 'Última actualización: 31 de mayo de 2026',
+    'fr': 'Dernière mise à jour : 31 mai 2026',
+    'de': 'Letzte Aktualisierung: 31. Mai 2026',
+    'ja': '最終更新日：2026年5月31日',
+    'ko': '마지막 업데이트: 2026년 5월 31일',
+    'pt': 'Última atualização: 31 de maio de 2026',
+    'ru': 'Последнее обновление: 31 мая 2026 г.',
+    'ar': 'آخر تحديث: 31 مايو 2026'
+};
+
+TRANSLATIONS['pp.intro'] = {
+    'en': 'At toolvx.com ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our free online image and PDF redaction tool.',
+    'zh': '在 toolvx.com（"我们"），我们致力于保护您的隐私。本隐私政策解释了我们如何收集、使用和保护您在使用我们的免费在线图像和PDF编辑工具时的信息。',
+    'es': 'En toolvx.com ("nosotros"), estamos comprometidos a proteger su privacidad. Esta Política de privacidad explica cómo recopilamos, usamos y protegemos su información cuando utiliza nuestra herramienta gratuita de edición de imágenes y PDF en línea.',
+    'fr': 'Chez toolvx.com ("nous"), nous nous engageons à protéger votre vie privée. Cette Politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre outil gratuit d\'édition d\'images et de PDF en ligne.',
+    'de': 'Bei toolvx.com ("wir") sind wir verpflichtet, Ihre Privatsphäre zu schützen. Diese Datenschutzerklärung erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unser kostenloses Online-Tool zur Bild- und PDF-Bearbeitung verwenden.',
+    'ja': 'toolvx.com（「私たち」）では、お客様のプライバシーを保護することをお約束します。本プライバシーポリシーでは、無料のオンライン画像およびPDF編集ツールを使用する際に、私たちがどのように情報を収集、使用、保護するかを説明します。',
+    'ko': 'toolvx.com("우리")에서는 귀하의 개인정보 보호를 위해 최선을 다하고 있습니다. 본 개인정보 보호정책은 무료 온라인 이미지 및 PDF 편집 도구를 사용할 때 정보를 수집, 사용 및 보호하는 방법을 설명합니다.',
+    'pt': 'No toolvx.com ("nós"), estamos comprometidos em proteger sua privacidade. Esta Política de privacidade explica como coletamos, usamos e protegemos suas informações quando você usa nossa ferramenta gratuita de edição de imagens e PDF online.',
+    'ru': 'На toolvx.com ("мы") мы стремимся защищать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем и защищаем вашу информацию, когда вы используете наш бесплатный онлайн-инструмент для редактирования изображений и PDF.',
+    'ar': 'في toolvx.com ("نحن")، نلتزم بحماية خصوصيتك. توضح سياسة الخصوصية هذه كيف نقوم بجمع واستخدام وحماية معلوماتك عند استخدام أداتنا المجانية لتحرير الصور وملفات PDF عبر الإنترنت.'
+};
+
+TRANSLATIONS['pp.s1.title'] = {
+    'en': '1. Information We Collect',
+    'zh': '1. 我们收集的信息',
+    'es': '1. Información que recopilamos',
+    'fr': '1. Informations que nous collectons',
+    'de': '1. Informationen, die wir sammeln',
+    'ja': '1. 収集する情報',
+    'ko': '1. 수집하는 정보',
+    'pt': '1. Informações que coletamos',
+    'ru': '1. Информация, которую мы собираем',
+    'ar': '1. المعلومات التي نجمعها'
+};
+
+TRANSLATIONS['pp.s1.1.title'] = {
+    'en': '1.1 Personal Information',
+    'zh': '1.1 个人信息',
+    'es': '1.1 Información personal',
+    'fr': '1.1 Informations personnelles',
+    'de': '1.1 Persönliche Informationen',
+    'ja': '1.1 個人情報',
+    'ko': '1.1 개인 정보',
+    'pt': '1.1 Informações pessoais',
+    'ru': '1.1 Персональная информация',
+    'ar': '1.1 المعلومات الشخصية'
+};
+
+TRANSLATIONS['pp.s1.1.text'] = {
+    'en': 'We do NOT collect any personal information. Our tool operates entirely in your browser, and no files, images, or documents are uploaded to our servers. You can use our service anonymously without creating an account or providing any personal details.',
+    'zh': '我们完全不收集任何个人信息。我们的工具完全在您的浏览器中运行，不会将任何文件、图像或文档上传到我们的服务器。您可以匿名使用我们的服务，无需创建账户或提供任何个人信息。',
+    'es': 'NO recopilamos ninguna información personal. Nuestra herramienta funciona completamente en su navegador y no se cargan archivos, imágenes ni documentos en nuestros servidores. Puede usar nuestro servicio de forma anónima sin crear una cuenta ni proporcionar datos personales.',
+    'fr': 'Nous ne collectons AUCUNE information personnelle. Notre outil fonctionne entièrement dans votre navigateur et aucun fichier, image ou document n\'est téléchargé sur nos serveurs. Vous pouvez utiliser notre service anonymement sans créer de compte ni fournir de données personnelles.',
+    'de': 'Wir sammeln KEINE persönlichen Informationen. Unser Tool funktioniert vollständig in Ihrem Browser und keine Dateien, Bilder oder Dokumente werden auf unsere Server hochgeladen. Sie können unseren Service anonym nutzen, ohne ein Konto zu erstellen oder persönliche Daten anzugeben.',
+    'ja': '個人情報を収集しません。当ツールはブラウザ内で完全に動作し、ファイル、画像、文書はサーバーにアップロードされません。アカウント作成や個人情報の提供なしに匿名でサービスを利用できます。',
+    'ko': '개인 정보를 수집하지 않습니다. 우리의 도구는 브라우저에서 완전히 작동하며 파일, 이미지 또는 문서가 서버에 업로드되지 않습니다. 계정을 만들거나 개인 정보를 제공하지 않고 익명으로 서비스를 이용할 수 있습니다.',
+    'pt': 'NÃO coletamos nenhuma informação pessoal. Nossa ferramenta opera inteiramente no seu navegador e nenhum arquivo, imagem ou documento é carregado em nossos servidores. Você pode usar nosso serviço anonimamente sem criar uma conta ou fornecer dados pessoais.',
+    'ru': 'Мы НЕ собираем никакой личной информации. Наш инструмент работает полностью в вашем браузере, и файлы, изображения или документы не загружаются на наши серверы. Вы можете использовать наш сервис анонимно, не создавая учетной записи и не предоставляя личных данных.',
+    'ar': 'لا نقوم بجمع أي معلومات شخصية. تعمل أداتنا بالكامل في متصفحك، ولا يتم تحميل أي ملفات أو صور أو مستندات إلى خوادمنا. يمكنك استخدام خدمتنا بشكل مجهول دون إنشاء حساب أو تقديم أي تفاصيل شخصية.'
+};
+
+TRANSLATIONS['pp.s1.2.title'] = {
+    'en': '1.2 Automatically Collected Information',
+    'zh': '1.2 自动收集的信息',
+    'es': '1.2 Información recopilada automáticamente',
+    'fr': '1.2 Informations collectées automatiquement',
+    'de': '1.2 Automatisch gesammelte Informationen',
+    'ja': '1.2 自動的に収集される情報',
+    'ko': '1.2 자동으로 수집된 정보',
+    'pt': '1.2 Informações coletadas automaticamente',
+    'ru': '1.2 Автоматически собираемая информация',
+    'ar': '1.2 المعلومات التي يتم جمعها تلقائيًا'
+};
+
+TRANSLATIONS['pp.s1.2.text'] = {
+    'en': 'When you visit our website, we may automatically collect certain non-personal information for analytics and improvement purposes:',
+    'zh': '当您访问我们的网站时，我们可能会自动收集某些非个人信息，用于分析和改进目的：',
+    'es': 'Cuando visita nuestro sitio web, podemos recopilar automáticamente cierta información no personal con fines de análisis y mejora:',
+    'fr': 'Lorsque vous visitez notre site Web, nous pouvons collecter automatiquement certaines informations non personnelles à des fins d\'analyse et d\'amélioration :',
+    'de': 'Wenn Sie unsere Website besuchen, können wir automatisch bestimmte nicht persönliche Informationen zu Analyse- und Verbesserungszwecken sammeln:',
+    'ja': '当サイトを訪問すると、分析および改善の目的で特定の非個人情報を自動的に収集する場合があります。',
+    'ko': '웹사이트를 방문하면 분석 및 개선 목적으로 특정 비개인 정보를 자동으로 수집할 수 있습니다.',
+    'pt': 'Quando você visita nosso site, podemos coletar automaticamente certas informações não pessoais para fins de análise e melhoria:',
+    'ru': 'При посещении нашего веб-сайта мы можем автоматически собирать определенную неперсональную информацию в целях аналитики и улучшения:',
+    'ar': 'عند زيارتك لموقعنا، قد نقوم تلقائيًا بجمع بعض المعلومات غير الشخصية لأغراض التحليل والتحسين:'
+};
+
+TRANSLATIONS['pp.s1.2.li1'] = {
+    'en': 'Browser type and version',
+    'zh': '浏览器类型和版本',
+    'es': 'Tipo y versión del navegador',
+    'fr': 'Type et version du navigateur',
+    'de': 'Browsertyp und -version',
+    'ja': 'ブラウザの種類とバージョン',
+    'ko': '브라우저 유형 및 버전',
+    'pt': 'Tipo e versão do navegador',
+    'ru': 'Тип и версия браузера',
+    'ar': 'نوع وإصدار المتصفح'
+};
+
+TRANSLATIONS['pp.s1.2.li2'] = {
+    'en': 'Operating system',
+    'zh': '操作系统',
+    'es': 'Sistema operativo',
+    'fr': 'Système d\'exploitation',
+    'de': 'Betriebssystem',
+    'ja': 'オペレーティングシステム',
+    'ko': '운영 체제',
+    'pt': 'Sistema operacional',
+    'ru': 'Операционная система',
+    'ar': 'نظام التشغيل'
+};
+
+TRANSLATIONS['pp.s1.2.li3'] = {
+    'en': 'Referring website (if applicable)',
+    'zh': '引荐网站（如适用）',
+    'es': 'Sitio web de referencia (si corresponde)',
+    'fr': 'Site web référent (si applicable)',
+    'de': 'Referenz-Website (falls zutreffend)',
+    'ja': '参照元ウェブサイト（該当する場合）',
+    'ko': '참조 웹사이트(해당하는 경우)',
+    'pt': 'Site de referência (se aplicável)',
+    'ru': 'Ссылающийся веб-сайт (если применимо)',
+    'ar': 'الموقع المرجعي (إن وجد)'
+};
+
+TRANSLATIONS['pp.s1.2.li4'] = {
+    'en': 'Pages visited on our site',
+    'zh': '在我们网站上访问的页面',
+    'es': 'Páginas visitadas en nuestro sitio',
+    'fr': 'Pages visitées sur notre site',
+    'de': 'Auf unserer Website besuchte Seiten',
+    'ja': '当サイトで訪問したページ',
+    'ko': '우리 사이트에서 방문한 페이지',
+    'pt': 'Páginas visitadas em nosso site',
+    'ru': 'Страницы, посещенные на нашем сайте',
+    'ar': 'الصفحات التي تمت زيارتها على موقعنا'
+};
+
+TRANSLATIONS['pp.s1.2.li5'] = {
+    'en': 'Time and date of visit',
+    'zh': '访问时间和日期',
+    'es': 'Hora y fecha de la visita',
+    'fr': 'Heure et date de la visite',
+    'de': 'Uhrzeit und Datum des Besuchs',
+    'ja': '訪問の日時',
+    'ko': '방문 시간 및 날짜',
+    'pt': 'Hora e data da visita',
+    'ru': 'Время и дата посещения',
+    'ar': 'وقت وتاريخ الزيارة'
+};
+
+TRANSLATIONS['pp.s1.2.li6'] = {
+    'en': 'Device type (desktop, mobile, tablet)',
+    'zh': '设备类型（桌面、移动、平板）',
+    'es': 'Tipo de dispositivo (escritorio, móvil, tableta)',
+    'fr': 'Type d\'appareil (bureau, mobile, tablette)',
+    'de': 'Gerätetyp (Desktop, Mobil, Tablet)',
+    'ja': 'デバイスの種類（デスクトップ、モバイル、タブレット）',
+    'ko': '장치 유형(데스크톱, 모바일, 태블릿)',
+    'pt': 'Tipo de dispositivo (desktop, mobile, tablet)',
+    'ru': 'Тип устройства (компьютер, мобильный, планшет)',
+    'ar': 'نوع الجهاز (سطح المكتب، الجوال، اللوحي)'
+};
+
+TRANSLATIONS['pp.s1.2.note'] = {
+    'en': 'This information is collected through cookies and similar technologies. It does not identify you personally and is used solely to improve our service and user experience.',
+    'zh': '这些信息通过 Cookie 和类似技术收集。它不会识别您的个人身份，仅用于改进我们的服务和用户体验。',
+    'es': 'Esta información se recopila a través de cookies y tecnologías similares. No le identifica personalmente y se utiliza únicamente para mejorar nuestro servicio y la experiencia del usuario.',
+    'fr': 'Ces informations sont collectées via des cookies et des technologies similaires. Elles ne vous identifient pas personnellement et sont utilisées uniquement pour améliorer notre service et l\'expérience utilisateur.',
+    'de': 'Diese Informationen werden über Cookies und ähnliche Technologien gesammelt. Sie identifiziert Sie nicht persönlich und wird ausschließlich zur Verbesserung unseres Services und der Benutzererfahrung verwendet.',
+    'ja': 'この情報は、Cookie および類似技術を通じて収集されます。これは個人を特定するものではなく、サービスとユーザーエクスペリエンスの向上にのみ使用されます。',
+    'ko': '이 정보는 쿠키 및 유사 기술을 통해 수집됩니다. 이는 개인을 식별하지 않으며 서비스와 사용자 경험을 개선하기 위해 사용됩니다.',
+    'pt': 'Estas informações são coletadas por meio de cookies e tecnologias similares. Não o identificam pessoalmente e são usadas apenas para melhorar nosso serviço e a experiência do usuário.',
+    'ru': 'Эта информация собирается с помощью файлов cookie и аналогичных технологий. Она не идентифицирует вас лично и используется исключительно для улучшения нашего сервиса и пользовательского опыта.',
+    'ar': 'يتم جمع هذه المعلومات من خلال ملفات تعريف الارتباط والتقنيات المشابهة. لا تحدد هويتك شخصيًا وتُستخدم فقط لتحسين خدماتنا وتجربة المستخدم.'
+};
+
+TRANSLATIONS['pp.s2.title'] = {
+    'en': '2. How We Use Your Information',
+    'zh': '2. 我们如何使用您的信息',
+    'es': '2. Cómo usamos su información',
+    'fr': '2. Comment nous utilisons vos informations',
+    'de': '2. Wie wir Ihre Informationen verwenden',
+    'ja': '2. 情報の利用方法',
+    'ko': '2. 수집한 정보의 사용 방법',
+    'pt': '2. Como usamos suas informações',
+    'ru': '2. Как мы используем вашу информацию',
+    'ar': '2. كيف نستخدم معلوماتك'
+};
+
+TRANSLATIONS['pp.s2.text'] = {
+    'en': 'Since we do not collect personal information, we do not use any personal data. The automatically collected non-personal information is used for:',
+    'zh': '由于我们不收集个人信息，因此不会使用任何个人数据。自动收集的非个人信息用于：',
+    'es': 'Dado que no recopilamos información personal, no utilizamos ningún dato personal. La información no personal recopilada automáticamente se utiliza para:',
+    'fr': 'Étant donné que nous ne collectons pas d\'informations personnelles, nous n\'utilisons aucune donnée personnelle. Les informations non personnelles collectées automatiquement sont utilisées pour :',
+    'de': 'Da wir keine persönlichen Informationen sammeln, verwenden wir keine persönlichen Daten. Die automatisch gesammelten nicht persönlichen Informationen werden verwendet für:',
+    'ja': '個人情報を収集していないため、個人データは使用しません。自動的に収集された非個人情報は以下の目的で使用されます。',
+    'ko': '개인 정보를 수집하지 않으므로 개인 데이터를 사용하지 않습니다. 자동으로 수집된 비개인 정보는 다음을 위해 사용됩니다.',
+    'pt': 'Como não coletamos informações pessoais, não usamos nenhum dado pessoal. As informações não pessoais coletadas automaticamente são usadas para:',
+    'ru': 'Поскольку мы не собираем личную информацию, мы не используем никаких личных данных. Автоматически собранная неперсональная информация используется для:',
+    'ar': 'بما أننا لا نقوم بجمع المعلومات الشخصية، فإننا لا نستخدم أي بيانات شخصية. يتم استخدام المعلومات غير الشخصية التي يتم جمعها تلقائيًا لـ:'
+};
+
+TRANSLATIONS['pp.s2.li1'] = {
+    'en': 'Analyzing website traffic and usage patterns',
+    'zh': '分析网站流量和使用模式',
+    'es': 'Analizar el tráfico del sitio web y los patrones de uso',
+    'fr': 'Analyser le trafic du site Web et les modèles d\'utilisation',
+    'de': 'Analysieren von Website-Traffic und Nutzungsmustern',
+    'ja': 'ウェブサイトのトラフィックと使用パターンの分析',
+    'ko': '웹사이트 트래픽 및 사용 패턴 분석',
+    'pt': 'Analisar o tráfego do site e padrões de uso',
+    'ru': 'Анализ трафика сайта и шаблонов использования',
+    'ar': 'تحليل حركة مرور الموقع وأنماط الاستخدام'
+};
+
+TRANSLATIONS['pp.s2.li2'] = {
+    'en': 'Improving our tool\'s functionality and performance',
+    'zh': '改进工具的功能和性能',
+    'es': 'Mejorar la funcionalidad y el rendimiento de nuestra herramienta',
+    'fr': 'Améliorer la fonctionnalité et les performances de notre outil',
+    'de': 'Verbesserung der Funktionalität und Leistung unseres Tools',
+    'ja': 'ツールの機能とパフォーマンスの向上',
+    'ko': '도구의 기능 및 성능 개선',
+    'pt': 'Melhorar a funcionalidade e o desempenho de nossa ferramenta',
+    'ru': 'Улучшение функциональности и производительности нашего инструмента',
+    'ar': 'تحسين وظائف أدائنا وأدائنا'
+};
+
+TRANSLATIONS['pp.s2.li3'] = {
+    'en': 'Identifying and fixing technical issues',
+    'zh': '识别和修复技术问题',
+    'es': 'Identificar y solucionar problemas técnicos',
+    'fr': 'Identifier et résoudre les problèmes techniques',
+    'de': 'Identifizierung und Behebung technischer Probleme',
+    'ja': '技術的な問題の特定と修正',
+    'ko': '기술 문제 식별 및 해결',
+    'pt': 'Identificar e corrigir problemas técnicos',
+    'ru': 'Выявление и устранение технических проблем',
+    'ar': 'تحديد وإصلاح المشكلات الفنية'
+};
+
+TRANSLATIONS['pp.s2.li4'] = {
+    'en': 'Enhancing user experience',
+    'zh': '增强用户体验',
+    'es': 'Mejorar la experiencia del usuario',
+    'fr': 'Améliorer l\'expérience utilisateur',
+    'de': 'Verbesserung der Benutzererfahrung',
+    'ja': 'ユーザーエクスペリエンスの向上',
+    'ko': '사용자 경험 향상',
+    'pt': 'Melhorar a experiência do usuário',
+    'ru': 'Улучшение пользовательского опыта',
+    'ar': 'تعزيز تجربة المستخدم'
+};
+
+TRANSLATIONS['pp.s2.li5'] = {
+    'en': 'Ensuring website security',
+    'zh': '确保网站安全',
+    'es': 'Garantizar la seguridad del sitio web',
+    'fr': 'Assurer la sécurité du site Web',
+    'de': 'Sicherstellung der Website-Sicherheit',
+    'ja': 'ウェブサイトの安全性確保',
+    'ko': '웹사이트 보안 보장',
+    'pt': 'Garantir a segurança do site',
+    'ru': 'Обеспечение безопасности сайта',
+    'ar': 'ضمان أمان الموقع'
+};
+
+TRANSLATIONS['pp.s3.title'] = {
+    'en': '3. Data Storage and Security',
+    'zh': '3. 数据存储与安全',
+    'es': '3. Almacenamiento y seguridad de datos',
+    'fr': '3. Stockage et sécurité des données',
+    'de': '3. Datenspeicherung und Sicherheit',
+    'ja': '3. データの保存とセキュリティ',
+    'ko': '3. 데이터 저장 및 보안',
+    'pt': '3. Armazenamento e segurança de dados',
+    'ru': '3. Хранение и безопасность данных',
+    'ar': '3. تخزين البيانات والأمان'
+};
+
+TRANSLATIONS['pp.s3.1.title'] = {
+    'en': '3.1 Local Processing',
+    'zh': '3.1 本地处理',
+    'es': '3.1 Procesamiento local',
+    'fr': '3.1 Traitement local',
+    'de': '3.1 Lokale Verarbeitung',
+    'ja': '3.1 ローカル処理',
+    'ko': '3.1 로컬 처리',
+    'pt': '3.1 Processamento local',
+    'ru': '3.1 Локальная обработка',
+    'ar': '3.1 المعالجة المحلية'
+};
+
+TRANSLATIONS['pp.s3.1.text'] = {
+    'en': 'All image and PDF processing happens locally in your browser. Your files never leave your device or get uploaded to any server. This ensures maximum privacy and security for your sensitive documents.',
+    'zh': '所有图像和PDF处理都在您的浏览器中本地进行。您的文件永远不会离开您的设备或上传到任何服务器。这确保了敏感文档的最大隐私和安全性。',
+    'es': 'Todo el procesamiento de imágenes y PDF se realiza localmente en su navegador. Sus archivos nunca abandonan su dispositivo ni se cargan en ningún servidor. Esto garantiza la máxima privacidad y seguridad para sus documentos sensibles.',
+    'fr': 'Tout le traitement d\'images et de PDF se fait localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil et ne sont téléchargés sur aucun serveur. Cela garantit une confidentialité et une sécurité maximales pour vos documents sensibles.',
+    'de': 'Die gesamte Bild- und PDF-Verarbeitung erfolgt lokal in Ihrem Browser. Ihre Dateien verlassen nie Ihr Gerät oder werden auf einen Server hochgeladen. Dies gewährleistet maximale Privatsphäre und Sicherheit für Ihre sensiblen Dokumente.',
+    'ja': 'すべての画像およびPDF処理は、ブラウザ内でローカルに行われます。ファイルがデバイスから離れたり、サーバーにアップロードされたりすることはありません。これにより、機密文書の最大限のプライバシーと安全性が確保されます。',
+    'ko': '모든 이미지 및 PDF 처리는 브라우저에서 로컬로 이루어집니다. 파일이 장치를 떠나거나 서버에 업로드되지 않습니다. 이를 통해 민감한 문서의 최대한의 프라이버시와 보안이 보장됩니다.',
+    'pt': 'Todo o processamento de imagens e PDF é feito localmente no seu navegador. Seus arquivos nunca saem do seu dispositivo ou são carregados em nenhum servidor. Isso garante a máxima privacidade e segurança para seus documentos sensíveis.',
+    'ru': 'Вся обработка изображений и PDF происходит локально в вашем браузере. Ваши файлы никогда не покидают ваше устройство и не загружаются на какой-либо сервер. Это обеспечивает максимальную конфиденциальность и безопасность для ваших конфиденциальных документов.',
+    'ar': 'يتم معالجة جميع الصور وملفات PDF محليًا في متصفحك. ملفاتك لا تغادر جهازك أبدًا ولا يتم تحميلها على أي خادم. وهذا يضمن أقصى درجات الخصوصية والأمان لمستنداتك الحساسة.'
+};
+
+TRANSLATIONS['pp.s3.2.title'] = {
+    'en': '3.2 No Server Storage',
+    'zh': '3.2 无服务器存储',
+    'es': '3.2 Sin almacenamiento en servidor',
+    'fr': '3.2 Aucun stockage sur serveur',
+    'de': '3.2 Keine Serverspeicherung',
+    'ja': '3.2 サーバー保存なし',
+    'ko': '3.2 서버 저장 없음',
+    'pt': '3.2 Sem armazenamento no servidor',
+    'ru': '3.2 Хранение на сервере отсутствует',
+    'ar': '3.2 لا يوجد تخزين على الخادم'
+};
+
+TRANSLATIONS['pp.s3.2.text'] = {
+    'en': 'We do not store any images, PDFs, or edited documents on our servers. Once you close your browser tab, all temporary data is permanently deleted.',
+    'zh': '我们不会在我们的服务器上存储任何图像、PDF或编辑过的文档。一旦您关闭浏览器标签页，所有临时数据将被永久删除。',
+    'es': 'No almacenamos ninguna imagen, PDF ni documento editado en nuestros servidores. Una vez que cierra la pestaña de su navegador, todos los datos temporales se eliminan permanentemente.',
+    'fr': 'Nous ne stockons aucune image, PDF ni document édité sur nos serveurs. Une fois que vous fermez l\'onglet de votre navigateur, toutes les données temporaires sont définitivement supprimées.',
+    'de': 'Wir speichern keine Bilder, PDFs oder bearbeiteten Dokumente auf unseren Servern. Sobald Sie Ihren Browser-Tab schließen, werden alle temporären Daten dauerhaft gelöscht.',
+    'ja': 'サーバーに画像、PDF、編集済み文書を保存することはありません。ブラウザタブを閉じると、すべての一時データは永久に削除されます。',
+    'ko': '서버에 이미지, PDF 또는 편집된 문서를 저장하지 않습니다. 브라우저 탭을 닫으면 모든 임시 데이터가 영구적으로 삭제됩니다.',
+    'pt': 'Não armazenamos nenhuma imagem, PDF ou documento editado em nossos servidores. Depois que você fecha a guia do navegador, todos os dados temporários são excluídos permanentemente.',
+    'ru': 'Мы не храним никакие изображения, PDF-файлы или редактированные документы на наших серверах. После того как вы закрываете вкладку браузера, все временные данные безвозвратно удаляются.',
+    'ar': 'لا نقوم بتخزين أي صور أو ملفات PDF أو مستندات معدلة على خوادمنا. بمجرد إغلاق علامة تبويب المتصفح الخاصة بك، يتم حذف جميع البيانات المؤقتة نهائيًا.'
+};
+
+TRANSLATIONS['pp.s3.3.title'] = {
+    'en': '3.3 Website Security',
+    'zh': '3.3 网站安全',
+    'es': '3.3 Seguridad del sitio web',
+    'fr': '3.3 Sécurité du site Web',
+    'de': '3.3 Website-Sicherheit',
+    'ja': '3.3 ウェブサイトのセキュリティ',
+    'ko': '3.3 웹사이트 보안',
+    'pt': '3.3 Segurança do site',
+    'ru': '3.3 Безопасность сайта',
+    'ar': '3.3 أمان الموقع'
+};
+
+TRANSLATIONS['pp.s3.3.text'] = {
+    'en': 'We implement industry-standard security measures to protect our website, including:',
+    'zh': '我们实施行业标准的安全措施来保护我们的网站，包括：',
+    'es': 'Implementamos medidas de seguridad estándar de la industria para proteger nuestro sitio web, incluyendo:',
+    'fr': 'Nous mettons en œuvre des mesures de sécurité conformes aux normes de l\'industrie pour protéger notre site Web, y compris :',
+    'de': 'Wir implementieren branchenübliche Sicherheitsmaßnahmen zum Schutz unserer Website, einschließlich:',
+    'ja': 'ウェブサイトを保護するために業界標準のセキュリティ対策を実施しています。',
+    'ko': '웹사이트를 보호하기 위해 업계 표준 보안 조치를 구현하고 있습니다.',
+    'pt': 'Implementamos medidas de segurança padrão da indústria para proteger nosso site, incluindo:',
+    'ru': 'Мы внедряем стандартные меры безопасности для защиты нашего сайта, включая:',
+    'ar': 'نقوم بتنفيذ تدابير أمان مطابقة لمعايير الصناعة لحماية موقعنا، بما في ذلك:'
+};
+
+TRANSLATIONS['pp.s3.3.li1'] = {
+    'en': 'HTTPS encryption for all communications',
+    'zh': '所有通信的HTTPS加密',
+    'es': 'Encriptación HTTPS para todas las comunicaciones',
+    'fr': 'Chiffrement HTTPS pour toutes les communications',
+    'de': 'HTTPS-Verschlüsselung für alle Kommunikationen',
+    'ja': 'すべての通信に対するHTTPS暗号化',
+    'ko': '모든 통신을 위한 HTTPS 암호화',
+    'pt': 'Criptografia HTTPS para todas as comunicações',
+    'ru': 'HTTPS-шифрование для всех соединений',
+    'ar': 'تشفير HTTPS لجميع الاتصالات'
+};
+
+TRANSLATIONS['pp.s3.3.li2'] = {
+    'en': 'Regular security audits',
+    'zh': '定期安全审计',
+    'es': 'Auditorías de seguridad regulares',
+    'fr': 'Audits de sécurité réguliers',
+    'de': 'Regelmäßige Sicherheitsprüfungen',
+    'ja': '定期的なセキュリティ監査',
+    'ko': '정기적인 보안 감사',
+    'pt': 'Auditorias de segurança regulares',
+    'ru': 'Регулярные аудиты безопасности',
+    'ar': 'عمليات تدقيق أمنية منتظمة'
+};
+
+TRANSLATIONS['pp.s3.3.li3'] = {
+    'en': 'Protection against common web vulnerabilities',
+    'zh': '防范常见网络漏洞',
+    'es': 'Protección contra vulnerabilidades web comunes',
+    'fr': 'Protection contre les vulnérabilités Web courantes',
+    'de': 'Schutz gegen gängige Web-Schwachstellen',
+    'ja': '一般的なWeb脆弱性に対する保護',
+    'ko': '일반적인 웹 취약점에 대한 보호',
+    'pt': 'Proteção contra vulnerabilidades web comuns',
+    'ru': 'Защита от распространенных уязвимостей',
+    'ar': 'الحماية ضد ثغرات الويب الشائعة'
+};
+
+TRANSLATIONS['pp.s4.title'] = {
+    'en': '4. Cookies and Tracking Technologies',
+    'zh': '4. Cookie和跟踪技术',
+    'es': '4. Cookies y tecnologías de seguimiento',
+    'fr': '4. Cookies et technologies de suivi',
+    'de': '4. Cookies und Tracking-Technologien',
+    'ja': '4. Cookieとトラッキング技術',
+    'ko': '4. 쿠키 및 추적 기술',
+    'pt': '4. Cookies e tecnologias de rastreamento',
+    'ru': '4. Файлы cookie и технологии отслеживания',
+    'ar': '4. ملفات تعريف الارتباط وتقنيات التتبع'
+};
+
+TRANSLATIONS['pp.s4.text'] = {
+    'en': 'We use minimal cookies and similar technologies for the following purposes:',
+    'zh': '我们使用最少的Cookie和类似技术，用于以下目的：',
+    'es': 'Utilizamos cookies mínimas y tecnologías similares para los siguientes propósitos:',
+    'fr': 'Nous utilisons un minimum de cookies et de technologies similaires aux fins suivantes :',
+    'de': 'Wir verwenden minimale Cookies und ähnliche Technologien für die folgenden Zwecke:',
+    'ja': '以下の目的のために、最小限のCookieおよび類似技術を使用しています。',
+    'ko': '다음 목적을 위해 최소한의 쿠키 및 유사 기술을 사용합니다.',
+    'pt': 'Usamos cookies mínimas e tecnologias similares para os seguintes propósitos:',
+    'ru': 'Мы используем минимальное количество файлов cookie и аналогичных технологий для следующих целей:',
+    'ar': 'نستخدم الحد الأدنى من ملفات تعريف الارتباط والتقنيات المماثلة للأغراض التالية:'
+};
+
+TRANSLATIONS['pp.s4.li1'] = {
+    'en': 'Essential Cookies: Required for basic website functionality',
+    'zh': '必要Cookie：网站基本功能所需',
+    'es': 'Cookies esenciales: Requeridas para la funcionalidad básica del sitio web',
+    'fr': 'Cookies essentiels : Requis pour la fonctionnalité de base du site Web',
+    'de': 'Wesentliche Cookies: Erforderlich für die grundlegende Website-Funktionalität',
+    'ja': '必須Cookie：ウェブサイトの基本機能に必要',
+    'ko': '필수 쿠키: 기본 웹사이트 기능에 필요',
+    'pt': 'Cookies essenciais: Necessários para a funcionalidade básica do site',
+    'ru': 'Необходимые файлы cookie: Требуются для базовой функциональности сайта',
+    'ar': 'ملفات تعريف الارتباط الأساسية: مطلوبة لوظائف الموقع الأساسية'
+};
+
+TRANSLATIONS['pp.s4.li2'] = {
+    'en': 'Analytics Cookies: Help us understand how users interact with our site (e.g., Google Analytics)',
+    'zh': '分析Cookie：帮助我们了解用户如何与网站互动（例如，Google Analytics）',
+    'es': 'Cookies de análisis: Nos ayudan a entender cómo los usuarios interactúan con nuestro sitio (p. ej., Google Analytics)',
+    'fr': 'Cookies d\'analyse : Nous aident à comprendre comment les utilisateurs interagissent avec notre site (par exemple, Google Analytics)',
+    'de': 'Analyse-Cookies: Helfen uns zu verstehen, wie Benutzer mit unserer Website interagieren (z. B. Google Analytics)',
+    'ja': '分析Cookie：ユーザーがサイトとどのように対話するかを理解するのに役立ちます（例：Google Analytics）',
+    'ko': '분석 쿠키: 사용자가 사이트와 상호 작용하는 방식을 이해하는 데 도움이 됩니다(예: Google Analytics)',
+    'pt': 'Cookies de análise: Nos ajudam a entender como os usuários interagem com nosso site (por exemplo, Google Analytics)',
+    'ru': 'Аналитические файлы cookie: Помогают нам понять, как пользователи взаимодействуют с нашим сайтом (например, Google Analytics)',
+    'ar': 'ملفات تعريف الارتباط التحليلية: تساعدنا في فهم كيفية تفاعل المستخدمين مع موقعنا (على سبيل المثال، Google Analytics)'
+};
+
+TRANSLATIONS['pp.s4.li3'] = {
+    'en': 'Preference Cookies: Remember your language preference and other settings',
+    'zh': '偏好Cookie：记住您的语言偏好和其他设置',
+    'es': 'Cookies de preferencias: Recuerdan su preferencia de idioma y otras configuraciones',
+    'fr': 'Cookies de préférences : Mémorisent votre langue préférée et autres paramètres',
+    'de': 'Präferenz-Cookies: Merken sich Ihre Spracheinstellung und andere Einstellungen',
+    'ja': '設定Cookie：言語設定やその他の設定を記憶します',
+    'ko': '환경 설정 쿠키: 언어 선호도 및 기타 설정을 기억합니다',
+    'pt': 'Cookies de preferências: Lembram sua preferência de idioma e outras configurações',
+    'ru': 'Файлы cookie настроек: Запоминают предпочитаемый язык и другие настройки',
+    'ar': 'ملفات تعريف الارتباط التفضيلية: تتذكر تفضيل اللغة والإعدادات الأخرى'
+};
+
+TRANSLATIONS['pp.s4.note'] = {
+    'en': 'You can control cookie settings through your browser. However, disabling certain cookies may affect website functionality.',
+    'zh': '您可以通过浏览器控制Cookie设置。但是，禁用某些Cookie可能会影响网站功能。',
+    'es': 'Puede controlar la configuración de cookies a través de su navegador. Sin embargo, deshabilitar ciertas cookies puede afectar la funcionalidad del sitio web.',
+    'fr': 'Vous pouvez contrôler les paramètres des cookies via votre navigateur. Cependant, la désactivation de certains cookies peut affecter la fonctionnalité du site Web.',
+    'de': 'Sie können die Cookie-Einstellungen über Ihren Browser steuern. Das Deaktivieren bestimmter Cookies kann jedoch die Website-Funktionalität beeinträchtigen.',
+    'ja': 'ブラウザを通じてCookie設定を管理できます。ただし、特定のCookieを無効にすると、ウェブサイトの機能に影響を与える可能性があります。',
+    'ko': '브라우저를 통해 쿠키 설정을 제어할 수 있습니다. 그러나 특정 쿠키를 비활성화하면 웹사이트 기능에 영향을 미칠 수 있습니다.',
+    'pt': 'Você pode controlar as configurações de cookies através do seu navegador. No entanto, desativar certos cookies pode afetar a funcionalidade do site.',
+    'ru': 'Вы можете управлять настройками файлов cookie через свой браузер. Однако отключение определенных файлов cookie может повлиять на функциональность сайта.',
+    'ar': 'يمكنك التحكم في إعدادات ملفات تعريف الارتباط من خلال متصفحك. ومع ذلك، فقد يؤثر تعطيل ملفات تعريف الارتباط على وظائف الموقع.'
+};
+
+TRANSLATIONS['pp.s5.title'] = {
+    'en': '5. Third-Party Services',
+    'zh': '5. 第三方服务',
+    'es': '5. Servicios de terceros',
+    'fr': '5. Services tiers',
+    'de': '5. Drittanbieter-Dienste',
+    'ja': '5. 第三者サービス',
+    'ko': '5. 제3자 서비스',
+    'pt': '5. Serviços de terceiros',
+    'ru': '5. Услуги третьих сторон',
+    'ar': '5. خدمات الطرف الثالث'
+};
+
+TRANSLATIONS['pp.s5.text'] = {
+    'en': 'We may use third-party services for analytics and website improvement. These services may collect non-personal information as described in their own privacy policies:',
+    'zh': '我们可能会使用第三方服务进行分析和网站改进。这些服务可能会收集非个人信息，如各自的隐私政策所述：',
+    'es': 'Podemos usar servicios de terceros para análisis y mejora del sitio web. Estos servicios pueden recopilar información no personal según se describe en sus propias políticas de privacidad:',
+    'fr': 'Nous pouvons utiliser des services tiers pour l\'analyse et l\'amélioration du site Web. Ces services peuvent collecter des informations non personnelles comme décrit dans leurs propres politiques de confidentialité :',
+    'de': 'Wir können Drittanbieter-Dienste für Analyse- und Website-Verbesserungszwecke nutzen. Diese Dienste können nicht persönliche Informationen sammeln, wie in ihren eigenen Datenschutzrichtlinien beschrieben:',
+    'ja': '分析とウェブサイトの改善のために、第三者サービスを利用する場合があります。これらのサービスは、それぞれのプライバシーポリシーに記載されているとおり、非個人情報を収集する場合があります。',
+    'ko': '분석 및 웹사이트 개선을 위해 제3자 서비스를 사용할 수 있습니다. 이 서비스는 자체 개인정보 보호정책에 설명된 대로 비개인 정보를 수집할 수 있습니다.',
+    'pt': 'Podemos usar serviços de terceiros para análise e melhoria do site. Esses serviços podem coletar informações não pessoais conforme descrito em suas próprias políticas de privacidade:',
+    'ru': 'Мы можем использовать услуги третьих сторон для аналитики и улучшения сайта. Эти службы могут собирать неперсональную информацию, как описано в их собственных политиках конфиденциальности:',
+    'ar': 'قد نستخدم خدمات الطرف الثالث للتحليلات وتحسين الموقع. قد تقوم هذه الخدمات بجمع معلومات غير شخصية كما هو موضح في سياسات الخصوصية الخاصة بها:'
+};
+
+TRANSLATIONS['pp.s5.li1'] = {
+    'en': 'Google Analytics: For website traffic analysis',
+    'zh': 'Google Analytics：用于网站流量分析',
+    'es': 'Google Analytics: Para el análisis del tráfico del sitio web',
+    'fr': 'Google Analytics : Pour l\'analyse du trafic du site Web',
+    'de': 'Google Analytics: Für die Website-Traffic-Analyse',
+    'ja': 'Google Analytics：ウェブサイトトラフィック分析用',
+    'ko': 'Google Analytics: 웹사이트 트래픽 분석용',
+    'pt': 'Google Analytics: Para análise de tráfego do site',
+    'ru': 'Google Analytics: Для анализа трафика сайта',
+    'ar': 'Google Analytics: لتحليل حركة مرور الموقع'
+};
+
+TRANSLATIONS['pp.s5.li2'] = {
+    'en': 'CDN Providers: For faster content delivery (e.g., Cloudflare, jsDelivr)',
+    'zh': 'CDN提供商：用于更快的内容交付（例如，Cloudflare，jsDelivr）',
+    'es': 'Proveedores de CDN: Para una entrega de contenido más rápida (por ejemplo, Cloudflare, jsDelivr)',
+    'fr': 'Fournisseurs de CDN : Pour une livraison de contenu plus rapide (par exemple, Cloudflare, jsDelivr)',
+    'de': 'CDN-Anbieter: Für schnellere Inhaltsbereitstellung (z. B. Cloudflare, jsDelivr)',
+    'ja': 'CDNプロバイダー：より高速なコンテンツ配信のため（例：Cloudflare、jsDelivr）',
+    'ko': 'CDN 제공업체: 더 빠른 콘텐츠 전달을 위해(예: Cloudflare, jsDelivr)',
+    'pt': 'Provedores de CDN: Para entrega de conteúdo mais rápida (por exemplo, Cloudflare, jsDelivr)',
+    'ru': 'CDN-провайдеры: Для более быстрой доставки контента (например, Cloudflare, jsDelivr)',
+    'ar': 'موفري CDN: لتوصيل محتوى أسرع (على سبيل المثال، Cloudflare، jsDelivr)'
+};
+
+TRANSLATIONS['pp.s5.note'] = {
+    'en': 'These third parties have their own privacy policies, and we encourage you to review them.',
+    'zh': '这些第三方有他们自己的隐私政策，我们建议您查看。',
+    'es': 'Estas terceras partes tienen sus propias políticas de privacidad, y le recomendamos que las revise.',
+    'fr': 'Ces tiers ont leurs propres politiques de confidentialité, et nous vous encourageons à les consulter.',
+    'de': 'Diese Dritten haben ihre eigenen Datenschutzrichtlinien, und wir empfehlen Ihnen, diese zu überprüfen.',
+    'ja': 'これらの第三者には各自のプライバシーポリシーがあり、確認することをお勧めします。',
+    'ko': '이러한 제3자는 자체 개인정보 보호정책을 가지고 있으며 검토하시기를 권장합니다.',
+    'pt': 'Esses terceiros têm suas próprias políticas de privacidade, e incentivamos você a revisá-las.',
+    'ru': 'У этих третьих сторон есть свои собственные политики конфиденциальности, и мы рекомендуем вам ознакомиться с ними.',
+    'ar': 'هذه الأطراف الثالثة لها سياسات الخصوصية الخاصة بها، ونحن نشجعك على مراجعتها.'
+};
+
+TRANSLATIONS['pp.s6.title'] = {
+    'en': '6. Children\'s Privacy',
+    'zh': '6. 儿童隐私',
+    'es': '6. Privacidad de los niños',
+    'fr': '6. Confidentialité des enfants',
+    'de': '6. Datenschutz für Kinder',
+    'ja': '6. 子供のプライバシー',
+    'ko': '6. 어린이 개인정보 보호',
+    'pt': '6. Privacidade infantil',
+    'ru': '6. Конфиденциальность детей',
+    'ar': '6. خصوصية الأطفال'
+};
+
+TRANSLATIONS['pp.s6.text'] = {
+    'en': 'Our service is not directed to children under 13 years of age. We do not knowingly collect any information from children under 13. If you are a parent or guardian and believe your child has provided us with information, please contact us at admin@toolvx.com.',
+    'zh': '我们的服务不面向13岁以下儿童。我们不会故意收集13岁以下儿童的任何信息。如果您是父母或监护人，并且认为您的孩子向我们提供了信息，请通过 admin@toolvx.com 联系我们。',
+    'es': 'Nuestro servicio no está dirigido a menores de 13 años. No recopilamos intencionadamente ninguna información de niños menores de 13 años. Si usted es padre, madre o tutor y cree que su hijo nos ha proporcionado información, póngase en contacto con nosotros en admin@toolvx.com.',
+    'fr': 'Notre service n\'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d\'informations concernant des enfants de moins de 13 ans. Si vous êtes un parent ou un tuteur et que vous pensez que votre enfant nous a fourni des informations, veuillez nous contacter à admin@toolvx.com.',
+    'de': 'Unser Service richtet sich nicht an Kinder unter 13 Jahren. Wir sammeln nicht wissentlich Informationen von Kindern unter 13 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind uns Informationen bereitgestellt hat, kontaktieren Sie uns bitte unter admin@toolvx.com.',
+    'ja': '当サービスは13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に情報を収集することはありません。保護者の方で、お子様が情報を提供したと思われる場合は、admin@toolvx.com までご連絡ください。',
+    'ko': '우리의 서비스는 13세 미만의 어릭을 대상으로 하지 않습니다. 13세 미만 어릭의 정보를 의도적으로 수집하지 않습니다. 부모 또는 보호자이시며 자녀가 정보를 제공했다고 생각하시면 admin@toolvx.com으로 연락해 주세요.',
+    'pt': 'Nosso serviço não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente nenhuma informação de crianças menores de 13 anos. Se você é pai, mãe ou responsável e acredita que seu filho nos forneceu informações, entre em contato conosco em admin@toolvx.com.',
+    'ru': 'Наш сервис не предназначен для детей младше 13 лет. Мы сознательно не собираем никакой информации от детей младше 13 лет. Если вы родитель или опекун и считаете, что ваш ребенок предоставил нам информацию, пожалуйста, свяжитесь с нами по адресу admin@toolvx.com.',
+    'ar': 'خدمتنا غير موجهة للأطفال دون سن 13 عامًا. لا نقوم بجمع أي معلومات عن الأطفال دون سن 13 عامًا عمدًا. إذا كنت أحد الوالدين أو الوصي وتعتقد أن طفلك قد زودنا بمعلومات، فيرجى التواصل معنا على admin@toolvx.com.'
+};
+
+TRANSLATIONS['pp.s7.title'] = {
+    'en': '7. International Users',
+    'zh': '7. 国际用户',
+    'es': '7. Usuarios internacionales',
+    'fr': '7. Utilisateurs internationaux',
+    'de': '7. Internationale Nutzer',
+    'ja': '7. 国際ユーザー',
+    'ko': '7. 국제 사용자',
+    'pt': '7. Usuários internacionais',
+    'ru': '7. Международные пользователи',
+    'ar': '7. المستخدمون الدوليون'
+};
+
+TRANSLATIONS['pp.s7.text'] = {
+    'en': 'Our service is accessible worldwide. By using our tool, you agree that your information may be processed according to this Privacy Policy regardless of your location.',
+    'zh': '我们的服务面向全球用户。通过使用我们的工具，您同意无论您身在何处，您的信息都可以根据本隐私政策进行处理。',
+    'es': 'Nuestro servicio es accesible en todo el mundo. Al usar nuestra herramienta, usted acepta que su información pueda ser procesada de acuerdo con esta Política de privacidad, independientemente de su ubicación.',
+    'fr': 'Notre service est accessible dans le monde entier. En utilisant notre outil, vous acceptez que vos informations puissent être traitées conformément à la présente Politique de confidentialité, quel que soit votre emplacement.',
+    'de': 'Unser Service ist weltweit zugänglich. Durch die Nutzung unseres Tools stimmen Sie zu, dass Ihre Informationen unabhängig von Ihrem Standort gemäß dieser Datenschutzerklärung verarbeitet werden können.',
+    'ja': '当サービスは世界中で利用可能です。当ツールを使用することにより、あなたの所在地に関係なく、本プライバシーポリシーに従って情報が処理されることに同意したものとみなされます。',
+    'ko': '우리의 서비스는 전 세계에서 접근할 수 있습니다. 도구를 사용함으로써 귀하의 위치에 관계없이 본 개인정보 보호정책에 따라 정보가 처리될 수 있음에 동의하는 것으로 간주됩니다.',
+    'pt': 'Nosso serviço é acessível em todo o mundo. Ao usar nossa ferramenta, você concorda que suas informações podem ser processadas de acordo com esta Política de privacidade, independentemente de sua localização.',
+    'ru': 'Наш сервис доступен по всему миру. Используя наш инструмент, вы соглашаетесь с тем, что ваша информация может быть обработана в соответствии с настоящей Политикой конфиденциальности независимо от вашего местоположения.',
+    'ar': 'خدمتنا متاحة في جميع أنحاء العالم. باستخدام أداتنا، فإنك توافق على أنه قد يتم معالجة معلوماتك وفقًا لسياسة الخصوصية هذه بغض النظر عن موقعك.'
+};
+
+TRANSLATIONS['pp.s8.title'] = {
+    'en': '8. Changes to This Privacy Policy',
+    'zh': '8. 隐私政策变更',
+    'es': '8. Cambios en esta Política de privacidad',
+    'fr': '8. Modifications de la présente Politique de confidentialité',
+    'de': '8. Änderungen dieser Datenschutzerklärung',
+    'ja': '8. 本プライバシーポリシーの変更',
+    'ko': '8. 본 개인정보 보호정책의 변경',
+    'pt': '8. Alterações nesta Política de privacidade',
+    'ru': '8. Изменения в настоящей Политике конфиденциальности',
+    'ar': '8. التغييرات في سياسة الخصوصية هذه'
+};
+
+TRANSLATIONS['pp.s8.text'] = {
+    'en': 'We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated "Last updated" date. We encourage you to review this policy periodically.',
+    'zh': '我们可能会不时更新本隐私政策，以反映我们的实践或法律要求的变化。任何变更都将发布在此页面上，并更新“最后更新”日期。我们建议您定期查看本政策。',
+    'es': 'Podemos actualizar esta Política de privacidad de vez en cuando para reflejar cambios en nuestras prácticas o requisitos legales. Cualquier cambio se publicará en esta página con una fecha de "Última actualización" actualizada. Le recomendamos que revise esta política periódicamente.',
+    'fr': 'Nous pouvons mettre à jour la présente Politique de confidentialité de temps en temps pour refléter les changements dans nos pratiques ou les exigences légales. Toute modification sera publiée sur cette page avec une date de « Dernière mise à jour » actualisée. Nous vous encourageons à consulter régulièrement cette politique.',
+    'de': 'Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen in unseren Praktiken oder rechtlichen Anforderungen widerzuspiegeln. Alle Änderungen werden auf dieser Seite mit einem aktualisierten Datum der "Letzten Aktualisierung" veröffentlicht. Wir empfehlen Ihnen, diese Richtlinie regelmäßig zu überprüfen.',
+    'ja': '私たちは、慣行や法律上の要件の変更を反映するために、本プライバシーポリシーを随時更新する場合があります。変更はすべて、このページに更新された「最終更新日」とともに掲載されます。定期的に本ポリシーを確認することをお勧めします。',
+    'ko': '우리는 관행이나 법적 요구 사항의 변경을 반영하기 위해 본 개인정보 보호정책을 수시로 업데이트할 수 있습니다. 모든 변경 사항은 이 페이지에 업데이트된 "마지막 업데이트" 날짜와 함께 게시됩니다. 정기적으로 본 정책을 검토하시기를 권장합니다.',
+    'pt': 'Podemos atualizar esta Política de privacidade de tempos em tempos para refletir mudanças em nossas práticas ou requisitos legais. Quaisquer alterações serão publicadas nesta página com uma data de "Última atualização" atualizada. Recomendamos que você revise esta política periodicamente.',
+    'ru': 'Мы можем время от времени обновлять настоящую Политику конфиденциальности, чтобы отразить изменения в наших практиках или требованиях законодательства. Любые изменения будут опубликованы на этой странице с обновленной датой «Последнее обновление». Мы рекомендуем периодически просматривать настоящую политику.',
+    'ar': 'قد نقوم بتحديث سياسة الخصوصية هذه من time to time لعكس التغييرات في ممارساتنا أو المتطلبات القانونية. سيتم نشر أي تغييرات على هذه الصفحة مع تاريخ محدّث لـ "آخر تحديث". نشجعك على مراجعة هذه السياسة بشكل دوري.'
+};
+
+TRANSLATIONS['pp.s9.title'] = {
+    'en': '9. Your Rights',
+    'zh': '9. 您的权利',
+    'es': '9. Sus derechos',
+    'fr': '9. Vos droits',
+    'de': '9. Ihre Rechte',
+    'ja': '9. お客様の権利',
+    'ko': '9. 귀하의 권리',
+    'pt': '9. Seus direitos',
+    'ru': '9. Ваши права',
+    'ar': '9. حقوقك'
+};
+
+TRANSLATIONS['pp.s9.text'] = {
+    'en': 'Depending on your location, you may have certain rights regarding your personal information, such as:',
+    'zh': '根据您所在的位置，您可能对您个人信息拥有一定的权利，例如：',
+    'es': 'Dependiendo de su ubicación, puede tener ciertos derechos respecto a su información personal, tales como:',
+    'fr': 'Selon votre emplacement, vous pouvez avoir certains droits concernant vos informations personnelles, tels que :',
+    'de': 'Je nach Ihrem Standort können Sie bestimmte Rechte in Bezug auf Ihre persönlichen Informationen haben, wie z. B.:',
+    'ja': 'お住まいの地域により、個人情報に関して一定の権利を有する場合があります。',
+    'ko': '귀하의 위치에 따라 개인 정보와 관련하여 다음과 같은 특정 권리를 가질 수 있습니다.',
+    'pt': 'Dependendo da sua localização, você pode ter certos direitos em relação às suas informações pessoais, como:',
+    'ru': 'В зависимости от вашего местоположения, вы можете иметь определенные права в отношении вашей личной информации, такие как:',
+    'ar': 'اعتمادًا على موقعك، قد يكون لديك حقوق معينة فيما يتعلق بمعلوماتك الشخصية، مثل:'
+};
+
+TRANSLATIONS['pp.s9.li1'] = {
+    'en': 'Right to access personal data',
+    'zh': '访问个人数据的权利',
+    'es': 'Derecho a acceder a los datos personales',
+    'fr': 'Droit d\'accéder aux données personnelles',
+    'de': 'Recht auf Zugang zu persönlichen Daten',
+    'ja': '個人データへのアクセス権',
+    'ko': '개인 데이터 접근 권리',
+    'pt': 'Direito de acessar dados pessoais',
+    'ru': 'Право на доступ к личным данным',
+    'ar': 'الحق في الوصول إلى البيانات الشخصية'
+};
+
+TRANSLATIONS['pp.s9.li2'] = {
+    'en': 'Right to rectification of inaccurate data',
+    'zh': '更正不准确数据的权利',
+    'es': 'Derecho a la rectificación de datos inexactos',
+    'fr': 'Droit de rectification des données inexactes',
+    'de': 'Recht auf Berichtigung ungenauer Daten',
+    'ja': '不正確なデータの訂正権',
+    'ko': '부정확한 데이터 수정 권리',
+    'pt': 'Direito à retificação de dados imprecisos',
+    'ru': 'Право на исправление неточных данных',
+    'ar': 'الحق في تصحيح البيانات غير الدقيقة'
+};
+
+TRANSLATIONS['pp.s9.li3'] = {
+    'en': 'Right to erasure ("right to be forgotten")',
+    'zh': '删除权（"被遗忘权"）',
+    'es': 'Derecho al olvido',
+    'fr': 'Droit à l\'effacement (« droit à l\'oubli »)',
+    'de': 'Recht auf Löschung ("Recht auf Vergessenwerden")',
+    'ja': '抹消権（"忘れられる権利"）',
+    'ko': '삭제 권리 ("잊혀질 권리")',
+    'pt': 'Direito à eliminação ("direito ao esquecimento")',
+    'ru': 'Право на удаление («право на забвение»)',
+    'ar': 'الحق في المحو ("الحق في أن تُنسى")'
+};
+
+TRANSLATIONS['pp.s9.li4'] = {
+    'en': 'Right to restrict processing',
+    'zh': '限制处理的权利',
+    'es': 'Derecho a restringir el procesamiento',
+    'fr': 'Droit de limiter le traitement',
+    'de': 'Recht auf Einschränkung der Verarbeitung',
+    'ja': '処理制限権',
+    'ko': '처리 제한 권리',
+    'pt': 'Direito de restringir o processamento',
+    'ru': 'Право на ограничение обработки',
+    'ar': 'الحق في تقييد المعالجة'
+};
+
+TRANSLATIONS['pp.s9.li5'] = {
+    'en': 'Right to data portability',
+    'zh': '数据可携带权',
+    'es': 'Derecho a la portabilidad de datos',
+    'fr': 'Droit à la portabilité des données',
+    'de': 'Recht auf Datenübertragbarkeit',
+    'ja': 'データポータビリティ権',
+    'ko': '데이터 이동성 권리',
+    'pt': 'Direito à portabilidade de dados',
+    'ru': 'Право на переносимость данных',
+    'ar': 'الحق في نقل البيانات'
+};
+
+TRANSLATIONS['pp.s9.li6'] = {
+    'en': 'Right to object to processing',
+    'zh': '反对处理的权利',
+    'es': 'Derecho a oponerse al procesamiento',
+    'fr': 'Droit d\'opposition au traitement',
+    'de': 'Recht auf Widerspruch gegen die Verarbeitung',
+    'ja': '処理に対する異議権',
+    'ko': '처리에 대한 이의 권리',
+    'pt': 'Direito de se opor ao processamento',
+    'ru': 'Право на возражение против обработки',
+    'ar': 'الحق في الاعتراض على المعالجة'
+};
+
+TRANSLATIONS['pp.s9.note'] = {
+    'en': 'Since we do not collect personal information, these rights are limited. However, if you have concerns about automatically collected data, please contact us.',
+    'zh': '由于我们不收集个人信息，这些权利是有限的。但是，如果您对自动收集的数据有任何疑虑，请与我们联系。',
+    'es': 'Dado que no recopilamos información personal, estos derechos son limitados. Sin embargo, si tiene inquietudes sobre los datos recopilados automáticamente, póngase en contacto con nosotros.',
+    'fr': 'Étant donné que nous ne collectons pas d\'informations personnelles, ces droits sont limités. Cependant, si vous avez des préoccupations concernant les données collectées automatiquement, veuillez nous contacter.',
+    'de': 'Da wir keine persönlichen Informationen sammeln, sind diese Rechte begrenzt. Wenn Sie jedoch Bedenken bezüglich automatisch gesammelter Daten haben, kontaktieren Sie uns bitte.',
+    'ja': '個人情報を収集していないため、これらの権利は制限されます。ただし、自動的に収集されたデータについてご不明な点がございましたら、お問い合わせください。',
+    'ko': '개인 정보를 수집하지 않으므로 이러한 권리는 제한됩니다. 그러나 자동으로 수집된 데이터에 대한 우려가 있는 경우 연락해 주세요.',
+    'pt': 'Como não coletamos informações pessoais, esses direitos são limitados. No entanto, se tiver preocupações sobre dados coletados automaticamente, entre em contato conosco.',
+    'ru': 'Поскольку мы не собираем личную информацию, эти права ограничены. Однако, если у вас есть опасения по поводу автоматически собранных данных, пожалуйста, свяжитесь с нами.',
+    'ar': 'بما أننا لا نقوم بجمع المعلومات الشخصية، فإن هذه الحقوق محدودة. ومع ذلك، إذا كانت لديك مخاوف بشأن البيانات التي تم جمعها تلقائيًا، فيرجى التواصل معنا.'
+};
+
+TRANSLATIONS['pp.s10.title'] = {
+    'en': '10. Contact Us',
+    'zh': '10. 联系我们',
+    'es': '10. Contáctenos',
+    'fr': '10. Contactez-nous',
+    'de': '10. Kontaktieren Sie uns',
+    'ja': '10. お問い合わせ',
+    'ko': '10. 문의하기',
+    'pt': '10. Contate-nos',
+    'ru': '10. Свяжитесь с нами',
+    'ar': '10. اتصل بنا'
+};
+
+TRANSLATIONS['pp.s10.text'] = {
+    'en': 'If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:',
+    'zh': '如果您对本隐私政策或我们的隐私实践有任何问题、疑虑或要求，请通过以下方式与我们联系：',
+    'es': 'Si tiene alguna pregunta, inquietud o solicitud con respecto a esta Política de privacidad o a nuestras prácticas de privacidad, póngase en contacto con nosotros en:',
+    'fr': 'Si vous avez des questions, des préoccupations ou des demandes concernant la présente Politique de confidentialité ou nos pratiques en matière de confidentialité, veuillez nous contacter à :',
+    'de': 'Wenn Sie Fragen, Bedenken oder Anfragen zu dieser Datenschutzerklärung oder unseren Datenschutzpraktiken haben, kontaktieren Sie uns bitte unter:',
+    'ja': '本プライバシーポリシーまたは私たちのプライバシー慣行に関する質問、懸念、またはリクエストがある場合は、以下までお問い合わせください。',
+    'ko': '본 개인정보 보호정책 또는 개인정보 관행에 대해 질문, 우려 또는 요청 사항이 있는 경우 연락해 주세요.',
+    'pt': 'Se você tiver alguma dúvida, preocupação ou solicitação sobre esta Política de privacidade ou sobre nossas práticas de privacidade, entre em contato conosco em:',
+    'ru': 'Если у вас есть какие-либо вопросы, опасения или запросы касательно настоящей Политики конфиденциальности или наших практик конфиденциальности, пожалуйста, свяжитесь с нами по адресу:',
+    'ar': 'إذا كانت لديك أي أسئلة أو مخاوف أو طلبات بخصوص سياسة الخصوصية هذه أو ممارسات الخصوصية لدينا، فيرجى التواصل معنا على:'
+};
+
+TRANSLATIONS['pp.s10.email'] = {
+    'en': 'Email: admin@toolvx.com',
+    'zh': '电子邮件：admin@toolvx.com',
+    'es': 'Correo electrónico: admin@toolvx.com',
+    'fr': 'E-mail : admin@toolvx.com',
+    'de': 'E-Mail: admin@toolvx.com',
+    'ja': 'メール：admin@toolvx.com',
+    'ko': '이메일: admin@toolvx.com',
+    'pt': 'E-mail: admin@toolvx.com',
+    'ru': 'Электронная почта: admin@toolvx.com',
+    'ar': 'البريد الإلكتروني: admin@toolvx.com'
+};
+
+TRANSLATIONS['pp.s10.response'] = {
+    'en': 'We will respond to your inquiry within 30 days.',
+    'zh': '我们将在30天内回复您的询问。',
+    'es': 'Responderemos a su consulta en un plazo de 30 días.',
+    'fr': 'Nous répondrons à votre demande dans un délai de 30 jours.',
+    'de': 'Wir werden Ihre Anfrage innerhalb von 30 Tagen beantworten.',
+    'ja': 'お問い合わせには30日以内にご回答いたします。',
+    'ko': '30일 이내에 문의에 답변해 드리겠습니다.',
+    'pt': 'Responderemos à sua consulta em até 30 dias.',
+    'ru': 'Мы ответим на ваш запрос в течение 30 дней.',
+    'ar': 'سنرد على استفسارك في غضون 30 يومًا.'
+};
+
+TRANSLATIONS['pp.s11.title'] = {
+    'en': '11. Compliance with Regulations',
+    'zh': '11. 合规性',
+    'es': '11. Cumplimiento de regulaciones',
+    'fr': '11. Conformité aux réglementations',
+    'de': '11. Einhaltung von Vorschriften',
+    'ja': '11. 規制への対応',
+    'ko': '11. 규정 준수',
+    'pt': '11. Conformidade com regulamentações',
+    'ru': '11. Соблюдение нормативных требований',
+    'ar': '11. الامتثال للوائح'
+};
+
+TRANSLATIONS['pp.s11.text'] = {
+    'en': 'We strive to comply with applicable data protection laws, including:',
+    'zh': '我们努力遵守适用的数据保护法律，包括：',
+    'es': 'Nos esforzamos por cumplir con las leyes de protección de datos aplicables, incluyendo:',
+    'fr': 'Nous nous efforçons de respecter les lois applicables en matière de protection des données, y compris :',
+    'de': 'Wir bemühen uns, die geltenden Datenschutzgesetze einzuhalten, einschließlich:',
+    'ja': '私たちは、適用されるデータ保護法を遵守するよう努めています。',
+    'ko': '우리는 적용 가능한 데이터 보호법을 준수하기 위해 노력하고 있습니다.',
+    'pt': 'Nós nos esforçamos para cumprir as leis de proteção de dados aplicáveis, incluindo:',
+    'ru': 'Мы стремимся соблюдать применимые законы о защите данных, включая:',
+    'ar': 'نحن نسعى للامتثال لقوانين حماية البيانات المعمول بها، بما في ذلك:'
+};
+
+TRANSLATIONS['pp.note'] = {
+    'en': 'Note: This Privacy Policy applies only to toolvx.com and its services. We are not responsible for the privacy practices of external websites linked from our site.',
+    'zh': '注意：本隐私政策仅适用于toolvx.com及其服务。我们不对从我们网站链接的外部网站的隐私实践负责。',
+    'es': 'Nota: Esta Política de privacidad se aplica solo a toolvx.com y sus servicios. No somos responsables de las prácticas de privacidad de los sitios web externos vinculados desde nuestro sitio.',
+    'fr': 'Remarque : Cette Politique de confidentialité s\'applique uniquement à toolvx.com et à ses services. Nous ne sommes pas responsables des pratiques de confidentialité des sites Web externes liés à partir de notre site.',
+    'de': 'Hinweis: Diese Datenschutzerklärung gilt nur für toolvx.com und seine Dienste. Wir sind nicht für die Datenschutzpraktiken externer Websites verantwortlich, die von unserer Website aus verlinkt sind.',
+    'ja': '注：本プライバシーポリシーは、toolvx.comおよびそのサービスにのみ適用されます。当サイトからリンクされている外部ウェブサイトのプライバシー慣行については責任を負いません。',
+    'ko': '참고: 본 개인정보 보호정책은 toolvx.com 및 해당 서비스에만 적용됩니다. 우리 사이트에서 연결된 외부 웹사이트의 개인정보 보호慣行에 대해서는 책임을 지지 않습니다.',
+    'pt': 'Nota: Esta Política de privacidade aplica-se apenas ao toolvx.com e aos seus serviços. Não somos responsáveis pelas práticas de privacidade de sites externos vinculados a partir do nosso site.',
+    'ru': 'Примечание: Настоящая Политика конфиденциальности применяется только к toolvx.com и его услугам. Мы не несем ответственности за практики конфиденциальности внешних веб-сайтов, на которые есть ссылки с нашего сайта.',
+    'ar': 'ملاحظة: تنطبق سياسة الخصوصية هذه فقط على toolvx.com وخدماته. نحن لسنا مسؤولين عن ممارسات الخصوصية لمواقع الويب الخارجية المرتبطة من موقعنا.'
+};
+
+TRANSLATIONS['footer.quickLinks'] = {
+    'en': 'Quick Links',
+    'zh': '快速链接',
+    'es': 'Enlaces rápidos',
+    'fr': 'Liens rapides',
+    'de': 'Schnelllinks',
+    'ja': 'クイックリンク',
+    'ko': '빠른 링크',
+    'pt': 'Links rápidos',
+    'ru': 'Быстрые ссылки',
+    'ar': 'روابط سريعة'
+};
+
+TRANSLATIONS['footer.popularArticles'] = {
+    'en': 'Popular Articles',
+    'zh': '热门文章',
+    'es': 'Artículos populares',
+    'fr': 'Articles populaires',
+    'de': 'Beliebte Artikel',
+    'ja': '人気記事',
+    'ko': '인기 기사',
+    'pt': 'Artigos populares',
+    'ru': 'Популярные статьи',
+    'ar': 'المقالات الشائعة'
+};
+
+TRANSLATIONS['footer.legal'] = {
+    'en': 'Legal',
+    'zh': '法律',
+    'es': 'Legal',
+    'fr': 'Juridique',
+    'de': 'Rechtliches',
+    'ja': '法的情報',
+    'ko': '법적 사항',
+    'pt': 'Jurídico',
+    'ru': 'Юридическая информация',
+    'ar': 'قانوني'
+};
+
+TRANSLATIONS['footer.copyright'] = {
+    'en': '© 2026 toolvx.com - Free online image and PDF editing tools. All rights reserved.',
+    'zh': '© 2026 toolvx.com - 免费在线图像和PDF编辑工具。保留所有权利。',
+    'es': '© 2026 toolvx.com - Herramientas gratuitas de edición de imágenes y PDF en línea. Todos los derechos reservados.',
+    'fr': '© 2026 toolvx.com - Outils gratuits d\'édition d\'images et de PDF en ligne. Tous droits réservés.',
+    'de': '© 2026 toolvx.com - Kostenlose Online-Bild- und PDF-Bearbeitungswerkzeuge. Alle Rechte vorbehalten.',
+    'ja': '© 2026 toolvx.com - 無料のオンライン画像およびPDF編集ツール。無断複写・転載を禁じます。',
+    'ko': '© 2026 toolvx.com - 무료 온라인 이미지 및 PDF 편집 도구. 모든 권리 보유.',
+    'pt': '© 2026 toolvx.com - Ferramentas gratuitas de edição de imagens e PDF online. Todos os direitos reservados.',
+    'ru': '© 2026 toolvx.com - Бесплатные онлайн-инструменты для редактирования изображений и PDF. Все права защищены.',
+    'ar': '© 2026 toolvx.com - أدوات مجانية لتحرير الصور وملفات PDF عبر الإنترنت. جميع الحقوق محفوظة.'
+};
+
+TRANSLATIONS['footer.article.blurFaces'] = {
+    'en': 'Blur Faces Guide',
+    'zh': '模糊面部指南',
+    'es': 'Guía para desenfocar caras',
+    'fr': 'Guide de floutage des visages',
+    'de': 'Anleitung zum Verwischen von Gesichtern',
+    'ja': '顔ぼかしガイド',
+    'ko': '얼굴 흐림 가이드',
+    'pt': 'Guia de Desfoque de Rostos',
+    'ru': 'Руководство по размытию лиц',
+    'ar': 'دليل طمس الوجوه'
+};
+
+TRANSLATIONS['footer.article.privacyGuide'] = {
+    'en': 'Privacy Guide',
+    'zh': '隐私指南',
+    'es': 'Guía de privacidad',
+    'fr': 'Guide de confidentialité',
+    'de': 'Datenschutzleitfaden',
+    'ja': 'プライバシーガイド',
+    'ko': '개인정보 보호 가이드',
+    'pt': 'Guia de Privacidade',
+    'ru': 'Руководство по конфиденциальности',
+    'ar': 'دليل الخصوصية'
+};
+
+TRANSLATIONS['footer.article.pdfTools'] = {
+    'en': 'PDF Tools',
+    'zh': 'PDF工具',
+    'es': 'Herramientas PDF',
+    'fr': 'Outils PDF',
+    'de': 'PDF-Tools',
+    'ja': 'PDFツール',
+    'ko': 'PDF 도구',
+    'pt': 'Ferramentas PDF',
+    'ru': 'Инструменты PDF',
+    'ar': 'أدوات PDF'
+};
+
+TRANSLATIONS['footer.legal.privacy'] = {
+    'en': 'Privacy Policy',
+    'zh': '隐私政策',
+    'es': 'Política de privacidad',
+    'fr': 'Politique de confidentialité',
+    'de': 'Datenschutzerklärung',
+    'ja': 'プライバシーポリシー',
+    'ko': '개인정보 보호정책',
+    'pt': 'Política de privacidade',
+    'ru': 'Политика конфиденциальности',
+    'ar': 'سياسة الخصوصية'
+};
+
+TRANSLATIONS['footer.legal.terms'] = {
+    'en': 'Terms of Service',
+    'zh': '服务条款',
+    'es': 'Términos de servicio',
+    'fr': 'Conditions d\'utilisation',
+    'de': 'Nutzungsbedingungen',
+    'ja': '利用規約',
+    'ko': '서비스 약관',
+    'pt': 'Termos de serviço',
+    'ru': 'Условия использования',
+    'ar': 'شروط الخدمة'
+};
+
+TRANSLATIONS['footer.legal.cookie'] = {
+    'en': 'Cookie Policy',
+    'zh': 'Cookie政策',
+    'es': 'Política de cookies',
+    'fr': 'Politique de cookies',
+    'de': 'Cookie-Richtlinie',
+    'ja': 'Cookieポリシー',
+    'ko': '쿠키 정책',
+    'pt': 'Política de cookies',
+    'ru': 'Политика использования файлов cookie',
+    'ar': 'سياسة ملفات تعريف الارتباط'
+};
+
+TRANSLATIONS['nav.contact'] = {
+    'en': 'Contact Us',
+    'zh': '联系我们',
+    'es': 'Contáctenos',
+    'fr': 'Contactez-nous',
+    'de': 'Kontaktieren Sie uns',
+    'ja': 'お問い合わせ',
+    'ko': '문의하기',
+    'pt': 'Contate-nos',
+    'ru': 'Свяжитесь с нами',
+    'ar': 'اتصل بنا'
+};
+
+TRANSLATIONS['pp.s11.li1'] = {
+    'en': 'GDPR (General Data Protection Regulation): For users in the European Union',
+    'zh': 'GDPR（通用数据保护条例）：适用于欧盟用户',
+    'es': 'GDPR (Reglamento General de Protección de Datos): Para usuarios en la Unión Europea',
+    'fr': 'RGPD (Règlement général sur la protection des données) : Pour les utilisateurs dans l\'Union européenne',
+    'de': 'DSGVO (Datenschutz-Grundverordnung): Für Nutzer in der Europäischen Union',
+    'ja': 'GDPR（一般データ保護規則）：欧州連合のユーザー向け',
+    'ko': 'GDPR(일반 데이터 보호 규정): 유럽 연합 사용자용',
+    'pt': 'GDPR (Regulamento Geral de Proteção de Dados): Para usuários na União Europeia',
+    'ru': 'GDPR (Общий регламент по защите данных): Для пользователей в Европейском союзе',
+    'ar': 'GDPR (اللائحة العامة لحماية البيانات): للمستخدمين في الاتحاد الأوروبي'
+};
+
+TRANSLATIONS['pp.s11.li2'] = {
+    'en': 'CCPA (California Consumer Privacy Act): For users in California, USA',
+    'zh': 'CCPA（加州消费者隐私法）：适用于美国加州用户',
+    'es': 'CCPA (Ley de Privacidad del Consumidor de California): Para usuarios en California, EE. UU.',
+    'fr': 'CCPA (California Consumer Privacy Act) : Pour les utilisateurs en Californie, États-Unis',
+    'de': 'CCPA (California Consumer Privacy Act): Für Nutzer in Kalifornien, USA',
+    'ja': 'CCPA（カリフォルニア州消費者プライバシー法）：カリフォルニア州、米国のユーザー向け',
+    'ko': 'CCPA(캘리포니아 소비자 개인정보 보호법): 미국 캘리포니아 사용자용',
+    'pt': 'CCPA (Lei de Privacidade do Consumidor da Califórnia): Para usuários na Califórnia, EUA',
+    'ru': 'CCPA (Закон о конфиденциальности потребителей Калифорнии): Для пользователей в Калифорнии, США',
+    'ar': 'CCPA (قانون خصوصية المستهلك في كاليفورنيا): للمستخدمين في كاليفورنيا، الولايات المتحدة'
+};
+
+TRANSLATIONS['pp.s11.li3'] = {
+    'en': 'Other local privacy laws: As applicable',
+    'zh': '其他本地隐私法律：如适用',
+    'es': 'Otras leyes locales de privacidad: Según corresponda',
+    'fr': 'Autres lois locales sur la vie privée : Selon l\'applicabilité',
+    'de': 'Andere lokale Datenschutzgesetze: Sowie zutreffend',
+    'ja': 'その他の現地のプライバシー法：該当する場合',
+    'ko': '기타 현지 개인정보 보호법: 해당하는 경우',
+    'pt': 'Outras leis locais de privacidade: Conforme aplicável',
+    'ru': 'Другие местные законы о конфиденциальности: Применимо',
+    'ar': 'قوانين الخصوصية المحلية الأخرى: حسبما ينطبق'
+};
+
+TRANSLATIONS['footer.brand.description'] = {
+    'en': 'Free, secure, and private image editing tools. Your files never leave your device.',
+    'zh': '免费、安全、私密的图像编辑工具。您的文件永远不会离开您的设备。',
+    'es': 'Herramientas gratuitas, seguras y privadas de edición de imágenes. Sus archivos nunca abandonan su dispositivo.',
+    'fr': 'Outils d\'édition d\'images gratuits, sécurisés et privés. Vos fichiers ne quittent jamais votre appareil.',
+    'de': 'Kostenlose, sichere und private Bildbearbeitungswerkzeuge. Ihre Dateien verlassen nie Ihr Gerät.',
+    'ja': '無料で安全、プライベートな画像編集ツール。ファイルがデバイスを離れることはありません。',
+    'ko': '무료이고 안전하며 비공개인 이미지 편집 도구. 파일이 장치를 떠나지 않습니다.',
+    'pt': 'Ferramentas gratuitas, seguras e privadas de edição de imagens. Seus arquivos nunca saem do seu dispositivo.',
+    'ru': 'Бесплатные, безопасные и конфиденциальные инструменты редактирования изображений. Ваши файлы никогда не покидают ваше устройство.',
+    'ar': 'أدوات تحرير الصور المجانية والآمنة والخاصة. ملفاتك لا تغادر جهازك أبدًا.'
+};
+
 // Auto-initialize - Execute as soon as script loads
 console.log('🚀 i18n.js loaded, starting initialization...');
 initI18n();
