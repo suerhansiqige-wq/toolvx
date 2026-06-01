@@ -51,20 +51,20 @@
             <div class="grid md:grid-cols-2">
                 <div class="relative h-64 md:h-auto">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop" alt="Featured article" class="w-full h-full object-cover">
-                    <div class="absolute top-4 left-4 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                    <div class="absolute top-4 left-4 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold" data-i18n="blog.featured.badge">
                         🔥 Featured
                     </div>
                 </div>
                 <div class="p-8 md:p-12 flex flex-col justify-center">
                     <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Privacy Guide</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold" data-i18n="blog.featured.category">Privacy Guide</span>
                         <span>•</span>
-                        <span>8 min read</span>
+                        <span data-i18n="blog.featured.readTime">8 min read</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">How to Blur Faces in Photos: The Complete Guide for 2026</h2>
-                    <p class="text-gray-600 mb-6 text-lg">Learn proven techniques to protect privacy and identities in your images. Step-by-step instructions for beginners and professionals.</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="blog.featured.title">How to Blur Faces in Photos: The Complete Guide for 2026</h2>
+                    <p class="text-gray-600 mb-6 text-lg" data-i18n="blog.featured.desc">Learn proven techniques to protect privacy and identities in your images. Step-by-step instructions for beginners and professionals.</p>
                     <a href="how-to-blur-faces-in-photos.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition group">
-                        Read Full Article 
+                        <span data-i18n="blog.featured.readMore">Read Full Article</span> 
                         <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
@@ -77,212 +77,212 @@
     <!-- Blog Grid -->
     <section class="max-w-6xl mx-auto px-4 py-12">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-            <h2 class="text-3xl font-bold text-gray-900">Latest Articles</h2>
+            <h2 class="text-3xl font-bold text-gray-900" data-i18n="blog.latestArticles">Latest Articles</h2>
             <div class="flex flex-wrap gap-2" id="categoryFilters">
-                <button onclick="filterArticles('all')" class="category-btn active px-5 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow-md" data-category="all">
-                    📚 全部 (All)
+                <button onclick="filterArticles('all')" class="category-btn active px-5 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow-md" data-category="all" data-i18n="blog.cat.all">
+                    📚 All
                 </button>
-                <button onclick="filterArticles('privacy')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="privacy">
-                    🔒 隐私 (Privacy)
+                <button onclick="filterArticles('privacy')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="privacy" data-i18n="blog.cat.privacy">
+                    🔒 Privacy
                 </button>
-                <button onclick="filterArticles('security')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="security">
-                    ️ 安全 (Security)
+                <button onclick="filterArticles('security')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="security" data-i18n="blog.cat.security">
+                    🛡️ Security
                 </button>
-                <button onclick="filterArticles('tutorial')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="tutorial">
-                     教程 (Tutorial)
+                <button onclick="filterArticles('tutorial')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="tutorial" data-i18n="blog.cat.tutorial">
+                    🎓 Tutorial
                 </button>
-                <button onclick="filterArticles('business')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="business">
-                    💼 商业 (Business)
+                <button onclick="filterArticles('business')" class="category-btn px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition" data-category="business" data-i18n="blog.cat.business">
+                    💼 Business
                 </button>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Article Card 1 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="privacy">
                 <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">📱</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full font-semibold">Social Media</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card1.tag">Social Media</span>
                         <span>•</span>
-                        <span>10 min</span>
+                        <span data-i18n="blog.card1.time">10 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Complete Social Media Privacy Guide for 2026</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Protect your personal information across all social platforms. Essential settings and safe sharing practices.</p>
-                    <a href="social-media-privacy-guide.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card1.title">Complete Social Media Privacy Guide for 2026</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card1.desc">Protect your personal information across all social platforms. Essential settings and safe sharing practices.</p>
+                    <a href="social-media-privacy-guide.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 2 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="legal">
                 <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">⚖️</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-semibold">Legal</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card2.tag">Legal</span>
                         <span>•</span>
-                        <span>7 min</span>
+                        <span data-i18n="blog.card2.time">7 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">GDPR Compliance for Images: Complete Legal Guide</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Understanding your legal obligations when publishing photos in the EU. Consent requirements and compliance steps.</p>
-                    <a href="gdpr-compliance-image-privacy.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card2.title">GDPR Compliance for Images: Complete Legal Guide</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card2.desc">Understanding your legal obligations when publishing photos in the EU. Consent requirements and compliance steps.</p>
+                    <a href="gdpr-compliance-image-privacy.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 3 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="tutorial">
                 <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">📸</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">Tutorial</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card3.tag">Tutorial</span>
                         <span>•</span>
-                        <span>6 min</span>
+                        <span data-i18n="blog.card3.time">6 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Screenshot Privacy Protection: Essential Guide</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Never expose sensitive information in screenshots again. Quick tutorial on safe screenshot sharing.</p>
-                    <a href="screenshot-privacy-protection.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card3.title">Screenshot Privacy Protection: Essential Guide</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card3.desc">Never expose sensitive information in screenshots again. Quick tutorial on safe screenshot sharing.</p>
+                    <a href="screenshot-privacy-protection.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 4 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="tools">
                 <div class="h-48 bg-gradient-to-br from-orange-500 to-red-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">📄</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full font-semibold">Tools</span>
+                        <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card4.tag">Tools</span>
                         <span>•</span>
-                        <span>8 min</span>
+                        <span data-i18n="blog.card4.time">8 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Best Free PDF Redaction Tools in 2026</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Compare top-rated tools for securely hiding sensitive information in PDF documents.</p>
-                    <a href="best-free-pdf-redaction-tools.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card4.title">Best Free PDF Redaction Tools in 2026</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card4.desc">Compare top-rated tools for securely hiding sensitive information in PDF documents.</p>
+                    <a href="best-free-pdf-redaction-tools.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 5 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="security">
                 <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">🛡️</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full font-semibold">Identity</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card5.tag">Identity</span>
                         <span>•</span>
-                        <span>9 min</span>
+                        <span data-i18n="blog.card5.time">9 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">How to Protect Your Identity Online in 2026</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Essential strategies for maintaining privacy in the digital age. Anonymize photos and secure documents.</p>
-                    <a href="protect-identity-online.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card5.title">How to Protect Your Identity Online in 2026</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card5.desc">Essential strategies for maintaining privacy in the digital age. Anonymize photos and secure documents.</p>
+                    <a href="protect-identity-online.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 6 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="business">
                 <div class="h-48 bg-gradient-to-br from-teal-500 to-blue-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">💼</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded-full font-semibold">Business</span>
+                        <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card6.tag">Business</span>
                         <span>•</span>
-                        <span>7 min</span>
+                        <span data-i18n="blog.card6.time">7 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Business Document Security: Best Practices</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Protect confidential information and prevent costly data breaches in your organization.</p>
-                    <a href="business-document-security.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card6.title">Business Document Security: Best Practices</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card6.desc">Protect confidential information and prevent costly data breaches in your organization.</p>
+                    <a href="business-document-security.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 7 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="finance">
                 <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">🏦</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-semibold">Finance</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card7.tag">Finance</span>
                         <span>•</span>
-                        <span>6 min</span>
+                        <span data-i18n="blog.card7.time">6 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">How to Redact Bank Statements Securely</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Protect your financial privacy when sharing banking documents. What to hide and what to show.</p>
-                    <a href="redact-bank-statements.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card7.title">How to Redact Bank Statements Securely</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card7.desc">Protect your financial privacy when sharing banking documents. What to hide and what to show.</p>
+                    <a href="redact-bank-statements.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 8 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="security">
                 <div class="h-48 bg-gradient-to-br from-pink-500 to-red-500 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">💳</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full font-semibold">Security</span>
+                        <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card8.tag">Security</span>
                         <span>•</span>
-                        <span>5 min</span>
+                        <span data-i18n="blog.card8.time">5 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Mask Credit Card Numbers in Images</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Prevent fraud by properly hiding payment information in photos before sharing online.</p>
-                    <a href="mask-credit-card-numbers.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card8.title">Mask Credit Card Numbers in Images</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card8.desc">Prevent fraud by properly hiding payment information in photos before sharing online.</p>
+                    <a href="mask-credit-card-numbers.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 9 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="journalism">
                 <div class="h-48 bg-gradient-to-br from-gray-600 to-gray-800 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">📰</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-gray-700 text-white px-2 py-1 rounded-full font-semibold">Journalism</span>
+                        <span class="bg-gray-700 text-white px-2 py-1 rounded-full font-semibold" data-i18n="blog.card9.tag">Journalism</span>
                         <span>•</span>
-                        <span>8 min</span>
+                        <span data-i18n="blog.card9.time">8 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Photo Anonymization for Journalists</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Protect your sources and maintain journalistic integrity with proper anonymization techniques.</p>
-                    <a href="journalist-photo-anonymization.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card9.title">Photo Anonymization for Journalists</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card9.desc">Protect your sources and maintain journalistic integrity with proper anonymization techniques.</p>
+                    <a href="journalist-photo-anonymization.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
             </article>
 
             <!-- Article Card 10 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="comparison">
                 <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 relative">
                     <div class="absolute inset-0 flex items-center justify-center text-6xl">☁️</div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                        <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full font-semibold">Comparison</span>
+                        <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full font-semibold" data-i18n="blog.card10.tag">Comparison</span>
                         <span>•</span>
-                        <span>7 min</span>
+                        <span data-i18n="blog.card10.time">7 min</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Local vs Cloud Image Editors: Which is Safer?</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">Understanding the security implications of your choice. Why local processing matters for privacy.</p>
-                    <a href="local-vs-cloud-image-editors.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-i18n="blog.card10.title">Local vs Cloud Image Editors: Which is Safer?</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3" data-i18n="blog.card10.desc">Understanding the security implications of your choice. Why local processing matters for privacy.</p>
+                    <a href="local-vs-cloud-image-editors.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition text-sm" data-i18n="blog.readMore">
                         Read More →
                     </a>
                 </div>
@@ -293,15 +293,15 @@
     <!-- Newsletter CTA -->
     <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 mt-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Stay Updated on Privacy & Security</h2>
-            <p class="text-xl text-blue-100 mb-8">Get the latest tips and tutorials delivered to your inbox</p>
+            <h2 class="text-3xl font-bold mb-4" data-i18n="blog.newsletter.title">Stay Updated on Privacy & Security</h2>
+            <p class="text-xl text-blue-100 mb-8" data-i18n="blog.newsletter.subtitle">Get the latest tips and tutorials delivered to your inbox</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300">
-                <button class="bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition transform hover:scale-105">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300" data-i18n-placeholder="blog.newsletter.placeholder">
+                <button class="bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition transform hover:scale-105" data-i18n="blog.newsletter.button">
                     Subscribe
                 </button>
             </div>
-            <p class="text-sm text-blue-200 mt-4">No spam. Unsubscribe anytime. 🔒</p>
+            <p class="text-sm text-blue-200 mt-4" data-i18n="blog.newsletter.note">No spam. Unsubscribe anytime. 🔒</p>
         </div>
     </section>
 
@@ -311,37 +311,37 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="font-bold text-xl mb-4">🔒 toolvx</h3>
-                    <p class="text-gray-400 text-sm">Free, secure, and private image editing tools. Your files never leave your device.</p>
+                    <p class="text-gray-400 text-sm" data-i18n="footer.brand.description">Free, secure, and private image editing tools. Your files never leave your device.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <h4 class="font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="../pages/features.html" class="hover:text-white transition">Features</a></li>
-                        <li><a href="../pages/faq.html" class="hover:text-white transition">FAQ</a></li>
-                        <li><a href="../pages/contact.html" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="../index.html" class="hover:text-white transition" data-i18n="nav.home">Home</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="../pages/features.html" class="hover:text-white transition" data-i18n="nav.features">Features</a></li>
+                        <li><a href="../pages/faq.html" class="hover:text-white transition" data-i18n="nav.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Popular Articles</h4>
+                    <h4 class="font-semibold mb-4" data-i18n="footer.popularArticles">Popular Articles</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="how-to-blur-faces-in-photos.html" class="hover:text-white transition">Blur Faces Guide</a></li>
-                        <li><a href="social-media-privacy-guide.html" class="hover:text-white transition">Privacy Guide</a></li>
-                        <li><a href="best-free-pdf-redaction-tools.html" class="hover:text-white transition">PDF Tools</a></li>
+                        <li><a href="how-to-blur-faces-in-photos.html" class="hover:text-white transition" data-i18n="footer.article.blurFaces">Blur Faces Guide</a></li>
+                        <li><a href="social-media-privacy-guide.html" class="hover:text-white transition" data-i18n="footer.article.privacyGuide">Privacy Guide</a></li>
+                        <li><a href="best-free-pdf-redaction-tools.html" class="hover:text-white transition" data-i18n="footer.article.pdfTools">PDF Tools</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <h4 class="font-semibold mb-4" data-i18n="footer.legal">Legal</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="../pages/privacy-policy.html" class="hover:text-white transition" data-i18n="footer.legal.privacy">Privacy Policy</a></li>
+                        <li><a href="../pages/terms-of-service.html" class="hover:text-white transition" data-i18n="footer.legal.terms">Terms of Service</a></li>
+                        <li><a href="../pages/cookie-policy.html" class="hover:text-white transition" data-i18n="footer.legal.cookie">Cookie Policy</a></li>
+                        <li><a href="../pages/contact.html" class="hover:text-white transition" data-i18n="footer.contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2026 toolvx.com - Free Online Image & PDF Redaction Tool. All rights reserved.</p>
+                <p data-i18n="footer.copyright.full">&copy; 2026 toolvx.com - Free Online Image & PDF Redaction Tool. All rights reserved.</p>
             </div>
         </div>
     </footer>
