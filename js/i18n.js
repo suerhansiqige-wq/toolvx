@@ -126,7 +126,7 @@ const TRANSLATIONS = {
     // Hero Section
     'hero.title': {
         'en': '100% Local Image & PDF Redaction<br/>Zero Server Upload Required',
-        'zh': '100% 本地图片与PDF编辑<br/>无需上传到服务器',
+        'zh': '100% 本地图片与PDF脱敏<br/>无需上传到服务器',
         'es': 'Edición de imágenes y PDF 100% local<br/>Sin necesidad de subir al servidor',
         'fr': 'Édition d\'images et PDF 100% locale<br/>Aucun téléchargement requis',
         'de': '100% lokale Bild- und PDF-Bearbeitung<br/>Kein Server-Upload erforderlich',
@@ -139,7 +139,7 @@ const TRANSLATIONS = {
     
     'hero.description': {
         'en': 'Protect your privacy when sharing sensitive documents. Blur faces, mask ID numbers, and redact confidential information entirely in your browser.',
-        'zh': '分享敏感文档时保护您的隐私。在浏览器中模糊面部、遮盖身份证号码并编辑机密信息。',
+        'zh': '分享敏感文档时保护您的隐私。在浏览器中模糊面部、遮盖身份证号码并脱敏机密信息。',
         'es': 'Proteja su privacidad al compartir documentos confidenciales. Desenfoque rostros, oculte números de identificación y edite información confidencial completamente en su navegador.',
         'fr': 'Protégez votre vie privée lors du partage de documents sensibles. Floutez les visages, masquez les numéros d\'identification et éditez les informations confidentielles entièrement dans votre navigateur.',
         'de': 'Schützen Sie Ihre Privatsphäre beim Teilen sensibler Dokumente. Verwischen Sie Gesichter, maskieren Sie Ausweisnummern und bearbeiten Sie vertrauliche Informationen vollständig in Ihrem Browser.',
@@ -206,7 +206,7 @@ const TRANSLATIONS = {
     // Workspace
     'workspace.title': {
         'en': 'Document Redaction Workspace',
-        'zh': '文档编辑工作区',
+        'zh': '文档脱敏工作区',
         'es': 'Espacio de trabajo de edición de documentos',
         'fr': 'Espace de travail d\'édition de documents',
         'de': 'Dokumentenbearbeitungsarbeitsbereich',
@@ -260,7 +260,7 @@ const TRANSLATIONS = {
     // Upload Section
     'upload.prompt': {
         'en': 'Upload an image or PDF to start redacting',
-        'zh': '上传图片或PDF开始编辑',
+        'zh': '上传图片或PDF开始脱敏',
         'es': 'Suba una imagen o PDF para comenzar a editar',
         'fr': 'Téléchargez une image ou un PDF pour commencer l\'édition',
         'de': 'Laden Sie ein Bild oder PDF hoch, um mit der Bearbeitung zu beginnen',
@@ -379,7 +379,7 @@ const TRANSLATIONS = {
     
     'step3.title': {
         'en': 'Select Area to Redact',
-        'zh': '选择要编辑的区域',
+        'zh': '选择要脱敏的区域',
         'es': 'Seleccione área para editar',
         'fr': 'Sélectionnez la zone à éditer',
         'de': 'Bereich zum Bearbeiten auswählen',
@@ -392,7 +392,7 @@ const TRANSLATIONS = {
     
     'step3.desc': {
         'en': 'Click "Select Area to Redact" button, then click and drag on the image to select the area you want to mask. Release to apply the effect automatically.',
-        'zh': '点击"选择要编辑的区域"按钮，然后在图像上点击并拖动以选择要遮盖的区域。释放以自动应用效果。',
+        'zh': '点击"选择要脱敏的区域"按钮，然后在图像上点击并拖动以选择要遮盖的区域。释放以自动应用效果。',
         'es': 'Haga clic en el botón "Seleccionar área para editar", luego haga clic y arrastre en la imagen para seleccionar el área que desea ocultar. Suelte para aplicar el efecto automáticamente.',
         'fr': 'Cliquez sur le bouton "Sélectionner la zone à éditer", puis cliquez et faites glisser sur l\'image pour sélectionner la zone que vous souhaitez masquer. Relâchez pour appliquer l\'effet automatiquement.',
         'de': 'Klicken Sie auf die Schaltfläche "Bereich zum Bearbeiten auswählen" und klicken und ziehen Sie dann auf dem Bild, um den Bereich auszuwählen, den Sie maskieren möchten. Lassen Sie los, um den Effekt automatisch anzuwenden.',
@@ -457,7 +457,7 @@ const TRANSLATIONS = {
     
     'step5.desc': {
         'en': 'For multi-page PDFs, use the Previous/Next buttons to navigate between pages. Edit each page independently before exporting.',
-        'zh': '对于多页PDF，使用上一页/下一页按钮在页面之间导航。导出前独立编辑每个页面。',
+        'zh': '对于多页PDF，使用上一页/下一页按钮在页面之间导航。导出前独立脱敏每个页面。',
         'es': 'Para PDF de varias páginas, use los botones Anterior/Siguiente para navegar entre páginas. Edite cada página independientemente antes de exportar.',
         'fr': 'Pour les PDF multi-pages, utilisez les boutons Précédent/Suivant pour naviguer entre les pages. Modifiez chaque page indépendamment avant l\'exportation.',
         'de': 'Verwenden Sie bei mehrseitigen PDFs die Schaltflächen Zurück/Weiter, um zwischen den Seiten zu navigieren. Bearbeiten Sie jede Seite unabhängig, bevor Sie sie exportieren.',
@@ -483,7 +483,7 @@ const TRANSLATIONS = {
     
     'step6.desc': {
         'en': 'Click "Download" to save your edited file with the original filename preserved. For PDFs, all edited pages are combined into a single file.',
-        'zh': '点击"下载"保存您编辑的文件，保留原始文件名。对于PDF，所有编辑过的页面将合并为一个文件。',
+        'zh': '点击"下载"保存您脱敏的文件，保留原始文件名。对于PDF，所有脱敏过的页面将合并为一个文件。',
         'es': 'Haga clic en "Descargar" para guardar su archivo editado con el nombre de archivo original conservado. Para PDF, todas las páginas editadas se combinan en un solo archivo.',
         'fr': 'Cliquez sur "Télécharger" pour enregistrer votre fichier édité avec le nom de fichier d\'origine préservé. Pour les PDF, toutes les pages éditées sont combinées en un seul fichier.',
         'de': 'Klicken Sie auf "Herunterladen", um Ihre bearbeitete Datei mit beibehaltenem ursprünglichem Dateinamen zu speichern. Bei PDFs werden alle bearbeiteten Seiten in einer einzigen Datei kombiniert.',
@@ -497,7 +497,7 @@ const TRANSLATIONS = {
     // Footer
     'footer.description': {
         'en': 'Free, secure, and private image editing tools. Your files never leave your device.',
-        'zh': '免费、安全、私密的图像编辑工具。您的文件绝不会离开您的设备。',
+        'zh': '免费、安全、私密的图像脱敏工具。您的文件绝不会离开您的设备。',
         'es': 'Herramientas gratuitas, seguras y privadas de edición de imágenes. Sus archivos nunca salen de su dispositivo.',
         'fr': 'Outils gratuits, sécurisés et privés d\'édition d\'images. Vos fichiers ne quittent jamais votre appareil.',
         'de': 'Kostenlose, sichere und private Bildbearbeitungstools. Ihre Dateien verlassen niemals Ihr Gerät.',
@@ -524,7 +524,7 @@ const TRANSLATIONS = {
     
     'control.selectArea': {
         'en': 'Select Area to Redact',
-        'zh': '选择要编辑的区域',
+        'zh': '选择要脱敏的区域',
         'es': 'Seleccionar área para editar',
         'fr': 'Sélectionner la zone à éditer',
         'de': 'Bereich zum Bearbeiten auswählen',
@@ -628,7 +628,7 @@ const TRANSLATIONS = {
     
     'control.download': {
         'en': 'Download Redacted File',
-        'zh': '下载编辑后的文件',
+        'zh': '下载脱敏后的文件',
         'es': 'Descargar archivo editado',
         'fr': 'Télécharger le fichier édité',
         'de': 'Bearbeitete Datei herunterladen',
@@ -733,7 +733,7 @@ const TRANSLATIONS = {
     
     'footer.copyright': {
         'en': 'Free online image and PDF editing tools',
-        'zh': '免费在线图像和PDF编辑工具',
+        'zh': '免费在线图像和PDF脱敏工具',
         'es': 'Herramientas gratuitas de edición de imágenes y PDF en línea',
         'fr': 'Outils gratuits d\'édition d\'images et PDF en ligne',
         'de': 'Kostenlose Online-Tools zur Bild- und PDF-Bearbeitung',
@@ -826,7 +826,7 @@ const TRANSLATIONS = {
     
     'footer.tagline': {
         'en': 'Privacy-first photo editing. No uploads. No tracking. 100% secure.',
-        'zh': '隐私优先的照片编辑。无上传。无跟踪。100%安全。',
+        'zh': '隐私优先的照片脱敏。无上传。无跟踪。100%安全。',
         'es': 'Edición de fotos con prioridad de privacidad. Sin cargas. Sin rastreo. 100% seguro.',
         'fr': 'Édition photo axée sur la confidentialité. Aucun téléchargement. Aucun suivi. 100% sécurisé.',
         'de': 'Datenschutzorientierte Fotobearbeitung. Keine Uploads. Kein Tracking. 100% sicher.',
@@ -880,7 +880,7 @@ const TRANSLATIONS = {
     
     'feature.clientSide.desc': {
         'en': 'Your files never leave your device. All redaction happens directly in your browser for maximum privacy and security.',
-        'zh': '您的文件绝不会离开您的设备。所有编辑都在浏览器中直接进行，以实现最大的隐私和安全性。',
+        'zh': '您的文件绝不会离开您的设备。所有脱敏都在浏览器中直接进行，以实现最大的隐私和安全性。',
         'es': 'Sus archivos nunca salen de su dispositivo. Toda la edición ocurre directamente en su navegador para máxima privacidad y seguridad.',
         'fr': 'Vos fichiers ne quittent jamais votre appareil. Toute l\'édition se fait directement dans votre navigateur pour une confidentialité et une sécurité maximales.',
         'de': 'Ihre Dateien verlassen niemals Ihr Gerät. Die gesamte Bearbeitung erfolgt direkt in Ihrem Browser für maximale Privatsphäre und Sicherheit.',
@@ -906,7 +906,7 @@ const TRANSLATIONS = {
     
     'feature.manualControl.desc': {
         'en': 'You have complete control over which areas to redact. No automatic detection - you decide exactly what gets masked.',
-        'zh': '您可以完全控制要编辑的区域。没有自动检测 - 您决定确切要遮盖的内容。',
+        'zh': '您可以完全控制要脱敏的区域。没有自动检测 - 您决定确切要遮盖的内容。',
         'es': 'Tiene control completo sobre qué áreas editar. Sin detección automática: usted decide exactamente qué se oculta.',
         'fr': 'Vous avez un contrôle complet sur les zones à éditer. Pas de détection automatique - vous décidez exactement ce qui est masqué.',
         'de': 'Sie haben die vollständige Kontrolle darüber, welche Bereiche bearbeitet werden sollen. Keine automatische Erkennung - Sie entscheiden genau, was maskiert wird.',
@@ -958,7 +958,7 @@ const TRANSLATIONS = {
     
     'feature.pdfSupport.desc': {
         'en': 'Edit multiple pages in a single PDF file. Navigate between pages, apply different effects, and export as complete multi-page PDF.',
-        'zh': '在单个PDF文件中编辑多个页面。在页面之间导航，应用不同的效果，并导出为完整的多页PDF。',
+        'zh': '在单个PDF文件中脱敏多个页面。在页面之间导航，应用不同的效果，并导出为完整的多页PDF。',
         'es': 'Edite múltiples páginas en un solo archivo PDF. Navegue entre páginas, aplique diferentes efectos y exporte como PDF multipágina completo.',
         'fr': 'Modifiez plusieurs pages dans un seul fichier PDF. Naviguez entre les pages, appliquez différents effets et exportez en tant que PDF multi-pages complet.',
         'de': 'Bearbeiten Sie mehrere Seiten in einer einzigen PDF-Datei. Navigieren Sie zwischen den Seiten, wenden Sie verschiedene Effekte an und exportieren Sie als vollständiges mehrseitiges PDF.',
@@ -1024,7 +1024,7 @@ const TRANSLATIONS = {
     // SEO Content Section
     'seo.whyChoose.title': {
         'en': 'Why Choose Our Free Image Redaction Tool?',
-        'zh': '为什么选择我们的免费图像编辑工具？',
+        'zh': '为什么选择我们的免费图像脱敏工具？',
         'es': '¿Por qué elegir nuestra herramienta gratuita de edición de imágenes?',
         'fr': 'Pourquoi choisir notre outil gratuit d\'édition d\'images ?',
         'de': 'Warum unser kostenloses Bildbearbeitungstool wählen?',
@@ -1050,7 +1050,7 @@ const TRANSLATIONS = {
     
     'seo.faq.title': {
         'en': 'Frequently Asked Questions About Image Redaction',
-        'zh': '关于图像编辑的常见问题',
+        'zh': '关于图像脱敏的常见问题',
         'es': 'Preguntas frecuentes sobre la edición de imágenes',
         'fr': 'Questions fréquemment posées sur l\'édition d\'images',
         'de': 'Häufig gestellte Fragen zur Bildbearbeitung',
@@ -1065,7 +1065,7 @@ const TRANSLATIONS = {
 // SEO Why Choose Section
 TRANSLATIONS['seo.whyChoose.free'] = {
     'en': '100% Free Online Photo Editor',
-    'zh': '100%免费在线照片编辑器',
+    'zh': '100%免费在线照片脱敏器',
     'es': 'Editor de fotos en línea 100% gratuito',
     'fr': 'Éditeur de photos en ligne 100% gratuit',
     'de': '100% kostenloser Online-Fotoeditor',
@@ -1415,7 +1415,7 @@ if (typeof module !== 'undefined' && module.exports) {
 
 TRANSLATIONS['seo.faq.title'] = {
     'en': 'Frequently Asked Questions About Image Redaction',
-    'zh': '关于图像编辑的常见问题',
+    'zh': '关于图像脱敏的常见问题',
     'es': 'Preguntas frecuentes sobre la edición de imágenes',
     'fr': 'Questions fréquemment posées sur l\'édition d\'images',
     'de': 'Häufig gestellte Fragen zur Bildbearbeitung',
@@ -1481,7 +1481,7 @@ TRANSLATIONS['usecase.maskID.desc'] = {
 
 TRANSLATIONS['usecase.redactBank'] = {
     'en': 'Redact Bank Statements',
-    'zh': '编辑银行对账单',
+    'zh': '脱敏银行对账单',
     'es': 'Editar extractos bancarios',
     'fr': 'Éditer les relevés bancaires',
     'de': 'Kontoauszüge bearbeiten',
@@ -1507,7 +1507,7 @@ TRANSLATIONS['usecase.redactBank.desc'] = {
 
 TRANSLATIONS['usecase.editPDF'] = {
     'en': 'Edit PDF Documents',
-    'zh': '编辑PDF文档',
+    'zh': '脱敏PDF文档',
     'es': 'Editar documentos PDF',
     'fr': 'Éditer des documents PDF',
     'de': 'PDF-Dokumente bearbeiten',
@@ -1520,7 +1520,7 @@ TRANSLATIONS['usecase.editPDF'] = {
 
 TRANSLATIONS['usecase.editPDF.desc'] = {
     'en': 'Multi-page PDF support with page-by-page editing',
-    'zh': '多页PDF支持，逐页编辑',
+    'zh': '多页PDF支持，逐页脱敏',
     'es': 'Soporte para PDF de varias páginas con edición página por página',
     'fr': 'Support PDF multi-pages avec édition page par page',
     'de': 'Mehrseitige PDF-Unterstützung mit seitenweiser Bearbeitung',
@@ -1586,7 +1586,7 @@ TRANSLATIONS['usecase.anonymizeScreenshots.desc'] = {
 // FAQ Section
 TRANSLATIONS['faq.q1.title'] = {
     'en': 'What is image redaction and why do I need it?',
-    'zh': '什么是图像编辑，为什么我需要它？',
+    'zh': '什么是图像脱敏，为什么我需要它？',
     'es': '¿Qué es la edición de imágenes y por qué la necesito?',
     'fr': 'Qu\'est-ce que l\'édition d\'images et pourquoi en ai-je besoin ?',
     'de': 'Was ist Bildbearbeitung und warum brauche ich sie?',
@@ -1599,7 +1599,7 @@ TRANSLATIONS['faq.q1.title'] = {
 
 TRANSLATIONS['faq.q1.answer'] = {
     'en': 'Image redaction is the process of permanently removing or obscuring sensitive information from photos and documents. Whether you\'re sharing a screenshot online, submitting documents for verification, or posting photos on social media, redaction helps protect your privacy by hiding personal data like faces, ID numbers, addresses, and financial information. Our free online tool makes this process simple and secure.',
-    'zh': '图像编辑是从照片和文档中永久删除或遮盖敏感信息的过程。无论您是在线分享截图、提交文档进行验证，还是在社交媒体上发布照片，编辑都可以通过隐藏面部、身份证号、地址和财务信息等个人数据来帮助保护您的隐私。我们的免费在线工具使这一过程简单而安全。',
+    'zh': '图像脱敏是从照片和文档中永久删除或遮盖敏感信息的过程。无论您是在线分享截图、提交文档进行验证，还是在社交媒体上发布照片，脱敏都可以通过隐藏面部、身份证号、地址和财务信息等个人数据来帮助保护您的隐私。我们的免费在线工具使这一过程简单而安全。',
     'es': 'La edición de imágenes es el proceso de eliminar u ocultar permanentemente información sensible de fotos y documentos. Ya sea que comparta una captura de pantalla en línea, envíe documentos para verificación o publique fotos en redes sociales, la edición ayuda a proteger su privacidad ocultando datos personales como rostros, números de identificación, direcciones e información financiera. Nuestra herramienta gratuita en línea hace que este proceso sea simple y seguro.',
     'fr': 'L\'édition d\'images est le processus de suppression ou d\'obscurcissement permanent des informations sensibles des photos et documents. Que vous partagiez une capture d\'écran en ligne, soumettiez des documents pour vérification ou publiiez des photos sur les réseaux sociaux, l\'édition aide à protéger votre vie privée en masquant les données personnelles comme les visages, les numéros d\'identification, les adresses et les informations financières. Notre outil gratuit en ligne rend ce processus simple et sécurisé.',
     'de': 'Bildbearbeitung ist der Prozess des dauerhaften Entfernens oder Verbergens sensibler Informationen aus Fotos und Dokumenten. Ob Sie einen Screenshot online teilen, Dokumente zur Überprüfung einreichen oder Fotos in sozialen Medien veröffentlichen, die Bearbeitung hilft, Ihre Privatsphäre zu schützen, indem sie persönliche Daten wie Gesichter, Ausweisnummern, Adressen und Finanzinformationen verbirgt. Unser kostenloses Online-Tool macht diesen Prozess einfach und sicher.',
@@ -1612,7 +1612,7 @@ TRANSLATIONS['faq.q1.answer'] = {
 
 TRANSLATIONS['faq.q2.title'] = {
     'en': 'How does this local image editor protect my privacy?',
-    'zh': '这个本地图像编辑器如何保护我的隐私？',
+    'zh': '这个本地图像脱敏器如何保护我的隐私？',
     'es': '¿Cómo protege mi privacidad este editor de imágenes local?',
     'fr': 'Comment cet éditeur d\'images local protège-t-il ma vie privée ?',
     'de': 'Wie schützt dieser lokale Bildeditor meine Privatsphäre?',
@@ -1625,7 +1625,7 @@ TRANSLATIONS['faq.q2.title'] = {
 
 TRANSLATIONS['faq.q2.answer'] = {
     'en': 'Unlike most online photo editors, our tool processes everything 100% locally in your browser. This means your images and PDFs are never uploaded to any server. All editing happens on your own device using JavaScript, ensuring complete confidentiality. This is crucial when handling sensitive documents like passport copies, bank statements, medical records, or confidential business documents.',
-    'zh': '与大多数在线照片编辑器不同，我们的工具在浏览器中100%本地处理所有内容。这意味着您的图片和PDF永远不会上传到任何服务器。所有编辑都使用JavaScript在您自己的设备上完成，确保完全机密。这在处理护照副本、银行对账单、医疗记录或机密商业文档等敏感文档时至关重要。',
+    'zh': '与大多数在线照片脱敏器不同，我们的工具在浏览器中100%本地处理所有内容。这意味着您的图片和PDF永远不会上传到任何服务器。所有脱敏都使用JavaScript在您自己的设备上完成，确保完全机密。这在处理护照副本、银行对账单、医疗记录或机密商业文档等敏感文档时至关重要。',
     'es': 'A diferencia de la mayoría de los editores de fotos en línea, nuestra herramienta procesa todo 100% localmente en su navegador. Esto significa que sus imágenes y PDF nunca se cargan en ningún servidor. Toda la edición ocurre en su propio dispositivo usando JavaScript, garantizando completa confidencialidad. Esto es crucial al manejar documentos confidenciales como copias de pasaportes, extractos bancarios, registros médicos o documentos comerciales confidenciales.',
     'fr': 'Contrairement à la plupart des éditeurs de photos en ligne, notre outil traite tout 100% localement dans votre navigateur. Cela signifie que vos images et PDF ne sont jamais téléchargés sur un serveur. Tout l\'édition se fait sur votre propre appareil en utilisant JavaScript, garantissant une confidentialité complète. C\'est crucial lors du traitement de documents sensibles comme des copies de passeport, des relevés bancaires, des dossiers médicaux ou des documents commerciaux confidentiels.',
     'de': 'Im Gegensatz zu den meisten Online-Fotoeditoren verarbeitet unser Tool alles 100% lokal in Ihrem Browser. Das bedeutet, dass Ihre Bilder und PDFs niemals auf einen Server hochgeladen werden. Die gesamte Bearbeitung erfolgt auf Ihrem eigenen Gerät mit JavaScript, was vollständige Vertraulichkeit gewährleistet. Dies ist entscheidend beim Umgang mit sensiblen Dokumenten wie Passkopien, Kontoauszügen, medizinischen Aufzeichnungen oder vertraulichen Geschäftsdokumenten.',
@@ -1638,7 +1638,7 @@ TRANSLATIONS['faq.q2.answer'] = {
 
 TRANSLATIONS['faq.q3.title'] = {
     'en': 'Can I edit multi-page PDF files for free?',
-    'zh': '我可以免费编辑多页PDF文件吗？',
+    'zh': '我可以免费脱敏多页PDF文件吗？',
     'es': '¿Puedo editar archivos PDF de varias páginas gratis?',
     'fr': 'Puis-je éditer des fichiers PDF multi-pages gratuitement ?',
     'de': 'Kann ich mehrseitige PDF-Dateien kostenlos bearbeiten?',
@@ -1651,7 +1651,7 @@ TRANSLATIONS['faq.q3.title'] = {
 
 TRANSLATIONS['faq.q3.answer'] = {
     'en': 'Yes! Our free PDF redaction tool supports multi-page documents. You can navigate through pages, edit each page individually, and export the entire document as a single PDF file. Each page maintains its quality, and the exported PDF preserves all your redactions. This is perfect for editing contracts, legal documents, reports, or any multi-page PDF that needs sensitive information removed.',
-    'zh': '是的！我们的免费PDF编辑工具支持多页文档。您可以浏览页面，单独编辑每个页面，并将整个文档导出为单个PDF文件。每个页面都保持其质量，导出的PDF保留所有您的编辑。这非常适合编辑合同、法律文档、报告或任何需要删除敏感信息的多页PDF。',
+    'zh': '是的！我们的免费PDF脱敏工具支持多页文档。您可以浏览页面，单独脱敏每个页面，并将整个文档导出为单个PDF文件。每个页面都保持其质量，导出的PDF保留所有您的脱敏。这非常适合脱敏合同、法律文档、报告或任何需要删除敏感信息的多页PDF。',
     'es': '¡Sí! Nuestra herramienta gratuita de edición de PDF admite documentos de varias páginas. Puede navegar por las páginas, editar cada página individualmente y exportar todo el documento como un solo archivo PDF. Cada página mantiene su calidad y el PDF exportado conserva todas sus ediciones. Esto es perfecto para editar contratos, documentos legales, informes o cualquier PDF de varias páginas que necesite eliminar información confidencial.',
     'fr': 'Oui ! Notre outil gratuit d\'édition PDF prend en charge les documents multi-pages. Vous pouvez naviguer à travers les pages, éditer chaque page individuellement et exporter l\'ensemble du document en tant que fichier PDF unique. Chaque page conserve sa qualité et le PDF exporté préserve toutes vos éditions. C\'est parfait pour éditer des contrats, des documents juridiques, des rapports ou tout PDF multi-pages nécessitant la suppression d\'informations sensibles.',
     'de': 'Ja! Unser kostenloses PDF-Bearbeitungstool unterstützt mehrseitige Dokumente. Sie können durch Seiten navigieren, jede Seite einzeln bearbeiten und das gesamte Dokument als einzelne PDF-Datei exportieren. Jede Seite behält ihre Qualität und die exportierte PDF bewahrt alle Ihre Bearbeitungen. Dies ist perfekt zum Bearbeiten von Verträgen, juristischen Dokumenten, Berichten oder allen mehrseitigen PDFs, bei denen sensible Informationen entfernt werden müssen.',
@@ -1677,7 +1677,7 @@ TRANSLATIONS['faq.q4.title'] = {
 
 TRANSLATIONS['faq.q4.answer'] = {
     'en': 'To blur faces effectively: (1) Upload your photo to our tool, (2) Select the area covering the face by clicking and dragging, (3) Choose a solid color or blur effect, (4) Adjust the intensity if needed for complete coverage, (5) Export the edited image. For best results, make sure the selection completely covers facial features. You can use black or white boxes for maximum obscurity, or choose a skin-tone color for a more natural look.',
-    'zh': '要有效模糊面部：(1) 将照片上传到我们的工具，(2) 通过点击并拖动选择覆盖面部的区域，(3) 选择纯色或模糊效果，(4) 如果需要，调整强度以实现完全覆盖，(5) 导出编辑后的图像。为了获得最佳效果，请确保选择完全覆盖面部特征。您可以使用黑色或白色方框以获得最大程度的隐蔽性，或者选择肤色以获得更自然的外观。',
+    'zh': '要有效模糊面部：(1) 将照片上传到我们的工具，(2) 通过点击并拖动选择覆盖面部的区域，(3) 选择纯色或模糊效果，(4) 如果需要，调整强度以实现完全覆盖，(5) 导出脱敏后的图像。为了获得最佳效果，请确保选择完全覆盖面部特征。您可以使用黑色或白色方框以获得最大程度的隐蔽性，或者选择肤色以获得更自然的外观。',
     'es': 'Para difuminar rostros eficazmente: (1) Suba su foto a nuestra herramienta, (2) Seleccione el área que cubre el rostro haciendo clic y arrastrando, (3) Elija un color sólido o efecto de desenfoque, (4) Ajuste la intensidad si es necesario para una cobertura completa, (5) Exporte la imagen editada. Para obtener mejores resultados, asegúrese de que la selección cubra completamente las características faciales. Puede usar cajas negras o blancas para máxima oscuridad, o elegir un color de tono de piel para un aspecto más natural.',
     'fr': 'Pour flouter efficacement les visages : (1) Téléchargez votre photo sur notre outil, (2) Sélectionnez la zone couvrant le visage en cliquant et en faisant glisser, (3) Choisissez une couleur unie ou un effet de flou, (4) Ajustez l\'intensité si nécessaire pour une couverture complète, (5) Exportez l\'image éditée. Pour de meilleurs résultats, assurez-vous que la sélection couvre complètement les traits du visage. Vous pouvez utiliser des boîtes noires ou blanches pour une obscurité maximale, ou choisir une couleur de ton de peau pour un aspect plus naturel.',
     'de': 'Um Gesichter effektiv zu verwischen: (1) Laden Sie Ihr Foto in unser Tool hoch, (2) Wählen Sie den Bereich, der das Gesicht bedeckt, indem Sie klicken und ziehen, (3) Wählen Sie eine einfarbige Farbe oder einen Weichzeichnereffekt, (4) Passen Sie die Intensität bei Bedarf für vollständige Abdeckung an, (5) Exportieren Sie das bearbeitete Bild. Für beste Ergebnisse stellen Sie sicher, dass die Auswahl die Gesichtszüge vollständig abdeckt. Sie können schwarze oder weiße Kästen für maximale Undurchsichtigkeit verwenden oder eine Hautfarbe für ein natürlicheres Aussehen wählen.',
@@ -1690,7 +1690,7 @@ TRANSLATIONS['faq.q4.answer'] = {
 
 TRANSLATIONS['faq.q5.title'] = {
     'en': 'Is this really a free alternative to paid redaction software?',
-    'zh': '这真的是付费编辑软件的免费替代品吗？',
+    'zh': '这真的是付费脱敏软件的免费替代品吗？',
     'es': '¿Es realmente una alternativa gratuita al software de edición de pago?',
     'fr': 'Est-ce vraiment une alternative gratuite aux logiciels d\'édition payants ?',
     'de': 'Ist dies wirklich eine kostenlose Alternative zu kostenpflichtiger Bearbeitungssoftware?',
@@ -1703,7 +1703,7 @@ TRANSLATIONS['faq.q5.title'] = {
 
 TRANSLATIONS['faq.q5.answer'] = {
     'en': 'Absolutely! Our tool is completely free with no hidden costs. Unlike expensive software like Adobe Acrobat Pro or subscription-based services, we offer professional-grade redaction features at no cost. There are no watermarks, no usage limits, and no registration required. We believe privacy protection should be accessible to everyone.',
-    'zh': '绝对是的！我们的工具完全免费，没有隐藏成本。与Adobe Acrobat Pro等昂贵软件或基于订阅的服务不同，我们免费提供专业级编辑功能。没有水印，没有使用限制，也不需要注册。我们相信隐私保护应该对每个人都可以访问。',
+    'zh': '绝对是的！我们的工具完全免费，没有隐藏成本。与Adobe Acrobat Pro等昂贵软件或基于订阅的服务不同，我们免费提供专业级脱敏功能。没有水印，没有使用限制，也不需要注册。我们相信隐私保护应该对每个人都可以访问。',
     'es': '¡Absolutamente! Nuestra herramienta es completamente gratuita sin costos ocultos. A diferencia del software costoso como Adobe Acrobat Pro o los servicios basados en suscripción, ofrecemos funciones de edición de nivel profesional sin costo. No hay marcas de agua, no hay límites de uso y no se requiere registro. Creemos que la protección de la privacidad debería ser accesible para todos.',
     'fr': 'Absolument ! Notre outil est entièrement gratuit sans coûts cachés. Contrairement aux logiciels coûteux comme Adobe Acrobat Pro ou aux services basés sur un abonnement, nous offrons des fonctionnalités d\'édition de niveau professionnel sans frais. Il n\'y a pas de filigranes, pas de limites d\'utilisation et aucune inscription requise. Nous croyons que la protection de la vie privée devrait être accessible à tous.',
     'de': 'Absolut! Unser Tool ist völlig kostenlos ohne versteckte Kosten. Im Gegensatz zu teurer Software wie Adobe Acrobat Pro oder abonnementbasierten Diensten bieten wir professionelle Bearbeitungsfunktionen kostenlos an. Es gibt keine Wasserzeichen, keine Nutzungsbeschränkungen und keine Registrierung erforderlich. Wir glauben, dass Datenschutz für alle zugänglich sein sollte.',
@@ -1716,7 +1716,7 @@ TRANSLATIONS['faq.q5.answer'] = {
 
 TRANSLATIONS['faq.q6.title'] = {
     'en': 'Which file formats can I edit and export?',
-    'zh': '我可以编辑和导出哪些文件格式？',
+    'zh': '我可以脱敏和导出哪些文件格式？',
     'es': '¿Qué formatos de archivo puedo editar y exportar?',
     'fr': 'Quels formats de fichier puis-je éditer et exporter ?',
     'de': 'Welche Dateiformate kann ich bearbeiten und exportieren?',
@@ -1781,7 +1781,7 @@ TRANSLATIONS['faq.q8.title'] = {
 
 TRANSLATIONS['faq.q8.answer'] = {
     'en': 'Yes! Our responsive design works perfectly on smartphones and tablets running iOS or Android. You can upload photos directly from your camera roll, take new photos, or select PDF files. The touch-friendly interface makes it easy to select areas for redaction on smaller screens. Everything runs in your mobile browser - no app installation needed.',
-    'zh': '是的！我们的响应式设计在运行iOS或Android的智能手机和平板电脑上完美工作。您可以直接从相机胶卷上传照片、拍摄新照片或选择PDF文件。触摸友好的界面使在小屏幕上选择编辑区域变得容易。一切都在您的移动浏览器中运行 - 无需安装应用程序。',
+    'zh': '是的！我们的响应式设计在运行iOS或Android的智能手机和平板电脑上完美工作。您可以直接从相机胶卷上传照片、拍摄新照片或选择PDF文件。触摸友好的界面使在小屏幕上选择脱敏区域变得容易。一切都在您的移动浏览器中运行 - 无需安装应用程序。',
     'es': '¡Sí! Nuestro diseño responsivo funciona perfectamente en teléfonos inteligentes y tabletas que ejecutan iOS o Android. Puede cargar fotos directamente desde su carrete de cámara, tomar nuevas fotos o seleccionar archivos PDF. La interfaz amigable con el tacto facilita la selección de áreas para editar en pantallas más pequeñas. Todo se ejecuta en su navegador móvil: no es necesaria la instalación de aplicaciones.',
     'fr': 'Oui ! Notre conception réactive fonctionne parfaitement sur les smartphones et les tablettes exécutant iOS ou Android. Vous pouvez télécharger des photos directement depuis votre pellicule, prendre de nouvelles photos ou sélectionner des fichiers PDF. L\'interface conviviale au toucher facilite la sélection des zones à éditer sur les petits écrans. Tout s\'exécute dans votre navigateur mobile - aucune installation d\'application n\'est nécessaire.',
     'de': 'Ja! Unser responsives Design funktioniert einwandfrei auf Smartphones und Tablets mit iOS oder Android. Sie können Fotos direkt aus Ihrer Kamerarolle hochladen, neue Fotos aufnehmen oder PDF-Dateien auswählen. Die berührungsfreundliche Oberfläche erleichtert die Auswahl von Bereichen zur Bearbeitung auf kleineren Bildschirmen. Alles läuft in Ihrem mobilen Browser - keine App-Installation erforderlich.',
@@ -1795,7 +1795,7 @@ TRANSLATIONS['faq.q8.answer'] = {
 // Additional SEO Content Features
 TRANSLATIONS['seo.feature1.title'] = {
     'en': '🔒 Secure Document Editing',
-    'zh': '🔒 安全的文档编辑',
+    'zh': '🔒 安全的文档脱敏',
     'es': '🔒 Edición segura de documentos',
     'fr': '🔒 Édition sécurisée de documents',
     'de': '🔒 Sichere Dokumentenbearbeitung',
@@ -1808,7 +1808,7 @@ TRANSLATIONS['seo.feature1.title'] = {
 
 TRANSLATIONS['seo.feature1.desc'] = {
     'en': 'Edit sensitive documents safely with our client-side processor. Perfect for legal documents, medical records, financial statements, and personal identification cards. No data leaves your device.',
-    'zh': '使用我们的客户端处理器安全地编辑敏感文档。非常适合法律文档、医疗记录、财务报表和个人身份证件。数据不会离开您的设备。',
+    'zh': '使用我们的客户端处理器安全地脱敏敏感文档。非常适合法律文档、医疗记录、财务报表和个人身份证件。数据不会离开您的设备。',
     'es': 'Edite documentos confidenciales de forma segura con nuestro procesador del lado del cliente. Perfecto para documentos legales, registros médicos, estados financieros y tarjetas de identificación personal. Ningún dato sale de su dispositivo.',
     'fr': 'Modifiez des documents sensibles en toute sécurité avec notre processeur côté client. Parfait pour les documents juridiques, les dossiers médicaux, les relevés financiers et les cartes d\'identité personnelles. Aucune donnée ne quitte votre appareil.',
     'de': 'Bearbeiten Sie sensible Dokumente sicher mit unserem clientseitigen Prozessor. Perfekt für juristische Dokumente, medizinische Aufzeichnungen, Finanzberichte und persönliche Ausweise. Keine Daten verlassen Ihr Gerät.',
@@ -1847,7 +1847,7 @@ TRANSLATIONS['seo.feature2.desc'] = {
 
 TRANSLATIONS['seo.feature3.title'] = {
     'en': '📄 PDF Redaction Made Easy',
-    'zh': '📄 PDF编辑变得简单',
+    'zh': '📄 PDF脱敏变得简单',
     'es': '📄 Edición de PDF facilitada',
     'fr': '📄 Édition PDF simplifiée',
     'de': '📄 PDF-Bearbeitung leicht gemacht',
@@ -1860,7 +1860,7 @@ TRANSLATIONS['seo.feature3.title'] = {
 
 TRANSLATIONS['seo.feature3.desc'] = {
     'en': 'Professional PDF editing without expensive software. Redact text, mask images, hide sensitive data across multiple pages. Export as clean PDF ready for sharing or archiving.',
-    'zh': '无需昂贵软件的专业PDF编辑。跨多页编辑文本、遮盖图像、隐藏敏感数据。导出为干净的PDF，准备分享或存档。',
+    'zh': '无需昂贵软件的专业PDF脱敏。跨多页脱敏文本、遮盖图像、隐藏敏感数据。导出为干净的PDF，准备分享或存档。',
     'es': 'Edición profesional de PDF sin software costoso. Edite texto, oculte imágenes, oculte datos confidenciales en varias páginas. Exporte como PDF limpio listo para compartir o archivar.',
     'fr': 'Édition PDF professionnelle sans logiciel coûteux. Éditez du texte, masquez des images, cachez des données sensibles sur plusieurs pages. Exportez en tant que PDF propre prêt à partager ou archiver.',
     'de': 'Professionelle PDF-Bearbeitung ohne teure Software. Bearbeiten Sie Text, maskieren Sie Bilder, verbergen Sie sensible Daten über mehrere Seiten. Exportieren Sie als sauberes PDF, bereit zum Teilen oder Archivieren.',
@@ -1887,7 +1887,7 @@ TRANSLATIONS['seo.keywords.title'] = {
 
 TRANSLATIONS['seo.keywords.list'] = {
     'en': 'free online image redaction tool, how to blur faces in photos online, mask sensitive information in screenshots, hide ID card number in image, secure photo editor no upload, offline image redaction software, edit PDF without Adobe, free PDF redaction tool online, blur license plate in photo, anonymize document before sharing, remove personal data from images, protect privacy in photos, obscure credit card number in receipt, hide social security number in document, free alternative to Photoshop for redaction, browser-based image editor secure, client-side photo processing tool, edit bank statement PDF free, redact medical records online, hide email address in screenshot, mosaic effect for photos online, pixelate faces in images free, whiteout text in image online, black box redaction tool, multi-page PDF editor free, edit contract PDF online secure',
-    'zh': '免费在线图像编辑工具，如何在线模糊照片中的面部，遮盖截图中的敏感信息，隐藏图像中的身份证号码，安全照片编辑器无上传，离线图像编辑软件，无需Adobe编辑PDF，免费在线PDF编辑工具，模糊照片中的车牌，分享前匿名化文档，从图像中删除个人数据，保护照片中的隐私，遮盖收据中的信用卡号码，隐藏文档中的社会安全号码，Photoshop编辑的免费替代品，基于浏览器的安全图像编辑器，客户端照片处理工具，免费编辑银行对账单PDF，在线编辑医疗记录，隐藏截图中的电子邮件地址，在线照片马赛克效果，免费像素化图像中的面部，在线图像中涂白文本，黑盒编辑工具，免费多页PDF编辑器，安全在线编辑合同PDF',
+    'zh': '免费在线图像脱敏工具，如何在线模糊照片中的面部，遮盖截图中的敏感信息，隐藏图像中的身份证号码，安全照片脱敏器无上传，离线图像脱敏软件，无需Adobe脱敏PDF，免费在线PDF脱敏工具，模糊照片中的车牌，分享前匿名化文档，从图像中删除个人数据，保护照片中的隐私，遮盖收据中的信用卡号码，隐藏文档中的社会安全号码，Photoshop脱敏的免费替代品，基于浏览器的安全图像脱敏器，客户端照片处理工具，免费脱敏银行对账单PDF，在线脱敏医疗记录，隐藏截图中的电子邮件地址，在线照片马赛克效果，免费像素化图像中的面部，在线图像中涂白文本，黑盒脱敏工具，免费多页PDF脱敏器，安全在线脱敏合同PDF',
     'es': 'herramienta gratuita de edición de imágenes en línea, cómo difuminar rostros en fotos en línea, ocultar información confidencial en capturas de pantalla, ocultar número de tarjeta de identificación en imagen, editor de fotos seguro sin carga, software de edición de imágenes sin conexión, editar PDF sin Adobe, herramienta gratuita de edición de PDF en línea, difuminar matrícula en foto, anonimizar documento antes de compartir, eliminar datos personales de imágenes, proteger privacidad en fotos, ocultar número de tarjeta de crédito en recibo, ocultar número de seguridad social en documento, alternativa gratuita a Photoshop para edición, editor de imágenes basado en navegador seguro, herramienta de procesamiento de fotos del lado del cliente, editar extracto bancario PDF gratis, editar registros médicos en línea, ocultar dirección de correo electrónico en captura de pantalla, efecto mosaico para fotos en línea, pixelar rostros en imágenes gratis, tachar texto en imagen en línea, herramienta de edición de caja negra, editor de PDF de varias páginas gratis, editar contrato PDF en línea seguro',
     'fr': 'outil gratuit d\'édition d\'images en ligne, comment flouter les visages dans les photos en ligne, masquer les informations sensibles dans les captures d\'écran, masquer le numéro de carte d\'identité dans l\'image, éditeur de photos sécurisé sans téléchargement, logiciel d\'édition d\'images hors ligne, modifier PDF sans Adobe, outil gratuit d\'édition PDF en ligne, flouter la plaque d\'immatriculation dans la photo, anonymiser le document avant de partager, supprimer les données personnelles des images, protéger la vie privée dans les photos, masquer le numéro de carte de crédit sur le reçu, masquer le numéro de sécurité sociale dans le document, alternative gratuite à Photoshop pour l\'édition, éditeur d\'images basé sur un navigateur sécurisé, outil de traitement de photos côté client, modifier le relevé bancaire PDF gratuitement, éditer les dossiers médicaux en ligne, masquer l\'adresse e-mail dans la capture d\'écran, effet mosaïque pour les photos en ligne, pixéliser les visages dans les images gratuitement, corriger le texte dans l\'image en ligne, outil d\'édition de boîte noire, éditeur PDF multi-pages gratuit, modifier le contrat PDF en ligne sécurisé',
     'de': 'kostenloses Online-Bildbearbeitungstool, wie man Gesichter in Fotos online verwischt, sensible Informationen in Screenshots maskieren, Ausweisnummer im Bild verbergen, sicherer Fotoeditor ohne Upload, Offline-Bildbearbeitungssoftware, PDF ohne Adobe bearbeiten, kostenloses PDF-Bearbeitungstool online, Kennzeichen im Foto verwischen, Dokument vor dem Teilen anonymisieren, persönliche Daten aus Bildern entfernen, Privatsphäre in Fotos schützen, Kreditkartennummer auf Quittung verbergen, Sozialversicherungsnummer im Dokument verbergen, kostenlose Alternative zu Photoshop zum Bearbeiten, browserbasierter sicherer Bildeditor, clientseitiges Fotobearbeitungstool, Kontoauszug PDF kostenlos bearbeiten, medizinische Aufzeichnungen online bearbeiten, E-Mail-Adresse im Screenshot verbergen, Mosaikeffekt für Fotos online, Gesichter in Bildern kostenlos verpixeln, Text im Bild online schwärzen, Blackbox-Bearbeitungstool, mehrseitiger PDF-Editor kostenlos, Vertrag PDF online sicher bearbeiten',
@@ -2543,7 +2543,7 @@ TRANSLATIONS['pp.lastUpdated'] = {
 
 TRANSLATIONS['pp.intro'] = {
     'en': 'At toolvx.com ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our free online image and PDF redaction tool.',
-    'zh': '在 toolvx.com（"我们"），我们致力于保护您的隐私。本隐私政策解释了我们如何收集、使用和保护您在使用我们的免费在线图像和PDF编辑工具时的信息。',
+    'zh': '在 toolvx.com（"我们"），我们致力于保护您的隐私。本隐私政策解释了我们如何收集、使用和保护您在使用我们的免费在线图像和PDF脱敏工具时的信息。',
     'es': 'En toolvx.com ("nosotros"), estamos comprometidos a proteger su privacidad. Esta Política de privacidad explica cómo recopilamos, usamos y protegemos su información cuando utiliza nuestra herramienta gratuita de edición de imágenes y PDF en línea.',
     'fr': 'Chez toolvx.com ("nous"), nous nous engageons à protéger votre vie privée. Cette Politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre outil gratuit d\'édition d\'images et de PDF en ligne.',
     'de': 'Bei toolvx.com ("wir") sind wir verpflichtet, Ihre Privatsphäre zu schützen. Diese Datenschutzerklärung erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unser kostenloses Online-Tool zur Bild- und PDF-Bearbeitung verwenden.',
@@ -2855,7 +2855,7 @@ TRANSLATIONS['pp.s3.2.title'] = {
 
 TRANSLATIONS['pp.s3.2.text'] = {
     'en': 'We do not store any images, PDFs, or edited documents on our servers. Once you close your browser tab, all temporary data is permanently deleted.',
-    'zh': '我们不会在我们的服务器上存储任何图像、PDF或编辑过的文档。一旦您关闭浏览器标签页，所有临时数据将被永久删除。',
+    'zh': '我们不会在我们的服务器上存储任何图像、PDF或脱敏过的文档。一旦您关闭浏览器标签页，所有临时数据将被永久删除。',
     'es': 'No almacenamos ninguna imagen, PDF ni documento editado en nuestros servidores. Una vez que cierra la pestaña de su navegador, todos los datos temporales se eliminan permanentemente.',
     'fr': 'Nous ne stockons aucune image, PDF ni document édité sur nos serveurs. Une fois que vous fermez l\'onglet de votre navigateur, toutes les données temporaires sont définitivement supprimées.',
     'de': 'Wir speichern keine Bilder, PDFs oder bearbeiteten Dokumente auf unseren Servern. Sobald Sie Ihren Browser-Tab schließen, werden alle temporären Daten dauerhaft gelöscht.',
@@ -3401,7 +3401,7 @@ TRANSLATIONS['footer.legal'] = {
 
 TRANSLATIONS['footer.copyright'] = {
     'en': '© 2026 toolvx.com - Free online image and PDF editing tools. All rights reserved.',
-    'zh': '© 2026 toolvx.com - 免费在线图像和PDF编辑工具。保留所有权利。',
+    'zh': '© 2026 toolvx.com - 免费在线图像和PDF脱敏工具。保留所有权利。',
     'es': '© 2026 toolvx.com - Herramientas gratuitas de edición de imágenes y PDF en línea. Todos los derechos reservados.',
     'fr': '© 2026 toolvx.com - Outils gratuits d\'édition d\'images et de PDF en ligne. Tous droits réservés.',
     'de': '© 2026 toolvx.com - Kostenlose Online-Bild- und PDF-Bearbeitungswerkzeuge. Alle Rechte vorbehalten.',
@@ -3544,7 +3544,7 @@ TRANSLATIONS['pp.s11.li3'] = {
 
 TRANSLATIONS['footer.brand.description'] = {
     'en': 'Free, secure, and private image editing tools. Your files never leave your device.',
-    'zh': '免费、安全、私密的图像编辑工具。您的文件永远不会离开您的设备。',
+    'zh': '免费、安全、私密的图像脱敏工具。您的文件永远不会离开您的设备。',
     'es': 'Herramientas gratuitas, seguras y privadas de edición de imágenes. Sus archivos nunca abandonan su dispositivo.',
     'fr': 'Outils d\'édition d\'images gratuits, sécurisés et privés. Vos fichiers ne quittent jamais votre appareil.',
     'de': 'Kostenlose, sichere und private Bildbearbeitungswerkzeuge. Ihre Dateien verlassen nie Ihr Gerät.',
@@ -3635,7 +3635,7 @@ TRANSLATIONS['features.card2.title'] = {
 
 TRANSLATIONS['features.card2.desc'] = {
     'en': 'Edit unlimited pages in PDF documents. Navigate between pages and export as complete multi-page PDFs.',
-    'zh': '在PDF文档中编辑无限页面。在页面之间导航并导出为完整的多页PDF。',
+    'zh': '在PDF文档中脱敏无限页面。在页面之间导航并导出为完整的多页PDF。',
     'es': 'Edite páginas ilimitadas en documentos PDF. Navegue entre páginas y exporte como PDF de varias páginas completos.',
     'fr': 'Éditez un nombre illimité de pages dans les documents PDF. Naviguez entre les pages et exportez en PDF multi-pages complets.',
     'de': 'Bearbeiten Sie unbegrenzte Seiten in PDF-Dokumenten. Navigieren Sie zwischen den Seiten und exportieren Sie als vollständige mehrseitige PDFs.',
@@ -3661,7 +3661,7 @@ TRANSLATIONS['features.card3.title'] = {
 
 TRANSLATIONS['features.card3.desc'] = {
     'en': 'All editing happens in your browser. Files never leave your device for maximum privacy and security.',
-    'zh': '所有编辑都在您的浏览器中进行。文件永远不会离开您的设备，以实现最大的隐私和安全性。',
+    'zh': '所有脱敏都在您的浏览器中进行。文件永远不会离开您的设备，以实现最大的隐私和安全性。',
     'es': 'Toda la edición ocurre en su navegador. Los archivos nunca abandonan su dispositivo para máxima privacidad y seguridad.',
     'fr': 'Toute l\'édition se fait dans votre navigateur. Les fichiers ne quittent jamais votre appareil pour une confidentialité et une sécurité maximales.',
     'de': 'Die gesamte Bearbeitung erfolgt in Ihrem Browser. Dateien verlassen niemals Ihr Gerät für maximale Privatsphäre und Sicherheit.',
@@ -3713,7 +3713,7 @@ TRANSLATIONS['features.card5.title'] = {
 
 TRANSLATIONS['features.card5.desc'] = {
     'en': 'Manual click-and-drag selection gives you complete control over what gets redacted. No automatic detection errors.',
-    'zh': '手动点击并拖动选择让您完全控制要编辑的内容。没有自动检测错误。',
+    'zh': '手动点击并拖动选择让您完全控制要脱敏的内容。没有自动检测错误。',
     'es': 'La selección manual de clic y arrastre le brinda control total sobre lo que se edita. Sin errores de detección automática.',
     'fr': 'La sélection manuelle par clic et glissement vous donne un contrôle total sur ce qui est édité. Pas d\'erreurs de détection automatique.',
     'de': 'Die manuelle Klick-und-Ziehen-Auswahl gibt Ihnen vollständige Kontrolle darüber, was bearbeitet wird. Keine automatischen Erkennungsfehler.',
@@ -3765,7 +3765,7 @@ TRANSLATIONS['footer.contact'] = {
 
 TRANSLATIONS['footer.copyright.full'] = {
     'en': '© 2026 toolvx.com - Free online image and PDF editing tools. All rights reserved.',
-    'zh': '© 2026 toolvx.com - 免费在线图像和PDF编辑工具。保留所有权利。',
+    'zh': '© 2026 toolvx.com - 免费在线图像和PDF脱敏工具。保留所有权利。',
     'es': '© 2026 toolvx.com - Herramientas gratuitas de edición de imágenes y PDF en línea. Todos los derechos reservados.',
     'fr': '© 2026 toolvx.com - Outils gratuits d\'édition d\'images et PDF en ligne. Tous droits réservés.',
     'de': '© 2026 toolvx.com - Kostenlose Online-Tools zur Bild- und PDF-Bearbeitung. Alle Rechte vorbehalten.',
@@ -3791,7 +3791,7 @@ TRANSLATIONS['faq.page.title'] = {
 
 TRANSLATIONS['faq.page.subtitle'] = {
     'en': 'Get answers to common questions about our privacy-focused redaction tool',
-    'zh': '获取有关我们注重隐私的编辑工具的常见问题解答',
+    'zh': '获取有关我们注重隐私的脱敏工具的常见问题解答',
     'es': 'Obtenga respuestas a preguntas comunes sobre nuestra herramienta de edición centrada en la privacidad',
     'fr': 'Obtenez des réponses aux questions courantes sur notre outil d\'édition axé sur la confidentialité',
     'de': 'Erhalten Sie Antworten auf häufige Fragen zu unserem datenschutzorientierten Bearbeitungswerkzeug',
@@ -3817,7 +3817,7 @@ TRANSLATIONS['faq.q1.title'] = {
 
 TRANSLATIONS['faq.q1.desc'] = {
     'en': 'Yes! Our tool is 100% free with no hidden costs, watermarks, or usage limits. You can redact unlimited images and PDFs without paying anything.',
-    'zh': '是的！我们的工具完全免费，没有隐藏费用、水印或使用限制。您可以免费编辑无限量的图像和PDF。',
+    'zh': '是的！我们的工具完全免费，没有隐藏费用、水印或使用限制。您可以免费脱敏无限量的图像和PDF。',
     'es': '¡Sí! Nuestra herramienta es 100% gratuita sin costos ocultos, marcas de agua ni límites de uso. Puede editar imágenes y PDF ilimitados sin pagar nada.',
     'fr': 'Oui ! Notre outil est 100% gratuit sans frais cachés, filigranes ni limites d\'utilisation. Vous pouvez éditer un nombre illimité d\'images et de PDF sans payer quoi que ce soit.',
     'de': 'Ja! Unser Tool ist 100% kostenlos ohne versteckte Kosten, Wasserzeichen oder Nutzungslimits. Sie können unbegrenzte Bilder und PDFs bearbeiten, ohne etwas zu bezahlen.',
@@ -3895,7 +3895,7 @@ TRANSLATIONS['faq.q4.title'] = {
 
 TRANSLATIONS['faq.q4.desc'] = {
     'en': 'We support JPG, PNG, GIF, WebP images, and PDF files. Multi-page PDFs are fully supported with page-by-page editing capabilities.',
-    'zh': '我们支持JPG、PNG、GIF、WebP图像和PDF文件。多页PDF完全支持逐页编辑功能。',
+    'zh': '我们支持JPG、PNG、GIF、WebP图像和PDF文件。多页PDF完全支持逐页脱敏功能。',
     'es': 'Admitimos imágenes JPG, PNG, GIF, WebP y archivos PDF. Los PDF de varias páginas son totalmente compatibles con capacidades de edición página por página.',
     'fr': 'Nous prenons en charge les images JPG, PNG, GIF, WebP et les fichiers PDF. Les PDF multi-pages sont entièrement pris en charge avec des capacités d\'édition page par page.',
     'de': 'Wir unterstützen JPG-, PNG-, GIF-, WebP-Bilder und PDF-Dateien. Mehrseitige PDFs werden vollständig mit Seiten-für-Seiten-Bearbeitungsfunktionen unterstützt.',
@@ -3921,7 +3921,7 @@ TRANSLATIONS['faq.q5.title'] = {
 
 TRANSLATIONS['faq.q5.desc'] = {
     'en': 'Simply upload your image, click and drag to select the area you want to redact, choose your preferred color or effect, adjust intensity if needed, and export the result.',
-    'zh': '只需上传您的图像，点击并拖动以选择要编辑的区域，选择您喜欢的颜色或效果，根据需要调整强度，然后导出结果。',
+    'zh': '只需上传您的图像，点击并拖动以选择要脱敏的区域，选择您喜欢的颜色或效果，根据需要调整强度，然后导出结果。',
     'es': 'Simplemente cargue su imagen, haga clic y arrastre para seleccionar el área que desea editar, elija su color o efecto preferido, ajuste la intensidad si es necesario y exporte el resultado.',
     'fr': 'Il vous suffit de télécharger votre image, de cliquer et de glisser pour sélectionner la zone à éditer, de choisir votre couleur ou effet préféré, d\'ajuster l\'intensité si nécessaire et d\'exporter le résultat.',
     'de': 'Laden Sie einfach Ihr Bild hoch, klicken und ziehen Sie, um den Bereich auszuwählen, den Sie bearbeiten möchten, wählen Sie Ihre bevorzugte Farbe oder Ihren Effekt, passen Sie die Intensität bei Bedarf an und exportieren Sie das Ergebnis.',
@@ -3960,7 +3960,7 @@ TRANSLATIONS['faq.q6.desc'] = {
 
 TRANSLATIONS['faq.q7.title'] = {
     'en': 'Can I edit multiple pages in a PDF?',
-    'zh': '我可以编辑PDF中的多个页面吗？',
+    'zh': '我可以脱敏PDF中的多个页面吗？',
     'es': '¿Puedo editar varias páginas en un PDF?',
     'fr': 'Puis-je éditer plusieurs pages dans un PDF ?',
     'de': 'Kann ich mehrere Seiten in einem PDF bearbeiten?',
@@ -3973,7 +3973,7 @@ TRANSLATIONS['faq.q7.title'] = {
 
 TRANSLATIONS['faq.q7.desc'] = {
     'en': 'Absolutely! Our tool supports multi-page PDFs. You can navigate between pages, edit each one individually, and export as a complete multi-page PDF.',
-    'zh': '当然可以！我们的工具支持多页PDF。您可以在页面之间导航，单独编辑每一页，并导出为完整的多页PDF。',
+    'zh': '当然可以！我们的工具支持多页PDF。您可以在页面之间导航，单独脱敏每一页，并导出为完整的多页PDF。',
     'es': '¡Absolutamente! Nuestra herramienta admite PDF de varias páginas. Puede navegar entre páginas, editar cada una individualmente y exportar como un PDF de varias páginas completo.',
     'fr': 'Absolument ! Notre outil prend en charge les PDF multi-pages. Vous pouvez naviguer entre les pages, éditer chacune individuellement et exporter en tant que PDF multi-pages complet.',
     'de': 'Absolut! Unser Tool unterstützt mehrseitige PDFs. Sie können zwischen den Seiten navigieren, jede einzelne bearbeiten und als vollständiges mehrseitiges PDF exportieren.',
@@ -4039,7 +4039,7 @@ TRANSLATIONS['tos.page.subtitle'] = {
 
 TRANSLATIONS['tos.intro'] = {
     'en': 'Welcome to toolvx.com ("we," "our," or "us"). These Terms of Service ("Terms") govern your access to and use of our website and services, including our free online image and PDF redaction tool (the "Service"). By accessing or using our Service, you agree to be bound by these Terms.',
-    'zh': '欢迎使用toolvx.com（"我们"）。这些服务条款（"条款"）约束您对我们网站和服务的访问和使用，包括我们的免费在线图像和PDF编辑工具（"服务"）。通过访问或使用我们的服务，您同意受这些条款的约束。',
+    'zh': '欢迎使用toolvx.com（"我们"）。这些服务条款（"条款"）约束您对我们网站和服务的访问和使用，包括我们的免费在线图像和PDF脱敏工具（"服务"）。通过访问或使用我们的服务，您同意受这些条款的约束。',
     'es': 'Bienvenido a toolvx.com ("nosotros"). Estos Términos de servicio ("Términos") rigen su acceso y uso de nuestro sitio web y servicios, incluida nuestra herramienta gratuita de edición de imágenes y PDF en línea (el "Servicio"). Al acceder o usar nuestro Servicio, usted acepta estar sujeto a estos Términos.',
     'fr': 'Bienvenue sur toolvx.com ("nous"). Ces Conditions d\'utilisation ("Conditions") régissent votre accès et votre utilisation de notre site Web et de nos services, y compris notre outil gratuit d\'édition d\'images et de PDF en ligne (le "Service"). En accédant à ou en utilisant notre Service, vous acceptez d\'être lié par ces Conditions.',
     'de': 'Willkommen bei toolvx.com ("wir"). Diese Nutzungsbedingungen ("Bedingungen") regeln Ihren Zugriff auf und Ihre Nutzung unserer Website und Dienste, einschließlich unseres kostenlosen Online-Tools zur Bild- und PDF-Bearbeitung (der "Service"). Durch den Zugriff auf oder die Nutzung unseres Service stimmen Sie zu, durch diese Bedingungen gebunden zu sein.',
@@ -4130,7 +4130,7 @@ TRANSLATIONS['tos.section2.text'] = {
 
 TRANSLATIONS['tos.section2.item1'] = {
     'en': 'Edit and redact images (JPG, PNG, GIF, WebP)',
-    'zh': '编辑和编辑图像（JPG、PNG、GIF、WebP）',
+    'zh': '脱敏和脱敏图像（JPG、PNG、GIF、WebP）',
     'es': 'Editar y redactar imágenes (JPG, PNG, GIF, WebP)',
     'fr': 'Éditer et rédiger des images (JPG, PNG, GIF, WebP)',
     'de': 'Bilder bearbeiten und redigieren (JPG, PNG, GIF, WebP)',
@@ -4143,7 +4143,7 @@ TRANSLATIONS['tos.section2.item1'] = {
 
 TRANSLATIONS['tos.section2.item2'] = {
     'en': 'Edit and redact PDF documents',
-    'zh': '编辑和编辑PDF文档',
+    'zh': '脱敏和脱敏PDF文档',
     'es': 'Editar y redactar documentos PDF',
     'fr': 'Éditer et rédiger des documents PDF',
     'de': 'PDF-Dokumente bearbeiten und redigieren',
@@ -4169,7 +4169,7 @@ TRANSLATIONS['tos.section2.item3'] = {
 
 TRANSLATIONS['tos.section2.item4'] = {
     'en': 'Export edited files with original filenames preserved',
-    'zh': '导出已编辑的文件并保留原始文件名',
+    'zh': '导出已脱敏的文件并保留原始文件名',
     'es': 'Exportar archivos editados conservando los nombres de archivo originales',
     'fr': 'Exporter des fichiers édités en conservant les noms de fichier originaux',
     'de': 'Bearbeitete Dateien mit beibehaltenen ursprünglichen Dateinamen exportieren',
@@ -4429,7 +4429,7 @@ TRANSLATIONS['tos.section4_2.title'] = {
 
 TRANSLATIONS['tos.section4_2.text'] = {
     'en': 'You are solely responsible for all content you upload, process, or edit using our Service. You represent and warrant that:',
-    'zh': '您对使用我们的服务上传、处理或编辑的所有内容负全部责任。您声明并保证：',
+    'zh': '您对使用我们的服务上传、处理或脱敏的所有内容负全部责任。您声明并保证：',
     'es': 'Usted es el único responsable de todo el contenido que carga, procesa o edita usando nuestro Servicio. Usted declara y garantiza que:',
     'fr': 'Vous êtes seul responsable de tout le contenu que vous téléchargez, traitez ou éditez en utilisant notre Service. Vous déclarez et garantissez que :',
     'de': 'Sie sind allein verantwortlich für alle Inhalte, die Sie mit unserem Service hochladen, verarbeiten oder bearbeiten. Sie erklären und garantieren, dass:',
@@ -4533,7 +4533,7 @@ TRANSLATIONS['tos.section5_2.title'] = {
 
 TRANSLATIONS['tos.section5_2.text'] = {
     'en': 'You retain all rights to the images, PDFs, and other content you upload and edit using our Service. Since all processing happens locally in your browser, we never store or claim ownership of your content.',
-    'zh': '您保留对使用我们的服务上传和编辑的图像、PDF和其他内容的所有权利。由于所有处理都在您的浏览器中本地进行，因此我们永远不会存储或主张您内容的所有权。',
+    'zh': '您保留对使用我们的服务上传和脱敏的图像、PDF和其他内容的所有权利。由于所有处理都在您的浏览器中本地进行，因此我们永远不会存储或主张您内容的所有权。',
     'es': 'Usted conserva todos los derechos sobre las imágenes, PDF y otro contenido que carga y edita usando nuestro Servicio. Dado que todo el procesamiento ocurre localmente en su navegador, nunca almacenamos ni reclamamos la propiedad de su contenido.',
     'fr': 'Vous conservez tous les droits sur les images, les PDF et les autres contenus que vous téléchargez et éditez en utilisant notre Service. Puisque tout le traitement se fait localement dans votre navigateur, nous ne stockons ni ne revendiquons jamais la propriété de votre contenu.',
     'de': 'Sie behalten alle Rechte an den Bildern, PDFs und anderen Inhalten, die Sie mit unserem Service hochladen und bearbeiten. Da die gesamte Verarbeitung lokal in Ihrem Browser erfolgt, speichern wir niemals Ihre Inhalte oder beanspruchen das Eigentum daran.',
@@ -6089,7 +6089,7 @@ TRANSLATIONS['blog.card4.time'] = {
 };
 TRANSLATIONS['blog.card4.title'] = {
     'en': 'Best Free PDF Redaction Tools in 2026',
-    'zh': '2026年最佳免费PDF编辑工具',
+    'zh': '2026年最佳免费PDF脱敏工具',
     'es': 'Mejores Herramientas Gratuitas de Redacción de PDF en 2026',
     'fr': 'Meilleurs Outils de Rédaction PDF Gratuits en 2026',
     'de': 'Beste kostenlose PDF-Redaktionstools 2026',
@@ -6191,7 +6191,7 @@ TRANSLATIONS['blog.card7.time'] = {
 };
 TRANSLATIONS['blog.card7.title'] = {
     'en': 'How to Redact Bank Statements Securely',
-    'zh': '如何安全地编辑银行对账单',
+    'zh': '如何安全地脱敏银行对账单',
     'es': 'Cómo Redactar Estados Bancarios de Forma Segura',
     'fr': 'Comment Rédiger des Relevés Bancaires en Toute Sécurité',
     'de': 'So Redaktieren Sie Kontoauszüge Sicher',
@@ -6293,7 +6293,7 @@ TRANSLATIONS['blog.card10.time'] = {
 };
 TRANSLATIONS['blog.card10.title'] = {
     'en': 'Local vs Cloud Image Editors: Which is Safer?',
-    'zh': '本地与云端图像编辑器：哪个更安全？',
+    'zh': '本地与云端图像脱敏器：哪个更安全？',
     'es': 'Editores de Imágenes Locales vs en la Nube: ¿Cuál es Más Seguro?',
     'fr': 'Éditeurs d\'Images Locaux vs Cloud : Lequel est Plus Sûr ?',
     'de': 'Lokale vs Cloud-Bildbearbeitungstools: Was ist sicherer?',
@@ -6423,7 +6423,7 @@ TRANSLATIONS['blurFaces.quickAnswer.title'] = {
 
 TRANSLATIONS['blurFaces.quickAnswer.text'] = {
     'en': 'To blur faces in photos: Upload your image to a local redaction tool, select the face area, apply a blur or solid color mask, and download the edited image. The entire process should happen in your browser without uploading to servers for maximum privacy.',
-    'zh': '要在照片中模糊面部：将图像上传到本地编辑工具，选择面部区域，应用模糊或纯色遮罩，然后下载编辑后的图像。整个过程应在浏览器中完成，无需上传到服务器，以实现最大程度的隐私保护。',
+    'zh': '要在照片中模糊面部：将图像上传到本地脱敏工具，选择面部区域，应用模糊或纯色遮罩，然后下载脱敏后的图像。整个过程应在浏览器中完成，无需上传到服务器，以实现最大程度的隐私保护。',
     'es': 'Para difuminar caras en fotos: suba su imagen a una herramienta de edición local, seleccione el área de la cara, aplique un desenfoque o una máscara de color sólido y descargue la imagen editada. Todo el proceso debe realizarse en su navegador sin subir a servidores para una privacidad máxima.',
     'fr': 'Pour flouter les visages sur les photos : téléchargez votre image dans un outil d\'édition local, sélectionnez la zone du visage, appliquez un flou ou un masque de couleur uni et téléchargez l\'image éditée. L\'ensemble du processus doit se faire dans votre navigateur sans téléchargement sur des serveurs pour une confidentialité maximale.',
     'de': 'So verwischen Sie Gesichter in Fotos: Laden Sie Ihr Bild in ein lokales Bearbeitungswerkzeug hoch, wählen Sie den Bereich des Gesichts aus, wenden Sie einen Weichzeichner oder eine Deckkraftmaske an und laden Sie das bearbeitete Bild herunter. Der gesamte Vorgang sollte in Ihrem Browser stattfinden, ohne auf Server hochzuladen, für maximale Privatsphäre.',
@@ -6566,7 +6566,7 @@ TRANSLATIONS['blurFaces.scenario4.title'] = {
 
 TRANSLATIONS['blurFaces.scenario4.desc'] = {
     'en': 'Redacting identities in evidence photos or case files',
-    'zh': '在证据照片或案件档案中编辑身份信息',
+    'zh': '在证据照片或案件档案中脱敏身份信息',
     'es': 'Redactando identidades en fotos de evidencia o archivos de casos',
     'fr': 'Masquer les identités dans les photos de preuves ou les dossiers de cas',
     'de': 'Schwärzen von Identitäten in Beweisfotos oder Fallakten',
@@ -6644,7 +6644,7 @@ TRANSLATIONS['blurFaces.step1.title'] = {
 
 TRANSLATIONS['blurFaces.step1.text'] = {
     'en': 'Select a tool that processes images locally in your browser, like toolvx\'s free image redaction tool. This ensures your photos never leave your device.',
-    'zh': '选择一款在浏览器中本地处理图像的工具，例如toolvx的免费图像编辑工具。这可以确保您的照片永远不会离开您的设备。',
+    'zh': '选择一款在浏览器中本地处理图像的工具，例如toolvx的免费图像脱敏工具。这可以确保您的照片永远不会离开您的设备。',
     'es': 'Seleccione una herramienta que procese imágenes localmente en su navegador, como la herramienta gratuita de edición de imágenes de toolvx. Esto asegura que sus fotos nunca abandonen su dispositivo.',
     'fr': 'Sélectionnez un outil qui traite les images localement dans votre navigateur, comme l\'outil d\'édition d\'images gratuit de toolvx. Cela garantit que vos photos ne quittent jamais votre appareil.',
     'de': 'Wählen Sie ein Tool, das Bilder lokal in Ihrem Browser verarbeitet, wie das kostenlose Bildbearbeitungstool von toolvx. Dadurch wird sichergestellt, dass Ihre Fotos Ihr Gerät niemals verlassen.',
@@ -6748,7 +6748,7 @@ TRANSLATIONS['blurFaces.step5.title'] = {
 
 TRANSLATIONS['blurFaces.step5.text'] = {
     'en': 'Review your edits to ensure complete coverage, then export the image in your preferred format.',
-    'zh': '查看您的编辑以确保完全覆盖，然后以您喜欢的格式导出图像。',
+    'zh': '查看您的脱敏以确保完全覆盖，然后以您喜欢的格式导出图像。',
     'es': 'Revise sus ediciones para asegurar una cobertura completa, luego exporte la imagen en su formato preferido.',
     'fr': 'Vérifiez vos modifications pour assurer une couverture complète, puis exportez l\'image dans le format de votre choix.',
     'de': 'Überprüfen Sie Ihre Bearbeitungen, um eine vollständige Abdeckung sicherzustellen, und exportieren Sie das Bild dann in Ihrem bevorzugten Format.',
@@ -7386,7 +7386,7 @@ TRANSLATIONS['blurFaces.related.article2.desc'] = {
 // 404 Page translations
 TRANSLATIONS['404.title'] = {
     'en': 'Page Not Found - toolvx.com | Free Image & PDF Redaction Tool',
-    'zh': '页面未找到 - toolvx.com | 免费图像与PDF编辑工具',
+    'zh': '页面未找到 - toolvx.com | 免费图像与PDF脱敏工具',
     'es': 'Página no encontrada - toolvx.com | Herramienta gratuita de edición de imágenes y PDF',
     'fr': 'Page non trouvée - toolvx.com | Outil gratuit d\'édition d\'images et de PDF',
     'de': 'Seite nicht gefunden - toolvx.com | Kostenloses Bild- und PDF-Bearbeitungs-Tool',
@@ -7451,7 +7451,7 @@ TRANSLATIONS['404.feature1'] = {
 
 TRANSLATIONS['404.feature2'] = {
     'en': 'Edit and redact multi-page PDF documents securely',
-    'zh': '安全地编辑多页PDF文档',
+    'zh': '安全地脱敏多页PDF文档',
     'es': 'Editar y redactar documentos PDF de varias páginas de forma segura',
     'fr': 'Éditer et rédiger des documents PDF multi-pages en toute sécurité',
     'de': 'Mehrseitige PDF-Dokumente sicher bearbeiten und bearbeiten',
