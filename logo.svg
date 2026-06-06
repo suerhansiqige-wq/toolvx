@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 140" width="100%" height="100%">
+  <defs>
+    <!-- 渐变色：科技蓝到安全绿 -->
+    <linearGradient id="brandGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="50%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. 左侧图标组合 (纯透明背景) -->
+  <g transform="translate(20, 10)">
+    <!-- 数字化隐私颗粒 (左侧圆点) -->
+    <circle cx="15" cy="55" r="3.5" fill="#10B981" opacity="0.8"/>
+    <circle cx="28" cy="45" r="4.5" fill="#0EA5E9" />
+    <circle cx="25" cy="65" r="5" fill="#10B981" />
+    <circle cx="40" cy="38" r="5.5" fill="#3B82F6" />
+    <circle cx="42" cy="55" r="6" fill="#0EA5E9" />
+    <circle cx="38" cy="72" r="5" fill="#10B981" />
+    
+    <!-- 字母 P 主体架构与阴影切面 -->
+    <path d="M55,20 L105,20 C130,20 145,38 145,60 C145,82 128,98 105,98 L78,98 L78,120 L55,120 Z" fill="#FFFFFF" />
+    <!-- P 字母下方的绿色保护盾弧翼 -->
+    <path d="M78,98 L102,98 C115,98 125,91 132,82 C120,102 100,112 78,112 Z" fill="#10B981" />
+    
+    <!-- 核心：隐私之眼 (Eye Concept) -->
+    <path d="M72,60 C85,38 115,38 128,60 C115,82 85,82 72,60 Z" fill="#0F172A" />
+    <path d="M76,60 C88,43 112,43 124,60 C112,77 88,77 76,60 Z" fill="#FFFFFF" />
+    <!-- 眼眸与瞳孔 (渐变高光) -->
+    <circle cx="100" cy="60" r="16" fill="url(#brandGrad)" />
+    <circle cx="100" cy="60" r="9" fill="#0F172A" />
+    <circle cx="104" cy="56" r="3" fill="#FFFFFF" />
+  </g>
+
+  <!-- 2. 右侧品牌文字 (适合您的暗色背景) -->
+  <text x="195" y="82" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">PrivacyMask</text>
+  <text x="475" y="82" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="44" font-weight="400" fill="#FFFFFF" letter-spacing="0.5">Pro</text>
+</svg>
