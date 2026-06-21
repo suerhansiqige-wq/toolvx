@@ -28,7 +28,7 @@
    - 字数: 1600+ words
    - 特色: 快速教程、常见错误警示
 
-5. **Best Free PDF Redaction Tools** (最佳免费PDF编辑工具)
+5. **Best Free PDF Redaction Tools** (最佳免费PDF脱敏工具)
    - 文件: `articles/best-free-pdf-redaction-tools.html`
    - 关键词: free PDF redaction, PDF editor
    - 字数: 1400+ words
@@ -46,7 +46,7 @@
    - 字数: 1600+ words
    - 特色: 工作流程、成本分析
 
-8. **Redact Bank Statements** (银行对账单编辑)
+8. **Redact Bank Statements** (银行对账单脱敏)
    - 文件: `articles/redact-bank-statements.html`
    - 关键词: redact bank statement, financial privacy
    - 字数: 1700+ words
@@ -70,7 +70,7 @@
     - 字数: 1500+ words
     - 特色: Top 10提示格式
 
-12. **Local vs Cloud Image Editors** (本地vs云端编辑器) - 额外赠送!
+12. **Local vs Cloud Redaction Tools** (本地vs云端脱敏工具) - 额外赠送!
     - 文件: `articles/local-vs-cloud-image-editors.html`
     - 关键词: local image editor, cloud photo editor
     - 字数: 1800+ words

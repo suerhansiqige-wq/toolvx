@@ -104,7 +104,7 @@
           "name": "What file formats are supported?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We support JPG, PNG, GIF, WebP images, and PDF files. Multi-page PDFs are fully supported with page-by-page editing."
+            "text": "We support JPG, PNG, GIF, WebP images, and PDF files. Multi-page PDFs are fully supported with page-by-page redaction."
           }
         },
         {
@@ -668,7 +668,7 @@
                     <img src="logo.png" alt="" class="h-10 w-auto" aria-hidden="true" />
                     <span class="site-header-brand">
                         <span class="site-header-brand-name">toolvx</span>
-                        <span class="site-header-brand-tag">Local Image &amp; PDF Redaction</span>
+                        <span class="site-header-brand-tag" data-i18n="site.brand.tag">Local Image &amp; PDF Redaction</span>
                     </span>
                 </a>
                 <div class="site-header-links hidden md:flex items-center">
@@ -702,9 +702,9 @@
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-12 gap-4 lg:gap-6" id="toolGrid">
                 <div id="sidebarIntro" class="sidebar-trust-card rounded-xl p-5 shadow-lg border border-slate-700/50 lg:col-span-3">
-                    <span class="intro-badge" data-i18n="tool.intro.badge">Redaction Tool &middot; Not an Editor</span>
+                    <span class="intro-badge" data-i18n="tool.intro.badge">Local Image &amp; PDF Redaction</span>
                     <h1 class="intro-headline" data-i18n="tool.intro.title">100% Local Data Redaction</h1>
-                    <p class="intro-lead" data-i18n-html="tool.intro.lead">Mask and remove sensitive information from images and PDFs before you share. This is <strong>not</strong> a photo or document editor &mdash; it only redacts private data.</p>
+                    <p class="intro-lead" data-i18n-html="tool.intro.lead">Local image and PDF redaction tool. Mask and remove sensitive information before you share &mdash; data desensitization only.</p>
                     <ul class="space-y-2">
                         <li class="trust-item"><span class="trust-dot"></span> <span data-i18n="tool.intro.trust1">Mask IDs, faces, and account numbers</span></li>
                         <li class="trust-item"><span class="trust-dot"></span> <span data-i18n="tool.intro.trust2">Works Offline</span></li>
@@ -811,7 +811,7 @@
                 <p class="text-gray-600 leading-relaxed mb-10 text-lg">ToolVX is built for exactly this moment: a fast, browser-based tool to block out text in photo regions, obscure faces, and sanitize PDF pages without sending your files to any server. Whether you need to blur background online free for a quick social post or perform secure photo de-identification for compliance documents, local processing gives you professional results with zero upload risk. The sections below explain why redaction matters in the age of AI and social media, and how to protect your images in three practical steps.</p>
 
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Why You Must Redact Images Before Uploading to AI or Social Platforms</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">Redaction is not merely cosmetic editing?it is the deliberate removal or destruction of sensitive visual information so it cannot be recovered. Cropping a screenshot or lowering brightness does not qualify; true redaction replaces pixels with solid blocks, mosaic patterns, or irreversible blur that eliminates the underlying data. In 2026, three forces make pre-upload redaction essential: AI training pipelines that ingest public images, social platforms that retain metadata and facial embeddings, and regulations that hold individuals and businesses accountable for leaking personal data.</p>
+                <p class="text-gray-600 leading-relaxed mb-6">Redaction is not merely cosmetic adjustments?it is the deliberate removal or destruction of sensitive visual information so it cannot be recovered. Cropping a screenshot or lowering brightness does not qualify; true redaction replaces pixels with solid blocks, mosaic patterns, or irreversible blur that eliminates the underlying data. In 2026, three forces make pre-upload redaction essential: AI training pipelines that ingest public images, social platforms that retain metadata and facial embeddings, and regulations that hold individuals and businesses accountable for leaking personal data.</p>
 
                 <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">AI Tools Remember More Than You Think</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">When you paste a screenshot into an AI assistant or upload a document for "summarization," you are often granting that service the right to process, store, and sometimes retain your content for model improvement. A photo of a contract with a visible signature, a medical form with a patient ID, or a whiteboard photo with client names can enter training corpora or third-party logs. Even when providers claim they do not train on user data, backups, support tickets, and regional data-residency rules create exposure windows you cannot control after upload.</p>
@@ -834,7 +834,7 @@
 
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">Step 1: Inventory and Classify Sensitive Content</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Before drawing a single box, scan the full image at maximum zoom. List every element that could identify a person, location, account, or organization: faces and tattoos, name badges, street signs, unique interiors, serial numbers, QR codes, chat bubbles, and email headers in screenshots. For PDFs, repeat per page including headers, footers, and marginal notes. Classification helps you choose the right effect?blackout for account numbers, mosaic for faces, blur for large background zones.</p>
-                <p class="text-gray-600 leading-relaxed mb-8">Ask: "If a stranger saw only this file, what could they learn or do?" If the answer includes impersonation, stalking, fraud, or competitive intelligence, mark that region mandatory for redaction. Save the original securely offline; work on a copy inside your image redaction online tool so you always retain an unedited archive for internal use only.</p>
+                <p class="text-gray-600 leading-relaxed mb-8">Ask: "If a stranger saw only this file, what could they learn or do?" If the answer includes impersonation, stalking, fraud, or competitive intelligence, mark that region mandatory for redaction. Save the original securely offline; work on a copy inside your image redaction online tool so you always retain an unredacted archive for internal use only.</p>
 
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">Step 2: Apply Redaction Locally with the Right Technique</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Upload your file to ToolVX and process it entirely in the browser?no registration, no cloud upload. Select regions manually and apply mosaic pixelation, gaussian blur, or solid-color blackout depending on sensitivity. Use a tool to block out text in photo screenshots character-by-character when numbers or codes appear; partial coverage is worse than none because it creates a false sense of security. Extend selections slightly beyond text edges to capture anti-aliasing and shadow pixels.</p>
@@ -844,8 +844,8 @@
                 <p class="text-gray-600 leading-relaxed mb-4">After redaction, perform a "fresh eyes" review: shrink the image, view it on another monitor, or ask a colleague to hunt for leaks. Try selecting redacted areas?if text is still copyable in a PDF, the redaction failed. Download the sanitized file with a clear filename (e.g., "invoice-redacted.pdf") and store it separately from originals. When posting online, consider additional compression and stripping EXIF metadata with a dedicated tool if your threat model requires it.</p>
                 <p class="text-gray-600 leading-relaxed mb-10">Share only the redacted export?not the project file, not the original RAW, not a cloud link with version history. For AI uploads, paste or attach the cleaned asset and avoid describing redacted details in your prompt. For social platforms, disable automatic location tagging and review tag suggestions before publishing. Secure photo de-identification is a habit, not a one-time fix; repeating these three steps trains you to spot risks faster over time.</p>
 
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Why Local Browser Redaction Outperforms Cloud Editors</h2>
-                <p class="text-gray-600 leading-relaxed mb-4">Cloud-based photo editors require upload bandwidth, create server-side copies, and depend on vendor security practices you cannot audit. A breach, misconfigured bucket, or subpoena directed at the provider exposes your unredacted originals. ToolVX runs image redaction online in the literal sense?the web app loads in your browser, but pixels never leave your device. WebAssembly, Canvas, and PDF.js enable professional-grade editing with the privacy properties of desktop software and the convenience of a link bookmark.</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Why Local Browser Redaction Outperforms Cloud Redaction Tools</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Cloud-based photo redaction services require upload bandwidth, create server-side copies, and depend on vendor security practices you cannot audit. A breach, misconfigured bucket, or subpoena directed at the provider exposes your unredacted originals. ToolVX runs image redaction online in the literal sense?the web app loads in your browser, but pixels never leave your device. WebAssembly, Canvas, and PDF.js enable professional-grade redaction with the privacy properties of desktop software and the convenience of a link bookmark.</p>
                 <p class="text-gray-600 leading-relaxed mb-10">Local processing also means speed and control: no queue, no account lockout, no watermarks on exports. You can work offline after the initial page load on a plane, in a secure facility, or during a network outage. For teams handling regulated data, local redaction simplifies compliance narratives?data stays on the endpoint, transformations are deterministic, and you choose when and where sanitized files move next.</p>
 
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Choosing Effects: Mosaic, Blur, and Blackout</h2>
@@ -873,7 +873,7 @@
                         </svg>
                         <span class="text-xl font-bold">toolvx</span>
                     </div>
-                    <p class="text-sm text-gray-400 leading-relaxed">Free, local image and PDF redaction tools. Your files never leave your device.</p>
+                    <p class="text-sm text-gray-400 leading-relaxed" data-i18n="site.footer.tagline">Free, local image and PDF redaction tools. Your files never leave your device.</p>
                 </div>
                 
                 <!-- Column 2: Quick Links -->

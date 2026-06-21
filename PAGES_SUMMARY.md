@@ -33,7 +33,7 @@
 4. What file formats are supported?（支持什么格式？）
 5. How do I blur faces or hide text?（如何模糊脸部或隐藏文字？）
 6. Will exported files keep the original filename?（导出文件会保留原文件名吗？）
-7. Can I edit multiple pages in a PDF?（可以编辑多页PDF吗？）
+7. Can I redact multiple pages in a PDF?（可以脱敏多页PDF吗？）
 8. Does it work on mobile devices?（支持移动设备吗？）
 
 **设计特色**:

@@ -3,9 +3,9 @@
 
     var MESSAGES = {
         en: {
-            'tool.intro.badge': 'Redaction Tool · Not an Editor',
+            'tool.intro.badge': 'Local Image & PDF Redaction',
             'tool.intro.title': '100% Local Data Redaction',
-            'tool.intro.lead': 'Mask and remove sensitive information from images and PDFs before you share. This is <strong>not</strong> a photo or document editor — it only redacts private data.',
+            'tool.intro.lead': 'Local image and PDF redaction tool. Mask and remove sensitive information before you share — data desensitization only.',
             'tool.intro.trust1': 'Mask IDs, faces, and account numbers',
             'tool.intro.trust2': 'Works Offline',
             'tool.intro.trust3': 'No Data Leaves Your Device',
@@ -52,9 +52,9 @@
             'tool.alert.pdfExportError': 'Error exporting PDF. Please try again.'
         },
         zh: {
-            'tool.intro.badge': '脱敏工具 · 非编辑器',
+            'tool.intro.badge': '本地图像和PDF脱敏',
             'tool.intro.title': '100% 本地数据脱敏',
-            'tool.intro.lead': '分享前遮盖并移除图片与 PDF 中的敏感信息。这<strong>不是</strong>图片或文档编辑工具，仅用于数据脱敏。',
+            'tool.intro.lead': '本地图像和PDF脱敏工具。分享前遮盖并移除图片与 PDF 中的敏感信息。',
             'tool.intro.trust1': '遮盖身份证、人脸与账号',
             'tool.intro.trust2': '支持离线使用',
             'tool.intro.trust3': '数据不离开您的设备',

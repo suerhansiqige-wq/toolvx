@@ -35,7 +35,7 @@
 - obscure social security number in PDF
 - whiteout text in image free online
 - black box redaction tool free
-- multi-page PDF editor free online
+- multi-page PDF redaction tool free online
 
 ## 🌍 Geographic Keywords (If Targeting Specific Regions)
 
@@ -70,7 +70,7 @@
 **Target Keywords:**
 - free online image editor
 - local photo redaction
-- secure PDF editor
+- secure PDF redaction tool
 - no upload required
 
 **Implementation:**
@@ -181,7 +181,7 @@
 ### Partial Match Anchors (30%)
 - "free tool for redacting images"
 - "online face blurring software"
-- "secure PDF editor free"
+- "secure PDF redaction tool free"
 
 ### Generic Anchors (20%)
 - "click here"
