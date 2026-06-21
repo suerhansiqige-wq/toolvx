@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mask Credit Card Numbers - Image Redaction for Financial Data | toolvx</title>
+    <meta name="description" content="Learn how to mask credit card numbers with image redaction. Sanitize financial data in photos and documents securely.">
+    <meta name="keywords" content="mask credit card, hide card number, payment security, card photo safety, protect card details">
+    <link rel="canonical" href="https://toolvx.com/articles/mask-credit-card-numbers.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/site.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="site-header-nav py-3">
+                <a href="../index.html" class="site-header-logo flex items-center gap-2 shrink-0">
+                    <img src="../logo.png" alt="toolvx" class="h-8 w-auto" />
+                </a>
+                <div class="site-header-links hidden md:flex items-center">
+                    <a href="../index.html" class="hover:text-blue-300 transition">Home</a>
+                    <a href="blog.html" class="hover:text-blue-300 transition">Blog</a>
+                    <a href="../pages/features.html" class="hover:text-blue-300 transition">Features</a>
+                    <a href="../pages/faq.html" class="hover:text-blue-300 transition">FAQ</a>
+                    <a href="../pages/about.html" class="hover:text-blue-300 transition">About</a>
+                </div>
+                <div class="site-header-end">
+                    <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 rounded-lg hover:bg-slate-800" aria-label="Open menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu-panel" class="site-nav-mobile-panel md:hidden pb-4 border-t border-slate-700">
+                <div class="flex flex-col gap-3 pt-4 text-sm font-medium">
+                    <a href="../index.html" class="hover:text-blue-300">Home</a>
+                    <a href="blog.html" class="hover:text-blue-300">Blog</a>
+                    <a href="../pages/features.html" class="hover:text-blue-300">Features</a>
+                    <a href="../pages/faq.html" class="hover:text-blue-300">FAQ</a>
+                    <a href="../pages/about.html" class="hover:text-blue-300">About</a>
+                    <a href="../pages/contact.html" class="hover:text-blue-300">Contact</a>
+                    <a href="../pages/privacy-policy.html" class="hover:text-blue-300">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <header class="mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How to Mask Credit Card Numbers in Images</h1>
+            <p class="text-xl text-gray-600">Essential guide to protecting payment information in photos</p>
+        </header>
+
+        <div class="prose prose-lg max-w-none">
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Credit Card Security in Photos Matters</h2>
+            
+            <p class="text-gray-700 mb-6">With contactless payments and digital wallets, we often photograph credit cards for records, receipts, or verification. However, sharing these images without proper masking can lead to immediate fraud. Criminals can use visible card numbers, expiry dates, and CVV codes to make unauthorized purchases.</p>
+
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+                <p class="text-red-900 font-bold">🚨 NEVER Share These Visible:</p>
+                <ul class="text-red-800 mt-3 space-y-2">
+                    <li>• Full 16-digit card number</li>
+                    <li>• CVV/CVC code (3 digits on back)</li>
+                    <li>• Expiry date combined with card number</li>
+                    <li>• Cardholder's full name with number</li>
+                    <li>• Billing address with card details</li>
+                </ul>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Proper Masking Techniques</h2>
+
+            <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                <h3 class="text-xl font-bold mb-4">The Safe Way to Display Cards</h3>
+                <p class="text-gray-700 mb-4">When you must show a card (for verification, tutorials, etc.), follow these rules:</p>
+                
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">▼</span>
+                        <span class="text-gray-700">Show only first 6 and last 4 digits: <strong>123456******7890</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">▼</span>
+                        <span class="text-gray-700">Completely cover CVV with black box</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">▼</span>
+                        <span class="text-gray-700">Obscure expiry date partially</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">▼</span>
+                        <span class="text-gray-700">Use solid black masks (not semi-transparent)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Quick Tutorial</h2>
+
+            <ol class="space-y-4 mb-8">
+                <li class="bg-white p-4 rounded-lg shadow">
+                    <strong>1. Upload Image</strong>
+                    <p class="text-gray-600 mt-2">Go to <a href="../index.html" class="text-blue-600 hover:underline">our free tool</a> and upload your card photo</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow">
+                    <strong>2. Select Card Number Area</strong>
+                    <p class="text-gray-600 mt-2">Click and drag over the middle 8 digits</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow">
+                    <strong>3. Apply Black Mask</strong>
+                    <p class="text-gray-600 mt-2">Choose solid black color for maximum security</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow">
+                    <strong>4. Cover CVV Completely</strong>
+                    <p class="text-gray-600 mt-2">Add another black box over the 3-digit code</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow">
+                    <strong>5. Download Secure Image</strong>
+                    <p class="text-gray-600 mt-2">Your image is now safe to share</p>
+                </li>
+            </ol>
+
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white mt-12">
+                <h3 class="text-2xl font-bold mb-4">Protect Your Card Information Now</h3>
+                <p class="mb-6">Free, instant, and secure card number masking</p>
+                <a href="../index.html" class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg">Try It Free →</a>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Common Situations Where Card Photos Leak</h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">Card images escape privacy in predictable ways. Rental applications ask for "proof of payment method" and tenants photograph the front and back without masking the CVV. Marketplace sellers post wallet photos to prove they can pay, exposing full PAN and expiry. Expense-report apps encourage snapping receipts that include the last four digits on the same page as a visible card in the background. Support chats for subscription services often request a screenshot of the card on file—exactly the scenario fraudsters simulate in phishing emails.</p>
+
+            <p class="text-gray-700 leading-relaxed mb-6">Treat every card photo as if it will be indexed by search engines or scraped from a compromised cloud backup. Before attaching to email, Slack, or a ticket portal, open the image in <a href="../index.html" class="text-blue-600 hover:underline">toolvx</a>, draw blackout boxes over digits 7–12 (the middle eight), fully cover the CVV strip on the reverse, and mask the expiry if the full number is visible anywhere in the frame. PCI-DSS rules prohibit storing CVV after authorization—there is no legitimate reason to transmit an unmasked CVV in an image.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">PCI-Aligned Masking: What to Show and What to Hide</h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">Payment card industry guidance allows displaying the first six and last four digits (BIN + last four) for dispute resolution—format: <strong>411111******1111</strong>. Never show the full primary account number, magnetic-stripe data, or CVV in any customer-facing or internal wiki screenshot. For virtual cards used in QA environments, apply the same rules: test PANs still train fraud models and may belong to live BIN ranges.</p>
+
+            <p class="text-gray-700 leading-relaxed mb-6">Choose blackout (solid fill) for all numeric fields on cards—blur and mosaic can leave recoverable patterns under magnification on glossy card surfaces with embossed numbers. Extend each selection box two to three pixels beyond the digit edges to catch shadows and reflections. After export, zoom to 200% and confirm no digit strokes remain visible. Our <a href="../pages/faq.html" class="text-blue-600 hover:underline">FAQ</a> compares mosaic, blur, and blackout if you are redacting related documents in the same session.</p>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Beyond the Card: Redacting Receipt and Wallet Shots</h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">Wallet photos often include driver's licenses, transit passes with serial numbers, and insurance cards with member IDs—all in one frame. Scan the entire image, not just the payment card. Redact barcodes on the back of loyalty cards; many encode account identifiers scannable from a photo. If you are submitting proof of purchase, crop or blackout unrelated items in the wallet spread before sharing.</p>
+
+            <p class="text-gray-700 leading-relaxed mb-8">For bank-statement screenshots that show linked card numbers, follow the field-level rules in our <a href="redact-bank-statements.html" class="text-blue-600 hover:underline">bank statement redaction guide</a>. For broader identity hygiene after a card image mistake, see <a href="protect-identity-online.html" class="text-blue-600 hover:underline">Protect Identity Online</a>—request a replacement card, enable transaction alerts, and rotate any passwords stored in password managers visible in the same screenshot.</p>
+
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h3 class="text-xl font-bold mb-4">Related Articles</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="redact-bank-statements.html" class="block p-4 bg-white rounded-lg shadow">
+                        <h4 class="font-semibold text-blue-600 mb-2">Redact Bank Statements</h4>
+                    </a>
+                    <a href="protect-identity-online.html" class="block p-4 bg-white rounded-lg shadow">
+                        <h4 class="font-semibold text-blue-600 mb-2">Protect Identity Online</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="mt-12 pt-8 border-t border-gray-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">About This Article</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">Written by the <strong>toolvx Editorial Team</strong>. We publish practical privacy and redaction guides tested with local browser tools. Updated periodically —last reviewed June 2026.</p>
+            <p class="text-gray-600 leading-relaxed">Corrections: <a href="mailto:admin@toolvx.com" class="text-blue-600 hover:underline">admin@toolvx.com</a>. <a href="../pages/about.html" class="text-blue-600 hover:underline">Editorial standards</a>.</p>
+        </section>
+    </article>
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="../logo.png" alt="" class="h-6 w-auto opacity-90" width="24" height="24" />
+                        <span class="text-xl font-bold">toolvx</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">Free, local image and PDF redaction tools. Your files never leave your device.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="../pages/features.html" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="../pages/about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="../pages/faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Popular Articles</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="how-to-blur-faces-in-photos.html" class="text-gray-400 hover:text-white transition">Blur Faces Guide</a></li>
+                        <li><a href="social-media-privacy-guide.html" class="text-gray-400 hover:text-white transition">Privacy Guide</a></li>
+                        <li><a href="how-to-redact-faces-in-photos.html" class="text-gray-400 hover:text-white transition">Face Redaction Guide</a></li>
+                        <li><a href="best-free-pdf-redaction-tools.html" class="text-gray-400 hover:text-white transition">PDF Redaction Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../pages/privacy-policy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="../pages/terms-of-service.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="../pages/cookie-policy.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="../pages/contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2026 toolvx.com —Free online image and PDF redaction tools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4 justify-between px-4">
+            <p class="text-sm leading-relaxed">We use cookies for advertising (Google AdSense). By clicking Accept, you consent to ad cookies as described in our <a href="../pages/cookie-policy.html">Cookie Policy</a> and <a href="../pages/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="flex gap-3 shrink-0">
+                <button id="cookie-decline" type="button" class="px-4 py-2 text-sm rounded-lg border border-slate-500 hover:bg-slate-800 transition">Decline</button>
+                <button id="cookie-accept" type="button" class="px-4 py-2 text-sm rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition">Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/site.js"></script>
+    </body>
+</html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Primary Meta Tags -->
+    <title>Free Image & PDF Redaction Tool - Online Data Sanitization | toolvx</title>
+    <meta name="title" content="Free Image & PDF Redaction Tool - Online Data Sanitization | toolvx">
+    <meta name="description" content="ToolVX is a free online redaction tool for corporate and personal data sanitization. We provide instant image redaction and PDF redaction using secure local processing for absolute privacy protection. Easily blur faces, mask IDs, and execute irreversible sensitive data removal directly in your browser. Fully anonymize photos and complete document sanitization with zero server tracking.">
+    <meta name="keywords" content="image redaction, PDF redaction, free online redaction tool, data sanitization, blur faces, mask IDs, remove sensitive data, local processing, privacy protection, anonymize photos, document sanitization, sensitive data removal">
+    <meta name="author" content="toolvx.com">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://toolvx.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolvx.com/">
+    <meta property="og:title" content="Free Image & PDF Redaction Tool - Online Data Sanitization | toolvx.com">
+    <meta property="og:description" content="ToolVX is a free online redaction tool for corporate and personal data sanitization. We provide instant image redaction and PDF redaction using secure local processing for absolute privacy protection. Easily blur faces, mask IDs, and execute irreversible sensitive data removal directly in your browser. Fully anonymize photos and complete document sanitization with zero server tracking.">
+    <meta property="og:image" content="https://toolvx.com/logo.png">
+    <meta property="og:site_name" content="toolvx">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://toolvx.com/">
+    <meta property="twitter:title" content="Free Image & PDF Redaction Tool - Online Data Sanitization | toolvx.com">
+    <meta property="twitter:description" content="ToolVX is a free online redaction tool for corporate and personal data sanitization. We provide instant image redaction and PDF redaction using secure local processing for absolute privacy protection. Easily blur faces, mask IDs, and execute irreversible sensitive data removal directly in your browser. Fully anonymize photos and complete document sanitization with zero server tracking.">
+    <meta property="twitter:image" content="https://toolvx.com/logo.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="global">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Local Image Redaction Tool",
+      "url": "https://toolvx.com",
+      "description": "Free online tool for redacting and sanitizing images and PDFs locally. Blur faces, mask ID numbers, hide sensitive information with complete privacy.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Local image processing - no server uploads",
+        "PDF multi-page support",
+        "Face blurring and masking",
+        "ID card number redaction",
+        "Custom color selection",
+        "Mosaic, gaussian blur, and blackout redaction effects",
+        "Format-preserving export",
+        "Works offline after loading"
+      ],
+      "browserRequirements": "Requires JavaScript. Works in modern browsers.",
+      "creator": {
+        "@type": "Organization",
+        "name": "toolvx",
+        "url": "https://toolvx.com",
+        "email": "admin@toolvx.com"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this image redaction tool really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool is 100% free to use. There are no hidden costs, subscriptions, or watermarks. You can redact unlimited images and PDFs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my images uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All processing happens 100% locally in your browser. Your images and PDFs never leave your device, ensuring complete privacy and security."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this tool offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once the page has loaded, you can use the tool without an internet connection. All functionality works offline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support JPG, PNG, GIF, WebP images, and PDF files. Multi-page PDFs are fully supported with page-by-page editing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I blur faces or hide text in images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload your image or PDF, click and drag to select the area you want to redact, choose mosaic, gaussian blur, or blackout, click Apply, and export the result."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://toolvx.com"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="css/site.css">
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        .drop-zone { border: 3px dashed #64748b; transition: all 0.3s ease; }
+        .drop-zone:hover, .drop-zone.dragover { border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.1); box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2); transform: translateY(-2px); }
+        .canvas-container {
+            position: relative;
+            overflow: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            min-height: 320px;
+            max-height: calc(100vh - 8rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+        #mainCanvas {
+            display: block;
+            flex-shrink: 0;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #canvasPreviewHost {
+            position: relative;
+        }
+        #floatingUpload {
+            display: none;
+            position: absolute;
+            top: 0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 30;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(6px);
+            border: 2px dashed #93c5fd;
+            border-radius: 9999px;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+            cursor: pointer;
+            max-width: calc(100% - 1.5rem);
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+        #floatingUpload:hover,
+        #floatingUpload.dragover {
+            border-color: #2563eb;
+            background: #eff6ff;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.22);
+            transform: translateX(-50%) translateY(-1px);
+        }
+        #floatingUpload svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #2563eb;
+            flex-shrink: 0;
+        }
+        .floating-upload-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.25;
+            min-width: 0;
+        }
+        .floating-upload-text .float-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #1e293b;
+            white-space: nowrap;
+        }
+        .floating-upload-text .float-hint {
+            font-size: 0.6875rem;
+            color: #64748b;
+            white-space: nowrap;
+        }
+        #workspace.tool-active #floatingUpload {
+            display: flex;
+        }
+
+        /* Tool area horizontal centering */
+        #toolGrid {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: 1024px) {
+            #toolGrid {
+                max-width: 1140px;
+                align-items: stretch;
+            }
+            #sidebarIntro {
+                grid-column: span 3 / span 3;
+            }
+            #workspace:not(.tool-active) #sidebarIntro {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: stretch;
+            }
+            #workspace:not(.tool-active) #canvasArea {
+                grid-column: span 6 / span 6;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            #workspace:not(.tool-active) #emptyState {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100%;
+            }
+            #workspace:not(.tool-active) #controlPanel {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            #workspace:not(.tool-active) #colorPickerSection {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                min-height: 100%;
+            }
+            #workspace:not(.tool-active) #colorPalette {
+                flex: 1;
+            }
+            #workspace:not(.tool-active) #clearColorBtn {
+                margin-top: auto;
+            }
+            #workspace.tool-active #canvasArea {
+                grid-column: span 7 / span 7;
+            }
+        }
+        #workspace.tool-active #sidebarIntro {
+            display: none;
+        }
+
+        /* When a file is loaded: tighter padding, more room for canvas */
+        #workspace.tool-active {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .btn-primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4); }
+        .security-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; border-radius: 20px; color: #22c55e; font-size: 14px; font-weight: 500; }
+
+        /* Sidebar trust intro (moved from hero) */
+        .sidebar-trust-card {
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+        }
+        .sidebar-trust-card .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8125rem;
+            color: #cbd5e1;
+        }
+        .sidebar-trust-card .trust-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #22c55e;
+            flex-shrink: 0;
+        }
+        .intro-badge {
+            display: inline-block;
+            padding: 0.25rem 0.625rem;
+            margin-bottom: 0.75rem;
+            border-radius: 9999px;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(74, 222, 128, 0.55);
+            color: #86efac;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .intro-headline {
+            font-size: 1.375rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .intro-lead {
+            font-size: 0.8125rem;
+            color: #94a3b8;
+            line-height: 1.55;
+            margin-bottom: 1rem;
+        }
+        .intro-lead strong {
+            color: #fca5a5;
+            font-weight: 700;
+        }
+
+        /* Left thumbnail sidebar */
+        #thumbnailSidebar {
+            display: none;
+        }
+        #workspace.tool-active #thumbnailSidebar {
+            display: flex;
+            position: sticky;
+            top: 100px;
+        }
+        #thumbnailSidebar {
+            flex-direction: column;
+            max-height: calc(100vh - 8rem);
+        }
+        #thumbnailList {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-right: 4px;
+        }
+        .thumb-item {
+            position: relative;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #fff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .thumb-item:hover {
+            border-color: #93c5fd;
+        }
+        .thumb-item.active {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+        }
+        .thumb-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .thumb-item .thumb-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.75);
+            color: #fff;
+            font-size: 10px;
+            text-align: center;
+            padding: 2px 0;
+        }
+        .thumb-item.thumb-loading {
+            min-height: 72px;
+            background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+            background-size: 200% 100%;
+            animation: thumb-shimmer 1.2s ease-in-out infinite;
+        }
+        .thumb-item.thumb-loading img {
+            display: none;
+        }
+        @keyframes thumb-shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        #thumbnailList::-webkit-scrollbar {
+            width: 4px;
+        }
+        #thumbnailList::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+        .color-palette-grid {
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            gap: 1px;
+            background: #94a3b8;
+            border: 1px solid #94a3b8;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .color-swatch {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            min-height: 14px;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .color-swatch:hover {
+            transform: scale(1.15);
+            z-index: 2;
+            position: relative;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+        }
+        .color-swatch.selected {
+            box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #2563eb;
+            z-index: 3;
+            position: relative;
+        }
+        @media (max-width: 1023px) {
+            #workspace.tool-active #thumbnailSidebar {
+                display: none;
+            }
+        }
+        .page-controls { display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 16px; }
+        .page-btn { padding: 10px 20px; background: #3b82f6; color: white; border-radius: 8px; font-size: 14px; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        .page-btn:hover:not(:disabled) { background: #2563eb; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+        .page-btn:disabled { background: #cbd5e1; cursor: not-allowed; opacity: 0.6; }
+        .page-info { font-size: 15px; color: #64748b; font-weight: 600; }
+        
+        /* Chat app browser overlay */
+        .chat-app-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #1e293b;
+            z-index: 99999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .chat-app-overlay.active { display: flex; }
+        .chat-app-overlay .browser-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .chat-app-overlay .arrow {
+            width: 40px;
+            height: 40px;
+            margin: 1rem 0;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+            transition: all 0.2s;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.6);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+            border: none;
+            transition: all 0.2s;
+        }
+        input[type="range"]::-moz-range-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.6);
+        }
+        
+        /* Fixed control panel for desktop */
+        #controlPanel {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 10;
+        }
+        
+        /* Mobile responsive - fixed positioning */
+        @media (max-width: 1023px) {
+            #controlPanel {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                top: auto;
+                max-height: none;
+                background: transparent;
+                border-top: none;
+                box-shadow: none;
+                padding: 0;
+                z-index: auto;
+                overflow-y: visible;
+                margin-top: 1.5rem;
+            }
+
+            #workspace {
+                padding-bottom: 0;
+            }
+
+            #emptyState {
+                cursor: pointer;
+            }
+
+            .canvas-container {
+                min-height: 260px;
+                max-height: calc(100vh - 7rem);
+            }
+
+            .canvas-container canvas {
+                transition: transform 0.1s ease-out;
+            }
+
+            header.gradient-bg {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+
+            main#workspace {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+
+            #controlPanel {
+                margin-top: 0.5rem !important;
+            }
+
+            #workspace .grid {
+                gap: 0.25rem !important;
+            }
+
+            #canvasArea {
+                gap: 0.25rem !important;
+            }
+
+            #canvasArea > * {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+
+            #canvasArea > * + * {
+                margin-top: 0.25rem !important;
+            }
+
+            #controlPanel > * {
+                margin-top: 0.25rem !important;
+                margin-bottom: 0 !important;
+            }
+
+            #controlPanel > * + * {
+                margin-top: 0.25rem !important;
+            }
+        }
+        
+        /* Scrollbar styling for control panel */
+        #controlPanel::-webkit-scrollbar {
+            width: 6px;
+        }
+        #controlPanel::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 3px;
+        }
+        #controlPanel::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 3px;
+        }
+        #controlPanel::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Chat App Browser Guide Overlay -->
+    <div id="chatAppOverlay" class="chat-app-overlay">
+        <div class="browser-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5">
+                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.6 9H20.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.6 15H20.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 3C14.0188 5.4696 15.1112 8.68288 15.1112 12C15.1112 15.3171 14.0188 18.5304 12 21C9.98124 18.5304 8.88885 15.3171 8.88885 12C8.88885 8.68288 9.98124 5.4696 12 3Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-white mb-2">Open in Browser</h2>
+        <p class="text-slate-300 mb-6 max-w-md">This page is opened in an in-app browser where some features may not work. Tap the menu in the top-right corner and choose "Open in Browser".</p>
+        <div class="text-slate-400 text-sm mb-4">Recommended: Chrome / Safari / Edge</div>
+        <div class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-4 max-w-sm">
+            <div class="flex items-center gap-3 text-left">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">1</div>
+                <p class="text-slate-200 text-sm">Tap the <span class="text-yellow-400 font-bold">&middot;&middot;&middot;</span> menu in the top-right corner</p>
+            </div>
+            <div class="flex items-center gap-3 text-left mt-3">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">2</div>
+                <p class="text-slate-200 text-sm">Choose "Open in Browser" or "Open in Safari / Chrome"</p>
+            </div>
+        </div>
+    </div>
+    <!-- Download Progress Bar -->
+    <div id="downloadProgress" class="fixed top-0 left-0 right-0 h-1 bg-gray-200/50 backdrop-blur-sm z-[9999] hidden">
+        <div id="downloadProgressBar" class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 w-0 transition-all duration-300 ease-out shadow-[0_0_8px_rgba(59,130,246,0.6)]"></div>
+    </div>
+    <header class="gradient-bg text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="site-header-nav">
+                <a href="index.html" class="site-header-logo flex items-center gap-3 shrink-0">
+                    <img src="logo.png" alt="toolvx" class="h-10 w-auto" />
+                </a>
+                <div class="site-header-links hidden md:flex items-center">
+                    <a href="index.html" class="text-white hover:text-blue-300 transition">Home</a>
+                    <a href="articles/blog.html" class="text-white hover:text-blue-300 transition">Blog</a>
+                    <a href="pages/features.html" class="text-white hover:text-blue-300 transition">Features</a>
+                    <a href="pages/faq.html" class="text-white hover:text-blue-300 transition">FAQ</a>
+                    <a href="pages/about.html" class="text-white hover:text-blue-300 transition">About</a>
+                </div>
+                <div class="site-header-end">
+                    <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 rounded-lg hover:bg-slate-800 text-white" aria-label="Open menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu-panel" class="site-nav-mobile-panel md:hidden pb-4 border-t border-slate-700 mt-2">
+                <div class="flex flex-col gap-3 pt-4 text-sm font-medium text-white">
+                    <a href="index.html" class="hover:text-blue-300">Home</a>
+                    <a href="articles/blog.html" class="hover:text-blue-300">Blog</a>
+                    <a href="pages/features.html" class="hover:text-blue-300">Features</a>
+                    <a href="pages/faq.html" class="hover:text-blue-300">FAQ</a>
+                    <a href="pages/about.html" class="hover:text-blue-300">About</a>
+                    <a href="pages/contact.html" class="hover:text-blue-300">Contact</a>
+                    <a href="pages/privacy-policy.html" class="hover:text-blue-300">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-6 lg:py-8 bg-gradient-to-br from-slate-50 via-white to-blue-50" id="workspace">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-4 lg:gap-6" id="toolGrid">
+                <div id="sidebarIntro" class="sidebar-trust-card rounded-xl p-5 shadow-lg border border-slate-700/50 lg:col-span-3">
+                    <span class="intro-badge" data-i18n="tool.intro.badge">Redaction Tool &middot; Not an Editor</span>
+                    <h1 class="intro-headline" data-i18n="tool.intro.title">100% Local Data Redaction</h1>
+                    <p class="intro-lead" data-i18n-html="tool.intro.lead">Mask and remove sensitive information from images and PDFs before you share. This is <strong>not</strong> a photo or document editor &mdash; it only redacts private data.</p>
+                    <ul class="space-y-2">
+                        <li class="trust-item"><span class="trust-dot"></span> <span data-i18n="tool.intro.trust1">Mask IDs, faces, and account numbers</span></li>
+                        <li class="trust-item"><span class="trust-dot"></span> <span data-i18n="tool.intro.trust2">Works Offline</span></li>
+                        <li class="trust-item"><span class="trust-dot"></span> <span data-i18n="tool.intro.trust3">No Data Leaves Your Device</span></li>
+                        <li class="trust-item"><span class="trust-dot"></span> <span data-i18n="tool.intro.trust4">Multi-Page PDF Support</span></li>
+                    </ul>
+                </div>
+                <aside id="thumbnailSidebar" class="hidden lg:col-span-2 bg-white rounded-xl shadow-md border border-slate-200 p-3">
+                    <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2 shrink-0" data-i18n="tool.pages.title">Pages</h3>
+                    <div id="thumbnailList"></div>
+                    <div id="thumbPagination" class="hidden mt-2 pt-2 border-t border-slate-200 shrink-0">
+                        <div class="flex items-center justify-between gap-1">
+                            <button id="thumbViewPrev" type="button" class="px-2 py-1 text-xs font-semibold text-blue-600 hover:bg-blue-50 rounded disabled:opacity-40 disabled:cursor-not-allowed" data-i18n-aria="tool.thumb.prev" aria-label="Previous thumbnails">&larr;</button>
+                            <span id="thumbViewInfo" class="text-xs text-slate-500 font-medium"></span>
+                            <button id="thumbViewNext" type="button" class="px-2 py-1 text-xs font-semibold text-blue-600 hover:bg-blue-50 rounded disabled:opacity-40 disabled:cursor-not-allowed" data-i18n-aria="tool.thumb.next" aria-label="Next thumbnails">&rarr;</button>
+                        </div>
+                    </div>
+                </aside>
+                <div class="lg:col-span-6 space-y-3" id="canvasArea">
+                    <input type="file" id="fileInput" accept="image/*,.pdf" class="hidden">
+                    <div id="canvasPreviewHost">
+                        <div id="floatingUpload" class="floating-upload drop-zone" role="button" tabindex="0" aria-labelledby="floatingUploadTitle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                            <div class="floating-upload-text">
+                                <span id="floatingUploadTitle" class="float-title" data-i18n="tool.float.title">Open next file</span>
+                                <span class="float-hint" data-i18n="tool.float.hint">Drop image or PDF here</span>
+                            </div>
+                        </div>
+                        <div id="canvasWrapper" class="canvas-container bg-white rounded-xl shadow-lg border border-slate-200 hidden">
+                            <canvas id="mainCanvas" class="block rounded-xl"></canvas>
+                        </div>
+                    </div>
+                    <div id="pageControls" class="page-controls hidden mt-4 bg-white rounded-xl p-4 shadow-md border border-slate-200">
+                        <button id="prevPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(-1)" data-i18n="tool.page.prev">&larr; Previous</button>
+                        <span class="page-info bg-slate-100 px-4 py-2.5 rounded-lg font-semibold text-slate-700"><span data-i18n="tool.page.label">Page</span> <span id="currentPage" class="text-blue-600">1</span> <span data-i18n="tool.page.of">of</span> <span id="totalPages" class="text-blue-600">1</span></span>
+                        <button id="nextPage" class="page-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:shadow transition-all duration-200" onclick="changePage(1)" data-i18n="tool.page.next">Next &rarr;</button>
+                    </div>
+                    <div id="emptyState" class="drop-zone border-2 border-dashed border-blue-300 rounded-xl p-12 md:p-16 text-center bg-gradient-to-br from-blue-50 to-indigo-50 shadow-sm cursor-pointer">
+                        <svg class="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                        <p class="text-lg md:text-xl font-bold text-slate-700 mb-2" data-i18n="tool.drop.title">Drop your file here</p>
+                        <p class="text-sm text-slate-500" data-i18n="tool.drop.subtitle">or click to browse files</p>
+                        <p class="text-xs text-slate-400 mt-2" data-i18n="tool.drop.formats">Supports JPG, PNG, GIF, WebP, PDF</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 space-y-5" id="controlPanel">
+                    <div id="colorPickerSection" class="bg-white rounded-xl p-5 shadow-md border border-slate-200">
+                        <label class="block text-sm font-semibold text-slate-700 mb-3 text-center" data-i18n="tool.color.label">Fill Color</label>
+                        <div id="colorPalette" class="color-palette-grid" role="listbox" data-i18n-aria="tool.color.palette" aria-label="Color palette"></div>
+                        <button type="button" id="clearColorBtn" onclick="clearFillColor()" class="w-full mt-3 py-2.5 px-4 rounded-lg border-2 border-slate-300 hover:border-red-400 hover:bg-red-50 hover:text-red-600 text-slate-600 text-sm font-semibold transition-all duration-200" data-i18n="tool.color.clear">
+                            Clear Color
+                        </button>
+                    </div>
+                    <div id="historyControls" class="space-y-3 hidden">
+                        <div class="flex gap-2">
+                            <button id="undoBtn" onclick="undo()" disabled class="flex-1 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 disabled:opacity-50 disabled:cursor-not-allowed text-white py-3.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+                                <span data-i18n="tool.history.undo">Undo</span>
+                            </button>
+                            <button id="redoBtn" onclick="redo()" disabled class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white py-3.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10h-10a8 8 0 00-8 8v2M21 10l-6 6m6-6l-6-6"/></svg>
+                                <span data-i18n="tool.history.redo">Redo</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="effectControls" class="bg-white rounded-xl p-5 shadow-md border border-slate-200 space-y-4 hidden">
+                        <div class="effect-type-block text-center">
+                            <label for="effectType" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="tool.effect.label">Effect Type</label>
+                            <select id="effectType" onchange="updateColorPicker()" class="w-full max-w-[220px] mx-auto border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-700 font-medium shadow-sm text-center">
+                                <option value="pixelate" selected data-i18n="tool.effect.pixelate">Mosaic (Pixelate)</option>
+                                <option value="blur" data-i18n="tool.effect.blur">Gaussian Blur</option>
+                                <option value="blackout" data-i18n="tool.effect.blackout">Black Out</option>
+                            </select>
+                        </div>
+                        <button onclick="resetImage()" class="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                            <span data-i18n="tool.effect.reset">Reset to Original</span>
+                        </button>
+                    </div>
+                    <div id="mobileApplySection" class="lg:hidden hidden">
+                        <button onclick="applyMobileBox()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 px-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span data-i18n="tool.mobile.apply">Apply Redaction</span>
+                        </button>
+                    </div>
+                    <div id="exportSection" class="hidden">
+                        <button onclick="downloadImage()" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-4 px-6 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            <span data-i18n="tool.export.download">Download Redacted File</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- AdSense ad slot (add code after approval ??see README.md) -->
+    <div id="ad-slot-below-tool" class="ad-slot-placeholder container mx-auto px-4 py-4 max-w-4xl" aria-hidden="true"></div>
+
+    <!-- SEO Content Section -->
+    <section class="bg-white py-16 border-t border-slate-200" id="seo-content" aria-labelledby="seo-main-heading">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <article>
+                <h2 id="seo-main-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Complete Guide to Image Redaction Online: Protect Your Privacy Before You Share</h2>
+                <p class="text-gray-600 leading-relaxed mb-5 text-lg">Every day, millions of people upload photos to social networks, cloud storage, and AI chatbots without realizing how much sensitive data travels inside a single JPEG file. Names on ID cards, home addresses in the background, license plates on the street, employee badges in office selfies, and children's faces in family albums can all be extracted, indexed, and reused long after you hit "Post." If you run an image redaction online workflow before sharing, you dramatically reduce the risk of identity theft, doxxing, and unintended data exposure.</p>
+                <p class="text-gray-600 leading-relaxed mb-10 text-lg">ToolVX is built for exactly this moment: a fast, browser-based tool to block out text in photo regions, obscure faces, and sanitize PDF pages without sending your files to any server. Whether you need to blur background online free for a quick social post or perform secure photo de-identification for compliance documents, local processing gives you professional results with zero upload risk. The sections below explain why redaction matters in the age of AI and social media, and how to protect your images in three practical steps.</p>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Why You Must Redact Images Before Uploading to AI or Social Platforms</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">Redaction is not merely cosmetic editing?it is the deliberate removal or destruction of sensitive visual information so it cannot be recovered. Cropping a screenshot or lowering brightness does not qualify; true redaction replaces pixels with solid blocks, mosaic patterns, or irreversible blur that eliminates the underlying data. In 2026, three forces make pre-upload redaction essential: AI training pipelines that ingest public images, social platforms that retain metadata and facial embeddings, and regulations that hold individuals and businesses accountable for leaking personal data.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">AI Tools Remember More Than You Think</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">When you paste a screenshot into an AI assistant or upload a document for "summarization," you are often granting that service the right to process, store, and sometimes retain your content for model improvement. A photo of a contract with a visible signature, a medical form with a patient ID, or a whiteboard photo with client names can enter training corpora or third-party logs. Even when providers claim they do not train on user data, backups, support tickets, and regional data-residency rules create exposure windows you cannot control after upload.</p>
+                <p class="text-gray-600 leading-relaxed mb-6">Secure photo de-identification before any AI interaction ensures that only the information you intend to share reaches the model. Redact account numbers, blur faces of bystanders, and use a dedicated tool to block out text in photo areas that contain passwords, API keys, or internal project codes. Local redaction?performed entirely in your browser?means the sanitized file never touches an external server until you consciously choose to upload the cleaned version.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">Social Networks Amplify What You Cannot Take Back</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">Platforms optimize for engagement, not privacy. A vacation photo may reveal your hotel room number, a child's school logo, or GPS coordinates embedded in EXIF metadata. Reverse-image search can link redacted and unredacted versions across accounts. Comments, tags, and automated face-grouping features create social graphs that connect people who never consented to appear in your post. Once content is public, deletion is slow, incomplete, or impossible on mirrors and caches.</p>
+                <p class="text-gray-600 leading-relaxed mb-6">Running image redaction online before publishing lets you share the story without exposing identities. Journalists blur sources; HR teams sanitize internal Slack screenshots; parents obscure children's faces in public groups. If you need to blur background online free?for example, to hide a messy home office or a branded document on a desk?do it locally first so the original high-resolution file never leaves your device.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">Hidden Metadata and Background Details Leak Context</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">Visual redaction addresses pixels, but context leaks through metadata and scene details. Camera timestamps, device serial hints, and geolocation tags can survive export unless you strip them separately. Background elements?a reflection in a window, a shipping label on a table, a notification banner with a contact name?often contain more identifying information than the subject in focus. Automated OCR on social platforms and search engines can index text you assumed was too small to matter.</p>
+                <p class="text-gray-600 leading-relaxed mb-6">A thorough workflow combines pixel-level redaction with conscious cropping and metadata review. Use blackout boxes for high-risk text, mosaic for faces, and gaussian blur for large background regions. When handling PDFs?bank statements, invoices, medical records?apply the same discipline page by page. Multi-page PDF redaction in a local tool prevents partial sanitization where page three still shows an account number you removed from page one.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">Legal, Professional, and Ethical Obligations</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">GDPR, HIPAA-aligned practices, CCPA, and sector-specific rules increasingly expect demonstrable data minimization. Publishing a colleague's face without consent, leaking a customer's invoice, or sharing a child's image in a marketing post can trigger complaints, fines, or reputational damage. Employers, freelancers, and creators who handle third-party data need audit-friendly habits: redact first, upload second, document what was removed and why.</p>
+                <p class="text-gray-600 leading-relaxed mb-10">Secure photo de-identification is also an ethical choice. Bystanders, minors, and vulnerable individuals deserve protection even when no law explicitly requires it. Building redaction into your publishing pipeline?like spell-checking before send?signals professionalism and respect. Free tools that process files locally remove the excuse that privacy software is too expensive or too complex for everyday use.</p>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">3-Step Guide to Protect Your Image Privacy</h2>
+                <p class="text-gray-600 leading-relaxed mb-8">Follow this repeatable process every time you prepare images for AI tools, email attachments, social posts, or client deliverables. Each step builds on the last; skipping one reintroduces risk.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Step 1: Inventory and Classify Sensitive Content</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">Before drawing a single box, scan the full image at maximum zoom. List every element that could identify a person, location, account, or organization: faces and tattoos, name badges, street signs, unique interiors, serial numbers, QR codes, chat bubbles, and email headers in screenshots. For PDFs, repeat per page including headers, footers, and marginal notes. Classification helps you choose the right effect?blackout for account numbers, mosaic for faces, blur for large background zones.</p>
+                <p class="text-gray-600 leading-relaxed mb-8">Ask: "If a stranger saw only this file, what could they learn or do?" If the answer includes impersonation, stalking, fraud, or competitive intelligence, mark that region mandatory for redaction. Save the original securely offline; work on a copy inside your image redaction online tool so you always retain an unedited archive for internal use only.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Step 2: Apply Redaction Locally with the Right Technique</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">Upload your file to ToolVX and process it entirely in the browser?no registration, no cloud upload. Select regions manually and apply mosaic pixelation, gaussian blur, or solid-color blackout depending on sensitivity. Use a tool to block out text in photo screenshots character-by-character when numbers or codes appear; partial coverage is worse than none because it creates a false sense of security. Extend selections slightly beyond text edges to capture anti-aliasing and shadow pixels.</p>
+                <p class="text-gray-600 leading-relaxed mb-8">For backgrounds that reveal location or brand secrets, use gaussian blur over a wide selection. For legal or medical material, prefer blackout redaction because it destroys underlying data rather than obscuring it. Review every page of multi-page PDFs, use undo/redo to refine selections, and zoom in to confirm no stray digits remain. Export in the same format when possible to preserve workflow compatibility.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Step 3: Verify, Export, and Share Minimized Copies Only</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">After redaction, perform a "fresh eyes" review: shrink the image, view it on another monitor, or ask a colleague to hunt for leaks. Try selecting redacted areas?if text is still copyable in a PDF, the redaction failed. Download the sanitized file with a clear filename (e.g., "invoice-redacted.pdf") and store it separately from originals. When posting online, consider additional compression and stripping EXIF metadata with a dedicated tool if your threat model requires it.</p>
+                <p class="text-gray-600 leading-relaxed mb-10">Share only the redacted export?not the project file, not the original RAW, not a cloud link with version history. For AI uploads, paste or attach the cleaned asset and avoid describing redacted details in your prompt. For social platforms, disable automatic location tagging and review tag suggestions before publishing. Secure photo de-identification is a habit, not a one-time fix; repeating these three steps trains you to spot risks faster over time.</p>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Why Local Browser Redaction Outperforms Cloud Editors</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Cloud-based photo editors require upload bandwidth, create server-side copies, and depend on vendor security practices you cannot audit. A breach, misconfigured bucket, or subpoena directed at the provider exposes your unredacted originals. ToolVX runs image redaction online in the literal sense?the web app loads in your browser, but pixels never leave your device. WebAssembly, Canvas, and PDF.js enable professional-grade editing with the privacy properties of desktop software and the convenience of a link bookmark.</p>
+                <p class="text-gray-600 leading-relaxed mb-10">Local processing also means speed and control: no queue, no account lockout, no watermarks on exports. You can work offline after the initial page load on a plane, in a secure facility, or during a network outage. For teams handling regulated data, local redaction simplifies compliance narratives?data stays on the endpoint, transformations are deterministic, and you choose when and where sanitized files move next.</p>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Choosing Effects: Mosaic, Blur, and Blackout</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Different threats call for different techniques. Mosaic pixelation works well for faces in casual social contexts where you want viewers to understand a crowd existed without identifying individuals. Gaussian blur suits large background regions when you need to blur background online free without harsh rectangular boxes. Solid blackout remains the gold standard when you must guarantee irreversible removal?financial digits, signatures, passport numbers, and credentials should never rely on blur alone because advanced reconstruction models continue to improve.</p>
+                <p class="text-gray-600 leading-relaxed mb-10">Combine techniques in one file: blackout for IBANs, mosaic for faces, blur for proprietary UI layouts. Extend each selection slightly beyond text edges so no anti-aliased pixels remain visible. When you need a tool to block out text in photo mockups or design exports, solid fills with contrasting colors prevent partial OCR. Always preview at 100% zoom before download; compression artifacts from aggressive JPEG settings can reintroduce faint ghosts of redacted content if quality is set too low.</p>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 mt-12">Start Redacting Before Your Next Upload</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Privacy expectations are rising while sharing friction is falling. AI assistants ingest documents in seconds; social algorithms reward authentic, raw-feeling photos that often contain authentic, raw-identifying details. The cost of a single unredacted screenshot?identity theft, harassment, regulatory inquiry, or client trust lost?far exceeds the minute it takes to sanitize a file locally. Image redaction online should be a default step in your creative and professional workflow, not an emergency measure after a leak.</p>
+                <p class="text-gray-600 leading-relaxed">ToolVX gives you secure photo de-identification without paywalls, uploads, or install steps. Scroll up, drop your image or PDF, redact what matters, and download a clean copy. Teach your team the three-step guide, apply it before every AI prompt and every public post, and keep your originals offline. Your privacy belongs on your device?keep it there until you decide exactly what the world is allowed to see.</p>
+            </article>
+        </div>
+    </section>
+
+    
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Column 1: Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <span class="text-xl font-bold">toolvx</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">Free, local image and PDF redaction tools. Your files never leave your device.</p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="articles/blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="pages/features.html" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="pages/about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="pages/faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Popular Articles -->
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Popular Articles</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="articles/how-to-blur-faces-in-photos.html" class="text-gray-400 hover:text-white transition">Blur Faces Guide</a></li>
+                        <li><a href="articles/social-media-privacy-guide.html" class="text-gray-400 hover:text-white transition">Privacy Guide</a></li>
+                        <li><a href="articles/how-to-redact-faces-in-photos.html" class="text-gray-400 hover:text-white transition">Face Redaction Guide</a></li>
+                        <li><a href="articles/best-free-pdf-redaction-tools.html" class="text-gray-400 hover:text-white transition">PDF Tools</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Legal -->
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="pages/privacy-policy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="pages/terms-of-service.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="pages/cookie-policy.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="pages/contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2026 toolvx.com ? Free online image and PDF redaction tools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-consent">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4 justify-between px-4">
+            <p class="text-sm leading-relaxed">We use cookies for advertising (Google AdSense). By clicking Accept, you consent to ad cookies as described in our <a href="pages/cookie-policy.html">Cookie Policy</a> and <a href="pages/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="flex gap-3 shrink-0">
+                <button id="cookie-decline" type="button" class="px-4 py-2 text-sm rounded-lg border border-slate-500 hover:bg-slate-800 transition">Decline</button>
+                <button id="cookie-accept" type="button" class="px-4 py-2 text-sm rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition">Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/tool-i18n.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>
