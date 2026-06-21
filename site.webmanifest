@@ -1,7 +1,7 @@
 {
-  "name": "toolvx — Local Image & PDF Redaction",
-  "short_name": "toolvx",
-  "description": "Free local redaction for images and PDFs. Blur faces, mask IDs, protect privacy.",
+  "name": "toolvx — 免费本地图像和 PDF 脱敏",
+  "short_name": "toolvx 脱敏",
+  "description": "Free local image and PDF desensitization. Blur faces, mask IDs, protect privacy — not an editor.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1e293b",

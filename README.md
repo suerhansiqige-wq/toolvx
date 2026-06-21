@@ -1,6 +1,8 @@
-# toolvx — Free Local Image & PDF Redaction
+# toolvx — 免费本地图像和 PDF 脱敏
 
-Privacy-first redaction tool: blur faces, mask text, sanitize PDFs — 100% in your browser, zero server uploads.
+# toolvx — Free Local Image & PDF Desensitization (Redaction)
+
+Privacy-first desensitization tool: blur faces, mask text, sanitize PDFs — 100% in your browser, zero server uploads. **Not a photo or document editor** — data redaction only.
 
 **Live site:** [toolvx.com](https://toolvx.com)
 
